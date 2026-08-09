@@ -204,7 +204,6 @@
 .lum-icon {
 
     --icon-size: var(--lum-icon-lg);
-
     display: inline-block;
     width: var(--icon-size);
     height: var(--icon-size);
@@ -221,4 +220,135 @@
     .lum-lg-icon-md { --icon-size: var(--lum-icon-md); }
     .lum-lg-icon-lg { --icon-size: var(--lum-icon-lg); }
     .lum-lg-icon-xl { --icon-size: var(--lum-icon-xl); }
+}
+
+
+.lum-icon--arrow-right {
+    -webkit-mask-image: url("./arrow-right.svg");
+    mask-image: url("./arrow-right.svg");
+}
+
+.lum-icon--arrow-right-tight {
+    -webkit-mask-image: url("./arrow-right-tight.svg");
+    mask-image: url("./arrow-right-tight.svg");
+}
+
+.lum-icon--briefcase {
+    -webkit-mask-image: url("./briefcase.svg");
+    mask-image: url("./briefcase.svg");
+}
+
+.lum-icon--calendar-date {
+    -webkit-mask-image: url("./calendar-date.svg");
+    mask-image: url("./calendar-date.svg");
+}
+
+.lum-icon--cart {
+    -webkit-mask-image: url("./cart.svg");
+    mask-image: url("./cart.svg");
+}
+
+.lum-icon--chevron-left {
+    -webkit-mask-image: url("./chevron-left.svg");
+    mask-image: url("./chevron-left.svg");
+}
+
+.lum-icon--chevron-right {
+    -webkit-mask-image: url("./chevron-right.svg");
+    mask-image: url("./chevron-right.svg");
+}
+
+.lum-icon--clipboard-check {
+    -webkit-mask-image: url("./clipboard-check.svg");
+    mask-image: url("./clipboard-check.svg");
+}
+
+.lum-icon--cube {
+    -webkit-mask-image: url("./cube.svg");
+    mask-image: url("./cube.svg");
+}
+
+.lum-icon--dollar-circle {
+    -webkit-mask-image: url("./dollar-circle.svg");
+    mask-image: url("./dollar-circle.svg");
+}
+
+.lum-icon--facebook {
+    -webkit-mask-image: url("./facebook.svg");
+    mask-image: url("./facebook.svg");
+}
+
+.lum-icon--file-chart {
+    -webkit-mask-image: url("./file-chart.svg");
+    mask-image: url("./file-chart.svg");
+}
+
+.lum-icon--focus {
+    -webkit-mask-image: url("./focus.svg");
+    mask-image: url("./focus.svg");
+}
+
+.lum-icon--instagram {
+    -webkit-mask-image: url("./instagram.svg");
+    mask-image: url("./instagram.svg");
+}
+
+.lum-icon--linkedin {
+    -webkit-mask-image: url("./linkedin.svg");
+    mask-image: url("./linkedin.svg");
+}
+
+.lum-icon--mail {
+    -webkit-mask-image: url("./mail.svg");
+    mask-image: url("./mail.svg");
+}
+
+.lum-icon--phone {
+    -webkit-mask-image: url("./phone.svg");
+    mask-image: url("./phone.svg");
+}
+
+.lum-icon--screwdriver-bolt {
+    -webkit-mask-image: url("./screwdriver-bolt.svg");
+    mask-image: url("./screwdriver-bolt.svg");
+}
+
+.lum-icon--search {
+    -webkit-mask-image: url("./search.svg");
+    mask-image: url("./search.svg");
+}
+
+.lum-icon--sink {
+    -webkit-mask-image: url("./sink.svg");
+    mask-image: url("./sink.svg");
+}
+
+.lum-icon--tag {
+    -webkit-mask-image: url("./tag.svg");
+    mask-image: url("./tag.svg");
+}
+
+.lum-icon--umbrella {
+    -webkit-mask-image: url("./umbrella.svg");
+    mask-image: url("./umbrella.svg");
+}
+
+.lum-icon--user {
+    -webkit-mask-image: url("./user.svg");
+    mask-image: url("./user.svg");
+}
+
+.lum-icon--water-heater {
+    -webkit-mask-image: url("./water-heater.svg");
+    mask-image: url("./water-heater.svg");
+}
+
+.lum-icon--x-twitter {
+    -webkit-mask-image: url("./x-twitter.svg");
+    mask-image: url("./x-twitter.svg");
+}
+
+.lum-icon--youtube {
+    -webkit-mask-image: url("./youtube.svg");
+    mask-image: url("./youtube.svg");
 }

@@ -79,6 +79,14 @@
         --lum-h-xxs: 18px;    --lum-h-xxs-lh: 32px;
     }
 }
+:root {
+    /* Icon Sizes */
+    --lum-icon-xs: 12px;
+    --lum-icon-sm: 16px;
+    --lum-icon-md: 20px;
+    --lum-icon-lg: 24px;
+    --lum-icon-xl: 28px;
+}
 
 /* ---------- Typography utilities ---------- */
 .lum-text-lg, .lum-text-md, .lum-text-sm,
@@ -189,4 +197,28 @@
 
     }
 }
-/**/
+/*-------------------- Icon utilities -------------------- */
+
+
+
+.lum-icon {
+
+    --icon-size: var(--lum-icon-lg);
+
+    display: inline-block;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-color: currentColor;
+}
+.lum-icon-xs { --icon-size: var(--lum-icon-xs); } /* 12px */
+.lum-icon-sm { --icon-size: var(--lum-icon-sm); } /* 16px */
+.lum-icon-md { --icon-size: var(--lum-icon-md); } /* 20px */
+.lum-icon-lg { --icon-size: var(--lum-icon-lg); } /* 24px */
+.lum-icon-xl { --icon-size: var(--lum-icon-xl); } /* 28px */
+@media screen and (min-width: 1024px) {
+    .lum-lg-icon-xs { --icon-size: var(--lum-icon-xs); }
+    .lum-lg-icon-sm { --icon-size: var(--lum-icon-sm); }
+    .lum-lg-icon-md { --icon-size: var(--lum-icon-md); }
+    .lum-lg-icon-lg { --icon-size: var(--lum-icon-lg); }
+    .lum-lg-icon-xl { --icon-size: var(--lum-icon-xl); }
+}

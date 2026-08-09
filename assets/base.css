@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --lum-primary-1:  #ecf7ee;
+    --lum-primary-2:  #c5e8cd;
+    --lum-primary-3:  #9ed8ad;
+    --lum-primary-4:  #74c78d;
+    --lum-primary-5:  #41b66c;
+    --lum-primary-6:  #15ae5c;
+    --lum-primary-7:  #11974f;
+    --lum-primary-8:  #086a36;
+    --lum-primary-9:  #03411f;
+    --lum-primary-10: #011c0a;
+    --lum-primary: var(--lum-primary-6);
+    --lum-n-1000: #000000;
+    --lum-n-900:  #091e42;
+    --lum-n-800:  #172b4d;
+    --lum-n-700:  #253858;
+    --lum-n-600:  #344563;
+    --lum-n-500:  #42526e;
+    --lum-n-400:  #505f79;
+    --lum-n-300:  #5e6c84;
+    --lum-n-200:  #6b778c;
+    --lum-n-100:  #7a869a;
+    --lum-n-90:   #8993a4;
+    --lum-n-80:   #97a0af;
+    --lum-n-70:   #a5adba;
+    --lum-n-60:   #b3bac5;
+    --lum-n-50:   #c1c7d0;
+    --lum-n-40:   #dfe1e6;
+    --lum-n-30:   #ebecf0;
+    --lum-n-20:   #f4f5f7;
+    --lum-n-10:   #fafbfc;
+    --lum-n-0:    #ffffff;
+    --lum-border: var(--lum-n-30);
+    --lum-font: 'Inter', 'Open Sans', sans-serif;
+    --lum-w-body: 500;
+    --lum-w-heading: 700;
+    --lum-text-lg: 16px;     --lum-text-lg-lh: 32px;
+    --lum-text-md: 14.22px;  --lum-text-md-lh: 28px;
+    --lum-text-sm: 12.64px;  --lum-text-sm-lh: 24px;
+    --lum-text-xs: 11.24px;  --lum-text-xs-lh: 20px;
+    --lum-text-xxs: 9.99px;  --lum-text-xxs-lh: 12px;
+    --lum-text-xxxs: 8.88px; --lum-text-xxxs-lh: 12px;
+
+    --lum-h-lg: 22.78px;  --lum-h-lg-lh: 40px;  --lum-h-lg-w: 700;
+    --lum-h-md: 20.25px;  --lum-h-md-lh: 36px;
+    --lum-h-sm: 18px;     --lum-h-sm-lh: 32px;
+    --lum-h-xs: 16px;     --lum-h-xs-lh: 32px;
+    --lum-h-xxs: 14.22px; --lum-h-xxs-lh: 28px;
+    --lum-containr: 1536px;
+    --lum-b-xs:400px;
+    --lum-b-sm:520px;
+    --lum-b-md:768px;
+    --lum-b-lg:1024px;
+    --lum-b-xl:1280px;
+    --lum-b-2xl:1600px;
+    --lum-b-3xl:1800px;
+}
+@media screen and (min-width: 1024px) {
+    :root {
+        --lum-text-lg: 18px;     --lum-text-lg-lh: 36px;
+        --lum-text-md: 16px;     --lum-text-md-lh: 32px;
+        --lum-text-sm: 14.22px;  --lum-text-sm-lh: 24px;
+        --lum-text-xs: 12.64px;  --lum-text-xs-lh: 20px;
+        --lum-text-xxs: 11.24px; --lum-text-xxs-lh: 16px;
+        --lum-text-xxxs: 9.99px; --lum-text-xxxs-lh: 12px;
+
+        --lum-h-lg: 41.05px;  --lum-h-lg-lh: 72px;
+        --lum-h-lg-w: 900;
+        --lum-h-md: 32.44px;  --lum-h-md-lh: 56px;
+        --lum-h-sm: 22.78px;  --lum-h-sm-lh: 40px;
+        --lum-h-xs: 20.25px;  --lum-h-xs-lh: 36px;
+        --lum-h-xxs: 18px;    --lum-h-xxs-lh: 32px;
+    }
+}
+
+/* ---------- Typography utilities ---------- */
+.lum-text-lg, .lum-text-md, .lum-text-sm,
+.lum-text-xs, .lum-text-2xs, .lum-text-3xs {
+    font-family: var(--lum-font);
+    font-weight: var(--lum-w-body);
+}
+.lum-h-lg, .lum-h-md, .lum-h-sm, .lum-h-xs, .lum-h-2xs {
+    font-family: var(--lum-font);
+    font-weight: var(--lum-w-heading);
+}
+.lum-text-lg   {
+    font-size: var(--lum-text-lg);
+    line-height: var(--lum-text-lg-lh);
+}
+.lum-text-md   {
+    font-size: var(--lum-text-md);
+    line-height: var(--lum-text-md-lh);
+}
+.lum-text-sm   {
+    font-size: var(--lum-text-sm);
+    line-height: var(--lum-text-sm-lh);
+}
+.lum-text-xs   {
+    font-size: var(--lum-text-xs);
+    line-height: var(--lum-text-xs-lh);
+}
+.lum-text-2xs  {
+    font-size: var(--lum-text-xxs);
+    line-height: var(--lum-text-xxs-lh);
+}
+.lum-text-3xs {
+    font-size: var(--lum-text-xxxs);
+    line-height: var(--lum-text-xxxs-lh);
+}
+.lum-h-lg  {
+    font-size: var(--lum-h-lg);
+    line-height: var(--lum-h-lg-lh);
+    font-weight: var(--lum-h-lg-w);
+}
+.lum-h-md  {
+    font-size: var(--lum-h-md);
+    line-height: var(--lum-h-md-lh);
+}
+.lum-h-sm  {
+    font-size: var(--lum-h-sm);
+    line-height: var(--lum-h-sm-lh);
+}
+.lum-h-xs  {
+    font-size: var(--lum-h-xs);
+    line-height: var(--lum-h-xs-lh);
+}
+.lum-h-2xs {
+    font-size: var(--lum-h-xxs);
+    line-height: var(--lum-h-xxs-lh);
+}
+.lum-container {
+    width: 100%;
+    max-width: var(--lum-containr);
+    margin: 0 auto;
+}
+
+
+
+/*-------------------- buttons --------------------- */
+
+.lum-button{
+    --py:10px;
+    --px:24px;
+    --gap:8px;
+    --rounded:8px;
+    --border:1px;
+    --icon:16px;
+    --fs: var(--lum-text-sm);
+    --fl:var( --lum-text-xs-lh);
+    @media screen and (min-width: 1024px) {
+        --py:12px;
+        --px:32px;
+        --icon:24px;
+        --fs: var(--lum-text-sm);
+        --fl:var( --lum-text-xs-lh);
+    }
+    cursor: pointer;
+    padding: var(--py) var(--px);
+    border-radius: var(--rounded);
+    display: flex;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    border: var(--border) solid transparent;
+    .text__lum-button{
+        font-size: var(--fs) ;
+        font-weight: 500;
+        line-height: var(--fl) ;
+    }
+    &.primary{
+        background: var(--lum-primary);
+        color: var(--lum-n-0);
+    }
+    &.outline{
+        background: transparent;
+        border-color: var(--lum-border);
+        color: var(--lum-n-1000);
+    }
+    &:hover{
+        border-color: var(--lum-primary);
+        box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
+
+    }
+}
+/**/

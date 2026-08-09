@@ -352,3 +352,141 @@
     -webkit-mask-image: url("./youtube.svg");
     mask-image: url("./youtube.svg");
 }
+
+.lum-icon {
+    display: inline-block;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    vertical-align: middle;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+}
+
+.lum-icon--xs { width: 12px; height: 12px; }
+.lum-icon--sm { width: 16px; height: 16px; }
+.lum-icon--md { width: 20px; height: 20px; }
+.lum-icon--lg { width: 24px; height: 24px; }
+.lum-icon--xl { width: 28px; height: 28px; }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.gui-page {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 24px 16px;
+    direction: rtl;
+}
+
+.gui-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.gui-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.gui-header h1 {
+    margin: 0;
+    font-size: 16px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.gui-header span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.gui-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    direction: ltr;
+}
+
+.gui-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.gui-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.gui-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gui-card-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.gui-card-code {
+    font-family: monospace;
+    font-size: 10px;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.gui-card-sizes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #f1f5f9;
+}
+
+.gui-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+    color: #475569;
+}
+
+.gui-icon-wrapper:hover {
+    background: #e2e8f0;
+    color: #2563eb;
+}
+
+.gui-icon-label {
+    font-size: 9px;
+    font-family: monospace;
+    color: #94a3b8;
+}

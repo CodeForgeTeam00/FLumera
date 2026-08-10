@@ -61,6 +61,12 @@
     --lum-b-xl:1280px;
     --lum-b-2xl:1600px;
     --lum-b-3xl:1800px;
+    /*icons size*/
+    --lum-icon-xs: 12px;
+    --lum-icon-sm: 16px;
+    --lum-icon-md: 20px;
+    --lum-icon-lg: 24px;
+    --lum-icon-xl: 28px;
 }
 @media screen and (min-width: 1024px) {
     :root {
@@ -78,14 +84,6 @@
         --lum-h-xs: 20.25px;  --lum-h-xs-lh: 36px;
         --lum-h-xxs: 18px;    --lum-h-xxs-lh: 32px;
     }
-}
-:root {
-    /* Icon Sizes */
-    --lum-icon-xs: 12px;
-    --lum-icon-sm: 16px;
-    --lum-icon-md: 20px;
-    --lum-icon-lg: 24px;
-    --lum-icon-xl: 28px;
 }
 
 /* ---------- Typography utilities ---------- */
@@ -202,24 +200,32 @@
 
 
 .lum-icon {
-
     --icon-size: var(--lum-icon-lg);
     display: inline-block;
     width: var(--icon-size);
     height: var(--icon-size);
     background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    vertical-align: middle;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
 }
-.lum-icon-xs { --icon-size: var(--lum-icon-xs); } /* 12px */
-.lum-icon-sm { --icon-size: var(--lum-icon-sm); } /* 16px */
-.lum-icon-md { --icon-size: var(--lum-icon-md); } /* 20px */
-.lum-icon-lg { --icon-size: var(--lum-icon-lg); } /* 24px */
-.lum-icon-xl { --icon-size: var(--lum-icon-xl); } /* 28px */
+.lum-icon--xs { --icon-size: var(--lum-icon-xs); } /* 12px */
+.lum-icon--sm { --icon-size: var(--lum-icon-sm); } /* 16px */
+.lum-icon--md { --icon-size: var(--lum-icon-md); } /* 20px */
+.lum-icon--lg { --icon-size: var(--lum-icon-lg); } /* 24px */
+.lum-icon--xl { --icon-size: var(--lum-icon-xl); } /* 28px */
 @media screen and (min-width: 1024px) {
-    .lum-lg-icon-xs { --icon-size: var(--lum-icon-xs); }
-    .lum-lg-icon-sm { --icon-size: var(--lum-icon-sm); }
-    .lum-lg-icon-md { --icon-size: var(--lum-icon-md); }
-    .lum-lg-icon-lg { --icon-size: var(--lum-icon-lg); }
-    .lum-lg-icon-xl { --icon-size: var(--lum-icon-xl); }
+    .lum-lg-icon--xs { --icon-size: var(--lum-icon-xs); }
+    .lum-lg-icon--sm { --icon-size: var(--lum-icon-sm); }
+    .lum-lg-icon--md { --icon-size: var(--lum-icon-md); }
+    .lum-lg-icon--lg { --icon-size: var(--lum-icon-lg); }
+    .lum-lg-icon--xl { --icon-size: var(--lum-icon-xl); }
 }
 
 
@@ -353,31 +359,6 @@
     mask-image: url("./youtube.svg");
 }
 
-.lum-icon {
-    display: inline-block;
-    background-color: currentColor;
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    vertical-align: middle;
-    flex-shrink: 0;
-    transition: color 0.2s ease;
-}
-
-.lum-icon--xs { width: 12px; height: 12px; }
-.lum-icon--sm { width: 16px; height: 16px; }
-.lum-icon--md { width: 20px; height: 20px; }
-.lum-icon--lg { width: 24px; height: 24px; }
-.lum-icon--xl { width: 28px; height: 28px; }
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: #f8fafc;
-}
 
 .gui-page {
     min-height: 100vh;

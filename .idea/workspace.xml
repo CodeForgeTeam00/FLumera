@@ -6,34 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e4518921-9f29-446b-8f3a-f2efe3f9844d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/arrow-right-tight.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/arrow-right-tight.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/arrow-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/arrow-right.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/briefcase.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/briefcase.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/calendar-date.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calendar-date.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/chevron-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/chevron-left.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/chevron-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/chevron-right.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/clipboard-check.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/clipboard-check.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cube.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cube.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dollar-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dollar-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/facebook.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/facebook.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/file-chart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/file-chart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/focus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/focus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/instagram.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/instagram.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/linkedin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/linkedin.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/mail.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/mail.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/phone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/phone.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/screwdriver-bolt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/screwdriver-bolt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/tag.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/tag.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/umbrella.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/umbrella.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/user.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/water-heater.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/water-heater.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/x-twitter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/x-twitter.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/youtube.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/youtube.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/gui.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mj368"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CodeForgeTeam00/FLumera.git",
+    "accountId": "5951d8dd-643b-4d35-b087-2c0b528dd324"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -66,27 +51,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;gui&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alias/OneDrive/اسناد/project/Us/FLumera&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "gui",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/alias/OneDrive/اسناد/project/Us/FLumera",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\alias\OneDrive\اسناد\project\Us\FLumera" />
@@ -95,7 +82,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-WS-253.28294.332" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.8665.259" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1786260859433</updated>
       <workItem from="1786260860524" duration="6303000" />
+      <workItem from="1786345940337" duration="854000" />
     </task>
     <servers />
   </component>

@@ -152,7 +152,7 @@
 /*-------------------- buttons --------------------- */
 
 .lum-button{
-    --py:10px;
+    --h:40px;
     --px:24px;
     --gap:8px;
     --rounded:8px;
@@ -161,14 +161,14 @@
     --fs: var(--lum-text-sm);
     --fl:var( --lum-text-xs-lh);
     @media screen and (min-width: 1024px) {
-        --py:12px;
+        --h:48px;
         --px:32px;
         --icon:24px;
         --fs: var(--lum-text-sm);
         --fl:var( --lum-text-xs-lh);
     }
     cursor: pointer;
-    padding: var(--py) var(--px);
+    padding: 0 var(--px);
     border-radius: var(--rounded);
     display: flex;
     transition: all 0.3s ease;
@@ -179,6 +179,9 @@
         font-size: var(--fs) ;
         font-weight: 500;
         line-height: var(--fl) ;
+    }
+    .h__lum-button{
+        height: var(--h);
     }
     &.primary{
         background: var(--lum-primary);
@@ -193,6 +196,11 @@
         border-color: var(--lum-primary);
         box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
 
+    }
+    &.glass{
+        background: rgba(255, 255, 255, 0.30);
+        border-color: var(--lum-border);
+        color: var(--lum-n-30);
     }
 }
 /*-------------------- Icon utilities -------------------- */
@@ -359,7 +367,7 @@
     mask-image: url("./youtube.svg");
 }
 
-
+/* gui  page ____________________________________________________________________________________________________________*/
 .gui-page {
     min-height: 100vh;
     font-family: system-ui, -apple-system, sans-serif;
@@ -470,4 +478,51 @@
     font-size: 9px;
     font-family: monospace;
     color: #94a3b8;
+}
+/*======================================================================================================================*/
+.gui-preview-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin: 12px 0;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+.gui-preview-box[data-theme="dark"] {
+    background-color: #1e293b;
+    background-image: radial-gradient(#334155 1px, transparent 1px);
+    border-color: #334155;
+}
+
+.gui-code-block {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.gui-code-block:hover {
+    background: #e2e8f0;
+    color: #2563eb;
+    border-color: #cbd5e1;
+}
+
+.lum-button .h__lum-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
 }

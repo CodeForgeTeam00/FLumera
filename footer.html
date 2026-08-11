@@ -5,206 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumera — Footer</title>
     <link rel="stylesheet" href="./assets/base.css">
-    <style>
-        .lum-footer {
-            --_bg:         var(--lum-n-10);
-            --_fg:         var(--lum-n-1000);
-            --_muted:      var(--lum-n-300);
-            --_link:       var(--lum-n-700);
-            --_border:     var(--lum-border);
-            --_field-bg:   var(--lum-n-0);
-            --_pad-inline: 16px;
-            --_pad-block:  40px;
-            --_gap:        16px;
-            background: var(--_bg);
-            color: var(--_fg);
-            border-block-start: 1px solid var(--_border);
-            padding: var( --_pad-block) var(--_pad-inline) ;
-            display: flex;
-            gap: var(--_gap);
-            flex-direction: column;
-        }
-        @media screen and (min-width: 1024px) {
-            .lum-footer {
-                --_pad-inline: 0;
-                --_pad-block: 48px;
-                --_gap: 24px;
-                padding: var( --_pad-block) var(--_pad-inline) ;
-            }
-        }
-        /* ---------- Top: logo + newsletter ---------- */
-        .lum-footer__top {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        .lum-line{
-            width: 100%;
-            height: 1px;
-            background: var(--_border);
-        }
-        @media screen and (min-width: 1024px) {
-            .lum-footer__top {
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-        }
-
-        .lum-footer__logo { display: inline-flex; align-items: center; gap: 8px; color: var(--lum-primary); }
-        .lum-footer__logo-text { font-weight: 900; font-size: 24px; letter-spacing: .5px; color: var(--lum-primary); line-height: 1; }
-        .lum-footer__logo-sub  { display: block; font-weight: 500; font-size: 9px; letter-spacing: 1.5px; color: var(--lum-n-400); }
-
-        .lum-newsletter {
-            inline-size: 100%;
-            max-inline-size: 714px;
-        }
-        .lum-newsletter__label {
-                            font-size: var(--lum-text-md);
-                            font-weight: 700;
-                            color: var(--_fg);
-                            margin-block-end: 8px;
-                        }
-        .lum-newsletter__form { display: flex; gap: 12px; }
-        .lum-newsletter__field {
-            flex: 1;
-            padding-inline: 16px;
-            block-size: 48px;
-            background: var(--_field-bg);
-            border: 1px solid var(--_border);
-            border-radius: 8px;
-            font-size: var(--lum-text-sm);
-            color: var(--_fg);
-            outline: none;
-            transition: border-color .2s ease, box-shadow .2s ease;
-
-            &::placeholder { color: var(--_muted); }
-            &:focus { border-color: var(--lum-primary); box-shadow: 0 0 0 3px rgba(21, 174, 92, .15); }
-        }
-
-        /* ---------- Middle: link columns ---------- */
-        .lum-footer__cols {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 8px;
-        }
-        @media screen and (min-width: 1024px) {
-            .lum-footer__cols { grid-template-columns: repeat(5, 1fr); gap: 32px; align-items: start; }
-        }
-
-        .lum-footer__col-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: var(--lum-text-md);
-            font-weight: 700;
-            color: var(--_fg);
-            border-radius: 100px;
-            padding: 0 16px;
-            height: 44px;
-
-        }
-        .lum-footer__col-title[data-accordion-toggle] {
-            background: var(--lum-n-20);
-        }
-        .lum-footer__links { display: flex; flex-direction: column; gap: 12px; }
-        .lum-footer__link {
-            font-size: var(--lum-text-md);
-            color: var(--_link);
-            transition: color .2s ease;
-
-            &:hover { color: var(--lum-primary); }
-        }
-
-        .lum-footer__contact { display: flex; flex-direction: column; gap: 12px; }
-        .lum-footer__contact-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: var(--lum-text-sm);
-            color: var(--_link);
-            transition: color .2s ease;
-
-            &:hover { color: var(--lum-primary); }
-        }
-
-        /* ---------- Socials ---------- */
-        .lum-socials { display: flex; align-items: center; gap: 8px; }
-        .lum-socials__link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            inline-size: 36px;
-            block-size: 36px;
-            border-radius: 8px;
-            color: var(--lum-n-500);
-            background: var(--lum-n-0);
-            border: 1px solid var(--_border);
-            transition: color .2s ease, border-color .2s ease;
-
-            &:hover { color: var(--lum-primary); border-color: var(--lum-primary); }
-        }
-        .lum-socials__link--brand { color: var(--lum-primary); border-color: var(--lum-primary-2); background: var(--lum-primary-1); }
-
-        /* ---------- Bottom: copyright + policy links ---------- */
-        .lum-footer__bottom {
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 16px;
-            align-items: center;
-        }
-        @media screen and (min-width: 1024px) {
-            .lum-footer__bottom { flex-direction: row; justify-content: space-between; }
-        }
-        .lum-footer__copy { font-size: var(--lum-text-sm); color: var(--_muted); }
-        .lum-footer__policies { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
-        .lum-footer__policy {
-            position: relative;
-            font-size: var(--lum-text-sm);
-            color: var(--_link);
-            padding-inline-start: 14px;
-            transition: color .2s ease;
-
-            &::before {
-                content: "";
-                position: absolute;
-                inset-inline-start: 0;
-                inset-block-start: 50%;
-                transform: translateY(-50%);
-                inline-size: 5px;
-                block-size: 5px;
-                border-radius: 999px;
-                background: var(--lum-primary);
-            }
-            &:hover { color: var(--lum-primary); }
-        }
-
-        /* ---------- Mobile accordion behaviour ---------- */
-        /* On mobile, columns tagged [data-accordion] collapse. Desktop = always open. */
-
-        .lum-footer__col-caret {
-            /* no chevron-down in the set yet: chevron-right rotated */
-            transform: rotate(90deg);
-            transition: transform .2s ease;
-        }
-        .lum-footer__col--accordion .lum-footer__body {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: opacity 1.25s ease-in-out;
-            overflow: hidden;
-            opacity: 0;
-
-        }
-        .lum-footer__col--accordion[data-open] .lum-footer__body { grid-template-rows: 1fr; padding: 16px; opacity: 1;}
-        .lum-footer__col--accordion[data-open] .lum-footer__col-caret { transform: rotate(-90deg); }
-        .lum-footer__body > div { min-block-size: 0; } /* allow the 0fr collapse */
-
-        @media screen and (min-width: 1024px) {
-            .lum-footer__col-title { cursor: default; }
-            .lum-footer__col-caret { display: none; }
-            .lum-footer__col--accordion .lum-footer__body { grid-template-rows: 1fr; } /* force open */
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/footer.css">
 </head>
 <body>
 
@@ -214,15 +15,14 @@
     <div class="lum-container lum-footer__row">
         <div class="lum-footer__top">
             <a class="lum-footer__logo" href="/">
-                <!-- TODO: replace with real Lumera lamp logo -->
-                <i class="lum-icon lum-icon--focus lum-icon--xl"></i>
-                <span class="lum-footer__logo-text">LUMERA
-                    <span class="lum-footer__logo-sub">ELECTRIC AND LIGHTING</span>
-                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="54" viewBox="0 0 34 54" fill="none">
+                    <path d="M21.3247 42.1738H11.8966C11.6953 42.1738 11.496 42.2135 11.3101 42.2907C11.1242 42.3678 10.9552 42.4809 10.8129 42.6235C10.6706 42.7661 10.5577 42.9353 10.4807 43.1216C10.4037 43.3079 10.364 43.5076 10.364 43.7092V47.878C10.3653 48.5921 10.6249 49.2816 11.0948 49.8186C11.5647 50.3556 12.2129 50.7038 12.9194 50.7985V51.5837C12.9194 52.0478 13.1034 52.4928 13.431 52.821C13.7585 53.1491 14.2027 53.3334 14.6659 53.3334H18.5554C19.0186 53.3334 19.4628 53.1491 19.7904 52.821C20.1179 52.4928 20.3019 52.0478 20.3019 51.5837V50.7985C21.0084 50.7037 21.6566 50.3556 22.1265 49.8186C22.5964 49.2816 22.856 48.5921 22.8573 47.878V43.7092C22.8573 43.302 22.6958 42.9114 22.4084 42.6235C22.121 42.3356 21.7312 42.1738 21.3247 42.1738Z" fill="#C5E8CD"/>
+                    <path d="M19.3914 0.232819V12.4493C19.3914 12.5423 19.4097 12.6344 19.4452 12.7203C19.4807 12.8062 19.5328 12.8843 19.5984 12.95C19.6641 13.0158 19.742 13.068 19.8278 13.1035C19.9135 13.1391 20.0054 13.1575 20.0983 13.1574H24.0825C24.1675 13.1574 24.251 13.1804 24.3241 13.2239C24.3972 13.2674 24.4573 13.3299 24.498 13.4047C24.5387 13.4795 24.5585 13.5639 24.5553 13.649C24.5522 13.7342 24.5262 13.8169 24.4801 13.8885L14.7027 29.0712C14.6474 29.1572 14.5657 29.223 14.4699 29.2586C14.3742 29.2943 14.2695 29.2979 14.1715 29.269C14.0735 29.2401 13.9875 29.1802 13.9263 29.0982C13.8651 29.0162 13.832 28.9167 13.832 28.8143V16.2327C13.832 16.0449 13.7575 15.8648 13.625 15.732C13.4924 15.5992 13.3126 15.5245 13.1252 15.5245H9.14093C9.05589 15.5245 8.97242 15.5016 8.8993 15.4581C8.82618 15.4146 8.76611 15.3522 8.72541 15.2774C8.68472 15.2026 8.66491 15.1181 8.66807 15.033C8.67122 14.9479 8.69721 14.8652 8.74332 14.7936L18.2184 0.0801331C17.423 0.00224674 16.623 -0.0188986 15.8246 0.0168543C12.5041 0.173934 9.30699 1.3257 6.64702 3.32315C3.98705 5.3206 1.98662 8.07179 0.904525 11.2208C-0.177567 14.3697 -0.291508 17.7716 0.577444 20.9862C1.4464 24.2007 3.25825 27.0801 5.77858 29.2517C6.87126 30.2102 7.74497 31.3933 8.34024 32.7205C8.9355 34.0477 9.23834 35.4878 9.22815 36.9428V39.0212C9.22814 39.2572 9.27454 39.491 9.36471 39.7091C9.45488 39.9272 9.58706 40.1254 9.75367 40.2923C9.92029 40.4592 10.1181 40.5916 10.3358 40.682C10.5535 40.7723 10.7868 40.8188 11.0225 40.8188H22.1986C22.6745 40.8188 23.1309 40.6294 23.4674 40.2923C23.8039 39.9552 23.9929 39.4979 23.9929 39.0212V36.8075C23.9869 35.3802 24.2892 33.9685 24.8789 32.6693C25.4686 31.37 26.3318 30.2138 27.4093 29.2801C29.8083 27.2241 31.5726 24.5255 32.4955 21.5009C33.4184 18.4762 33.4616 15.2506 32.6201 12.2022C31.7787 9.15373 30.0874 6.40872 27.7444 4.28882C25.4015 2.16892 22.504 0.761961 19.3914 0.232819Z" fill="#15AE5C"/>
+                </svg>
             </a>
 
             <div class="lum-newsletter">
-                <p class="lum-newsletter__label">Stock Alerts, New Brands Promotions</p>
+                <p class="lum-newsletter__label">Stock Alerts, New Brands &amp; Promotions</p>
                 <form class="lum-newsletter__form" action="#" method="post">
                     <input class="lum-newsletter__field" type="email" name="email" placeholder="Enter Your Email..." aria-label="Email">
                     <button class="lum-button primary" type="submit">
@@ -296,7 +96,7 @@
 
             <!-- Socials (always open) -->
             <div class="lum-footer__col">
-                <p class="lum-footer__col-title">Lumera in Socials</p>
+                <p class="lum-footer__col-title"> Join Us </p>
                 <div class="lum-socials">
                     <a class="lum-socials__link lum-socials__link--brand" href="#" aria-label="YouTube">
                         <i class="lum-icon lum-icon--youtube lum-icon--sm"></i>
@@ -321,7 +121,7 @@
     <!-- ============ Bottom: copyright + policies ============ -->
     <div class="lum-container lum-footer__row">
         <div class="lum-footer__bottom">
-            <p class="lum-footer__copy">2026, Lumera Electric Powered by Shopify</p>
+            <p class="lum-footer__copy">&copy; 2026, Lumera Electric Powered by Shopify</p>
             <div class="lum-footer__policies">
                 <a class="lum-footer__policy" href="#">Privacy policy</a>
                 <a class="lum-footer__policy" href="#">Refund policy</a>
@@ -333,20 +133,7 @@
     </div>
 </footer>
 
-<script>
-    /* ---------- Footer accordion (mobile only; desktop forced open via CSS) ---------- */
-    (function () {
-        'use strict';
-        document.querySelectorAll('[data-accordion]').forEach(function (col) {
-            var toggle = col.querySelector('[data-accordion-toggle]');
-            toggle.addEventListener('click', function () {
-                // desktop is always open (caret hidden); guard so clicks there do nothing
-                if (window.matchMedia('(min-width: 1024px)').matches) return;
-                col.toggleAttribute('data-open');
-            });
-        });
-    })();
-</script>
 
+<script src="./assets/footer.js"></script>
 </body>
 </html>

@@ -33,6 +33,7 @@
   <component name="ProjectId" id="3HfZ0M94E5MIBBi8RSKRsBC6hsI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -81,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1786260859433</updated>
       <workItem from="1786260860524" duration="6303000" />
-      <workItem from="1786432723650" duration="14348000" />
+      <workItem from="1786432723650" duration="18155000" />
     </task>
     <servers />
   </component>

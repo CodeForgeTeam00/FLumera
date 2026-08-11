@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumera — Footer</title>
+    <link rel="stylesheet" href="./assets/base.css">
+    <style>
+        .lum-footer {
+            --_bg:         var(--lum-n-10);
+            --_fg:         var(--lum-n-1000);
+            --_muted:      var(--lum-n-300);
+            --_link:       var(--lum-n-700);
+            --_border:     var(--lum-border);
+            --_field-bg:   var(--lum-n-0);
+            --_pad-inline: 16px;
+            --_pad-block:  40px;
+            --_gap:        16px;
+            background: var(--_bg);
+            color: var(--_fg);
+            border-block-start: 1px solid var(--_border);
+            padding: var( --_pad-block) var(--_pad-inline) ;
+            display: flex;
+            gap: var(--_gap);
+            flex-direction: column;
+        }
+        @media screen and (min-width: 1024px) {
+            .lum-footer {
+                --_pad-inline: 0;
+                --_pad-block: 48px;
+                --_gap: 24px;
+                padding: var( --_pad-block) var(--_pad-inline) ;
+            }
+        }
+        /* ---------- Top: logo + newsletter ---------- */
+        .lum-footer__top {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .lum-line{
+            width: 100%;
+            height: 1px;
+            background: var(--_border);
+        }
+        @media screen and (min-width: 1024px) {
+            .lum-footer__top {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+        }
+
+        .lum-footer__logo { display: inline-flex; align-items: center; gap: 8px; color: var(--lum-primary); }
+        .lum-footer__logo-text { font-weight: 900; font-size: 24px; letter-spacing: .5px; color: var(--lum-primary); line-height: 1; }
+        .lum-footer__logo-sub  { display: block; font-weight: 500; font-size: 9px; letter-spacing: 1.5px; color: var(--lum-n-400); }
+
+        .lum-newsletter {
+            inline-size: 100%;
+            max-inline-size: 714px;
+        }
+        .lum-newsletter__label {
+                            font-size: var(--lum-text-md);
+                            font-weight: 700;
+                            color: var(--_fg);
+                            margin-block-end: 8px;
+                        }
+        .lum-newsletter__form { display: flex; gap: 12px; }
+        .lum-newsletter__field {
+            flex: 1;
+            padding-inline: 16px;
+            block-size: 48px;
+            background: var(--_field-bg);
+            border: 1px solid var(--_border);
+            border-radius: 8px;
+            font-size: var(--lum-text-sm);
+            color: var(--_fg);
+            outline: none;
+            transition: border-color .2s ease, box-shadow .2s ease;
+
+            &::placeholder { color: var(--_muted); }
+            &:focus { border-color: var(--lum-primary); box-shadow: 0 0 0 3px rgba(21, 174, 92, .15); }
+        }
+
+        /* ---------- Middle: link columns ---------- */
+        .lum-footer__cols {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+        @media screen and (min-width: 1024px) {
+            .lum-footer__cols { grid-template-columns: repeat(5, 1fr); gap: 32px; align-items: start; }
+        }
+
+        .lum-footer__col-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: var(--lum-text-md);
+            font-weight: 700;
+            color: var(--_fg);
+            border-radius: 100px;
+            padding: 0 16px;
+            height: 44px;
+
+        }
+        .lum-footer__col-title[data-accordion-toggle] {
+            background: var(--lum-n-20);
+        }
+        .lum-footer__links { display: flex; flex-direction: column; gap: 12px; }
+        .lum-footer__link {
+            font-size: var(--lum-text-md);
+            color: var(--_link);
+            transition: color .2s ease;
+
+            &:hover { color: var(--lum-primary); }
+        }
+
+        .lum-footer__contact { display: flex; flex-direction: column; gap: 12px; }
+        .lum-footer__contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: var(--lum-text-sm);
+            color: var(--_link);
+            transition: color .2s ease;
+
+            &:hover { color: var(--lum-primary); }
+        }
+
+        /* ---------- Socials ---------- */
+        .lum-socials { display: flex; align-items: center; gap: 8px; }
+        .lum-socials__link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            inline-size: 36px;
+            block-size: 36px;
+            border-radius: 8px;
+            color: var(--lum-n-500);
+            background: var(--lum-n-0);
+            border: 1px solid var(--_border);
+            transition: color .2s ease, border-color .2s ease;
+
+            &:hover { color: var(--lum-primary); border-color: var(--lum-primary); }
+        }
+        .lum-socials__link--brand { color: var(--lum-primary); border-color: var(--lum-primary-2); background: var(--lum-primary-1); }
+
+        /* ---------- Bottom: copyright + policy links ---------- */
+        .lum-footer__bottom {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 16px;
+            align-items: center;
+        }
+        @media screen and (min-width: 1024px) {
+            .lum-footer__bottom { flex-direction: row; justify-content: space-between; }
+        }
+        .lum-footer__copy { font-size: var(--lum-text-sm); color: var(--_muted); }
+        .lum-footer__policies { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+        .lum-footer__policy {
+            position: relative;
+            font-size: var(--lum-text-sm);
+            color: var(--_link);
+            padding-inline-start: 14px;
+            transition: color .2s ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset-inline-start: 0;
+                inset-block-start: 50%;
+                transform: translateY(-50%);
+                inline-size: 5px;
+                block-size: 5px;
+                border-radius: 999px;
+                background: var(--lum-primary);
+            }
+            &:hover { color: var(--lum-primary); }
+        }
+
+        /* ---------- Mobile accordion behaviour ---------- */
+        /* On mobile, columns tagged [data-accordion] collapse. Desktop = always open. */
+
+        .lum-footer__col-caret {
+            /* no chevron-down in the set yet: chevron-right rotated */
+            transform: rotate(90deg);
+            transition: transform .2s ease;
+        }
+        .lum-footer__col--accordion .lum-footer__body {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: opacity 1.25s ease-in-out;
+            overflow: hidden;
+            opacity: 0;
+
+        }
+        .lum-footer__col--accordion[data-open] .lum-footer__body { grid-template-rows: 1fr; padding: 16px; opacity: 1;}
+        .lum-footer__col--accordion[data-open] .lum-footer__col-caret { transform: rotate(-90deg); }
+        .lum-footer__body > div { min-block-size: 0; } /* allow the 0fr collapse */
+
+        @media screen and (min-width: 1024px) {
+            .lum-footer__col-title { cursor: default; }
+            .lum-footer__col-caret { display: none; }
+            .lum-footer__col--accordion .lum-footer__body { grid-template-rows: 1fr; } /* force open */
+        }
+    </style>
+</head>
+<body>
+
+<footer class="lum-footer">
+
+    <!-- ============ Top: logo + newsletter ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__top">
+            <a class="lum-footer__logo" href="/">
+                <!-- TODO: replace with real Lumera lamp logo -->
+                <i class="lum-icon lum-icon--focus lum-icon--xl"></i>
+                <span class="lum-footer__logo-text">LUMERA
+                    <span class="lum-footer__logo-sub">ELECTRIC AND LIGHTING</span>
+                </span>
+            </a>
+
+            <div class="lum-newsletter">
+                <p class="lum-newsletter__label">Stock Alerts, New Brands Promotions</p>
+                <form class="lum-newsletter__form" action="#" method="post">
+                    <input class="lum-newsletter__field" type="email" name="email" placeholder="Enter Your Email..." aria-label="Email">
+                    <button class="lum-button primary" type="submit">
+                        <span class="h__lum-button">
+                            <span class="text__lum-button">Send</span>
+                            <i class="lum-icon lum-icon--arrow-right lum-icon--sm"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="lum-line"></div>
+    <!-- ============ Middle: link columns ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__cols">
+
+            <!-- About (accordion on mobile) -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    About Lumera Electric
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body"><div class="lum-footer__links">
+                    <a class="lum-footer__link lum-footer__link--active" href="#">About us</a>
+                    <a class="lum-footer__link" href="#">Blog &amp; Resources</a>
+                    <a class="lum-footer__link" href="#">Installation and Code Disclaimer</a>
+                </div></div>
+            </div>
+
+            <!-- Help & Policies -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    Help &amp; Policies
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body"><div class="lum-footer__links">
+                    <a class="lum-footer__link" href="#">Shipping &amp; Delivery Info</a>
+                    <a class="lum-footer__link" href="#">Store &amp; Payment Policies</a>
+                    <a class="lum-footer__link" href="#">Terms of Use</a>
+                    <a class="lum-footer__link" href="#">Privacy Policy</a>
+                </div></div>
+            </div>
+
+            <!-- Trade Accounts -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    Trade Accounts
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body"><div class="lum-footer__links">
+                    <a class="lum-footer__link" href="#">Open a Trade Account</a>
+                    <a class="lum-footer__link" href="#">Credit Application</a>
+                    <a class="lum-footer__link" href="#">Request a Quote</a>
+                    <a class="lum-footer__link" href="#">Press Conferences</a>
+                </div></div>
+            </div>
+
+            <!-- Need Help? (always open, not an accordion) -->
+            <div class="lum-footer__col">
+                <p class="lum-footer__col-title">Need Help?</p>
+                <div class="lum-footer__contact">
+                    <a class="lum-footer__contact-item" href="tel:+17473810270">
+                        <i class="lum-icon lum-icon--phone lum-icon--sm"></i> (747) 381-0270
+                    </a>
+                    <a class="lum-footer__contact-item" href="mailto:Info@lumeraelectric.com">
+                        <i class="lum-icon lum-icon--mail lum-icon--sm"></i> Info@lumeraelectric.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Socials (always open) -->
+            <div class="lum-footer__col">
+                <p class="lum-footer__col-title">Lumera in Socials</p>
+                <div class="lum-socials">
+                    <a class="lum-socials__link lum-socials__link--brand" href="#" aria-label="YouTube">
+                        <i class="lum-icon lum-icon--youtube lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="X">
+                        <i class="lum-icon lum-icon--x-twitter lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="Facebook">
+                        <i class="lum-icon lum-icon--facebook lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="LinkedIn">
+                        <i class="lum-icon lum-icon--linkedin lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="Instagram">
+                        <i class="lum-icon lum-icon--instagram lum-icon--sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lum-line"></div>
+    <!-- ============ Bottom: copyright + policies ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__bottom">
+            <p class="lum-footer__copy">2026, Lumera Electric Powered by Shopify</p>
+            <div class="lum-footer__policies">
+                <a class="lum-footer__policy" href="#">Privacy policy</a>
+                <a class="lum-footer__policy" href="#">Refund policy</a>
+                <a class="lum-footer__policy" href="#">Terms of service</a>
+                <a class="lum-footer__policy" href="#">Privacy policy</a>
+                <a class="lum-footer__policy" href="#">Shipping policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /* ---------- Footer accordion (mobile only; desktop forced open via CSS) ---------- */
+    (function () {
+        'use strict';
+        document.querySelectorAll('[data-accordion]').forEach(function (col) {
+            var toggle = col.querySelector('[data-accordion-toggle]');
+            toggle.addEventListener('click', function () {
+                // desktop is always open (caret hidden); guard so clicks there do nothing
+                if (window.matchMedia('(min-width: 1024px)').matches) return;
+                col.toggleAttribute('data-open');
+            });
+        });
+    })();
+</script>
+
+</body>
+</html>

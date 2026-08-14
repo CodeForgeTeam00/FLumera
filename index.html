@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/lum-brands.css">
+    <link rel="stylesheet" href="./assets/catCard.css">
+    <link rel="stylesheet" href="./assets/lum-hotspots.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+<header class="lum-header">
+    <div class="lum-container">
+        <!-- mobile row -->
+        <div class="mobile__header">
+            <button class="menu-button__header" type="button" aria-label="Open menu" data-lum-open-menu>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <a href="#" class="logo__mobile-header" aria-label="Lumera home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="34" viewBox="0 0 21 34" fill="none">
+                    <path d="M13.431 26.3594H7.49286C7.3661 26.3594 7.24058 26.3842 7.12347 26.4324C7.00636 26.4806 6.89994 26.5513 6.81031 26.6404C6.72068 26.7295 6.64957 26.8353 6.60106 26.9517C6.55255 27.0682 6.52759 27.193 6.52759 27.319V29.9245C6.52839 30.3708 6.69191 30.8017 6.98786 31.1373C7.2838 31.473 7.6921 31.6906 8.13709 31.7498V32.2406C8.13709 32.5306 8.25298 32.8087 8.45926 33.0138C8.66555 33.2189 8.94534 33.3341 9.23707 33.3341H11.6868C11.9785 33.3341 12.2583 33.2189 12.4646 33.0138C12.6709 32.8087 12.7868 32.5306 12.7868 32.2406V31.7498C13.2318 31.6906 13.6401 31.473 13.936 31.1373C14.232 30.8017 14.3955 30.3708 14.3963 29.9245V27.319C14.3963 27.0645 14.2946 26.8204 14.1136 26.6404C13.9325 26.4605 13.687 26.3594 13.431 26.3594Z"
+                          fill="#C5E8CD"/>
+                    <path d="M12.2134 0.145512V7.7808C12.2134 7.83893 12.2249 7.89648 12.2473 7.95018C12.2696 8.00388 12.3024 8.05268 12.3438 8.09378C12.3851 8.13488 12.4342 8.16748 12.4882 8.18972C12.5422 8.21196 12.6001 8.22341 12.6586 8.2234H15.168C15.2215 8.22341 15.2741 8.23776 15.3202 8.26495C15.3662 8.29214 15.404 8.33116 15.4297 8.37792C15.4553 8.42467 15.4678 8.47743 15.4658 8.53064C15.4638 8.58385 15.4474 8.63554 15.4184 8.68029L9.26029 18.1695C9.22541 18.2233 9.17397 18.2644 9.11366 18.2866C9.05334 18.3089 8.9874 18.3112 8.92568 18.2931C8.86396 18.275 8.80978 18.2376 8.77124 18.1864C8.73271 18.1352 8.71187 18.0729 8.71187 18.0089V10.1454C8.71187 10.028 8.66496 9.91547 8.58147 9.83247C8.49798 9.74947 8.38475 9.70284 8.26667 9.70283H5.75727C5.70371 9.70284 5.65114 9.6885 5.60508 9.66132C5.55903 9.63413 5.52119 9.59511 5.49556 9.54835C5.46993 9.5016 5.45746 9.44884 5.45944 9.39563C5.46143 9.34242 5.4778 9.29072 5.50684 9.24598L11.4746 0.0500832C10.9736 0.00140421 10.4697 -0.0118116 9.96688 0.0105339C7.87549 0.108709 5.86186 0.828565 4.18652 2.07697C2.51118 3.32537 1.25124 5.04487 0.569701 7.01298C-0.111838 8.98109 -0.183602 11.1072 0.363694 13.1163C0.91099 15.1255 2.05216 16.925 3.63955 18.2823C4.32775 18.8814 4.87805 19.6208 5.25297 20.4503C5.62789 21.2798 5.81863 22.1799 5.8122 23.0892V24.3882C5.8122 24.5358 5.84142 24.6819 5.89822 24.8182C5.95501 24.9545 6.03826 25.0784 6.1432 25.1827C6.24814 25.287 6.37272 25.3698 6.50984 25.4262C6.64695 25.4827 6.79391 25.5118 6.94233 25.5118H13.9814C14.2811 25.5118 14.5686 25.3934 14.7805 25.1827C14.9925 24.972 15.1115 24.6862 15.1115 24.3882V23.0047C15.1078 22.1126 15.2982 21.2303 15.6696 20.4183C16.041 19.6062 16.5847 18.8837 17.2633 18.3001C18.7743 17.015 19.8855 15.3285 20.4668 13.438C21.048 11.5476 21.0753 9.53163 20.5453 7.62635C20.0153 5.72108 18.9501 4.00545 17.4744 2.68051C15.9987 1.35558 14.1738 0.476225 12.2134 0.145512Z"
+                          fill="#15AE5C"/>
+                </svg>
+            </a>
+            <button class="search-button__header" type="button" aria-label="Search" data-lum-open-search>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z"
+                          stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- desktop row -->
+        <div class="desktop__header">
+            <a href="#" class="logo__desktop-header" aria-label="Lumera home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="54" viewBox="0 0 34 54" fill="none">
+                    <path d="M21.3247 42.1758H11.8965C11.6953 42.1758 11.496 42.2155 11.31 42.2926C11.1241 42.3698 10.9552 42.4829 10.8128 42.6255C10.6705 42.768 10.5576 42.9373 10.4806 43.1236C10.4036 43.3098 10.364 43.5095 10.364 43.7111V47.8799C10.3652 48.5941 10.6249 49.2835 11.0947 49.8205C11.5646 50.3576 12.2129 50.7057 12.9194 50.8005V51.5857C12.9194 52.0497 13.1034 52.4948 13.4309 52.8229C13.7584 53.151 14.2027 53.3354 14.6659 53.3354H18.5553C19.0185 53.3354 19.4628 53.151 19.7903 52.8229C20.1178 52.4948 20.3018 52.0497 20.3018 51.5857V50.8005C21.0083 50.7057 21.6566 50.3575 22.1264 49.8205C22.5963 49.2835 22.856 48.5941 22.8572 47.8799V43.7111C22.8572 43.3039 22.6958 42.9134 22.4084 42.6255C22.1209 42.3375 21.7311 42.1758 21.3247 42.1758Z"
+                          fill="#C5E8CD"/>
+                    <path d="M19.3914 0.232819V12.4493C19.3914 12.5423 19.4097 12.6344 19.4452 12.7203C19.4807 12.8062 19.5328 12.8843 19.5984 12.95C19.6641 13.0158 19.742 13.068 19.8278 13.1035C19.9135 13.1391 20.0054 13.1575 20.0983 13.1574H24.0825C24.1675 13.1574 24.251 13.1804 24.3241 13.2239C24.3972 13.2674 24.4573 13.3299 24.498 13.4047C24.5387 13.4795 24.5585 13.5639 24.5553 13.649C24.5522 13.7342 24.5262 13.8169 24.4801 13.8885L14.7027 29.0712C14.6474 29.1572 14.5657 29.223 14.4699 29.2586C14.3742 29.2943 14.2695 29.2979 14.1715 29.269C14.0735 29.2401 13.9875 29.1802 13.9263 29.0982C13.8651 29.0162 13.832 28.9167 13.832 28.8143V16.2327C13.832 16.0449 13.7575 15.8648 13.625 15.732C13.4924 15.5992 13.3126 15.5245 13.1252 15.5245H9.14093C9.05589 15.5245 8.97242 15.5016 8.8993 15.4581C8.82618 15.4146 8.76611 15.3522 8.72541 15.2774C8.68472 15.2026 8.66491 15.1181 8.66807 15.033C8.67122 14.9479 8.69721 14.8652 8.74332 14.7936L18.2184 0.0801331C17.423 0.00224674 16.623 -0.0188986 15.8246 0.0168543C12.5041 0.173934 9.30699 1.3257 6.64702 3.32315C3.98705 5.3206 1.98662 8.07179 0.904525 11.2208C-0.177567 14.3697 -0.291508 17.7716 0.577444 20.9862C1.4464 24.2007 3.25825 27.0801 5.77858 29.2517C6.87126 30.2102 7.74497 31.3933 8.34024 32.7205C8.9355 34.0477 9.23834 35.4878 9.22815 36.9428V39.0212C9.22814 39.2572 9.27454 39.491 9.36471 39.7091C9.45488 39.9272 9.58706 40.1254 9.75367 40.2923C9.92029 40.4592 10.1181 40.5916 10.3358 40.682C10.5535 40.7723 10.7868 40.8188 11.0225 40.8188H22.1986C22.6745 40.8188 23.1309 40.6294 23.4674 40.2923C23.8039 39.9552 23.9929 39.4979 23.9929 39.0212V36.8075C23.9869 35.3802 24.2892 33.9685 24.8789 32.6693C25.4686 31.37 26.3318 30.2138 27.4093 29.2801C29.8083 27.2241 31.5726 24.5255 32.4955 21.5009C33.4184 18.4762 33.4616 15.2506 32.6201 12.2022C31.7787 9.15373 30.0874 6.40872 27.7444 4.28882C25.4015 2.16892 22.504 0.761961 19.3914 0.232819Z"
+                          fill="#15AE5C"/>
+                </svg>
+            </a>
+
+            <div data-search class="lum-search__header">
+                <i class="lum-icon lum-icon--search lum-icon--sm"></i>
+                <input class="lum-search__input lum-text-sm" type="search"
+                       placeholder="Search products, SKU, UPC or brand" aria-label="Search" data-search-input>
+                <span class="lum-search__hint">Enter</span>
+                <span class="lum-search__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <button class="lum-search__clear " type="button" data-search-clear>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M8.5 3.5L3.5 8.5M3.5 3.5L8.5 8.5" stroke="black" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                    Clear
+                </button>
+
+                <!-- ===== dropdown: empty | loading | results ===== -->
+                <div class="lum-search__dropdown">
+
+                    <!-- state: empty (Recent + Popular Categories) -->
+                    <div class="lum-search__panel" data-panel="empty">
+                        <p class="lum-search__section-label">Recent Search</p>
+                        <div class="lum-search__chips">
+                            <a class="lum-search__chip" href="#">Area Lights</a>
+                            <a class="lum-search__chip" href="#">Wall Packs</a>
+                            <a class="lum-search__chip" href="#">Strip Lights</a>
+                        </div>
+                        <div class="lum-search__rule"></div>
+                        <p class="lum-search__section-label">Popular Categories</p>
+                        <div class="lum-search__cats">
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- state: loading (skeleton) -->
+                    <div class="lum-search__panel" data-panel="loading">
+                        <div class="lum-search__chips">
+                            <span class="lum-skel lum-skel--chip"></span>
+                            <span class="lum-skel lum-skel--chip"></span>
+                            <span class="lum-skel lum-skel--chip"></span>
+                        </div>
+                        <div class="lum-search__rule"></div>
+                        <div class="lum-search__results">
+                            <div class="lum-search__result">
+                                <span class="lum-skel lum-skel--thumb"></span>
+                                <span style="flex:1">
+                                    <span class="lum-skel lum-skel--line"
+                                          style="inline-size:30%;margin-block-end:8px"></span>
+                                    <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                                </span>
+                            </div>
+                            <div class="lum-search__result">
+                                <span class="lum-skel lum-skel--thumb"></span>
+                                <span style="flex:1">
+                                    <span class="lum-skel lum-skel--line"
+                                          style="inline-size:30%;margin-block-end:8px"></span>
+                                    <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                                </span>
+                            </div>
+                            <div class="lum-search__result">
+                                <span class="lum-skel lum-skel--thumb"></span>
+                                <span style="flex:1">
+                                    <span class="lum-skel lum-skel--line"
+                                          style="inline-size:30%;margin-block-end:8px"></span>
+                                    <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- state: results (hardcoded for the static phase) -->
+                    <div class="lum-search__panel" data-panel="results">
+                        <p class="lum-search__section-label">Categories for &ldquo;<span
+                                data-search-term>Lighting</span>&rdquo;</p>
+                        <div class="lum-search__chips">
+                            <a class="lum-search__chip" href="#">Area Lights</a>
+                            <a class="lum-search__chip" href="#">Wall Packs</a>
+                            <a class="lum-search__chip" href="#">Strip Lights</a>
+                        </div>
+                        <div class="lum-search__rule"></div>
+                        <div class="lum-search__results">
+                            <a class="lum-search__result" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__result-kind">Category</span><br><span
+                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                            </a>
+                            <a class="lum-search__result" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__result-kind">Category</span><br><span
+                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                            </a>
+                            <a class="lum-search__result" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__result-kind">Category</span><br><span
+                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lum-header__actions">
+                <a class="lum-icon-block" href="/account">
+                    <span class="lum-icon-block__figure"><i class="lum-icon lum-icon--user lum-icon--lg"></i></span>
+                    <span class="lum-icon-block__text">
+                        <span class="lum-icon-block__title">Account</span>
+                        <span class="lum-icon-block__sub">Sign in</span>
+                    </span>
+                </a>
+                <a class="lum-icon-block" href="/cart">
+                    <span class="lum-icon-block__figure">
+                        <i class="lum-icon lum-icon--cart lum-icon--lg"></i>
+                        <span class="lum-badge">1</span>
+                    </span>
+                    <span class="lum-icon-block__text">
+                        <span class="lum-icon-block__title">Shopping Cart</span>
+                        <span class="lum-icon-block__sub">1 Items</span>
+                    </span>
+                </a>
+                <a style="white-space: nowrap" class="lum-button outline" href="/pages/project-pricing">
+                    <span class="h__lum-button">
+                        <i class="lum-icon lum-icon--dollar-circle lum-icon--sm"></i>
+                        <span class="text__lum-button">Project pricing</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ============ Tier 3: nav bar ============ -->
+        <nav class="lum-header__nav" aria-label="Primary">
+            <div class="lum-header__row lum-header__row--nav">
+                <ul class="lum-nav">
+                    <li class="lum-nav__item">
+                        <button class="lum-nav__trigger" type="button" aria-expanded="false">
+                            <!-- TODO: real Lighting icon -->
+                            <i class="lum-icon lum-icon--focus lum-icon--sm"></i>
+                            <span>Lighting</span>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-nav__caret"></i>
+                        </button>
+                        <div class="lum-nav__panel">
+                            <div class="lum-nav__cols">
+                                <div>
+                                    <p class="lum-nav__group-title">Outdoor Lighting</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">Area Lights</a>
+                                        <a class="lum-nav__link" href="#">Wall Packs</a>
+                                        <a class="lum-nav__link" href="#">Flood Lights</a>
+                                        <a class="lum-nav__link" href="#">Canopy Lights</a>
+                                        <a class="lum-nav__link" href="#">Outdoor Wall Lights</a>
+                                        <a class="lum-nav__link" href="#">Security Lights</a>
+                                        <a class="lum-nav__link" href="#">Landscape Lighting</a>
+                                        <a class="lum-nav__link" href="#">Landscape Lighting Accessories</a>
+                                        <a class="lum-nav__link" href="#">LED Well Light</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="lum-nav__group-title">Commercial Lighting</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">Troffers</a>
+                                        <a class="lum-nav__link" href="#">High Bay</a>
+                                        <a class="lum-nav__link" href="#">Strip Lights</a>
+                                        <a class="lum-nav__link" href="#">Vapor Tight</a>
+                                        <a class="lum-nav__link" href="#">Linear / Architectural</a>
+                                        <a class="lum-nav__link" href="#">Track Lighting</a>
+                                        <a class="lum-nav__link" href="#">Panel Lights</a>
+                                        <a class="lum-nav__link" href="#">Hazardous Location</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="lum-nav__group-title">Indoor &amp; Residential</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">Vanity Lights</a>
+                                        <a class="lum-nav__link" href="#">Pendants</a>
+                                        <a class="lum-nav__link" href="#">Ceiling Lights</a>
+                                        <a class="lum-nav__link" href="#">Chandeliers</a>
+                                        <a class="lum-nav__link" href="#">Surface-Mount Fixtures</a>
+                                        <a class="lum-nav__link" href="#">Indoor Wall Lights</a>
+                                        <a class="lum-nav__link" href="#">Under-Cabinet Lights</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="lum-nav__group-title">Recessed &amp; Downlights</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">Recessed Housings</a>
+                                        <a class="lum-nav__link" href="#">Fire-Rated Housings</a>
+                                        <a class="lum-nav__link" href="#">Recessed Trims</a>
+                                        <a class="lum-nav__link" href="#">Retrofit &amp; Canless Downlights</a>
+                                        <a class="lum-nav__link" href="#">New-Construction Downlights</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="lum-nav__group-title">Bulbs &amp; Lamps</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">General Bulbs</a>
+                                        <a class="lum-nav__link" href="#">Tube Lamps</a>
+                                        <a class="lum-nav__link" href="#">PAR Lamps</a>
+                                        <a class="lum-nav__link" href="#">A19 Lamps</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="lum-nav__group-title">Tape, Rope &amp; Ribbon</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">Tape Light</a>
+                                        <a class="lum-nav__link" href="#">Ribbon Light</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="lum-nav__group-title">Emergency &amp; Exit</p>
+                                    <div class="lum-nav__links">
+                                        <a class="lum-nav__link" href="#">Exit Signs</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="lum-nav__item">
+                        <button class="lum-nav__trigger" type="button" aria-expanded="false">
+                            <!-- TODO: real Electrical icon -->
+                            <i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i>
+                            <span>Electrical</span>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-nav__caret"></i>
+                        </button>
+                        <div class="lum-nav__panel"><!-- TODO: columns from mockup --></div>
+                    </li>
+
+                    <li class="lum-nav__item">
+                        <button class="lum-nav__trigger" type="button" aria-expanded="false">
+                            <!-- TODO: real Lighting Controls icon -->
+                            <i class="lum-icon lum-icon--focus lum-icon--sm"></i>
+                            <span>Lighting Controls</span>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-nav__caret"></i>
+                        </button>
+                        <div class="lum-nav__panel"><!-- TODO: columns --></div>
+                    </li>
+
+                    <li class="lum-nav__item">
+                        <button class="lum-nav__trigger" type="button" aria-expanded="false">
+                            <i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i>
+                            <span>Hardware &amp; Fasteners</span>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-nav__caret"></i>
+                        </button>
+                        <div class="lum-nav__panel"><!-- TODO: columns --></div>
+                    </li>
+
+                    <li class="lum-nav__item">
+                        <button class="lum-nav__trigger" type="button" aria-expanded="false">
+                            <i class="lum-icon lum-icon--tag lum-icon--sm"></i>
+                            <span>Brands</span>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-nav__caret"></i>
+                        </button>
+                        <div class="lum-nav__panel"><!-- TODO: columns --></div>
+                    </li>
+                </ul>
+
+                <a class="lum-header__paylater" href="#">Need pay-later terms?</a>
+            </div>
+        </nav>
+    </div>
+</header>
+<main style="min-height: 50vh;  ">
+    <!-- ===== Hero slider ===== -->
+    <section class="root__section" style="padding: 32px 0 0 0">
+        <div class="lum-container">
+            <section class="lum-hero">
+                <div class="swiper lum-hero__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide lum-hero__slide">
+                            <img class="lum-hero__img" src="./assets/hero-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide lum-hero__slide">
+                            <img class="lum-hero__img" src="./assets/hero-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide lum-hero__slide">
+                            <img class="lum-hero__img" src="./assets/hero-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide lum-hero__slide">
+                            <img class="lum-hero__img" src="./assets/hero-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide lum-hero__slide">
+                            <img class="lum-hero__img" src="./assets/hero-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="lum-hero__dots"></div>
+
+                <button class="lum-hero__arrow lum-hero__arrow--prev" type="button" aria-label="Previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="#253858" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="lum-hero__arrow lum-hero__arrow--next" type="button" aria-label="Next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="#253858" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+
+                </button>
+            </section>
+        </div>
+    </section>
+    <!-- ===== Most ordered ===== -->
+    <section class="lum-cats">
+        <div class="lum-container">
+            <div class="lum-cats__inner">
+                <div class="lum-sec-head">
+                    <span class="lum-eyebrow lum-text-xs">Browse the catalog</span>
+                    <h2 class="lum-h-md lum-sec-head__title">Shop by Product Category</h2>
+                </div>
+                <div class="lum-cats__grid">
+                    <a href="#">
+                        <div class="lum-cat__card">
+                            <div class="lum-cat__img">
+                                <div class="lum-cat__img__inner">
+                                    <img src="assets/berand-product.png" alt="Category Name">
+                                </div>
+                            </div>
+                            <span class="lum-cat-card__name">Category Name</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="lum-cat__card">
+                            <div class="lum-cat__img">
+                                <div class="lum-cat__img__inner">
+                                    <img src="assets/berand-product.png" alt="Category Name">
+                                </div>
+                            </div>
+                            <span class="lum-cat-card__name">Category Name</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lum-brands">
+        <div class="lum-container">
+            <div class="lum-brands__wrapper">
+                <div class="lum-sec-head">
+                    <span class="lum-eyebrow lum-text-xs">Browse the catalog</span>
+                    <h2 class="lum-h-md lum-sec-head__title">Shop by Product Category</h2>
+                </div>
+                <div class="lum-brands__tabs">
+                    <button type="button" class="lum-brand-tab is-active" data-brand="nora">
+                        <img src="./assets/brand-nora.png" alt="Nora">
+                        <span class="lum-text-sm">EnVision LED Lighting</span>
+                    </button>
+                    <button type="button" class="lum-brand-tab" data-brand="premium">
+                        <img src="./assets/brand-nora.png" alt="Premium">
+                        <span class="lum-text-sm">Premium Lighting</span>
+                    </button>
+                    <button type="button" class="lum-brand-tab" data-brand="utopia">
+                        <img src="./assets/brand-nora.png" alt="Utopia">
+                        <span class="lum-text-sm">Utopia Lighting</span>
+                    </button>
+                </div>
+                <div class="lum-brands__body is-active" data-brand-panel="nora">
+                    <a href="#" class="lum-brands__banner">
+                        <img src="./assets/brand-banner-2.png" alt="Nora Lighting">
+                    </a>
+                    <div class="lum-brands__products">
+                        <div class="lum-brands__products-head">
+                            <h3 class="lum-h-xs">Nora Featured Products</h3>
+                            <a href="#" class="lum-link lum-text-sm">
+                                <span>See All</span>
+                                <i class="icon icon-16 icon-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="swiper lum-pswiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--prev"
+                                    aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--next" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- panel: premium -->
+                <div class="lum-brands__body" data-brand-panel="premium">
+                    <a href="#" class="lum-brands__banner">
+                        <img src="./assets/brand-banner.png" alt="Premium Lighting">
+                    </a>
+                    <div class="lum-brands__products">
+                        <div class="lum-brands__products-head">
+                            <h3 class="lum-h-xs">Premium Featured Products</h3>
+                            <a href="#" class="lum-link lum-text-sm">
+                                <span>See All</span>
+                                <i class="icon icon-16 icon-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="swiper lum-pswiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="lum-pourdact-card">
+                                        <div class="lum-pourdact-card__img">
+                                            <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                                        </div>
+                                        <div class="lum-pourdact-card__content">
+                                            <div class="lum-pourdact-card__content-header">Category</div>
+                                            <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well
+                                                Light SS5011AP
+                                            </div>
+                                            <div class="lum-pourdact-card__content-footer">810 $</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--prev"
+                                    aria-label="Previous">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--next" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lum-promos">
+        <div class="lum-container lum-promos__grid">
+            <a href="#" class="lum-promo">
+                <img class="lum-promo__img" src="./assets/Banner-3-col.png" alt="">
+            </a>
+            <a href="#" class="lum-promo">
+                <img class="lum-promo__img" src="./assets/Banner-3-col.png" alt="">
+            </a>
+            <a href="#" class="lum-promo">
+                <img class="lum-promo__img" src="./assets/Banner-3-col.png" alt="">
+            </a>
+        </div>
+    </section>
+    <section class="lum-ordered">
+        <div class="lum-container">
+            <div class="lum-sec-head lum-sec-head--split">
+                <div class="lum-sec-head__left">
+                    <span class="lum-eyebrow lum-eyebrow--start lum-text-xs">Contractor favorites</span>
+                    <h2 class="lum-h-md lum-sec-head__title">Most Ordered by Contractors</h2>
+                </div>
+                <p class="lum-text-sm lum-sec-head__desc">
+                    Explore proven products frequently selected for repeat jobs, replacements and everyday
+                    project installations, with clear pricing, availability and minimum order details.
+                </p>
+            </div>
+
+            <div class="lum-chips">
+                <button type="button" class="lum-chip lum-text-xs is-active">Lighting</button>
+                <button type="button" class="lum-chip lum-text-xs">Electrical</button>
+                <button type="button" class="lum-chip lum-text-xs">Control</button>
+                <button type="button" class="lum-chip lum-text-xs">Float Lighting</button>
+                <button type="button" class="lum-chip lum-text-xs">Control</button>
+                <button type="button" class="lum-chip lum-text-xs">Control</button>
+                <button type="button" class="lum-chip lum-text-xs">Control</button>
+            </div>
+
+            <div class="lum-ordered__grid">
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+                <div class="lum-pourdact-card">
+                    <div class="lum-pourdact-card__img">
+                        <img src="assets/img-pourdact-card.png" alt="Orbit Stainless Steel MR16">
+                    </div>
+                    <div class="lum-pourdact-card__content">
+                        <div class="lum-pourdact-card__content-header">Category</div>
+                        <div class="lum-pourdact-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                        </div>
+                        <div class="lum-pourdact-card__content-footer">810 $</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== Two collection blocks ===== -->
+    <section class="lum-hotspots" id="shop-by-application">
+        <div class="lum-container">
+            <header class="lum-hotspots__intro">
+                <span class="lum-hotspots__eyebrow lum-text-xs">Shop by Application</span>
+                <h2 class="lum-hotspots__title lum-h-md">Explore the System</h2>
+                <p class="lum-hotspots__lead lum-text-sm">
+                    See how lighting, controls and electrical components work together inside real project environments.<br>
+                    Select any product hotspot to review specifications, availability and ordering details.
+                </p>
+            </header>
+
+            <div class="lum-hotspots__tabs" role="tablist" aria-label="Shop by application">
+                <button class="lum-hotspots__tab lum-text-xs is-active" id="hs-tab-1" role="tab" aria-selected="true" aria-controls="hs-panel-1" type="button">Commercial Interior</button>
+                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-2" role="tab" aria-selected="false" aria-controls="hs-panel-2" tabindex="-1" type="button">Retail &amp; Hospitality</button>
+                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-3" role="tab" aria-selected="false" aria-controls="hs-panel-3" tabindex="-1" type="button">Warehouse &amp; Industrial</button>
+                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-4" role="tab" aria-selected="false" aria-controls="hs-panel-4" tabindex="-1" type="button">Outdoor &amp; Site</button>
+            </div>
+
+            <!-- ================= panel 1 ================= -->
+            <div class="lum-hotspots__panel is-active" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1">
+                <div class="lum-hotspots__grid">
+                    <div class="lum-hotspots__col lum-hotspots__col--a">
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/Banner-3-col.png" alt="Conference room with linear pendant lighting">
+                            <div class="lum-spot" data-spot style="--_x:20%; --_y:70%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/brand-banner-2.png" alt="Retail shelving with accent track lighting">
+                            <div class="lum-spot" data-spot style="--_x:60%; --_y:30%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="lum-hotspots__col lum-hotspots__col--b">
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/Banner-3-col.png" alt="Hotel lounge with cove lighting">
+                            <div class="lum-spot" data-spot style="--_x:55%; --_y:16%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/brand-banner-2.png" alt="Kitchen with under-cabinet LED strips">
+                            <div class="lum-spot" data-spot style="--_x:14%; --_y:22%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/brand-banner-2.png" alt="Electrical room with panelboards">
+                            <div class="lum-spot" data-spot style="--_x:55%; --_y:42%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+
+                    <div class="lum-hotspots__col lum-hotspots__col--c">
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/Banner-3-col.png" alt="Open office with recessed downlights">
+                            <div class="lum-spot" data-spot style="--_x:46%; --_y:24%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile>
+                            <img src="./assets/brand-banner-2.png" alt="Corridor with wood slat wall and wall sconces">
+                            <div class="lum-spot" data-spot style="--_x:55%; --_y:7%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lum-spot" data-spot style="--_x:84%; --_y:58%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                <div class="lum-spot__card" hidden>
+                                    <a href="#" class="lum-mini">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                        <div class="lum-mini__body">
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
+                                            <div class="lum-mini__meta">
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
+                                                <span class="lum-mini__price lum-text-xs">$105</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= panel 2 ================= -->
+            <div class="lum-hotspots__panel" id="hs-panel-2" hidden role="tabpanel" aria-labelledby="hs-tab-2">
+                <div class="lum-hotspots__grid">
+                    <div class="lum-hotspots__col lum-hotspots__col--a">
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Boutique retail interior"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Restaurant dining area"></figure>
+                    </div>
+                    <div class="lum-hotspots__col lum-hotspots__col--b">
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Hotel lobby"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Cafe counter"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Bar shelving with accent light"></figure>
+                    </div>
+                    <div class="lum-hotspots__col lum-hotspots__col--c">
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Fitting rooms corridor"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Hospitality corridor"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= panels 3 & 4 (same structure as panel 1) ================= -->
+            <div class="lum-hotspots__panel" id="hs-panel-3" hidden role="tabpanel" aria-labelledby="hs-tab-3">
+                <div class="lum-hotspots__grid"><!-- Warehouse & Industrial tiles --></div>
+            </div>
+            <div class="lum-hotspots__panel" id="hs-panel-4" hidden role="tabpanel" aria-labelledby="hs-tab-4">
+                <div class="lum-hotspots__grid"><!-- Outdoor & Site tiles --></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===== CTA banner ===== -->
+    <section class="lum-cta">
+        <div class="lum-container">
+            <div class="lum-cta__inner">
+                <span class="lum-cta__icon"><i class="icon icon-24 icon-clipboard-check"></i></span>
+                <div class="lum-cta__text">
+                    <h3 class="lum-h-xxs lum-cta__title">Planning a Larger Project?</h3>
+                    <p class="lum-text-xs lum-cta__desc">Share your product list, specifications or project requirements
+                        with our team to receive</p>
+                </div>
+                <div class="lum-cta__actions">
+                    <a href="#" class="lum-btn lum-btn--white lum-btn--sm">
+                        <i class="icon icon-16 icon-briefcase"></i>
+                        <span>Open a Trade Account</span>
+                    </a>
+                    <a href="#" class="lum-btn lum-btn--white lum-btn--sm">
+                        <i class="icon icon-16 icon-file-chart"></i>
+                        <span>Request Project Pricing</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lum-blog">
+        <div class="lum-container">
+            <div class="lum-sec-head">
+                <h2 class="lum-h-md lum-sec-head__title">Insights &amp; Updates</h2>
+                <p class="lum-text-sm lum-system__desc">
+                    Stay informed with the latest tips, trends, and best practices in IT, virtualization, and
+                    cybersecurity.
+                    Our blog shares actionable advice, industry news, and expert insights to help your business stay
+                    secure,
+                    efficient, and ahead of the curve.
+                </p>
+            </div>
+
+            <div class="lum-blog__grid">
+                <article class="lum-post">
+                    <img class="lum-post__img" src="./assets/images/post-1.jpg" alt="">
+                    <div class="lum-post__body">
+                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            silhouette that works best for your body and your moment.</p>
+                        <div class="lum-post__meta">
+                            <span class="lum-text-xxs">By Behnam Jafari</span>
+                            <span class="lum-text-xxs">21 August 2026</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="lum-post">
+                    <img class="lum-post__img" src="./assets/images/post-2.jpg" alt="">
+                    <div class="lum-post__body">
+                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            silhouette that works best for your body and your moment.</p>
+                        <div class="lum-post__meta">
+                            <span class="lum-text-xxs">By Behnam Jafari</span>
+                            <span class="lum-text-xxs">21 August 2026</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="lum-post">
+                    <img class="lum-post__img" src="./assets/images/post-3.jpg" alt="">
+                    <div class="lum-post__body">
+                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            silhouette that works best for your body and your moment.</p>
+                        <div class="lum-post__meta">
+                            <span class="lum-text-xxs">By Behnam Jafari</span>
+                            <span class="lum-text-xxs">21 August 2026</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="lum-post">
+                    <img class="lum-post__img" src="./assets/images/post-4.jpg" alt="">
+                    <div class="lum-post__body">
+                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            silhouette that works best for your body and your moment.</p>
+                        <div class="lum-post__meta">
+                            <span class="lum-text-xxs">By Behnam Jafari</span>
+                            <span class="lum-text-xxs">21 August 2026</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="lum-footer">
+
+    <!-- ============ Top: logo + newsletter ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__top">
+            <a class="lum-footer__logo" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="54" viewBox="0 0 34 54" fill="none">
+                    <path d="M21.3247 42.1738H11.8966C11.6953 42.1738 11.496 42.2135 11.3101 42.2907C11.1242 42.3678 10.9552 42.4809 10.8129 42.6235C10.6706 42.7661 10.5577 42.9353 10.4807 43.1216C10.4037 43.3079 10.364 43.5076 10.364 43.7092V47.878C10.3653 48.5921 10.6249 49.2816 11.0948 49.8186C11.5647 50.3556 12.2129 50.7038 12.9194 50.7985V51.5837C12.9194 52.0478 13.1034 52.4928 13.431 52.821C13.7585 53.1491 14.2027 53.3334 14.6659 53.3334H18.5554C19.0186 53.3334 19.4628 53.1491 19.7904 52.821C20.1179 52.4928 20.3019 52.0478 20.3019 51.5837V50.7985C21.0084 50.7037 21.6566 50.3556 22.1265 49.8186C22.5964 49.2816 22.856 48.5921 22.8573 47.878V43.7092C22.8573 43.302 22.6958 42.9114 22.4084 42.6235C22.121 42.3356 21.7312 42.1738 21.3247 42.1738Z"
+                          fill="#C5E8CD"/>
+                    <path d="M19.3914 0.232819V12.4493C19.3914 12.5423 19.4097 12.6344 19.4452 12.7203C19.4807 12.8062 19.5328 12.8843 19.5984 12.95C19.6641 13.0158 19.742 13.068 19.8278 13.1035C19.9135 13.1391 20.0054 13.1575 20.0983 13.1574H24.0825C24.1675 13.1574 24.251 13.1804 24.3241 13.2239C24.3972 13.2674 24.4573 13.3299 24.498 13.4047C24.5387 13.4795 24.5585 13.5639 24.5553 13.649C24.5522 13.7342 24.5262 13.8169 24.4801 13.8885L14.7027 29.0712C14.6474 29.1572 14.5657 29.223 14.4699 29.2586C14.3742 29.2943 14.2695 29.2979 14.1715 29.269C14.0735 29.2401 13.9875 29.1802 13.9263 29.0982C13.8651 29.0162 13.832 28.9167 13.832 28.8143V16.2327C13.832 16.0449 13.7575 15.8648 13.625 15.732C13.4924 15.5992 13.3126 15.5245 13.1252 15.5245H9.14093C9.05589 15.5245 8.97242 15.5016 8.8993 15.4581C8.82618 15.4146 8.76611 15.3522 8.72541 15.2774C8.68472 15.2026 8.66491 15.1181 8.66807 15.033C8.67122 14.9479 8.69721 14.8652 8.74332 14.7936L18.2184 0.0801331C17.423 0.00224674 16.623 -0.0188986 15.8246 0.0168543C12.5041 0.173934 9.30699 1.3257 6.64702 3.32315C3.98705 5.3206 1.98662 8.07179 0.904525 11.2208C-0.177567 14.3697 -0.291508 17.7716 0.577444 20.9862C1.4464 24.2007 3.25825 27.0801 5.77858 29.2517C6.87126 30.2102 7.74497 31.3933 8.34024 32.7205C8.9355 34.0477 9.23834 35.4878 9.22815 36.9428V39.0212C9.22814 39.2572 9.27454 39.491 9.36471 39.7091C9.45488 39.9272 9.58706 40.1254 9.75367 40.2923C9.92029 40.4592 10.1181 40.5916 10.3358 40.682C10.5535 40.7723 10.7868 40.8188 11.0225 40.8188H22.1986C22.6745 40.8188 23.1309 40.6294 23.4674 40.2923C23.8039 39.9552 23.9929 39.4979 23.9929 39.0212V36.8075C23.9869 35.3802 24.2892 33.9685 24.8789 32.6693C25.4686 31.37 26.3318 30.2138 27.4093 29.2801C29.8083 27.2241 31.5726 24.5255 32.4955 21.5009C33.4184 18.4762 33.4616 15.2506 32.6201 12.2022C31.7787 9.15373 30.0874 6.40872 27.7444 4.28882C25.4015 2.16892 22.504 0.761961 19.3914 0.232819Z"
+                          fill="#15AE5C"/>
+                </svg>
+            </a>
+
+            <div class="lum-newsletter">
+                <p class="lum-newsletter__label">Stock Alerts, New Brands &amp; Promotions</p>
+                <form class="lum-newsletter__form" action="#" method="post">
+                    <input class="lum-newsletter__field" type="email" name="email" placeholder="Enter Your Email..."
+                           aria-label="Email">
+                    <button class="lum-button primary" type="submit">
+                        <span class="h__lum-button">
+                            <span class="text__lum-button">Send</span>
+                            <i class="lum-icon lum-icon--arrow-right lum-icon--sm"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="lum-line"></div>
+    <!-- ============ Middle: link columns ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__cols">
+
+            <!-- About (accordion on mobile) -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    About Lumera Electric
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body">
+                    <div class="lum-footer__links">
+                        <a class="lum-footer__link lum-footer__link--active" href="#">About us</a>
+                        <a class="lum-footer__link" href="#">Blog &amp; Resources</a>
+                        <a class="lum-footer__link" href="#">Installation and Code Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help & Policies -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    Help &amp; Policies
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body">
+                    <div class="lum-footer__links">
+                        <a class="lum-footer__link" href="#">Shipping &amp; Delivery Info</a>
+                        <a class="lum-footer__link" href="#">Store &amp; Payment Policies</a>
+                        <a class="lum-footer__link" href="#">Terms of Use</a>
+                        <a class="lum-footer__link" href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade Accounts -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    Trade Accounts
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body">
+                    <div class="lum-footer__links">
+                        <a class="lum-footer__link" href="#">Open a Trade Account</a>
+                        <a class="lum-footer__link" href="#">Credit Application</a>
+                        <a class="lum-footer__link" href="#">Request a Quote</a>
+                        <a class="lum-footer__link" href="#">Press Conferences</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Need Help? (always open, not an accordion) -->
+            <div class="lum-footer__col">
+                <p class="lum-footer__col-title">Need Help?</p>
+                <div class="lum-footer__contact">
+                    <a class="lum-footer__contact-item" href="tel:+17473810270">
+                        <i class="lum-icon lum-icon--phone lum-icon--sm"></i> (747) 381-0270
+                    </a>
+                    <a class="lum-footer__contact-item" href="mailto:Info@lumeraelectric.com">
+                        <i class="lum-icon lum-icon--mail lum-icon--sm"></i> Info@lumeraelectric.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Socials (always open) -->
+            <div class="lum-footer__col">
+                <p class="lum-footer__col-title"> Join Us </p>
+                <div class="lum-socials">
+                    <a class="lum-socials__link lum-socials__link--brand" href="#" aria-label="YouTube">
+                        <i class="lum-icon lum-icon--youtube lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="X">
+                        <i class="lum-icon lum-icon--x-twitter lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="Facebook">
+                        <i class="lum-icon lum-icon--facebook lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="LinkedIn">
+                        <i class="lum-icon lum-icon--linkedin lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="Instagram">
+                        <i class="lum-icon lum-icon--instagram lum-icon--sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lum-line"></div>
+    <!-- ============ Bottom: copyright + policies ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__bottom">
+            <p class="lum-footer__copy">&copy; 2026, Lumera Electric Powered by Shopify</p>
+            <div class="lum-footer__policies">
+                <a class="lum-footer__policy" href="#">Privacy policy</a>
+                <a class="lum-footer__policy" href="#">Refund policy</a>
+                <a class="lum-footer__policy" href="#">Terms of service</a>
+                <a class="lum-footer__policy" href="#">Privacy policy</a>
+                <a class="lum-footer__policy" href="#">Shipping policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ============ Mobile full-screen search ============ -->
+<div class="lum-msearch" data-msearch data-state="empty">
+    <div class="lum-msearch__bar">
+        <div class="lum-msearch__field">
+            <i class="lum-icon lum-icon--search lum-icon--sm"></i>
+            <input class="lum-msearch__input" type="search" placeholder="Search products, SKU, UPC or brand"
+                   aria-label="Search" data-msearch-input>
+            <span class="lum-search__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+            <button class="lum-search__clear" type="button" data-msearch-clear>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M8.5 3.5L3.5 8.5M3.5 3.5L8.5 8.5" stroke="black" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+                Clear
+            </button>
+        </div>
+        <button class="lum-msearch__submit" type="button" aria-label="Close search" data-msearch-close>
+            <i class="lum-icon lum-icon--arrow-right lum-icon--lg"></i>
+        </button>
+    </div>
+
+    <div class="lum-msearch__body">
+        <!-- state: empty -->
+        <div class="lum-search__panel" data-panel="empty">
+            <p class="lum-search__section-label">Recent Search</p>
+            <div class="lum-search__chips">
+                <a class="lum-search__chip" href="#">Area Lights</a>
+                <a class="lum-search__chip" href="#">Wall Packs</a>
+                <a class="lum-search__chip" href="#">Strip Lights</a>
+            </div>
+            <div class="lum-search__rule"></div>
+            <p class="lum-search__section-label">Popular Categories</p>
+            <div class="lum-search__cats">
+                <a class="lum-search__cat" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
+                </a>
+                <a class="lum-search__cat" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
+                </a>
+                <a class="lum-search__cat" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
+                </a>
+                <a class="lum-search__cat" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- state: loading -->
+        <div class="lum-search__panel" data-panel="loading">
+            <div class="lum-search__chips">
+                <span class="lum-skel lum-skel--chip"></span>
+                <span class="lum-skel lum-skel--chip"></span>
+                <span class="lum-skel lum-skel--chip"></span>
+            </div>
+            <div class="lum-search__rule"></div>
+            <div class="lum-search__results">
+                <div class="lum-search__result">
+                    <span class="lum-skel lum-skel--thumb"></span>
+                    <span style="flex:1">
+                        <span class="lum-skel lum-skel--line" style="inline-size:30%;margin-block-end:8px"></span>
+                        <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                    </span>
+                </div>
+                <div class="lum-search__result">
+                    <span class="lum-skel lum-skel--thumb"></span>
+                    <span style="flex:1">
+                        <span class="lum-skel lum-skel--line" style="inline-size:30%;margin-block-end:8px"></span>
+                        <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                    </span>
+                </div>
+                <div class="lum-search__result">
+                    <span class="lum-skel lum-skel--thumb"></span>
+                    <span style="flex:1">
+                        <span class="lum-skel lum-skel--line" style="inline-size:30%;margin-block-end:8px"></span>
+                        <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- state: results -->
+        <div class="lum-search__panel" data-panel="results">
+            <p class="lum-search__section-label">Categories for &ldquo;<span data-msearch-term>Lighting</span>&rdquo;
+            </p>
+            <div class="lum-search__chips">
+                <a class="lum-search__chip" href="#">Area Lights</a>
+                <a class="lum-search__chip" href="#">Wall Packs</a>
+                <a class="lum-search__chip" href="#">Strip Lights</a>
+            </div>
+            <div class="lum-search__rule"></div>
+            <div class="lum-search__results">
+                <a class="lum-search__result" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__result-kind">Category</span><br><span
+                            class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                </a>
+                <a class="lum-search__result" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__result-kind">Category</span><br><span
+                            class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                </a>
+                <a class="lum-search__result" href="#">
+                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                    <span><span class="lum-search__result-kind">Category</span><br><span
+                            class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ Mobile drawer (drill-down) ============ -->
+<div class="lum-mobile-menu" data-lum-mobile-menu>
+    <div class="lum-mobile-menu__overlay" data-lum-close-menu></div>
+    <div class="lum-mobile-menu__panel-wrap">
+        <div class="lum-mobile-menu__head">
+            <a class="logo__mobile-header" href="/" aria-label="Lumera home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="34" viewBox="0 0 21 34" fill="none">
+                    <path d="M13.431 26.3594H7.49286C7.3661 26.3594 7.24058 26.3842 7.12347 26.4324C7.00636 26.4806 6.89994 26.5513 6.81031 26.6404C6.72068 26.7295 6.64957 26.8353 6.60106 26.9517C6.55255 27.0682 6.52759 27.193 6.52759 27.319V29.9245C6.52839 30.3708 6.69191 30.8017 6.98786 31.1373C7.2838 31.473 7.6921 31.6906 8.13709 31.7498V32.2406C8.13709 32.5306 8.25298 32.8087 8.45926 33.0138C8.66555 33.2189 8.94534 33.3341 9.23707 33.3341H11.6868C11.9785 33.3341 12.2583 33.2189 12.4646 33.0138C12.6709 32.8087 12.7868 32.5306 12.7868 32.2406V31.7498C13.2318 31.6906 13.6401 31.473 13.936 31.1373C14.232 30.8017 14.3955 30.3708 14.3963 29.9245V27.319C14.3963 27.0645 14.2946 26.8204 14.1136 26.6404C13.9325 26.4605 13.687 26.3594 13.431 26.3594Z"
+                          fill="#C5E8CD"/>
+                    <path d="M12.2134 0.145512V7.7808C12.2134 7.83893 12.2249 7.89648 12.2473 7.95018C12.2696 8.00388 12.3024 8.05268 12.3438 8.09378C12.3851 8.13488 12.4342 8.16748 12.4882 8.18972C12.5422 8.21196 12.6001 8.22341 12.6586 8.2234H15.168C15.2215 8.22341 15.2741 8.23776 15.3202 8.26495C15.3662 8.29214 15.404 8.33116 15.4297 8.37792C15.4553 8.42467 15.4678 8.47743 15.4658 8.53064C15.4638 8.58385 15.4474 8.63554 15.4184 8.68029L9.26029 18.1695C9.22541 18.2233 9.17397 18.2644 9.11366 18.2866C9.05334 18.3089 8.9874 18.3112 8.92568 18.2931C8.86396 18.275 8.80978 18.2376 8.77124 18.1864C8.73271 18.1352 8.71187 18.0729 8.71187 18.0089V10.1454C8.71187 10.028 8.66496 9.91547 8.58147 9.83247C8.49798 9.74947 8.38475 9.70284 8.26667 9.70283H5.75727C5.70371 9.70284 5.65114 9.6885 5.60508 9.66132C5.55903 9.63413 5.52119 9.59511 5.49556 9.54835C5.46993 9.5016 5.45746 9.44884 5.45944 9.39563C5.46143 9.34242 5.4778 9.29072 5.50684 9.24598L11.4746 0.0500832C10.9736 0.00140421 10.4697 -0.0118116 9.96688 0.0105339C7.87549 0.108709 5.86186 0.828565 4.18652 2.07697C2.51118 3.32537 1.25124 5.04487 0.569701 7.01298C-0.111838 8.98109 -0.183602 11.1072 0.363694 13.1163C0.91099 15.1255 2.05216 16.925 3.63955 18.2823C4.32775 18.8814 4.87805 19.6208 5.25297 20.4503C5.62789 21.2798 5.81863 22.1799 5.8122 23.0892V24.3882C5.8122 24.5358 5.84142 24.6819 5.89822 24.8182C5.95501 24.9545 6.03826 25.0784 6.1432 25.1827C6.24814 25.287 6.37272 25.3698 6.50984 25.4262C6.64695 25.4827 6.79391 25.5118 6.94233 25.5118H13.9814C14.2811 25.5118 14.5686 25.3934 14.7805 25.1827C14.9925 24.972 15.1115 24.6862 15.1115 24.3882V23.0047C15.1078 22.1126 15.2982 21.2303 15.6696 20.4183C16.041 19.6062 16.5847 18.8837 17.2633 18.3001C18.7743 17.015 19.8855 15.3285 20.4668 13.438C21.048 11.5476 21.0753 9.53163 20.5453 7.62635C20.0153 5.72108 18.9501 4.00545 17.4744 2.68051C15.9987 1.35558 14.1738 0.476225 12.2134 0.145512Z"
+                          fill="#15AE5C"/>
+                </svg>
+            </a>
+            <button class="lum-mobile-menu__close" type="button" aria-label="Close" data-lum-close-menu>&times;</button>
+        </div>
+
+        <div class="lum-mobile-menu__body">
+            <div class="lum-mobile-panel" data-level="0" data-active>
+                <button class="lum-mobile-row" type="button" data-open="lighting">
+                    <span class="lum-mobile-row__lead"><i
+                            class="lum-icon lum-icon--focus lum-icon--sm"></i> Lighting</span>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="electrical">
+                    <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i> Electrical</span>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="controls">
+                    <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--focus lum-icon--sm"></i> Lighting Controls</span>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="hardware">
+                    <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i> Hardware &amp; Fasteners</span>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="brands">
+                    <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--tag lum-icon--sm"></i> Brands</span>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+            </div>
+            <div class="lum-mobile-panel" data-level="1" data-panel="lighting">
+                <button class="lum-mobile-back" type="button" data-back>
+                    <i class="lum-icon lum-icon--chevron-left lum-icon--sm"></i> Back
+                </button>
+                <p class="lum-mobile-title">Lighting</p>
+                <button class="lum-mobile-row" type="button" data-open="lighting-outdoor">
+                    <span>Outdoor Lighting</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i></button>
+                <button class="lum-mobile-row" type="button" data-open="lighting-commercial">
+                    <span>Commercial Lighting</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="lighting-indoor">
+                    <span>Indoor &amp; Residential</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="lighting-recessed"><span>Recessed &amp; Downlights</span><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--sm"></i></button>
+                <button class="lum-mobile-row" type="button" data-open="lighting-bulbs"><span>Bulbs &amp; Lamps</span><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--sm"></i></button>
+                <button class="lum-mobile-row" type="button" data-open="lighting-tape">
+                    <span>Tape, Rope &amp; Ribbon</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+                <button class="lum-mobile-row" type="button" data-open="lighting-emergency">
+                    <span>Emergency &amp; Exit</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                </button>
+            </div>
+            <div class="lum-mobile-panel" data-level="2" data-panel="lighting-outdoor">
+                <button class="lum-mobile-back" type="button" data-back>
+                    <i class="lum-icon lum-icon--chevron-left lum-icon--sm"></i> Back
+                </button>
+                <p class="lum-mobile-title">Outdoor Lighting</p>
+                <a class="lum-mobile-row" href="#">Area Lights</a>
+                <a class="lum-mobile-row" href="#">Wall Packs</a>
+                <a class="lum-mobile-row" href="#">Flood Lights</a>
+                <a class="lum-mobile-row" href="#">Canopy Lights</a>
+                <a class="lum-mobile-row" href="#">Outdoor Wall Lights</a>
+                <a class="lum-mobile-row" href="#">Security Lights</a>
+                <a class="lum-mobile-row" href="#">Landscape Lighting</a>
+                <a class="lum-mobile-row" href="#">Landscape Lighting Accessories</a>
+                <a class="lum-mobile-row" href="#">LED Well Light</a>
+            </div>
+            <!-- TODO: remaining level-2 panels + Electrical/Controls/Hardware/Brands, same pattern -->
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/footer.js"></script>
+<script src="assets/header.js"></script>
+<script src="assets/heroSlider.js"></script>
+<script src="assets/lum-hotspots.js"></script>
+</body>
+</html>

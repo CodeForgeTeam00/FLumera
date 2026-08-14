@@ -293,7 +293,7 @@
     background: var(--lum-n-20);
 }
 .lum-icon-block__text { display: flex; flex-direction: column; }
-.lum-icon-block__title { font-size: var(--lum-text-sm); font-weight: 700; line-height: 1.2; }
+.lum-icon-block__title { font-size: var(--lum-text-sm); line-height: 1.2; white-space: nowrap; }
 .lum-icon-block__sub   { font-size: var(--lum-text-xs); color: var(--_muted); line-height: 1.2; }
 .lum-badge {
     position: absolute;
@@ -308,7 +308,6 @@
     background: var(--lum-primary);
     color: var(--lum-n-0);
     font-size: var(--lum-text-xs);
-    font-weight: 700;
     border-radius: 999px;
 }
 

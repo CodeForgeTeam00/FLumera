@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/slider.css">
     <link rel="stylesheet" href="./assets/lum-brands.css">
     <link rel="stylesheet" href="./assets/catCard.css">
+    <link rel="stylesheet" href="./assets/lum-hotspots.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
@@ -859,59 +860,50 @@
                     Select any product hotspot to review specifications, availability and ordering details.
                 </p>
             </header>
+
             <div class="lum-hotspots__tabs" role="tablist" aria-label="Shop by application">
-                <button class="lum-hotspots__tab lum-text-xs is-active" id="hs-tab-1" role="tab" aria-selected="true"
-                        aria-controls="hs-panel-1" type="button">Commercial Interior
-                </button>
-                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-2" role="tab" aria-selected="false"
-                        aria-controls="hs-panel-2" tabindex="-1" type="button">Retail &amp; Hospitality
-                </button>
-                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-3" role="tab" aria-selected="false"
-                        aria-controls="hs-panel-3" tabindex="-1" type="button">Warehouse &amp; Industrial
-                </button>
-                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-4" role="tab" aria-selected="false"
-                        aria-controls="hs-panel-4" tabindex="-1" type="button">Outdoor &amp; Site
-                </button>
+                <button class="lum-hotspots__tab lum-text-xs is-active" id="hs-tab-1" role="tab" aria-selected="true" aria-controls="hs-panel-1" type="button">Commercial Interior</button>
+                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-2" role="tab" aria-selected="false" aria-controls="hs-panel-2" tabindex="-1" type="button">Retail &amp; Hospitality</button>
+                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-3" role="tab" aria-selected="false" aria-controls="hs-panel-3" tabindex="-1" type="button">Warehouse &amp; Industrial</button>
+                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-4" role="tab" aria-selected="false" aria-controls="hs-panel-4" tabindex="-1" type="button">Outdoor &amp; Site</button>
             </div>
+
+            <!-- ================= panel 1 ================= -->
             <div class="lum-hotspots__panel is-active" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1">
                 <div class="lum-hotspots__grid">
                     <div class="lum-hotspots__col lum-hotspots__col--a">
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/Banner-3-col.png" alt="Conference room with linear pendant lighting">
-                            <div class="lum-spot" style="--_x:20%; --_y:70%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:20%; --_y:70%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
-                                                Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </figure>
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/brand-banner-2.png" alt="Retail shelving with accent track lighting">
-                            <div class="lum-spot" style="--_x:60%; --_y:30%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:60%; --_y:30%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-3.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED
-                                                Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
@@ -919,190 +911,151 @@
                             </div>
                         </figure>
                     </div>
+
                     <div class="lum-hotspots__col lum-hotspots__col--b">
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/Banner-3-col.png" alt="Hotel lounge with cove lighting">
-                            <div class="lum-spot" style="--_x:55%; --_y:16%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:55%; --_y:16%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-2.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
-                                                Indirect/direct Linear 6152LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </figure>
-
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/brand-banner-2.png" alt="Kitchen with under-cabinet LED strips">
-                            <div class="lum-spot" style="--_x:14%; --_y:22%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:14%; --_y:22%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-1.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
-                                                Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </figure>
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/brand-banner-2.png" alt="Electrical room with panelboards">
-                            <div class="lum-spot" style="--_x:55%; --_y:42%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:55%; --_y:42%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-4.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
-                                                Indirect/direct Linear 6152LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </figure>
-
                     </div>
 
-                    <!-- ستون C: دو تایل (3fr / 9fr) -->
                     <div class="lum-hotspots__col lum-hotspots__col--c">
-
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/Banner-3-col.png" alt="Open office with recessed downlights">
-                            <div class="lum-spot" style="--_x:46%; --_y:24%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:46%; --_y:24%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-3.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED
-                                                Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </figure>
-
-                        <figure class="lum-hotspots__tile">
+                        <figure class="lum-hotspots__tile" data-tile>
                             <img src="./assets/brand-banner-2.png" alt="Corridor with wood slat wall and wall sconces">
-                            <div class="lum-spot" style="--_x:55%; --_y:7%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:55%; --_y:7%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-1.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
-                                                Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <div class="lum-spot" style="--_x:84%; --_y:58%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false"
-                                        aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                            <div class="lum-spot" data-spot style="--_x:84%; --_y:58%">
+                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/images/p-4.png" alt="">
+                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
-                                                Indirect/direct Linear 6152LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
                                             <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-xxs">SKU</span>
+                                                <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-xxs">$140</span>
+                                                <span class="lum-mini__old lum-text-2xs">$140</span>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </figure>
-
                     </div>
-
                 </div>
             </div>
 
-            <!-- ================= پنل ۲ ================= -->
+            <!-- ================= panel 2 ================= -->
             <div class="lum-hotspots__panel" id="hs-panel-2" hidden role="tabpanel" aria-labelledby="hs-tab-2">
                 <div class="lum-hotspots__grid">
                     <div class="lum-hotspots__col lum-hotspots__col--a">
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-8.jpg" alt="Boutique retail interior">
-                        </figure>
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-9.jpg" alt="Restaurant dining area">
-                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Boutique retail interior"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Restaurant dining area"></figure>
                     </div>
                     <div class="lum-hotspots__col lum-hotspots__col--b">
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-10.jpg" alt="Hotel lobby">
-                        </figure>
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-11.jpg" alt="Cafe counter">
-                        </figure>
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-12.jpg" alt="Bar shelving with accent light">
-                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Hotel lobby"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Cafe counter"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Bar shelving with accent light"></figure>
                     </div>
                     <div class="lum-hotspots__col lum-hotspots__col--c">
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-13.jpg" alt="Fitting rooms corridor">
-                        </figure>
-                        <figure class="lum-hotspots__tile">
-                            <img src="./assets/images/app-14.jpg" alt="Hospitality corridor">
-                        </figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Fitting rooms corridor"></figure>
+                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Hospitality corridor"></figure>
                     </div>
                 </div>
             </div>
 
-            <!-- ================= پنل ۳ و ۴ ================= -->
-            <!-- ساختار دقیقاً مثل پنل ۱: grid با سه ستون col--a / col--b / col--c
-                 فقط عکس‌ها و اسپات‌های Warehouse و Outdoor را جایگزین کن -->
+            <!-- ================= panels 3 & 4 (same structure as panel 1) ================= -->
             <div class="lum-hotspots__panel" id="hs-panel-3" hidden role="tabpanel" aria-labelledby="hs-tab-3">
-                <div class="lum-hotspots__grid">
-                    <!-- تایل‌های Warehouse & Industrial -->
-                </div>
+                <div class="lum-hotspots__grid"><!-- Warehouse & Industrial tiles --></div>
             </div>
-
             <div class="lum-hotspots__panel" id="hs-panel-4" hidden role="tabpanel" aria-labelledby="hs-tab-4">
-                <div class="lum-hotspots__grid">
-                    <!-- تایل‌های Outdoor & Site -->
-                </div>
+                <div class="lum-hotspots__grid"><!-- Outdoor & Site tiles --></div>
             </div>
 
         </div>
@@ -1195,7 +1148,6 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <footer class="lum-footer">
@@ -1533,5 +1485,6 @@
 <script src="assets/footer.js"></script>
 <script src="assets/header.js"></script>
 <script src="assets/heroSlider.js"></script>
+<script src="assets/lum-hotspots.js"></script>
 </body>
 </html>

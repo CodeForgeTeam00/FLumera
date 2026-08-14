@@ -1,0 +1,214 @@
+/* ==========================================================================
+   lum-hotspots.css — Explore the System (Shop by Application)
+   Private --_ tokens on the block; media queries swap token values only.
+   ========================================================================== */
+.lum-hotspots{
+    --_py: clamp(40px, 6vw, 88px);
+    --_cols: 1;
+    --_col-display: contents;   /* below desktop the columns disappear visually */
+    --_gap: 16px;
+    --_grid-ratio: auto;        /* mobile: tiles define their own height */
+    --_tile-ratio: 4 / 3;
+    --_tile-radius: 12px;
+    --_grid-mt: 28px;
+    --_tabs-mt: 20px;
+    --_tab-h: 32px;
+    --_tab-px: 14px;
+    --_dot-size: 20px;
+    --_dot-ring: 9px;
+    --_card-w: 264px;
+
+    padding-block: var(--_py);
+    font-family: var(--lum-font);
+}
+@media (min-width: 768px){
+    .lum-hotspots{ --_cols: 2; --_gap: 20px; }
+}
+@media (min-width: 1024px){
+    .lum-hotspots{
+        --_cols: 3;
+        --_col-display: grid;
+        --_gap: 24px;
+        --_grid-ratio: 13 / 11;
+        --_tile-ratio: auto;
+        --_tile-radius: 16px;
+        --_grid-mt: 40px;
+        --_tab-h: 36px;
+        --_tab-px: 16px;
+    }
+}
+
+/* --- section head --- */
+.lum-hotspots__intro{ display: grid; justify-items: center; gap: 12px; text-align: center; }
+.lum-hotspots__eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--lum-primary);
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-weight: 500;
+}
+.lum-hotspots__eyebrow::before,
+.lum-hotspots__eyebrow::after{
+    content: "";
+    inline-size: 24px;
+    block-size: 1px;
+    background: currentColor;
+    opacity: .55;
+}
+.lum-hotspots__title{ margin: 0; color: var(--lum-n-1000); }
+.lum-hotspots__lead{ margin: 0; color: var(--lum-n-600); }
+
+/* --- tabs --- */
+.lum-hotspots__tabs{
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    margin-block-start: var(--_tabs-mt);
+    margin-inline: auto;
+    inline-size: fit-content;
+    max-inline-size: 100%;
+    background: var(--lum-n-20);
+    border-radius: 999px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.lum-hotspots__tabs::-webkit-scrollbar{ display: none; }
+.lum-hotspots__tab{
+    flex: 0 0 auto;
+    block-size: var(--_tab-h);
+    padding-inline: var(--_tab-px);
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--lum-n-700);
+    font-family: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color .2s ease, background-color .2s ease;
+}
+.lum-hotspots__tab.is-active{
+    background: var(--lum-n-0);
+    border-color: var(--lum-n-40);
+    color: var(--lum-n-1000);
+    box-shadow: 0 1px 2px rgb(9 30 66 / .08);
+}
+.lum-hotspots__tab:focus-visible{ outline: 2px solid var(--lum-primary); outline-offset: 2px; }
+
+/* --- panel & grid --- */
+.lum-hotspots__panel[hidden]{ display: none; }
+.lum-hotspots__grid{
+    display: grid;
+    grid-template-columns: repeat(var(--_cols), 1fr);
+    gap: var(--_gap);
+    margin-block-start: var(--_grid-mt);
+    aspect-ratio: var(--_grid-ratio);
+}
+.lum-hotspots__col{
+    display: var(--_col-display);
+    gap: var(--_gap);
+    grid-template-rows: var(--_rows, 1fr 1fr);
+    min-block-size: 0;
+}
+.lum-hotspots__col--a{ --_rows: 5fr 7fr; }
+.lum-hotspots__col--b{ --_rows: 5fr 3fr 4fr; }
+.lum-hotspots__col--c{ --_rows: 3fr 9fr; }
+
+.lum-hotspots__tile{
+    position: relative;
+    margin: 0;
+    min-block-size: 0;
+    min-inline-size: 0;
+    aspect-ratio: var(--_tile-ratio);
+}
+.lum-hotspots__tile > img{
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    border-radius: var(--_tile-radius);
+    background: var(--lum-n-30); /* skeleton until image loads */
+}
+
+/* --- hotspot --- */
+.lum-spot{
+    position: absolute;
+    inset-inline-start: var(--_x, 50%);
+    inset-block-start: var(--_y, 50%);
+    translate: -50% -50%;
+}
+.lum-spot.is-open{ z-index: 7; }
+.lum-spot__dot{
+    position: relative;
+    display: block;
+    inline-size: var(--_dot-size);
+    block-size: var(--_dot-size);
+    border: 0;
+    border-radius: 50%;
+    background: var(--lum-n-0);
+    box-shadow: 0 0 0 4px rgb(255 255 255 / .35), 0 2px 8px rgb(9 30 66 / .35);
+    cursor: pointer;
+    transition: scale .2s ease;
+}
+.lum-spot__dot:hover,
+.lum-spot.is-open .lum-spot__dot{ scale: 1.18; }
+.lum-spot__dot:focus-visible{ outline: 2px solid var(--lum-primary); outline-offset: 3px; }
+.lum-spot__dot::after{
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--_dot-ring));
+    border: 2px solid rgb(255 255 255 / .7);
+    border-radius: 50%;
+    animation: lum-spot-pulse 2.2s ease-out infinite;
+}
+@keyframes lum-spot-pulse{
+    0%   { scale: .55; opacity: .9; }
+    100% { scale: 1.1;  opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce){
+    .lum-spot__dot::after{ animation: none; opacity: .4; }
+    .lum-spot__dot,
+    .lum-hotspots__tab{ transition: none; }
+}
+
+/* --- spot product card, uses lum-mini --- */
+.lum-spot__card{
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: calc(100% + 12px);
+    translate: 0 -50%;
+    inline-size: min(var(--_card-w), 78vw);
+    padding: 10px;
+    background: var(--lum-n-0);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgb(9 30 66 / .22);
+    z-index: 6;
+}
+.lum-spot.is-flip .lum-spot__card{ inset-inline-start: auto; inset-inline-end: calc(100% + 12px); }
+.lum-spot.is-up .lum-spot__card{ inset-block-start: auto; inset-block-end: 50%; translate: 0 50%; }
+
+/* --- mini product card --- */
+.lum-mini{ display: flex; gap: 10px; align-items: center; }
+.lum-mini__img{
+    inline-size: 64px;
+    block-size: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--lum-n-20);
+    flex-shrink: 0;
+}
+.lum-mini__body{ display: flex; flex-direction: column; gap: 6px; }
+.lum-mini__title{ margin: 0; color: var(--lum-n-1000); font-weight: 700; }
+.lum-mini__meta{ display: inline-flex; align-items: center; gap: 8px; }
+.lum-mini__price{ color: var(--lum-n-1000); font-weight: 700; }
+.lum-mini__old{ color: var(--lum-n-300); text-decoration: line-through; }
+.lum-mini .lum-badge{
+    position: static;
+    background: var(--lum-primary);
+    color: var(--lum-n-0);
+    padding-inline: 6px;
+    block-size: auto;
+    border-radius: 4px;
+    min-inline-size: 0;
+}

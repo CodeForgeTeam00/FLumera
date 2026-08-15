@@ -42,7 +42,11 @@
 
 .lum-newsletter { inline-size: 100%; max-inline-size: 714px; }
 .lum-newsletter__label { font-size: var(--lum-text-md); font-weight: 700; color: var(--_fg); margin-block-end: 8px; }
-.lum-newsletter__form { display: flex; gap: 12px; }
+.lum-newsletter__form {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 12px;
+}
 .lum-newsletter__field {
     flex: 1;
     padding-inline: 16px;

@@ -1,0 +1,91 @@
+.lum-tabs{
+    --_tab-h: 32px;
+    --_tab-px: 14px;
+    --_tab-gap: 6px;
+    --_panel-mt: 24px;
+}
+@media (min-width: 1024px){
+    .lum-tabs{ --_tab-h: 36px; --_tab-px: 16px; }
+}
+
+.lum-tabs__list{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-inline-size: 100%;
+}
+.lum-tabs__list::-webkit-scrollbar{ display: none; }
+
+.lum-tabs__tab{
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--_tab-gap);
+    block-size: var(--_tab-h);
+    padding-inline: var(--_tab-px);
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--lum-n-700);
+    font-family: inherit;
+    font-size: var(--lum-text-sm);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.lum-tabs__tab:focus-visible{ outline: 2px solid var(--lum-primary); outline-offset: 2px; }
+
+.lum-tabs__panel[hidden]{ display: none; }
+.lum-tabs__panel{ margin-block-start: var(--_panel-mt); }
+
+/* ---------- variant: pill (capsule) ---------- */
+.lum-tabs--pill .lum-tabs__list{
+    gap: 4px;
+    padding: 4px;
+    inline-size: fit-content;
+    background: var(--lum-n-30);
+    border-radius: 12px;
+}
+.lum-tabs--pill .lum-tabs__tab{ border-radius: 12px; }
+.lum-tabs--pill .lum-tabs__tab.is-active{
+    background: var(--lum-n-0);
+    border-color: var(--lum-n-40);
+    color: var(--lum-n-1000);
+    box-shadow: 0 1px 2px rgb(9 30 66 / .08);
+}
+
+/* ---------- variant: underline ---------- */
+.lum-tabs--underline .lum-tabs__list{
+    gap: 24px;
+    border-block-end: 1px solid var(--lum-n-30);
+}
+.lum-tabs--underline .lum-tabs__tab{
+    padding-inline: 0;
+    padding-block-end: 10px;
+    block-size: auto;
+    position: relative;
+}
+.lum-tabs--underline .lum-tabs__tab.is-active{ color: var(--lum-primary); font-weight: 700; }
+.lum-tabs--underline .lum-tabs__tab.is-active::after{
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: -1px;
+    block-size: 2px;
+    background: var(--lum-primary);
+}
+
+/* ---------- variant: chip (independent outlined chips, active = outline-button hover state) ---------- */
+.lum-tabs--chip .lum-tabs__list{ gap: 12px; }
+.lum-tabs--chip .lum-tabs__tab{
+    block-size: auto;
+    padding: 10px 16px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 12px;
+    background: var(--lum-n-0);
+    color: var(--lum-n-1000);
+}
+.lum-tabs--chip .lum-tabs__tab:hover{ border-color: var(--lum-primary); }
+.lum-tabs--chip .lum-tabs__tab.is-active{
+    border-color: var(--lum-primary);
+    box-shadow: 0 0 0 3px rgba(21, 174, 92, .15);
+}

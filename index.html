@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <link rel="stylesheet" href="assets/Lum-utilities.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/base.css">
     <link rel="stylesheet" href="./assets/header.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/catCard.css">
     <link rel="stylesheet" href="./assets/lum-hotspots.css">
     <link rel="stylesheet" href="./assets/tabs.css">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
@@ -343,7 +344,7 @@
 </header>
 <main style="min-height: 50vh;  ">
     <!-- ===== Hero slider ===== -->
-    <section class="root__section" style="padding: 32px 0 0 0">
+    <section class="root__section lg:pt-8">
         <div class="lum-container">
             <section class="lum-hero">
                 <div class="swiper lum-hero__swiper">
@@ -388,7 +389,7 @@
         <div class="lum-container">
             <div class="lum-cats__inner">
                 <div class="lum-sec-head">
-                    <span class="lum-eyebrow lum-text-xs">Browse the catalog</span>
+                    <span class="lum-eyebrow lum-text-md">Browse the catalog</span>
                     <h2 class="lum-h-md lum-sec-head__title">Shop by Product Category</h2>
                 </div>
                 <div class="lum-cats__grid">
@@ -418,261 +419,301 @@
     </section>
     <section class="lum-brands">
         <div class="lum-container">
-            <div class="lum-brands__wrapper">
-                <div class="lum-sec-head">
-                    <span class="lum-eyebrow lum-text-xs">Browse the catalog</span>
-                    <h2 class="lum-h-md lum-sec-head__title">Shop by Product Category</h2>
-                </div>
-                <div class="lum-brands__tabs">
-                    <button type="button" class="lum-brand-tab is-active" data-brand="nora">
-                        <img src="./assets/brand-nora.png" alt="Nora">
-                        <span class="lum-text-sm">EnVision LED Lighting</span>
-                    </button>
-                    <button type="button" class="lum-brand-tab" data-brand="premium">
-                        <img src="./assets/brand-nora.png" alt="Premium">
-                        <span class="lum-text-sm">Premium Lighting</span>
-                    </button>
-                    <button type="button" class="lum-brand-tab" data-brand="utopia">
-                        <img src="./assets/brand-nora.png" alt="Utopia">
-                        <span class="lum-text-sm">Utopia Lighting</span>
-                    </button>
-                </div>
-                <div class="lum-brands__body is-active" data-brand-panel="nora">
-                    <a href="#" class="lum-brands__banner">
-                        <img src="./assets/brand-banner-2.png" alt="Nora Lighting">
-                    </a>
-                    <div class="lum-brands__products">
-                        <div class="lum-brands__products-head">
-                            <h3 class="lum-h-xs">Nora Featured Products</h3>
-                            <a href="#" class="lum-link lum-text-sm">
-                                <span>See All</span>
-                                <i class="icon icon-16 icon-arrow-right"></i>
-                            </a>
-                        </div>
-
-                        <div class="swiper lum-pswiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--prev"
-                                    aria-label="Previous">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--next" aria-label="Next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
+            <div class="lum-brands__wrapper lg:gap-10 gap-6">
+                <div class="lum-sec-head lum-sec-head--split" data-diraction="col">
+                    <div class="lum-sec-head__left">
+                        <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Contractor favorites</span>
+                        <h2 class="lum-h-md lum-sec-head__title">Most Ordered by Contractors</h2>
                     </div>
                 </div>
-                <!-- panel: premium -->
-                <div class="lum-brands__body" data-brand-panel="premium">
-                    <a href="#" class="lum-brands__banner">
-                        <img src="./assets/brand-banner.png" alt="Premium Lighting">
-                    </a>
-                    <div class="lum-brands__products">
-                        <div class="lum-brands__products-head">
-                            <h3 class="lum-h-xs">Premium Featured Products</h3>
-                            <a href="#" class="lum-link lum-text-sm">
-                                <span>See All</span>
-                                <i class="icon icon-16 icon-arrow-right"></i>
+                <div class="lum-tabs lum-tabs--chip" data-tabs>
+                    <div class="lum-tabs__list" role="tablist" aria-label="Example chip tabs">
+                        <button class="lum-tabs__tab is-active" id="t4-1" role="tab" aria-selected="true"
+                                aria-controls="p4-1" type="button">
+                                <img src="./assets/brand-nora.png" alt="Nora">
+                            EnVision LED Lighting
+                        </button>
+                        <button class="lum-tabs__tab" id="t4-2" role="tab" aria-selected="false" aria-controls="p4-2"
+                                tabindex="-1" type="button">
+                            <img src="./assets/brand-nora.png" alt="Nora">
+                            Premium Lighting
+                        </button>
+                    </div>
+                    <div class="lum-tabs__panel" id="p4-1" role="tabpanel" aria-labelledby="t4-1">
+                        <div class="lum-brands__body">
+                            <a href="#" class="lum-brands__banner">
+                                <img src="./assets/brand-banner-2.png" alt="Nora Lighting">
                             </a>
-                        </div>
+                            <div class="lum-brands__products">
+                                <div class="lum-brands__products-head">
+                                    <h3 class="lum-h-xs">Nora Featured Products</h3>
+                                    <a href="#" class="lum-link lum-text-sm">
+                                        <span>See All</span>
+                                        <i class="icon icon-16 icon-arrow-right"></i>
+                                    </a>
+                                </div>
 
-                        <div class="swiper lum-pswiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
+                                <div class="swiper lum-pswiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
                                             </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lum-product-card">
-                                        <div class="lum-product-card__img">
-                                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
-                                        </div>
-                                        <div class="lum-product-card__content">
-                                            <div class="lum-product-card__content-header">Category</div>
-                                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well
-                                                Light SS5011AP
-                                            </div>
-                                            <div class="lum-product-card__content-footer">810 $</div>
-                                        </div>
-                                    </div>
+                                    <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--prev"
+                                            aria-label="Previous">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--next"
+                                            aria-label="Next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
-
-                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--prev"
-                                    aria-label="Previous">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                            <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--next" aria-label="Next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none">
-                                    <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2" stroke-linecap="round"
-                                          stroke-linejoin="round"/>
-                                </svg>
-                            </button>
                         </div>
+                    </div>
+                    <div class="lum-tabs__panel" id="p4-2" role="tabpanel" aria-labelledby="t4-2" hidden>
+                        <div class="lum-brands__body">
+                            <a href="#" class="lum-brands__banner">
+                                <img src="./assets/brand-banner.png" alt="Premium Lighting">
+                            </a>
+                            <div class="lum-brands__products">
+                                <div class="lum-brands__products-head">
+                                    <h3 class="lum-h-xs">Premium Featured Products</h3>
+                                    <a href="#" class="lum-link lum-text-sm">
+                                        <span>See All</span>
+                                        <i class="icon icon-16 icon-arrow-right"></i>
+                                    </a>
+                                </div>
+
+                                <div class="swiper lum-pswiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="lum-product-card">
+                                                <div class="lum-product-card__img">
+                                                    <img src="assets/img-product-card.png"
+                                                         alt="Orbit Stainless Steel MR16">
+                                                </div>
+                                                <div class="lum-product-card__content">
+                                                    <div class="lum-product-card__content-header">Category</div>
+                                                    <div class="lum-product-card__content-main">Orbit Stainless Steel
+                                                        MR16 Well
+                                                        Light SS5011AP
+                                                    </div>
+                                                    <div class="lum-product-card__content-footer">810 $</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--prev"
+                                            aria-label="Previous">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="lum-pswiper__arrow lum-pswiper__arrow--next"
+                                            aria-label="Next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none">
+                                            <path d="M9 18L15 12L9 6" stroke="#15AE5C" stroke-width="2"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -692,22 +733,28 @@
         </div>
     </section>
     <section class="lum-ordered">
-        <div class="lum-container">
-            <div class="lum-sec-head lum-sec-head--split">
+        <div class="lum-container flex flex-col gap-6">
+            <div class="lum-sec-head lum-sec-head--split" data-diraction="row">
                 <div class="lum-sec-head__left">
-                    <span class="lum-eyebrow lum-eyebrow--start lum-text-xs">Contractor favorites</span>
+                    <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Contractor favorites</span>
                     <h2 class="lum-h-md lum-sec-head__title">Most Ordered by Contractors</h2>
                 </div>
-                <p class="lum-text-sm lum-sec-head__desc">
+                <p class="lum-text-lg lum-sec-head__desc">
                     Explore proven products frequently selected for repeat jobs, replacements and everyday
                     project installations, with clear pricing, availability and minimum order details.
                 </p>
             </div>
-            <div class="lum-tabs lum-tabs--pill" data-tabs>
+            <div class="lum-tabs lum-tabs--pill flex flex-col items-center lg:items-start" data-tabs>
                 <div class="lum-tabs__list" role="tablist" aria-label="Example pill tabs">
-                    <button class="lum-tabs__tab is-active" id="t1-1" role="tab" aria-selected="true"  aria-controls="p1-1" type="button">Lighting</button>
-                    <button class="lum-tabs__tab"           id="t1-2" role="tab" aria-selected="false" aria-controls="p1-2" tabindex="-1" type="button">Electrical</button>
-                    <button class="lum-tabs__tab"           id="t1-3" role="tab" aria-selected="false" aria-controls="p1-3" tabindex="-1" type="button">Control</button>
+                    <button class="lum-tabs__tab is-active" id="t1-1" role="tab" aria-selected="true"
+                            aria-controls="p1-1" type="button">Lighting
+                    </button>
+                    <button class="lum-tabs__tab" id="t1-2" role="tab" aria-selected="false" aria-controls="p1-2"
+                            tabindex="-1" type="button">Electrical
+                    </button>
+                    <button class="lum-tabs__tab" id="t1-3" role="tab" aria-selected="false" aria-controls="p1-3"
+                            tabindex="-1" type="button">Control
+                    </button>
 
                 </div>
                 <div class="lum-tabs__panel" id="p1-1" role="tabpanel" aria-labelledby="t1-1">
@@ -718,7 +765,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -729,7 +777,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -740,7 +789,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -751,7 +801,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -762,7 +813,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -773,7 +825,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -784,7 +837,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -795,7 +849,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -806,7 +861,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -817,7 +873,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -828,7 +885,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -839,7 +897,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -855,7 +914,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -867,7 +927,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -878,7 +939,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -889,7 +951,57 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
+                                </div>
+                                <div class="lum-product-card__content-footer">810 $</div>
+                            </div>
+                        </div>
+                        <div class="lum-product-card">
+                            <div class="lum-product-card__img">
+                                <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            </div>
+                            <div class="lum-product-card__content">
+                                <div class="lum-product-card__content-header">Category</div>
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
+                                </div>
+                                <div class="lum-product-card__content-footer">810 $</div>
+                            </div>
+                        </div>
+                        <!-- ============= -->
+                        <div class="lum-product-card">
+                            <div class="lum-product-card__img">
+                                <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            </div>
+                            <div class="lum-product-card__content">
+                                <div class="lum-product-card__content-header">Category</div>
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
+                                </div>
+                                <div class="lum-product-card__content-footer">810 $</div>
+                            </div>
+                        </div>
+                        <div class="lum-product-card">
+                            <div class="lum-product-card__img">
+                                <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            </div>
+                            <div class="lum-product-card__content">
+                                <div class="lum-product-card__content-header">Category</div>
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
+                                </div>
+                                <div class="lum-product-card__content-footer">810 $</div>
+                            </div>
+                        </div>
+                        <div class="lum-product-card">
+                            <div class="lum-product-card__img">
+                                <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            </div>
+                            <div class="lum-product-card__content">
+                                <div class="lum-product-card__content-header">Category</div>
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -904,7 +1016,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -915,7 +1028,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -926,7 +1040,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -937,7 +1052,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -948,7 +1064,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -959,7 +1076,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -970,7 +1088,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -981,7 +1100,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -992,7 +1112,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -1003,7 +1124,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -1014,7 +1136,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -1025,7 +1148,8 @@
                             </div>
                             <div class="lum-product-card__content">
                                 <div class="lum-product-card__content-header">Category</div>
-                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                                <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light
+                                    SS5011AP
                                 </div>
                                 <div class="lum-product-card__content-footer">810 $</div>
                             </div>
@@ -1037,213 +1161,230 @@
     </section>
     <!-- ===== Two collection blocks ===== -->
     <section class="lum-hotspots" id="shop-by-application">
-        <div class="lum-container">
-            <header class="lum-hotspots__intro">
-                <span class="lum-hotspots__eyebrow lum-text-xs">Shop by Application</span>
-                <h2 class="lum-hotspots__title lum-h-md">Explore the System</h2>
-                <p class="lum-hotspots__lead lum-text-sm">
-                    See how lighting, controls and electrical components work together inside real project environments.<br>
-                    Select any product hotspot to review specifications, availability and ordering details.
+        <div class="lum-container flex flex-col gap-6">
+            <div class="lum-sec-head lum-sec-head--split" data-diraction="col">
+                <div class="lum-sec-head__left">
+                    <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Contractor favorites</span>
+                    <h2 class="lum-h-md lum-sec-head__title">Most Ordered by Contractors</h2>
+                </div>
+                <p class="lum-text-lg lum-sec-head__desc">
+                    Explore proven products frequently selected for repeat jobs, replacements and everyday
+                    project installations, with clear pricing, availability and minimum order details.
                 </p>
-            </header>
-
-            <div class="lum-hotspots__tabs" role="tablist" aria-label="Shop by application">
-                <button class="lum-hotspots__tab lum-text-xs is-active" id="hs-tab-1" role="tab" aria-selected="true" aria-controls="hs-panel-1" type="button">Commercial Interior</button>
-                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-2" role="tab" aria-selected="false" aria-controls="hs-panel-2" tabindex="-1" type="button">Retail &amp; Hospitality</button>
-                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-3" role="tab" aria-selected="false" aria-controls="hs-panel-3" tabindex="-1" type="button">Warehouse &amp; Industrial</button>
-                <button class="lum-hotspots__tab lum-text-xs" id="hs-tab-4" role="tab" aria-selected="false" aria-controls="hs-panel-4" tabindex="-1" type="button">Outdoor &amp; Site</button>
             </div>
+            <div class="lum-tabs lum-tabs--pill flex flex-col items-center  " data-tabs>
+                <div class="lum-tabs__list" role="tablist" aria-label="Example pill tabs">
+                    <button class="lum-tabs__tab is-active" id="t2-1" role="tab" aria-selected="true"
+                            aria-controls="p2-1" type="button">Lighting
+                    </button>
+                    <button class="lum-tabs__tab" id="t2-2" role="tab" aria-selected="false" aria-controls="p2-2"
+                            tabindex="-1" type="button">Electrical
+                    </button>
+                </div>
+                <div class="lum-tabs__panel" id="p2-1" role="tabpanel" aria-labelledby="t2-1">
+                    <div class="lum-hotspots__grid">
+                        <div class="lum-hotspots__col lum-hotspots__col--a">
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/Banner-3-col.png" alt="Conference room with linear pendant lighting">
+                                <div class="lum-spot" data-spot style="--_x:20%; --_y:70%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
+                                                    Indirect/direct Linear 6162LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/brand-banner-2.png" alt="Retail shelving with accent track lighting">
+                                <div class="lum-spot" data-spot style="--_x:60%; --_y:30%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED
+                                                    Indirect/direct Linear 6162LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
 
-            <!-- ================= panel 1 ================= -->
-            <div class="lum-hotspots__panel is-active" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1">
-                <div class="lum-hotspots__grid">
-                    <div class="lum-hotspots__col lum-hotspots__col--a">
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/Banner-3-col.png" alt="Conference room with linear pendant lighting">
-                            <div class="lum-spot" data-spot style="--_x:20%; --_y:70%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                        <div class="lum-hotspots__col lum-hotspots__col--b">
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/Banner-3-col.png" alt="Hotel lounge with cove lighting">
+                                <div class="lum-spot" data-spot style="--_x:55%; --_y:16%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
+                                                    Indirect/direct Linear 6152LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </figure>
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/brand-banner-2.png" alt="Retail shelving with accent track lighting">
-                            <div class="lum-spot" data-spot style="--_x:60%; --_y:30%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
+                            </figure>
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/brand-banner-2.png" alt="Kitchen with under-cabinet LED strips">
+                                <div class="lum-spot" data-spot style="--_x:14%; --_y:22%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
+                                                    Indirect/direct Linear 6162LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </figure>
+                            </figure>
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/brand-banner-2.png" alt="Electrical room with panelboards">
+                                <div class="lum-spot" data-spot style="--_x:55%; --_y:42%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
+                                                    Indirect/direct Linear 6152LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div class="lum-hotspots__col lum-hotspots__col--c">
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/Banner-3-col.png" alt="Open office with recessed downlights">
+                                <div class="lum-spot" data-spot style="--_x:46%; --_y:24%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED
+                                                    Indirect/direct Linear 6162LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </figure>
+                            <figure class="lum-hotspots__tile" data-tile>
+                                <img src="./assets/brand-banner-2.png"
+                                     alt="Corridor with wood slat wall and wall sconces">
+                                <div class="lum-spot" data-spot style="--_x:55%; --_y:7%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
+                                                    Indirect/direct Linear 6162LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lum-spot" data-spot style="--_x:84%; --_y:58%">
+                                    <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                            aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                    <div class="lum-spot__card" hidden>
+                                        <a href="#" class="lum-mini">
+                                            <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
+                                            <div class="lum-mini__body">
+                                                <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
+                                                    Indirect/direct Linear 6152LM</h4>
+                                                <div class="lum-mini__meta">
+                                                    <span class="lum-badge lum-text-2xs">SKU</span>
+                                                    <span class="lum-mini__price lum-text-xs">$105</span>
+                                                    <span class="lum-mini__old lum-text-2xs">$140</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
                     </div>
-
-                    <div class="lum-hotspots__col lum-hotspots__col--b">
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/Banner-3-col.png" alt="Hotel lounge with cove lighting">
-                            <div class="lum-spot" data-spot style="--_x:55%; --_y:16%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/brand-banner-2.png" alt="Kitchen with under-cabinet LED strips">
-                            <div class="lum-spot" data-spot style="--_x:14%; --_y:22%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/brand-banner-2.png" alt="Electrical room with panelboards">
-                            <div class="lum-spot" data-spot style="--_x:55%; --_y:42%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </figure>
-                    </div>
-
-                    <div class="lum-hotspots__col lum-hotspots__col--c">
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/Banner-3-col.png" alt="Open office with recessed downlights">
-                            <div class="lum-spot" data-spot style="--_x:46%; --_y:24%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="lum-hotspots__tile" data-tile>
-                            <img src="./assets/brand-banner-2.png" alt="Corridor with wood slat wall and wall sconces">
-                            <div class="lum-spot" data-spot style="--_x:55%; --_y:7%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="lum-spot" data-spot style="--_x:84%; --_y:58%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
-                                <div class="lum-spot__card" hidden>
-                                    <a href="#" class="lum-mini">
-                                        <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
-                                        <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
-                                            <div class="lum-mini__meta">
-                                                <span class="lum-badge lum-text-2xs">SKU</span>
-                                                <span class="lum-mini__price lum-text-xs">$105</span>
-                                                <span class="lum-mini__old lum-text-2xs">$140</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </figure>
+                </div>
+                <div class="lum-tabs__panel" id="p2-2" role="tabpanel" aria-labelledby="t2-2" hidden>
+                    <div class="lum-hotspots__grid">
+                        <div class="lum-hotspots__col lum-hotspots__col--a">
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png"
+                                                                              alt="Boutique retail interior"></figure>
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png"
+                                                                              alt="Restaurant dining area"></figure>
+                        </div>
+                        <div class="lum-hotspots__col lum-hotspots__col--b">
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png"
+                                                                              alt="Hotel lobby"></figure>
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png"
+                                                                              alt="Cafe counter"></figure>
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png"
+                                                                              alt="Bar shelving with accent light">
+                            </figure>
+                        </div>
+                        <div class="lum-hotspots__col lum-hotspots__col--c">
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png"
+                                                                              alt="Fitting rooms corridor"></figure>
+                            <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png"
+                                                                              alt="Hospitality corridor"></figure>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- ================= panel 2 ================= -->
-            <div class="lum-hotspots__panel" id="hs-panel-2" hidden role="tabpanel" aria-labelledby="hs-tab-2">
-                <div class="lum-hotspots__grid">
-                    <div class="lum-hotspots__col lum-hotspots__col--a">
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Boutique retail interior"></figure>
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Restaurant dining area"></figure>
-                    </div>
-                    <div class="lum-hotspots__col lum-hotspots__col--b">
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Hotel lobby"></figure>
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Cafe counter"></figure>
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Bar shelving with accent light"></figure>
-                    </div>
-                    <div class="lum-hotspots__col lum-hotspots__col--c">
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/brand-banner-2.png" alt="Fitting rooms corridor"></figure>
-                        <figure class="lum-hotspots__tile" data-tile><img src="./assets/Banner-3-col.png" alt="Hospitality corridor"></figure>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ================= panels 3 & 4 (same structure as panel 1) ================= -->
-            <div class="lum-hotspots__panel" id="hs-panel-3" hidden role="tabpanel" aria-labelledby="hs-tab-3">
-                <div class="lum-hotspots__grid"><!-- Warehouse & Industrial tiles --></div>
-            </div>
-            <div class="lum-hotspots__panel" id="hs-panel-4" hidden role="tabpanel" aria-labelledby="hs-tab-4">
-                <div class="lum-hotspots__grid"><!-- Outdoor & Site tiles --></div>
-            </div>
-
         </div>
     </section>
     <!-- ===== CTA banner ===== -->

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumera — Tabs component</title>
     <link rel="stylesheet" href="./assets/base.css">
-
+    <link rel="stylesheet" href="./assets/tabs.css">
+    <link rel="stylesheet" href="./assets/Lum-utilities.css">
 </head>
-<body style="padding:32px; display:flex; flex-direction:column; gap:56px;">
+
 
 <!-- ===== variant 1: pill (no icons) ===== -->
-<div class="lum-tabs lum-tabs--pill" data-tabs>
+<div class="lum-tabs lum-tabs--pill flex flex-col items-center lg:items-start " data-tabs>
     <div class="lum-tabs__list" role="tablist" aria-label="Example pill tabs">
         <button class="lum-tabs__tab is-active" id="t1-1" role="tab" aria-selected="true"  aria-controls="p1-1" type="button">Lighting</button>
         <button class="lum-tabs__tab"           id="t1-2" role="tab" aria-selected="false" aria-controls="p1-2" tabindex="-1" type="button">Electrical</button>
@@ -62,6 +63,6 @@
 </div>
 
 
-
+<script src="assets/tabs.js"></script>
 </body>
 </html>

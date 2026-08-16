@@ -1,15 +1,10 @@
-/* section-lum-brands.css */
+/* section-lum-brands.css — tab styles removed (now handled by lum-tabs --brand) */
 .lum-brands {
     --_pad: 24px;
     --_gap: 24px;
-    --_tabs-gap: 8px;
-    --_tab-content-gap: 8px;
-    --_tab-h: 40px;
-    --_tab-pad-i: 16px;
-    --_tab-radius: 8px;
     --_body-cols: 1fr;
     --_body-gap: 32px;
-    padding:  var(--_pad) 0;
+    padding: var(--_pad) 0;
     background: linear-gradient(353deg, rgba(255, 255, 255, 0) 5.73%, #FAFBFC 94.27%);
     @media (min-width: 768px) {
         --_body-cols: 280px 1fr;
@@ -17,15 +12,11 @@
     @media (min-width: 1024px) {
         --_pad: 72px;
         --_gap: 40px;
-        --_tabs-gap: 16px;
-        --_tab-h: 64px;
-        --_tab-pad-i: 24px;
-        --_tab-radius: 16px;
     }
     @media (min-width: 1200px) {
         --_body-cols: 400px 1fr;
     }
-    .swiper-slide{
+    .swiper-slide {
         border: 1px solid var(--lum-border);
         border-radius: 12px;
         overflow: hidden;
@@ -34,54 +25,16 @@
 .lum-brands__wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--_gap);
 }
 
-.lum-brands__tabs {
-    display: flex;
-    gap: var(--_tabs-gap);
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: 12px 8px;
-    &::-webkit-scrollbar { display: none; }
-}
-.lum-brand-tab {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--_tab-content-gap);
-    height: var(--_tab-h);
-    padding-block: 0;
-    padding-inline: var(--_tab-pad-i);
-    border: 2px solid transparent;
-    border-radius: var(--_tab-radius);
-    background: var(--lum-n-0);
-    color: var(--lum-n-1000);
-    font-family: var(--lum-font);
-    white-space: nowrap;
-    cursor: pointer;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    & img { height: 100%; width: auto; }
-    &.is-active {
-        border-color: var(--lum-primary);
-        box-shadow: 0 0 0 4px color-mix(in srgb, var(--lum-primary) 25%, transparent);
-    }
-
-    &:focus-visible {
-        outline: 2px solid var(--lum-primary);
-        outline-offset: 2px;
-    }
-}
+/* NOTE: .lum-brands__tabs and .lum-brand-tab removed.
+   Use the shared component instead:  <div class="lum-tabs lum-tabs--brand" data-tabs> */
 
 .lum-brands__body {
-    display: none;
-
-    &.is-active {
-        display: grid;
-        grid-template-columns: var(--_body-cols);
-        gap: var(--_body-gap);
-        align-items: center;
-    }
+    display: grid;
+    grid-template-columns: var(--_body-cols);
+    gap: var(--_body-gap);
+    align-items: center;
 }
 
 .lum-brands__banner {
@@ -153,12 +106,10 @@
         visibility: hidden;
         pointer-events: none;
     }
-
     &:focus-visible {
         outline: 2px solid var(--lum-primary);
         outline-offset: 2px;
     }
 }
-
-.lum-pswiper__arrow--prev { left: 0; transform: rotate(180deg) translateY(50%) ; }
+.lum-pswiper__arrow--prev { left: 0; transform: rotate(180deg) translateY(50%); }
 .lum-pswiper__arrow--next { right: 30px; }

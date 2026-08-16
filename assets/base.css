@@ -495,11 +495,10 @@
     }
 }
 
-/*-------------------- pourdact card -------------------- */
-.lum-pourdact-card {
+/*-------------------- product card -------------------- */
+.lum-product-card {
     background: var(--lum-n-0);
-
-    .lum-pourdact-card__img {
+    .lum-product-card__img {
         --py: 0px;
         --px: 26px;
         @media screen and (min-width: 1024px) {
@@ -521,21 +520,17 @@
 
     }
 
-    .lum-pourdact-card__content {
-        --pp: 8px;
-        --pb: 8px;
+    .lum-product-card__content {
+        --pb: 16px;
+        --pt: 8px;
         --px: 16px;
         --gap: 4px;
-        @media screen and (min-width: 1024px) {
-
-        }
-        padding: var(--pp) var(--pb) var(--px);
+        padding: var(--pt) var(--px) var(--pb) var(--px) ;
         cursor: pointer;
         display: flex;
         gap: var(--gap);
         flex-direction: column;
-
-        .lum-pourdact-card__content-header {
+        .lum-product-card__content-header {
             font-size: var(--lum-text-xs);
             color: var(--lum-primary-6);
             @media screen and (min-width: 1024px) {
@@ -545,29 +540,20 @@
             }
         }
 
-        .lum-pourdact-card__content-main {
+        .lum-product-card__content-main {
             font-weight: 500;
             margin-top: 4px;
-            font-size: var(--lum-text-md);
-            line-height: var(--lum-text-md-lh);
-
-
-            @media screen and (min-width: 1024px) {
-                font-size: var(--lum-text-md) ;
-                line-height: var(--lum-h-sm-lh) ;
-            }
-
-
+            font-size: var(--lum-text-md) ;
+            line-height: var(--lum-h-md) ;
         }
 
-        .lum-pourdact-card__content-footer {
-            font-weight: 700;
+        .lum-product-card__content-footer {
+            font-weight: 500;
             margin-top: 4px;
             font-size: var(--lum-text-md);
 
             @media screen and (min-width: 1024px) {
                 font-size: var(--lum-text-xs-lh) ;
-
                 line-height: var(--lum-text-lg-lh) ;
 
             }
@@ -575,7 +561,7 @@
 
     }
 
-    &:hover .lum-pourdact-card__content {
+    &:hover .lum-product-card__content {
         background: linear-gradient(0deg, rgba(21, 174, 92, 0.15) -0.39%, rgba(255, 255, 255, 0.00) 49.39%);
     }
 

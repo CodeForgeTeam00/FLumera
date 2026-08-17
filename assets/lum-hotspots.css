@@ -17,9 +17,8 @@
     --_dot-size: 20px;
     --_dot-ring: 9px;
     --_card-w: 264px;
-
     padding-block: var(--_py);
-    font-family: var(--lum-font);
+
 }
 @media (min-width: 768px){
     .lum-hotspots{ --_cols: 2; --_gap: 20px; }
@@ -101,7 +100,7 @@
 .lum-hotspots__grid{
     display: grid;
     grid-template-columns: repeat(var(--_cols), 1fr);
-    gap: var(--_gap);
+    gap: 16px;
     margin-block-start: var(--_grid-mt);
     aspect-ratio: var(--_grid-ratio);
 }
@@ -142,8 +141,8 @@
 .lum-spot__dot{
     position: relative;
     display: block;
-    inline-size: var(--_dot-size);
-    block-size: var(--_dot-size);
+    inline-size: 16px;
+    block-size: 16px;
     border: 0;
     border-radius: 50%;
     background: var(--lum-n-0);

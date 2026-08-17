@@ -78,14 +78,22 @@
 .lum-tabs--chip .lum-tabs__list{ gap: 12px; }
 .lum-tabs--chip .lum-tabs__tab{
     block-size: auto;
-    padding: 10px 16px;
+    padding: 0 16px;
+
+    height: 40px;
     border: 1px solid var(--lum-n-30);
     border-radius: 12px;
     background: var(--lum-n-0);
     color: var(--lum-n-1000);
+    @media (min-width: 1024px){
+        height: 64px;
+
+    }
+    img{
+        height: 100%;
+    }
 }
-.lum-tabs--chip .lum-tabs__tab:hover{ border-color: var(--lum-primary); }
 .lum-tabs--chip .lum-tabs__tab.is-active{
-    border-color: var(--lum-primary);
-    box-shadow: 0 0 0 3px rgba(21, 174, 92, .15);
+    border: 2px solid var(--lum-primary);
+    box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
 }

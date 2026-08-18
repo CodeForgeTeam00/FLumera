@@ -17,78 +17,358 @@
            mirrors the same source into the Code tab, so they never drift.
            Component CSS is inlined below so previews look right with only base.css linked.
            ========================================================================== */
-        body{
+        body {
             background: #0f1b2d;
         }
-        .lum-gui { max-inline-size: 1540px; margin-inline: auto; padding: 40px 0; font-family: var(--lum-font); }
-        .lum-gui__head { margin-block-end: 32px; }
-        .lum-gui__title { color: var(--lum-n-1000); margin: 0 0 4px; }
-        .lum-gui__sub { color: var(--lum-n-400); }
 
-        .lum-demo { border: 1px solid var(--lum-n-30); border-radius: 12px; overflow: hidden; margin-block-end: 32px; }
-        .lum-demo__bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-block-end: 1px solid var(--lum-n-30); background: var(--lum-n-10); }
-        .lum-demo__name { font-weight: 700; color: var(--lum-n-1000); font-size: var(--lum-text-sm); }
-        .lum-demo__actions { display: inline-flex; align-items: center; gap: 4px; }
-        .lum-demo__toggle { display: inline-flex; border: 1px solid var(--lum-n-30); border-radius: 999px; padding: 2px; background: var(--lum-n-0); }
-        .lum-demo__tab { border: 0; background: transparent; padding: 4px 14px; border-radius: 999px; font-family: inherit; font-size: var(--lum-text-xs); color: var(--lum-n-500); cursor: pointer; }
-        .lum-demo__tab.is-active { background: var(--lum-n-1000); color: var(--lum-n-0); }
-        .lum-demo__copy { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--lum-n-30); border-radius: 8px; background: var(--lum-n-0); color: var(--lum-n-700); padding: 6px 12px; font-family: inherit; font-size: var(--lum-text-xs); cursor: pointer; transition: color .2s ease, border-color .2s ease; }
-        .lum-demo__copy:hover, .lum-demo__copy.is-done { color: var(--lum-primary); border-color: var(--lum-primary); }
-        .lum-demo__preview { padding: 32px; background: var(--lum-n-0); }
-        .lum-demo__code { margin: 0; display: none; }
-        .lum-demo__code pre { margin: 0; padding: 20px; overflow: auto; background: #0f1b2d; color: #e6edf3; font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; line-height: 1.7; }
-        .lum-demo[data-view="code"] .lum-demo__preview { display: none; }
-        .lum-demo[data-view="code"] .lum-demo__code { display: block; }
+        .lum-gui {
+            max-inline-size: 1540px;
+            margin-inline: auto;
+            padding: 40px 0;
+            font-family: var(--lum-font);
+        }
+
+        .lum-gui__head {
+            margin-block-end: 32px;
+        }
+
+        .lum-gui__title {
+            color: var(--lum-n-1000);
+            margin: 0 0 4px;
+        }
+
+        .lum-gui__sub {
+            color: var(--lum-n-400);
+        }
+
+        .lum-demo {
+            border: 1px solid var(--lum-n-30);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-block-end: 32px;
+        }
+
+        .lum-demo__bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 16px;
+            border-block-end: 1px solid var(--lum-n-30);
+            background: var(--lum-n-10);
+        }
+
+        .lum-demo__name {
+            font-weight: 700;
+            color: var(--lum-n-1000);
+            font-size: var(--lum-text-sm);
+        }
+
+        .lum-demo__actions {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .lum-demo__toggle {
+            display: inline-flex;
+            border: 1px solid var(--lum-n-30);
+            border-radius: 999px;
+            padding: 2px;
+            background: var(--lum-n-0);
+        }
+
+        .lum-demo__tab {
+            border: 0;
+            background: transparent;
+            padding: 4px 14px;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: var(--lum-text-xs);
+            color: var(--lum-n-500);
+            cursor: pointer;
+        }
+
+        .lum-demo__tab.is-active {
+            background: var(--lum-n-1000);
+            color: var(--lum-n-0);
+        }
+
+        .lum-demo__copy {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--lum-n-30);
+            border-radius: 8px;
+            background: var(--lum-n-0);
+            color: var(--lum-n-700);
+            padding: 6px 12px;
+            font-family: inherit;
+            font-size: var(--lum-text-xs);
+            cursor: pointer;
+            transition: color .2s ease, border-color .2s ease;
+        }
+
+        .lum-demo__copy:hover, .lum-demo__copy.is-done {
+            color: var(--lum-primary);
+            border-color: var(--lum-primary);
+        }
+
+        .lum-demo__preview {
+            padding: 32px;
+            background: var(--lum-n-0);
+        }
+
+        .lum-demo__code {
+            margin: 0;
+            display: none;
+        }
+
+        .lum-demo__code pre {
+            margin: 0;
+            padding: 20px;
+            overflow: auto;
+            background: #0f1b2d;
+            color: #e6edf3;
+            font-family: ui-monospace, Menlo, monospace;
+            font-size: 12.5px;
+            line-height: 1.7;
+        }
+
+        .lum-demo[data-view="code"] .lum-demo__preview {
+            display: none;
+        }
+
+        .lum-demo[data-view="code"] .lum-demo__code {
+            display: block;
+        }
 
         /* ===== component styles (inlined so previews render) ===== */
         /* product card */
-
-
 
 
         /* badge */
 
 
         /* icon block */
-        .lum-icon-block { display: inline-flex; align-items: center; gap: 8px; color: var(--lum-n-1000); }
-        .lum-icon-block__figure { position: relative; display: flex; align-items: center; justify-content: center; inline-size: 48px; block-size: 48px; border-radius: 12px; background: var(--lum-n-20); }
-        .lum-icon-block__text { display: flex; flex-direction: column; }
-        .lum-icon-block__title { font-size: var(--lum-text-sm); font-weight: 700; line-height: 1.2; }
-        .lum-icon-block__sub { font-size: var(--lum-text-xs); color: var(--lum-n-300); line-height: 1.2; }
+        .lum-icon-block {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--lum-n-1000);
+        }
+
+        .lum-icon-block__figure {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            inline-size: 48px;
+            block-size: 48px;
+            border-radius: 12px;
+            background: var(--lum-n-20);
+        }
+
+        .lum-icon-block__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lum-icon-block__title {
+            font-size: var(--lum-text-sm);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .lum-icon-block__sub {
+            font-size: var(--lum-text-xs);
+            color: var(--lum-n-300);
+            line-height: 1.2;
+        }
 
         /* mini card */
-        .lum-mini { display: flex; gap: 10px; align-items: center; }
-        .lum-mini__img { inline-size: 64px; block-size: 64px; border-radius: 8px; object-fit: cover; background: var(--lum-n-20); flex-shrink: 0; }
-        .lum-mini__body { display: flex; flex-direction: column; gap: 6px; }
-        .lum-mini__title { margin: 0; color: var(--lum-n-1000); font-weight: 700; font-size: var(--lum-text-xs); }
-        .lum-mini__meta { display: inline-flex; align-items: center; gap: 8px; }
-        .lum-mini__price { color: var(--lum-n-1000); font-weight: 700; font-size: var(--lum-text-xs); }
-        .lum-mini__old { color: var(--lum-n-300); text-decoration: line-through; font-size: var(--lum-text-xxs); }
+        .lum-mini {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .lum-mini__img {
+            inline-size: 64px;
+            block-size: 64px;
+            border-radius: 8px;
+            object-fit: cover;
+            background: var(--lum-n-20);
+            flex-shrink: 0;
+        }
+
+        .lum-mini__body {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .lum-mini__title {
+            margin: 0;
+            color: var(--lum-n-1000);
+            font-weight: 700;
+            font-size: var(--lum-text-xs);
+        }
+
+        .lum-mini__meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lum-mini__price {
+            color: var(--lum-n-1000);
+            font-weight: 700;
+            font-size: var(--lum-text-xs);
+        }
+
+        .lum-mini__old {
+            color: var(--lum-n-300);
+            text-decoration: line-through;
+            font-size: var(--lum-text-xxs);
+        }
 
         /* util link */
-        .lum-util-link { display: inline-flex; align-items: center; gap: 6px; color: var(--lum-n-1000); font-size: var(--lum-text-xs); }
+        .lum-util-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--lum-n-1000);
+            font-size: var(--lum-text-xs);
+        }
 
         /* tabs component (pill / underline / chip) */
-        .lum-tabs { --_tab-h: 32px; --_tab-px: 14px; --_tab-gap: 6px; --_panel-mt: 20px; font-family: var(--lum-font); }
-        .lum-tabs__list { display: flex; overflow-x: auto; scrollbar-width: none; max-inline-size: 100%; }
-        .lum-tabs__list::-webkit-scrollbar { display: none; }
-        .lum-tabs__tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: var(--_tab-gap); block-size: var(--_tab-h); padding-inline: var(--_tab-px); border: 1px solid transparent; background: transparent; color: var(--lum-n-700); font-family: inherit; font-size: var(--lum-text-sm); white-space: nowrap; cursor: pointer; transition: color .2s ease, background-color .2s ease, border-color .2s ease; }
-        .lum-tabs__panel { margin-block-start: var(--_panel-mt); font-size: var(--lum-text-sm); color: var(--lum-n-700); }
-        .lum-tabs__panel[hidden] { display: none; }
-        .lum-tabs--pill .lum-tabs__list { gap: 4px; padding: 4px; inline-size: fit-content; background: var(--lum-n-20); border-radius: 999px; }
-        .lum-tabs--pill .lum-tabs__tab { border-radius: 999px; }
-        .lum-tabs--pill .lum-tabs__tab.is-active { background: var(--lum-n-0); border-color: var(--lum-n-40); color: var(--lum-n-1000); box-shadow: 0 1px 2px rgb(9 30 66 / .08); }
-        .lum-tabs--underline .lum-tabs__list { gap: 24px; border-block-end: 1px solid var(--lum-n-30); }
-        .lum-tabs--underline .lum-tabs__tab { padding-inline: 0; padding-block-end: 10px; block-size: auto; position: relative; }
-        .lum-tabs--underline .lum-tabs__tab.is-active { color: var(--lum-primary); font-weight: 700; }
-        .lum-tabs--underline .lum-tabs__tab.is-active::after { content: ""; position: absolute; inset-inline: 0; inset-block-end: -1px; block-size: 2px; background: var(--lum-primary); }
-        .lum-tabs--chip .lum-tabs__list { gap: 12px; }
-        .lum-tabs--chip .lum-tabs__tab { block-size: auto; padding: 10px 16px; border: 1px solid var(--lum-n-30); border-radius: 12px; background: var(--lum-n-0); color: var(--lum-n-1000); }
-        .lum-tabs--chip .lum-tabs__tab:hover { border-color: var(--lum-primary); }
-        .lum-tabs--chip .lum-tabs__tab.is-active { border-color: var(--lum-primary); box-shadow: 0 0 0 3px rgba(21, 174, 92, .15); }
+        .lum-tabs {
+            --_tab-h: 32px;
+            --_tab-px: 14px;
+            --_tab-gap: 6px;
+            --_panel-mt: 20px;
+            font-family: var(--lum-font);
+        }
 
-        .demo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-inline-size: 480px; }
-        .demo-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .lum-tabs__list {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+            max-inline-size: 100%;
+        }
+
+        .lum-tabs__list::-webkit-scrollbar {
+            display: none;
+        }
+
+        .lum-tabs__tab {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--_tab-gap);
+            block-size: var(--_tab-h);
+            padding-inline: var(--_tab-px);
+            border: 1px solid transparent;
+            background: transparent;
+            color: var(--lum-n-700);
+            font-family: inherit;
+            font-size: var(--lum-text-sm);
+            white-space: nowrap;
+            cursor: pointer;
+            transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+        }
+
+        .lum-tabs__panel {
+            margin-block-start: var(--_panel-mt);
+            font-size: var(--lum-text-sm);
+            color: var(--lum-n-700);
+        }
+
+        .lum-tabs__panel[hidden] {
+            display: none;
+        }
+
+        .lum-tabs--pill .lum-tabs__list {
+            gap: 4px;
+            padding: 4px;
+            inline-size: fit-content;
+            background: var(--lum-n-20);
+            border-radius: 999px;
+        }
+
+        .lum-tabs--pill .lum-tabs__tab {
+            border-radius: 999px;
+        }
+
+        .lum-tabs--pill .lum-tabs__tab.is-active {
+            background: var(--lum-n-0);
+            border-color: var(--lum-n-40);
+            color: var(--lum-n-1000);
+            box-shadow: 0 1px 2px rgb(9 30 66 / .08);
+        }
+
+        .lum-tabs--underline .lum-tabs__list {
+            gap: 24px;
+            border-block-end: 1px solid var(--lum-n-30);
+        }
+
+        .lum-tabs--underline .lum-tabs__tab {
+            padding-inline: 0;
+            padding-block-end: 10px;
+            block-size: auto;
+            position: relative;
+        }
+
+        .lum-tabs--underline .lum-tabs__tab.is-active {
+            color: var(--lum-primary);
+            font-weight: 700;
+        }
+
+        .lum-tabs--underline .lum-tabs__tab.is-active::after {
+            content: "";
+            position: absolute;
+            inset-inline: 0;
+            inset-block-end: -1px;
+            block-size: 2px;
+            background: var(--lum-primary);
+        }
+
+        .lum-tabs--chip .lum-tabs__list {
+            gap: 12px;
+        }
+
+        .lum-tabs--chip .lum-tabs__tab {
+            block-size: auto;
+            padding: 10px 16px;
+            border: 1px solid var(--lum-n-30);
+            border-radius: 12px;
+            background: var(--lum-n-0);
+            color: var(--lum-n-1000);
+        }
+
+        .lum-tabs--chip .lum-tabs__tab:hover {
+            border-color: var(--lum-primary);
+        }
+
+        .lum-tabs--chip .lum-tabs__tab.is-active {
+            border-color: var(--lum-primary);
+            box-shadow: 0 0 0 3px rgba(21, 174, 92, .15);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-inline-size: 480px;
+        }
+
+        .demo-row {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 <body>
@@ -105,11 +385,21 @@
                 <code class="gui-card-code">--arrow-right</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--xs"><i class="lum-icon lum-icon--arrow-right lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--sm"><i class="lum-icon lum-icon--arrow-right lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--md"><i class="lum-icon lum-icon--arrow-right lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--lg"><i class="lum-icon lum-icon--arrow-right lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--xl"><i class="lum-icon lum-icon--arrow-right lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--xs"><i
+                        class="lum-icon lum-icon--arrow-right lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--sm"><i
+                        class="lum-icon lum-icon--arrow-right lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--md"><i
+                        class="lum-icon lum-icon--arrow-right lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--lg"><i
+                        class="lum-icon lum-icon--arrow-right lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right lum-icon--xl"><i
+                        class="lum-icon lum-icon--arrow-right lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
         <div class="gui-card">
@@ -118,11 +408,21 @@
                 <code class="gui-card-code">--arrow-right-tight</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--xs"><i class="lum-icon lum-icon--arrow-right-tight lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--sm"><i class="lum-icon lum-icon--arrow-right-tight lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--md"><i class="lum-icon lum-icon--arrow-right-tight lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--lg"><i class="lum-icon lum-icon--arrow-right-tight lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--xl"><i class="lum-icon lum-icon--arrow-right-tight lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--xs"><i
+                        class="lum-icon lum-icon--arrow-right-tight lum-icon--xs"></i><span
+                        class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--sm"><i
+                        class="lum-icon lum-icon--arrow-right-tight lum-icon--sm"></i><span
+                        class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--md"><i
+                        class="lum-icon lum-icon--arrow-right-tight lum-icon--md"></i><span
+                        class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--lg"><i
+                        class="lum-icon lum-icon--arrow-right-tight lum-icon--lg"></i><span
+                        class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--arrow-right-tight lum-icon--xl"><i
+                        class="lum-icon lum-icon--arrow-right-tight lum-icon--xl"></i><span
+                        class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -133,11 +433,21 @@
                 <code class="gui-card-code">--briefcase</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--xs"><i class="lum-icon lum-icon--briefcase lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--sm"><i class="lum-icon lum-icon--briefcase lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--md"><i class="lum-icon lum-icon--briefcase lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--lg"><i class="lum-icon lum-icon--briefcase lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--xl"><i class="lum-icon lum-icon--briefcase lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--xs"><i
+                        class="lum-icon lum-icon--briefcase lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--sm"><i
+                        class="lum-icon lum-icon--briefcase lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--md"><i
+                        class="lum-icon lum-icon--briefcase lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--lg"><i
+                        class="lum-icon lum-icon--briefcase lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--briefcase lum-icon--xl"><i
+                        class="lum-icon lum-icon--briefcase lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -148,11 +458,21 @@
                 <code class="gui-card-code">--calendar-date</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--xs"><i class="lum-icon lum-icon--calendar-date lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--sm"><i class="lum-icon lum-icon--calendar-date lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--md"><i class="lum-icon lum-icon--calendar-date lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--lg"><i class="lum-icon lum-icon--calendar-date lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--xl"><i class="lum-icon lum-icon--calendar-date lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--xs"><i
+                        class="lum-icon lum-icon--calendar-date lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--sm"><i
+                        class="lum-icon lum-icon--calendar-date lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--md"><i
+                        class="lum-icon lum-icon--calendar-date lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--lg"><i
+                        class="lum-icon lum-icon--calendar-date lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--calendar-date lum-icon--xl"><i
+                        class="lum-icon lum-icon--calendar-date lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -163,11 +483,16 @@
                 <code class="gui-card-code">--cart</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--xs"><i class="lum-icon lum-icon--cart lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--sm"><i class="lum-icon lum-icon--cart lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--md"><i class="lum-icon lum-icon--cart lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--lg"><i class="lum-icon lum-icon--cart lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--xl"><i class="lum-icon lum-icon--cart lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--xs"><i
+                        class="lum-icon lum-icon--cart lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--sm"><i
+                        class="lum-icon lum-icon--cart lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--md"><i
+                        class="lum-icon lum-icon--cart lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--lg"><i
+                        class="lum-icon lum-icon--cart lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cart lum-icon--xl"><i
+                        class="lum-icon lum-icon--cart lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -178,11 +503,21 @@
                 <code class="gui-card-code">--chevron-left</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--xs"><i class="lum-icon lum-icon--chevron-left lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--sm"><i class="lum-icon lum-icon--chevron-left lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--md"><i class="lum-icon lum-icon--chevron-left lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--lg"><i class="lum-icon lum-icon--chevron-left lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--xl"><i class="lum-icon lum-icon--chevron-left lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--xs"><i
+                        class="lum-icon lum-icon--chevron-left lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--sm"><i
+                        class="lum-icon lum-icon--chevron-left lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--md"><i
+                        class="lum-icon lum-icon--chevron-left lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--lg"><i
+                        class="lum-icon lum-icon--chevron-left lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-left lum-icon--xl"><i
+                        class="lum-icon lum-icon--chevron-left lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -193,11 +528,21 @@
                 <code class="gui-card-code">--chevron-right</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--xs"><i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--sm"><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--md"><i class="lum-icon lum-icon--chevron-right lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--lg"><i class="lum-icon lum-icon--chevron-right lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--xl"><i class="lum-icon lum-icon--chevron-right lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--xs"><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--sm"><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--md"><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--lg"><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--chevron-right lum-icon--xl"><i
+                        class="lum-icon lum-icon--chevron-right lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -208,11 +553,21 @@
                 <code class="gui-card-code">--clipboard-check</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--xs"><i class="lum-icon lum-icon--clipboard-check lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--sm"><i class="lum-icon lum-icon--clipboard-check lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--md"><i class="lum-icon lum-icon--clipboard-check lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--lg"><i class="lum-icon lum-icon--clipboard-check lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--xl"><i class="lum-icon lum-icon--clipboard-check lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--xs"><i
+                        class="lum-icon lum-icon--clipboard-check lum-icon--xs"></i><span
+                        class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--sm"><i
+                        class="lum-icon lum-icon--clipboard-check lum-icon--sm"></i><span
+                        class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--md"><i
+                        class="lum-icon lum-icon--clipboard-check lum-icon--md"></i><span
+                        class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--lg"><i
+                        class="lum-icon lum-icon--clipboard-check lum-icon--lg"></i><span
+                        class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--clipboard-check lum-icon--xl"><i
+                        class="lum-icon lum-icon--clipboard-check lum-icon--xl"></i><span
+                        class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -223,11 +578,16 @@
                 <code class="gui-card-code">--cube</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--xs"><i class="lum-icon lum-icon--cube lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--sm"><i class="lum-icon lum-icon--cube lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--md"><i class="lum-icon lum-icon--cube lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--lg"><i class="lum-icon lum-icon--cube lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--xl"><i class="lum-icon lum-icon--cube lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--xs"><i
+                        class="lum-icon lum-icon--cube lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--sm"><i
+                        class="lum-icon lum-icon--cube lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--md"><i
+                        class="lum-icon lum-icon--cube lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--lg"><i
+                        class="lum-icon lum-icon--cube lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--cube lum-icon--xl"><i
+                        class="lum-icon lum-icon--cube lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -238,11 +598,21 @@
                 <code class="gui-card-code">--dollar-circle</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--xs"><i class="lum-icon lum-icon--dollar-circle lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--sm"><i class="lum-icon lum-icon--dollar-circle lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--md"><i class="lum-icon lum-icon--dollar-circle lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--lg"><i class="lum-icon lum-icon--dollar-circle lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--xl"><i class="lum-icon lum-icon--dollar-circle lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--xs"><i
+                        class="lum-icon lum-icon--dollar-circle lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--sm"><i
+                        class="lum-icon lum-icon--dollar-circle lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--md"><i
+                        class="lum-icon lum-icon--dollar-circle lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--lg"><i
+                        class="lum-icon lum-icon--dollar-circle lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--dollar-circle lum-icon--xl"><i
+                        class="lum-icon lum-icon--dollar-circle lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -253,11 +623,21 @@
                 <code class="gui-card-code">--facebook</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--xs"><i class="lum-icon lum-icon--facebook lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--sm"><i class="lum-icon lum-icon--facebook lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--md"><i class="lum-icon lum-icon--facebook lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--lg"><i class="lum-icon lum-icon--facebook lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--xl"><i class="lum-icon lum-icon--facebook lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--xs"><i
+                        class="lum-icon lum-icon--facebook lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--sm"><i
+                        class="lum-icon lum-icon--facebook lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--md"><i
+                        class="lum-icon lum-icon--facebook lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--lg"><i
+                        class="lum-icon lum-icon--facebook lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--facebook lum-icon--xl"><i
+                        class="lum-icon lum-icon--facebook lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -268,11 +648,21 @@
                 <code class="gui-card-code">--file-chart</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--xs"><i class="lum-icon lum-icon--file-chart lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--sm"><i class="lum-icon lum-icon--file-chart lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--md"><i class="lum-icon lum-icon--file-chart lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--lg"><i class="lum-icon lum-icon--file-chart lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--xl"><i class="lum-icon lum-icon--file-chart lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--xs"><i
+                        class="lum-icon lum-icon--file-chart lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--sm"><i
+                        class="lum-icon lum-icon--file-chart lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--md"><i
+                        class="lum-icon lum-icon--file-chart lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--lg"><i
+                        class="lum-icon lum-icon--file-chart lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--file-chart lum-icon--xl"><i
+                        class="lum-icon lum-icon--file-chart lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -283,11 +673,16 @@
                 <code class="gui-card-code">--focus</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--xs"><i class="lum-icon lum-icon--focus lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--sm"><i class="lum-icon lum-icon--focus lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--md"><i class="lum-icon lum-icon--focus lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--lg"><i class="lum-icon lum-icon--focus lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--xl"><i class="lum-icon lum-icon--focus lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--xs"><i
+                        class="lum-icon lum-icon--focus lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--sm"><i
+                        class="lum-icon lum-icon--focus lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--md"><i
+                        class="lum-icon lum-icon--focus lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--lg"><i
+                        class="lum-icon lum-icon--focus lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--focus lum-icon--xl"><i
+                        class="lum-icon lum-icon--focus lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -298,11 +693,21 @@
                 <code class="gui-card-code">--instagram</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--xs"><i class="lum-icon lum-icon--instagram lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--sm"><i class="lum-icon lum-icon--instagram lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--md"><i class="lum-icon lum-icon--instagram lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--lg"><i class="lum-icon lum-icon--instagram lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--xl"><i class="lum-icon lum-icon--instagram lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--xs"><i
+                        class="lum-icon lum-icon--instagram lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--sm"><i
+                        class="lum-icon lum-icon--instagram lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--md"><i
+                        class="lum-icon lum-icon--instagram lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--lg"><i
+                        class="lum-icon lum-icon--instagram lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--instagram lum-icon--xl"><i
+                        class="lum-icon lum-icon--instagram lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -313,11 +718,21 @@
                 <code class="gui-card-code">--linkedin</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--xs"><i class="lum-icon lum-icon--linkedin lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--sm"><i class="lum-icon lum-icon--linkedin lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--md"><i class="lum-icon lum-icon--linkedin lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--lg"><i class="lum-icon lum-icon--linkedin lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--xl"><i class="lum-icon lum-icon--linkedin lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--xs"><i
+                        class="lum-icon lum-icon--linkedin lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--sm"><i
+                        class="lum-icon lum-icon--linkedin lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--md"><i
+                        class="lum-icon lum-icon--linkedin lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--lg"><i
+                        class="lum-icon lum-icon--linkedin lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--linkedin lum-icon--xl"><i
+                        class="lum-icon lum-icon--linkedin lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -328,11 +743,16 @@
                 <code class="gui-card-code">--mail</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--xs"><i class="lum-icon lum-icon--mail lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--sm"><i class="lum-icon lum-icon--mail lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--md"><i class="lum-icon lum-icon--mail lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--lg"><i class="lum-icon lum-icon--mail lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--xl"><i class="lum-icon lum-icon--mail lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--xs"><i
+                        class="lum-icon lum-icon--mail lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--sm"><i
+                        class="lum-icon lum-icon--mail lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--md"><i
+                        class="lum-icon lum-icon--mail lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--lg"><i
+                        class="lum-icon lum-icon--mail lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--mail lum-icon--xl"><i
+                        class="lum-icon lum-icon--mail lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -343,11 +763,16 @@
                 <code class="gui-card-code">--phone</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--xs"><i class="lum-icon lum-icon--phone lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--sm"><i class="lum-icon lum-icon--phone lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--md"><i class="lum-icon lum-icon--phone lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--lg"><i class="lum-icon lum-icon--phone lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--xl"><i class="lum-icon lum-icon--phone lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--xs"><i
+                        class="lum-icon lum-icon--phone lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--sm"><i
+                        class="lum-icon lum-icon--phone lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--md"><i
+                        class="lum-icon lum-icon--phone lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--lg"><i
+                        class="lum-icon lum-icon--phone lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--phone lum-icon--xl"><i
+                        class="lum-icon lum-icon--phone lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -358,11 +783,21 @@
                 <code class="gui-card-code">--screwdriver-bolt</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--xs"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--md"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--lg"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--xl"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--xs"><i
+                        class="lum-icon lum-icon--screwdriver-bolt lum-icon--xs"></i><span
+                        class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"><i
+                        class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i><span
+                        class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--md"><i
+                        class="lum-icon lum-icon--screwdriver-bolt lum-icon--md"></i><span
+                        class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--lg"><i
+                        class="lum-icon lum-icon--screwdriver-bolt lum-icon--lg"></i><span
+                        class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--screwdriver-bolt lum-icon--xl"><i
+                        class="lum-icon lum-icon--screwdriver-bolt lum-icon--xl"></i><span
+                        class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -373,11 +808,16 @@
                 <code class="gui-card-code">--search</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--xs"><i class="lum-icon lum-icon--search lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--sm"><i class="lum-icon lum-icon--search lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--md"><i class="lum-icon lum-icon--search lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--lg"><i class="lum-icon lum-icon--search lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--xl"><i class="lum-icon lum-icon--search lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--xs"><i
+                        class="lum-icon lum-icon--search lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--sm"><i
+                        class="lum-icon lum-icon--search lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--md"><i
+                        class="lum-icon lum-icon--search lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--lg"><i
+                        class="lum-icon lum-icon--search lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--search lum-icon--xl"><i
+                        class="lum-icon lum-icon--search lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -388,11 +828,16 @@
                 <code class="gui-card-code">--sink</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--xs"><i class="lum-icon lum-icon--sink lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--sm"><i class="lum-icon lum-icon--sink lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--md"><i class="lum-icon lum-icon--sink lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--lg"><i class="lum-icon lum-icon--sink lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--xl"><i class="lum-icon lum-icon--sink lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--xs"><i
+                        class="lum-icon lum-icon--sink lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--sm"><i
+                        class="lum-icon lum-icon--sink lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--md"><i
+                        class="lum-icon lum-icon--sink lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--lg"><i
+                        class="lum-icon lum-icon--sink lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--sink lum-icon--xl"><i
+                        class="lum-icon lum-icon--sink lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -403,11 +848,16 @@
                 <code class="gui-card-code">--tag</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--xs"><i class="lum-icon lum-icon--tag lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--sm"><i class="lum-icon lum-icon--tag lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--md"><i class="lum-icon lum-icon--tag lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--lg"><i class="lum-icon lum-icon--tag lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--xl"><i class="lum-icon lum-icon--tag lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--xs"><i
+                        class="lum-icon lum-icon--tag lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--sm"><i
+                        class="lum-icon lum-icon--tag lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--md"><i
+                        class="lum-icon lum-icon--tag lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--lg"><i
+                        class="lum-icon lum-icon--tag lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--tag lum-icon--xl"><i
+                        class="lum-icon lum-icon--tag lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -418,11 +868,21 @@
                 <code class="gui-card-code">--umbrella</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--xs"><i class="lum-icon lum-icon--umbrella lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--sm"><i class="lum-icon lum-icon--umbrella lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--md"><i class="lum-icon lum-icon--umbrella lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--lg"><i class="lum-icon lum-icon--umbrella lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--xl"><i class="lum-icon lum-icon--umbrella lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--xs"><i
+                        class="lum-icon lum-icon--umbrella lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--sm"><i
+                        class="lum-icon lum-icon--umbrella lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--md"><i
+                        class="lum-icon lum-icon--umbrella lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--lg"><i
+                        class="lum-icon lum-icon--umbrella lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--umbrella lum-icon--xl"><i
+                        class="lum-icon lum-icon--umbrella lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -433,11 +893,16 @@
                 <code class="gui-card-code">--user</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--xs"><i class="lum-icon lum-icon--user lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--sm"><i class="lum-icon lum-icon--user lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--md"><i class="lum-icon lum-icon--user lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--lg"><i class="lum-icon lum-icon--user lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--xl"><i class="lum-icon lum-icon--user lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--xs"><i
+                        class="lum-icon lum-icon--user lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--sm"><i
+                        class="lum-icon lum-icon--user lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--md"><i
+                        class="lum-icon lum-icon--user lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--lg"><i
+                        class="lum-icon lum-icon--user lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--user lum-icon--xl"><i
+                        class="lum-icon lum-icon--user lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -448,11 +913,21 @@
                 <code class="gui-card-code">--water-heater</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--xs"><i class="lum-icon lum-icon--water-heater lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--sm"><i class="lum-icon lum-icon--water-heater lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--md"><i class="lum-icon lum-icon--water-heater lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--lg"><i class="lum-icon lum-icon--water-heater lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--xl"><i class="lum-icon lum-icon--water-heater lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--xs"><i
+                        class="lum-icon lum-icon--water-heater lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--sm"><i
+                        class="lum-icon lum-icon--water-heater lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--md"><i
+                        class="lum-icon lum-icon--water-heater lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--lg"><i
+                        class="lum-icon lum-icon--water-heater lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--water-heater lum-icon--xl"><i
+                        class="lum-icon lum-icon--water-heater lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -463,11 +938,21 @@
                 <code class="gui-card-code">--x-twitter</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--xs"><i class="lum-icon lum-icon--x-twitter lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--sm"><i class="lum-icon lum-icon--x-twitter lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--md"><i class="lum-icon lum-icon--x-twitter lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--lg"><i class="lum-icon lum-icon--x-twitter lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--xl"><i class="lum-icon lum-icon--x-twitter lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--xs"><i
+                        class="lum-icon lum-icon--x-twitter lum-icon--xs"></i><span class="gui-icon-label">xs</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--sm"><i
+                        class="lum-icon lum-icon--x-twitter lum-icon--sm"></i><span class="gui-icon-label">sm</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--md"><i
+                        class="lum-icon lum-icon--x-twitter lum-icon--md"></i><span class="gui-icon-label">md</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--lg"><i
+                        class="lum-icon lum-icon--x-twitter lum-icon--lg"></i><span class="gui-icon-label">lg</span>
+                </div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--x-twitter lum-icon--xl"><i
+                        class="lum-icon lum-icon--x-twitter lum-icon--xl"></i><span class="gui-icon-label">xl</span>
+                </div>
             </div>
         </div>
 
@@ -478,11 +963,16 @@
                 <code class="gui-card-code">--youtube</code>
             </div>
             <div class="gui-card-sizes">
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--xs"><i class="lum-icon lum-icon--youtube lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--sm"><i class="lum-icon lum-icon--youtube lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--md"><i class="lum-icon lum-icon--youtube lum-icon--md"></i><span class="gui-icon-label">md</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--lg"><i class="lum-icon lum-icon--youtube lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
-                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--xl"><i class="lum-icon lum-icon--youtube lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--xs"><i
+                        class="lum-icon lum-icon--youtube lum-icon--xs"></i><span class="gui-icon-label">xs</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--sm"><i
+                        class="lum-icon lum-icon--youtube lum-icon--sm"></i><span class="gui-icon-label">sm</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--md"><i
+                        class="lum-icon lum-icon--youtube lum-icon--md"></i><span class="gui-icon-label">md</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--lg"><i
+                        class="lum-icon lum-icon--youtube lum-icon--lg"></i><span class="gui-icon-label">lg</span></div>
+                <div class="gui-icon-wrapper" data-clipboard="lum-icon lum-icon--youtube lum-icon--xl"><i
+                        class="lum-icon lum-icon--youtube lum-icon--xl"></i><span class="gui-icon-label">xl</span></div>
             </div>
         </div>
 
@@ -498,10 +988,18 @@
         <!-- Buttons -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Buttons</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="demo-row">
                     <a class="lum-button primary" href="#"><span class="h__lum-button"><span class="text__lum-button">Primary</span></span></a>
@@ -514,19 +1012,28 @@
         <!-- Product Card -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Product Card</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="grid grid-cols-4">
-                    <div class="lum-product-card" >
+                    <div class="lum-product-card">
                         <div class="lum-product-card__img">
                             <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
                         </div>
                         <div class="lum-product-card__content">
                             <div class="lum-product-card__content-header">Category</div>
-                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP</div>
+                            <div class="lum-product-card__content-main">Orbit Stainless Steel MR16 Well Light SS5011AP
+                            </div>
                             <div class="lum-product-card__content-footer">810 $</div>
                         </div>
                     </div>
@@ -537,13 +1044,23 @@
         <!-- Category Card -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Category Card</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <a href="#" class="lum-cat__card">
-                    <div class="lum-cat__img"><div class="lum-cat__img__inner"><img src="assets/berand-product.png" alt="Category Name"></div></div>
+                    <div class="lum-cat__img">
+                        <div class="lum-cat__img__inner"><img src="assets/berand-product.png" alt="Category Name"></div>
+                    </div>
                     <span class="lum-cat-card__name">Category Name</span>
                 </a>
             </template>
@@ -552,16 +1069,30 @@
         <!-- Tabs: pill -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Tabs — pill</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="lum-tabs lum-tabs--pill" data-tabs>
                     <div class="lum-tabs__list" role="tablist">
-                        <button class="lum-tabs__tab is-active" id="g1-1" role="tab" aria-controls="g1p-1" type="button">Lighting</button>
-                        <button class="lum-tabs__tab" id="g1-2" role="tab" aria-controls="g1p-2" tabindex="-1" type="button">Electrical</button>
-                        <button class="lum-tabs__tab" id="g1-3" role="tab" aria-controls="g1p-3" tabindex="-1" type="button">Control</button>
+                        <button class="lum-tabs__tab is-active" id="g1-1" role="tab" aria-controls="g1p-1"
+                                type="button">Lighting
+                        </button>
+                        <button class="lum-tabs__tab" id="g1-2" role="tab" aria-controls="g1p-2" tabindex="-1"
+                                type="button">Electrical
+                        </button>
+                        <button class="lum-tabs__tab" id="g1-3" role="tab" aria-controls="g1p-3" tabindex="-1"
+                                type="button">Control
+                        </button>
                     </div>
                     <div class="lum-tabs__panel" id="g1p-1">Lighting panel</div>
                     <div class="lum-tabs__panel" id="g1p-2" hidden>Electrical panel</div>
@@ -573,16 +1104,30 @@
         <!-- Tabs: underline -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Tabs — underline</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="lum-tabs lum-tabs--underline" data-tabs>
                     <div class="lum-tabs__list" role="tablist">
-                        <button class="lum-tabs__tab is-active" id="g2-1" role="tab" aria-controls="g2p-1" type="button">Description</button>
-                        <button class="lum-tabs__tab" id="g2-2" role="tab" aria-controls="g2p-2" tabindex="-1" type="button">Specifics</button>
-                        <button class="lum-tabs__tab" id="g2-3" role="tab" aria-controls="g2p-3" tabindex="-1" type="button">Comments</button>
+                        <button class="lum-tabs__tab is-active" id="g2-1" role="tab" aria-controls="g2p-1"
+                                type="button">Description
+                        </button>
+                        <button class="lum-tabs__tab" id="g2-2" role="tab" aria-controls="g2p-2" tabindex="-1"
+                                type="button">Specifics
+                        </button>
+                        <button class="lum-tabs__tab" id="g2-3" role="tab" aria-controls="g2p-3" tabindex="-1"
+                                type="button">Comments
+                        </button>
                     </div>
                     <div class="lum-tabs__panel" id="g2p-1">Description panel</div>
                     <div class="lum-tabs__panel" id="g2p-2" hidden>Specifics panel</div>
@@ -594,15 +1139,27 @@
         <!-- Tabs: chip -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Tabs — chip</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="lum-tabs lum-tabs--chip" data-tabs>
                     <div class="lum-tabs__list" role="tablist">
-                        <button class="lum-tabs__tab is-active" id="g3-1" role="tab" aria-controls="g3p-1" type="button">EnVision LED Lighting</button>
-                        <button class="lum-tabs__tab" id="g3-2" role="tab" aria-controls="g3p-2" tabindex="-1" type="button">Premium Lighting</button>
+                        <button class="lum-tabs__tab is-active" id="g3-1" role="tab" aria-controls="g3p-1"
+                                type="button">EnVision LED Lighting
+                        </button>
+                        <button class="lum-tabs__tab" id="g3-2" role="tab" aria-controls="g3p-2" tabindex="-1"
+                                type="button">Premium Lighting
+                        </button>
                     </div>
                     <div class="lum-tabs__panel" id="g3p-1">Panel one</div>
                     <div class="lum-tabs__panel" id="g3p-2" hidden>Panel two</div>
@@ -613,19 +1170,29 @@
         <!-- Icon Block -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Icon Block (account / cart)</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="demo-row">
                     <a class="lum-icon-block" href="#">
                         <span class="lum-icon-block__figure"><i class="lum-icon lum-icon--user lum-icon--lg"></i></span>
-                        <span class="lum-icon-block__text"><span class="lum-icon-block__title">Account</span><span class="lum-icon-block__sub">Sign in</span></span>
+                        <span class="lum-icon-block__text"><span class="lum-icon-block__title">Account</span><span
+                                class="lum-icon-block__sub">Sign in</span></span>
                     </a>
                     <a class="lum-icon-block" href="#">
                         <span class="lum-icon-block__figure"><i class="lum-icon lum-icon--cart lum-icon--lg"></i></span>
-                        <span class="lum-icon-block__text"><span class="lum-icon-block__title">Shopping Cart</span><span class="lum-icon-block__sub">1 Items</span></span>
+                        <span class="lum-icon-block__text"><span class="lum-icon-block__title">Shopping Cart</span><span
+                                class="lum-icon-block__sub">1 Items</span></span>
                     </a>
                 </div>
             </template>
@@ -634,10 +1201,18 @@
         <!-- Mini Card -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Mini Product Card</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <a href="#" class="lum-mini">
                     <img class="lum-mini__img" src="assets/img-product-card.png" alt="">
@@ -656,10 +1231,18 @@
         <!-- Badge -->
         <div class="lum-demo" data-demo data-view="preview">
             <div class="lum-demo__bar"><span class="lum-demo__name">Badge</span>
-                <div class="lum-demo__actions"><div class="lum-demo__toggle"><button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button><button class="lum-demo__tab" data-view-btn="code" type="button">Code</button></div><button class="lum-demo__copy" data-copy type="button">Copy</button></div>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
             </div>
             <div class="lum-demo__preview" data-preview></div>
-            <div class="lum-demo__code"><pre><code data-code></code></pre></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
             <template data-source>
                 <div class="demo-row">
                     <span class="lum-badge">1</span>
@@ -668,13 +1251,289 @@
                 </div>
             </template>
         </div>
+        <!--    Breadcrumb    -->
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name">Breadcrumb</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <nav class="lum-breadcrumb" aria-label="Breadcrumb">
+                    <ol class="lum-breadcrumb__list">
+                        <li class="lum-breadcrumb__item">
+                            <a class="lum-breadcrumb__link" href="/">Home</a>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-breadcrumb__sep"
+                               aria-hidden="true"></i>
+                        </li>
+                        <li class="lum-breadcrumb__item">
+                            <a class="lum-breadcrumb__link" href="/collections/lights">Lights</a>
+                        </li>
+                    </ol>
+                </nav>
+            </template>
+        </div>
+        <!--    show more    -->
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name">  show more</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <div class="lum-showmore">
+                    <div class="lum-showmore__text">
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                    </div>
+                    <button class="lum-showmore__toggle" type="button" data-toggle aria-expanded="false">
+                        <span class="lum-showmore__toggle-more">Show more</span>
+                        <span class="lum-showmore__toggle-less">Show less</span>
+                        <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-showmore__toggle-caret"></i>
+                    </button>
+                </div>
+            </template>
+        </div>
 
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name"> switch</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <label class="lum-switch">
+                    <input class="lum-switch__input" type="checkbox">
+                    <span class="lum-switch__track"><span class="lum-switch__thumb"></span></span>
+                </label>
+            </template>
+        </div>
+
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name"> accordion</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <div class="lum-accordion">
+
+                    <div class="lum-accordion__item" data-accordion-item>
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle aria-expanded="false">
+                            Accordion 1
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+                        <div class="lum-accordion__body"><div class="lum-accordion__inner">
+                            <div class="lum-accordion__details">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </div>
+                        </div></div>
+                    </div>
+
+                    <div class="lum-accordion__item" data-accordion-item>
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle aria-expanded="false">
+                            Accordion 2
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+                        <div class="lum-accordion__body"><div class="lum-accordion__inner">
+                            <div class="lum-accordion__details">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </div>
+                        </div></div>
+                    </div>
+
+                    <!-- defaultExpanded + actions -->
+                    <div class="lum-accordion__item" data-accordion-item data-open>
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle aria-expanded="true">
+                            Accordion Actions
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+                        <div class="lum-accordion__body"><div class="lum-accordion__inner">
+                            <div class="lum-accordion__details">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </div>
+                            <div class="lum-accordion__actions">
+                                <button class="lum-button outline"><span class="text__lum-button">Cancel</span></button>
+                                <button class="lum-button primary"><span class="text__lum-button">Agree</span></button>
+                            </div>
+                        </div></div>
+                    </div>
+
+                </div>
+            </template>
+        </div>
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name"> switch</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <div class="lum-range" data-range data-min="0" data-max="10000">
+                    <div class="lum-range__fields">
+                        <div class="lum-range__field">
+                            <span class="lum-range__field-label">From</span>
+                            <input class="lum-range__input" type="number" data-range-from value="1000">
+                            <span class="lum-range__suffix">$</span>
+                        </div>
+                        <div class="lum-range__field">
+                            <span class="lum-range__field-label">To</span>
+                            <input class="lum-range__input" type="number" data-range-to value="10000">
+                            <span class="lum-range__suffix">$</span>
+                        </div>
+                    </div>
+
+                    <div class="lum-range__slider">
+                        <div class="lum-range__rail"></div>
+                        <div class="lum-range__fill" data-range-fill></div>
+                        <div class="lum-range__thumbs">
+                            <input type="range" data-range-min min="0" max="10000" value="1000">
+                            <input type="range" data-range-max min="0" max="10000" value="10000">
+                        </div>
+                    </div>
+                    <div class="lum-range__ends">
+                        <span class="lum-range__end">Lowest</span>
+                        <span class="lum-range__end">Highest</span>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name"> accordion</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <label class="lum-check">
+                    <input class="lum-check__input" type="checkbox">
+                    <span class="lum-check__box"></span>
+                    <span class="lum-check__label">Nora</span>
+                </label>
+
+            </template>
+        </div>
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name"> accordion</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <section class="lum-catrow">
+                    <div class="lum-container">
+                        <div class="lum-catrow__scroll">
+                            <a href="#" class="lum-catcard is-active">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                                <span class="lum-catcard__img"><img src="assets/berand-product.png" alt=""></span>
+                                <span class="lum-catcard__name">Category Name</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </template>
+        </div>
     </div>
+
+
 </div>
-
-
-
-
 
 
 <script>
@@ -701,12 +1560,20 @@
 
     (function () {
         'use strict';
+
         function deindent(s) {
             s = s.replace(/^\n/, '').replace(/\s+$/, '');
             var lines = s.split('\n');
-            var indent = Math.min.apply(null, lines.filter(function (l){return l.trim();}).map(function (l){return l.match(/^ */)[0].length;}));
-            return lines.map(function (l){ return l.slice(indent); }).join('\n');
+            var indent = Math.min.apply(null, lines.filter(function (l) {
+                return l.trim();
+            }).map(function (l) {
+                return l.match(/^ */)[0].length;
+            }));
+            return lines.map(function (l) {
+                return l.slice(indent);
+            }).join('\n');
         }
+
         document.querySelectorAll('[data-demo]').forEach(function (demo) {
             var src = deindent(demo.querySelector('[data-source]').innerHTML);
             demo.querySelector('[data-preview]').innerHTML = src;
@@ -714,29 +1581,43 @@
             demo.querySelectorAll('[data-view-btn]').forEach(function (btn) {
                 btn.addEventListener('click', function () {
                     demo.setAttribute('data-view', btn.getAttribute('data-view-btn'));
-                    demo.querySelectorAll('[data-view-btn]').forEach(function (b){ b.classList.toggle('is-active', b === btn); });
+                    demo.querySelectorAll('[data-view-btn]').forEach(function (b) {
+                        b.classList.toggle('is-active', b === btn);
+                    });
                 });
             });
             var copyBtn = demo.querySelector('[data-copy]');
             copyBtn.addEventListener('click', function () {
                 navigator.clipboard.writeText(src).then(function () {
-                    copyBtn.textContent = 'Copied'; copyBtn.classList.add('is-done');
-                    setTimeout(function () { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('is-done'); }, 1400);
+                    copyBtn.textContent = 'Copied';
+                    copyBtn.classList.add('is-done');
+                    setTimeout(function () {
+                        copyBtn.textContent = 'Copy';
+                        copyBtn.classList.remove('is-done');
+                    }, 1400);
                 });
             });
         });
 
         document.querySelectorAll('[data-tabs]').forEach(function (root) {
-            var list = root.querySelector('.lum-tabs__list'); if (!list) return;
+            var list = root.querySelector('.lum-tabs__list');
+            if (!list) return;
             var tabs = [].slice.call(root.querySelectorAll('.lum-tabs__tab'));
             var panels = [].slice.call(root.querySelectorAll('.lum-tabs__panel'));
             list.addEventListener('click', function (e) {
-                var t = e.target.closest('.lum-tabs__tab'); if (!t) return;
-                tabs.forEach(function (x){ x.classList.toggle('is-active', x === t); x.tabIndex = x === t ? 0 : -1; });
-                panels.forEach(function (p){ p.hidden = p.id !== t.getAttribute('aria-controls'); });
+                var t = e.target.closest('.lum-tabs__tab');
+                if (!t) return;
+                tabs.forEach(function (x) {
+                    x.classList.toggle('is-active', x === t);
+                    x.tabIndex = x === t ? 0 : -1;
+                });
+                panels.forEach(function (p) {
+                    p.hidden = p.id !== t.getAttribute('aria-controls');
+                });
             });
         });
     })();
 </script>
+<script src="assets/global.js"></script>
 </body>
 </html>

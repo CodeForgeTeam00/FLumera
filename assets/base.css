@@ -327,7 +327,13 @@
 /* ==========================================================================
    SWITCH (lum-switch) — accessible toggle built on a real checkbox.
    ========================================================================== */
-.lum-switch { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; font-family: var(--lum-font); }
+.lum-switch {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        justify-content: space-between;
+    }
 .lum-switch__input { position: absolute; opacity: 0; inline-size: 0; block-size: 0; }
 .lum-switch__track {
     position: relative;
@@ -354,7 +360,10 @@
 .lum-switch__input:focus-visible + .lum-switch__track { outline: 2px solid var(--lum-primary); outline-offset: 2px; }
 .lum-switch__label { color: var(--lum-n-900); font-size: var(--lum-text-md); }
 
-.lum-accordion { font-family: var(--lum-font); border: 1px solid var(--lum-n-30); border-radius: 12px; overflow: hidden; }
+.lum-accordion {
+    border-radius: 12px;
+    overflow: hidden;
+}
 
 .lum-accordion__item + .lum-accordion__item { border-block-start: 1px solid var(--lum-n-30); }
 
@@ -390,7 +399,7 @@
    CHECKBOX (lum-check) — custom box on a real <input type=checkbox>.
    Default: white bg, our border, small radius. Checked: primary + white tick.
    ========================================================================== */
-.lum-check { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-family: var(--lum-font); }
+.lum-check { display: flex; align-items: center; gap: 10px; cursor: pointer; justify-content: space-between }
 .lum-check__input { position: absolute; opacity: 0; inline-size: 0; block-size: 0; }
 .lum-check__box {
     position: relative;
@@ -427,8 +436,18 @@
    Native <input type=range> has ONE thumb, so we overlay two and only let each
    grab its own thumb (pointer-events juggled in CSS + JS clamps values).
    ========================================================================== */
-.lum-range__fields { display: flex; flex-direction: column; gap: 12px; margin-block-end: 16px; }
-.lum-range__field { display: flex; align-items: center; gap: 12px; }
+.lum-range__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-block-end: 16px;
+}
+.lum-range__field {
+    display: grid;
+    grid-template-columns: 32px auto 10px;
+    gap: 16px;
+    align-items: center;
+}
 .lum-range__field-label { inline-size: 40px; color: var(--lum-n-400); font-size: var(--lum-text-sm); }
 .lum-range__input {
     flex: 1;
@@ -444,12 +463,58 @@
     outline: none;
 }
 .lum-range__input:focus { border-color: var(--lum-primary); box-shadow: 0 0 0 3px rgba(21,174,92,.15); }
-.lum-range__suffix { color: var(--lum-primary); font-weight: 700; }
+.lum-range__suffix { inline-size: 40px; color: var(--lum-n-400); font-size: var(--lum-text-sm); }
 /* ==========================================================================
    CATEGORY CARDS ROW (lum-catrow) — single horizontal row, never wraps,
    scrolls on overflow. Active card = primary border.
    Private --_ tokens on the block; media query swaps values only. BP 1024.
    ========================================================================== */
+/* ==========================================================================
+   FILTER SEARCH (lum-fsearch) — small search that live-filters the list below
+   it (client-side). Pairs with lum-check items. Matches on each item's text.
+   ========================================================================== */
+.lum-fsearch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    block-size: 48px;
+    padding-inline: 16px;
+    background: var(--lum-n-10);
+    border: 1px solid var(--lum-n-30);
+    border-radius: 10px;
+    font-family: var(--lum-font);
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.lum-fsearch:focus-within { border-color: var(--lum-primary); box-shadow: 0 0 0 3px rgba(21,174,92,.15); }
+.lum-fsearch__icon { color: var(--lum-n-300); flex-shrink: 0; }
+.lum-fsearch__input {
+    flex: 1;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: var(--lum-text-md);
+    color: var(--lum-n-1000);
+}
+.lum-fsearch__input::placeholder { color: var(--lum-n-100); }
+
+/* the list this search controls */
+.lum-fsearch-list { display: flex; flex-direction: column; gap: 4px; margin-block-start: 12px; }
+.lum-fsearch-list__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 10px;
+    font-family: var(--lum-font);
+    color: var(--lum-n-900);
+    font-size: var(--lum-text-md);
+}
+.lum-fsearch-list__row[hidden] { display: none; }
+.lum-fsearch__empty { padding-block: 12px; color: var(--lum-n-300); font-size: var(--lum-text-sm); }
+.lum-fsearch__empty[hidden] { display: none; }
+
+/* reuse the checkbox box look (compact) */
+.lum-check__box2 { inline-size: 20px; block-size: 20px; border: 1px solid var(--lum-border); border-radius: 4px; background: var(--lum-n-0); }
 .lum-catrow {
     --_card: 107px;    /* card width (mobile) */
     --_img:  64px;     /* image box (mobile) */
@@ -563,6 +628,123 @@
 }
 .lum-range__ends { display: flex; justify-content: space-between; margin-block-start: 8px; }
 .lum-range__end { color: var(--lum-n-400); font-size: var(--lum-text-xs); }
+/* ==========================================================================
+/* ==========================================================================
+   PAGINATION (lum-pager)
+   Active page = solid primary. Prev/Next = primary text + chevron.
+   Disabled Prev/Next = muted, not clickable. "…" for skipped pages.
+   Logical properties, no !important. Chevron via lum-icon (left/right).
+   ========================================================================== */
+.lum-pager { font-family: var(--lum-font); }
+.lum-pager__list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lum-pager__item { display: inline-flex; }
+
+/* number links */
+.lum-pager__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-inline-size: 40px;
+    block-size: 40px;
+    padding-inline: 12px;
+    border-radius: 8px;
+    color: var(--lum-n-700);
+    font-size: var(--lum-text-sm);
+    transition: background-color .2s ease, color .2s ease;
+}
+.lum-pager__link:hover { background: var(--lum-n-20); color: var(--lum-n-1000); }
+
+/* active page */
+.lum-pager__item[aria-current="page"] .lum-pager__link,
+.lum-pager__link.is-active {
+    background: var(--lum-primary);
+    color: var(--lum-n-0);
+}
+
+/* ellipsis */
+.lum-pager__gap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-inline-size: 40px;
+    block-size: 40px;
+    color: var(--lum-n-400);
+}
+
+/* prev / next */
+.lum-pager__edge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    block-size: 40px;
+    padding-inline: 12px;
+    border-radius: 8px;
+    color: var(--lum-primary);
+    font-size: var(--lum-text-sm);
+    font-weight: 500;
+    transition: background-color .2s ease;
+}
+.lum-pager__edge:hover { background: var(--lum-n-20); }
+.lum-pager__edge[aria-disabled="true"] {
+    color: var(--lum-n-60);
+    pointer-events: none;
+}
+
+/* ---------- mobile: hide Previous label text, compress, show fewer numbers ---------- */
+@media screen and (max-width: 767px) {
+    .lum-pager__list { gap: 2px; }
+    .lum-pager__link, .lum-pager__gap { min-inline-size: 36px; block-size: 36px; padding-inline: 8px; }
+    .lum-pager__edge { block-size: 36px; padding-inline: 8px; }
+
+    /* Previous edge is hidden on mobile (like the design) */
+    .lum-pager__item[data-role="prev"] { display: none; }
+
+    /* keep only: first page, last page, current (and its immediate neighbours),
+       and the ellipsis. Hide the rest. */
+    .lum-pager__item[data-role="page"]:not([data-keep]) { display: none; }
+}
+.lum-swatches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 16px;
+}
+
+.lum-swatch {
+    --_c: var(--lum-n-40);          /* fallback colour */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+}
+.lum-swatch__chip {
+    inline-size: 24px;
+    block-size: 24px;
+    border-radius: 8px;
+    background: var(--_c);
+    border: 1px solid var(--lum-n-30);
+    box-shadow: inset 0 0 0 3px var(--lum-n-0);  /* white inner gap, like the design */
+    transition: box-shadow .2s ease;
+}
+.lum-swatch__name { font-size: var(--lum-text-md); color: var(--lum-n-1000); }
+
+/* selected: primary ring hugging the chip (keeps the white inner gap) */
+.lum-swatch.is-selected .lum-swatch__chip {
+    box-shadow: inset 0 0 0 3px var(--lum-n-0), 0 0 0 2px var(--lum-primary);
+}
+.lum-swatch:focus-visible { outline: 0; }
+.lum-swatch:focus-visible .lum-swatch__chip { box-shadow: inset 0 0 0 3px var(--lum-n-0), 0 0 0 2px var(--lum-primary); }
+
 /*-------------------- Icon utilities -------------------- */
 
 .lum-icon {

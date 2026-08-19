@@ -318,141 +318,297 @@
         </nav>
     </div>
 </header>
-<section class="products-section mx-auto w-full max-w-[1440px] px-6">
+<section class="products-section mx-auto w-full max-w-[1440px]">
 
-    <div class="products-section__layout grid w-full grid-cols-[240px_minmax(0,1fr)] items-start gap-6 xl:grid-cols-[280px_minmax(0,1fr)]">
+    <div class="products-section__layout flex w-full items-start gap-6">
 
-        <!-- FILTER -->
-        <aside class="product-filters flex w-full flex-col gap-4 rounded-3xl border border-[#e5e5e5] px-6 py-5">
+        <!-- =====================================================
+             FILTER SIDEBAR
+        ====================================================== -->
 
-            <!-- Filters Header -->
-            <div class="product-filters__header">
-                <h3 class="product-filters__title m-0">Filters</h3>
-            </div>
+        <div class="products-section__sidebar hidden shrink-0 lg:block lg:w-60 xl:w-[280px]">
 
+            <aside class="product-filters flex w-full flex-col gap-4 rounded-3xl border border-[#e5e5e5] px-6 py-5">
 
-            <!-- Price Range -->
-            <section class="product-filters__section flex flex-col gap-4">
+                <div class="lum-accordion">
 
-                <div class="product-filters__section-header flex items-center justify-between">
-                    <h4 class="product-filters__section-title m-0">Price Range</h4>
+                    <!-- Price Range -->
+                    <div class="lum-accordion__item" data-accordion-item="">
 
-                    <div class="product-filters__section-icon">
-                        <!-- Icon -->
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="false">
+                            Accordion 1
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="lum-range" data-range="" data-min="0" data-max="10000">
+
+                                        <div class="lum-range__fields">
+
+                                            <div class="lum-range__field">
+                                                <span class="lum-range__field-label">From</span>
+                                                <input class="lum-range__input" type="number" data-range-from="" value="1000">
+                                                <span class="lum-range__suffix">$</span>
+                                            </div>
+
+                                            <div class="lum-range__field">
+                                                <span class="lum-range__field-label">To</span>
+                                                <input class="lum-range__input" type="number" data-range-to="" value="10000">
+                                                <span class="lum-range__suffix">$</span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="lum-range__slider">
+
+                                            <div class="lum-range__rail"></div>
+
+                                            <div class="lum-range__fill" data-range-fill=""></div>
+
+                                            <div class="lum-range__thumbs">
+                                                <input type="range" data-range-min="" min="0" max="10000" value="1000">
+                                                <input type="range" data-range-max="" min="0" max="10000" value="10000">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="lum-range__ends">
+                                            <span class="lum-range__end">Lowest</span>
+                                            <span class="lum-range__end">Highest</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
+
+
+                    <!-- Availability -->
+                    <div class="lum-accordion__item" data-accordion-item="">
+
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="false">
+                            Accordion 2
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="switch-container flex flex-col gap-4">
+
+                                        <label class="lum-switch">
+                                            <span>In Stock</span>
+                                            <input class="lum-switch__input" type="checkbox">
+                                            <span class="lum-switch__track">
+                                                <span class="lum-switch__thumb"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="lum-switch">
+                                            <span>In Stock</span>
+                                            <input class="lum-switch__input" type="checkbox">
+                                            <span class="lum-switch__track">
+                                                <span class="lum-switch__thumb"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="lum-switch">
+                                            <span>In Stock</span>
+                                            <input class="lum-switch__input" type="checkbox">
+                                            <span class="lum-switch__track">
+                                                <span class="lum-switch__thumb"></span>
+                                            </span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Brands -->
+                    <div class="lum-accordion__item" data-accordion-item="" data-open="">
+
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="true">
+                            Accordion Actions
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="switch-container flex flex-col gap-2">
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Application -->
+                    <div class="lum-accordion__item" data-accordion-item="" data-open="">
+
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="true">
+                            Accordion Actions
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="switch-container flex flex-col gap-2">
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                        <label class="lum-check">
+                                            <input class="lum-check__input" type="checkbox">
+                                            <span class="lum-check__box"></span>
+                                            <span class="lum-check__label">Nora</span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="product-filters__section-content">
+            </aside>
 
-                    <div class="product-filters__price-range">
-                        <!-- Price Range Items -->
+        </div>
+
+
+        <!-- =====================================================
+             PRODUCTS
+        ====================================================== -->
+
+        <div class="products-section__main min-w-0 flex-1">
+
+            <main class="products-section__content w-full min-w-0">
+
+
+                <!-- =====================================================
+                     SORT BAR
+                ====================================================== -->
+
+                <div class="products-sort mb-6 flex w-full items-center justify-between rounded-2xl border border-[#e5e5e5] px-4 py-4">
+
+                    <div class="products-sort__content flex min-w-0 items-center gap-4">
+
+                           <span class="products-sort__label shrink-0 font-bold text-[14px]">
+                               Sort By:
+                           </span>
+
+                        <div class="products-sort__options flex items-center gap-6">
+
+                            <button class="products-sort__option active whitespace-nowrap text-[14px]" type="button">
+                                Featured
+                            </button>
+
+                            <button class="products-sort__option whitespace-nowrap text-[14px]" type="button">
+                                Best Sellers
+                            </button>
+
+                            <button class="products-sort__option whitespace-nowrap text-[14px]" type="button">
+                                Most Popular
+                            </button>
+
+                            <button class="products-sort__option whitespace-nowrap text-[14px]" type="button">
+                                New Arrivals
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="products-sort__result shrink-0 text-[#8b95a5] text-[12px]">
+                        Showing 1–50 of 959 results
                     </div>
 
                 </div>
 
-            </section>
 
+                <!-- =====================================================
+                     PRODUCT GRID
 
-            <!-- Availability -->
-            <section class="product-filters__section flex flex-col gap-4">
+                ====================================================== -->
 
-                <div class="product-filters__section-header flex items-center justify-between">
-                    <h4 class="product-filters__section-title m-0">Availability</h4>
+                <div class="products-grid grid h-fit w-full grid-cols-2 content-start items-start overflow-hidden rounded-none border border-[#e5e5e5] bg-white lg:grid-cols-3 xl:grid-cols-4 xl:rounded-3xl">
 
-                    <div class="product-filters__section-icon">
-                        <!-- Icon -->
-                    </div>
-                </div>
-
-                <div class="product-filters__section-content">
-
-                    <div class="product-filters__options flex flex-col gap-3">
-                        <!-- Availability Items -->
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- Brands -->
-            <section class="product-filters__section flex flex-col gap-4">
-
-                <div class="product-filters__section-header flex items-center justify-between">
-                    <h4 class="product-filters__section-title m-0">Brands</h4>
-
-                    <div class="product-filters__section-icon">
-                        <!-- Icon -->
-                    </div>
-                </div>
-
-                <div class="product-filters__section-content flex flex-col gap-3">
-
-                    <div class="product-filters__search">
-                        <!-- Search Input -->
-                    </div>
-
-                    <div class="product-filters__options flex flex-col gap-3">
-                        <!-- Brand Items -->
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- Application -->
-            <section class="product-filters__section flex flex-col gap-4">
-
-                <div class="product-filters__section-header flex items-center justify-between">
-                    <h4 class="product-filters__section-title m-0">Application</h4>
-
-                    <div class="product-filters__section-icon">
-                        <!-- Icon -->
-                    </div>
-                </div>
-
-                <div class="product-filters__section-content">
-
-                    <div class="product-filters__options flex flex-col gap-3">
-                        <!-- Application Items -->
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- Color Family -->
-            <section class="product-filters__section flex flex-col gap-4">
-
-                <div class="product-filters__section-header flex items-center justify-between">
-                    <h4 class="product-filters__section-title m-0">Color Family</h4>
-
-                    <div class="product-filters__section-icon">
-                        <!-- Icon -->
-                    </div>
-                </div>
-
-                <div class="product-filters__section-content">
-
-                    <div class="product-filters__colors">
-                        <!-- Color Items -->
-                    </div>
-
-                </div>
-
-            </section>
-
-        </aside>
-
-
-        <!-- PRODUCTS -->
-        <main class="products-section__content min-w-0 w-full">
-
-            <div class="products-grid grid w-full grid-cols-2 gap-px overflow-hidden rounded-none border border-[#e5e5e5] bg-[#e5e5e5] lg:grid-cols-3 xl:grid-cols-4 xl:rounded-3xl">
-
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -460,20 +616,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -481,20 +641,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -502,20 +666,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -523,20 +691,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -544,20 +716,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -565,20 +741,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -586,20 +766,24 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
-                </div>
 
 
-                <div class="products-grid__item min-w-0 bg-white">
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
@@ -607,31 +791,63 @@
                         </div>
 
                         <div class="lum-product-card__content">
-                            <div class="lum-product-card__content-header">Category</div>
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
 
                             <div class="lum-product-card__content-main">
                                 Orbit Stainless Steel MR16 Well Light SS5011AP
                             </div>
 
-                            <div class="lum-product-card__content-footer">810 $</div>
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
                         </div>
 
                     </div>
+
+
+                    <div class="lum-product-card">
+
+                        <div class="lum-product-card__img">
+                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                        </div>
+
+                        <div class="lum-product-card__content">
+
+                            <div class="lum-product-card__content-header">
+                                Category
+                            </div>
+
+                            <div class="lum-product-card__content-main">
+                                Orbit Stainless Steel MR16 Well Light SS5011AP
+                            </div>
+
+                            <div class="lum-product-card__content-footer">
+                                810 $
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-            </div>
+            </main>
 
-        </main>
+        </div>
 
     </div>
 
 </section>
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/footer.js"></script>
 <script src="assets/header.js"></script>
 <script src="assets/heroSlider.js"></script>
 <script src="assets/lum-hotspots.js"></script>
 <script src="assets/tabs.js"></script>
+<script src="assets/global.js"></script>
 </body>
 </html>

@@ -58,3 +58,34 @@
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 })();
+
+(function () {
+    'use strict';
+    /* single-select demo; swap toggle logic for multi-select if needed */
+    document.querySelectorAll('.lum-swatches').forEach(function (group) {
+        group.addEventListener('click', function (e) {
+            var btn = e.target.closest('.lum-swatch');
+            if (!btn) return;
+            group.querySelectorAll('.lum-swatch').forEach(function (s) { s.classList.toggle('is-selected', s === btn); });
+        });
+    });
+})();
+
+
+(function () {
+    document.querySelectorAll('[data-fsearch]').forEach(function (group) {
+        var input = group.querySelector('[data-fsearch-input]');
+        var items = Array.prototype.slice.call(group.querySelectorAll('[data-fsearch-item]'));
+        var empty = group.querySelector('[data-fsearch-empty]');
+        input.addEventListener('input', function () {
+            var q = input.value.trim().toLowerCase();
+            var shown = 0;
+            items.forEach(function (item) {
+                var match = item.textContent.trim().toLowerCase().indexOf(q) !== -1;
+                item.hidden = !match;
+                if (match) shown++;
+            });
+            if (empty) empty.hidden = shown !== 0;
+        });
+    });
+})();

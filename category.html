@@ -333,7 +333,7 @@
                 <div class="lum-accordion">
 
                     <!-- Price Range -->
-                    <div class="lum-accordion__item" data-accordion-item="">
+                    <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="false">
                             Accordion 1
@@ -347,41 +347,31 @@
                                 <div class="lum-accordion__details">
 
                                     <div class="lum-range" data-range="" data-min="0" data-max="10000">
-
                                         <div class="lum-range__fields">
-
                                             <div class="lum-range__field">
                                                 <span class="lum-range__field-label">From</span>
                                                 <input class="lum-range__input" type="number" data-range-from="" value="1000">
                                                 <span class="lum-range__suffix">$</span>
                                             </div>
-
                                             <div class="lum-range__field">
                                                 <span class="lum-range__field-label">To</span>
                                                 <input class="lum-range__input" type="number" data-range-to="" value="10000">
                                                 <span class="lum-range__suffix">$</span>
                                             </div>
-
                                         </div>
 
                                         <div class="lum-range__slider">
-
                                             <div class="lum-range__rail"></div>
-
                                             <div class="lum-range__fill" data-range-fill=""></div>
-
                                             <div class="lum-range__thumbs">
                                                 <input type="range" data-range-min="" min="0" max="10000" value="1000">
                                                 <input type="range" data-range-max="" min="0" max="10000" value="10000">
                                             </div>
-
                                         </div>
-
                                         <div class="lum-range__ends">
                                             <span class="lum-range__end">Lowest</span>
                                             <span class="lum-range__end">Highest</span>
                                         </div>
-
                                     </div>
 
                                 </div>
@@ -394,7 +384,7 @@
 
 
                     <!-- Availability -->
-                    <div class="lum-accordion__item" data-accordion-item="">
+                    <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="false">
                             Accordion 2
@@ -457,34 +447,41 @@
                             <div class="lum-accordion__inner">
 
                                 <div class="lum-accordion__details">
-
                                     <div class="switch-container flex flex-col gap-2">
 
-                                        <label class="lum-check">
-                                            <input class="lum-check__input" type="checkbox">
-                                            <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
-                                        </label>
-
-                                        <label class="lum-check">
-                                            <input class="lum-check__input" type="checkbox">
-                                            <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
-                                        </label>
-
-                                        <label class="lum-check">
-                                            <input class="lum-check__input" type="checkbox">
-                                            <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
-                                        </label>
-
-                                        <label class="lum-check">
-                                            <input class="lum-check__input" type="checkbox">
-                                            <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
-                                        </label>
+                                        <div class="lum-fsearch-group" data-fsearch="">
+                                            <div class="lum-fsearch">
+                                                <i class="lum-icon lum-icon--search lum-icon--sm lum-fsearch__icon"></i>
+                                                <input class="lum-fsearch__input" type="text" placeholder="Search Brand" data-fsearch-input="" aria-label="Search Brand">
+                                            </div>
+                                            <div class="lum-fsearch-list">
+                                                <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                                    <span class="lum-check__label">Nora</span>
+                                                    <input class="lum-check__input" type="checkbox">
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+                                                <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                                    <span class="lum-check__label">ali</span>
+                                                    <input class="lum-check__input" type="checkbox">
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+                                                <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                                    <span class="lum-check__label">fix</span>
+                                                    <input class="lum-check__input" type="checkbox">
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+                                                <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                                    <span class="lum-check__label">loaosdjj</span>
+                                                    <input class="lum-check__input" type="checkbox">
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+                                                <p class="lum-fsearch__empty" data-fsearch-empty="" hidden="">No matches</p>
+                                            </div>
+                                        </div>
 
                                     </div>
+
+
 
                                 </div>
 
@@ -511,30 +508,58 @@
 
                                     <div class="switch-container flex flex-col gap-2">
 
-                                        <label class="lum-check">
+                                        <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                            <span class="lum-check__label">Nora</span>
                                             <input class="lum-check__input" type="checkbox">
                                             <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
                                         </label>
-
-                                        <label class="lum-check">
+                                        <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                            <span class="lum-check__label">ali</span>
                                             <input class="lum-check__input" type="checkbox">
                                             <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
                                         </label>
-
-                                        <label class="lum-check">
+                                        <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                            <span class="lum-check__label">fix</span>
                                             <input class="lum-check__input" type="checkbox">
                                             <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
                                         </label>
-
-                                        <label class="lum-check">
+                                        <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
+                                            <span class="lum-check__label">loaosdjj</span>
                                             <input class="lum-check__input" type="checkbox">
                                             <span class="lum-check__box"></span>
-                                            <span class="lum-check__label">Nora</span>
                                         </label>
 
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="lum-accordion__item" data-accordion-item="" data-open="">
+
+                        <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="true">
+                            Accordion Actions
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"></i>
+                        </button>
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="lum-swatches">
+                                        <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Ocean</span></button>
+                                        <button class="lum-swatch" style="--_c:#27ae60" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Forest</span></button>
+                                        <button class="lum-swatch" style="--_c:#e2542c" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Sunset</span></button>
+                                        <button class="lum-swatch" style="--_c:#e84f8b" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Rose</span></button>
+                                        <button class="lum-swatch" style="--_c:#5b6b83" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Slate</span></button>
+                                        <button class="lum-swatch" style="--_c:#e74c3c" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Coral</span></button>
+                                        <button class="lum-swatch" style="--_c:#c9a227" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Sand</span></button>
+                                        <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Berry</span></button>
                                     </div>
 
                                 </div>
@@ -833,6 +858,30 @@
 
                     </div>
 
+                </div>
+                <!-- middle page: both edges active, page 2 current, ellipsis before 1000 -->
+                <div class=" mt-10 w-auto flex  justify-center lg:justify-start border border-[#efefef] rounded-2xl">
+                    <nav class="lum-pager" aria-label="Pagination">
+                        <ul class="lum-pager__list">
+                            <li class="lum-pager__item" data-role="prev">
+                                <a href="#" class="lum-pager__edge">
+                                    <i class="lum-icon lum-icon--chevron-left lum-icon--sm"></i> Previous
+                                </a>
+                            </li>
+                            <li class="lum-pager__item" data-role="page" data-keep=""><a href="#" class="lum-pager__link">1</a></li>
+                            <li class="lum-pager__item" data-role="page" data-keep="" aria-current="page"><a href="#" class="lum-pager__link">2</a></li>
+                            <li class="lum-pager__item" data-role="page"><a href="#" class="lum-pager__link">3</a></li>
+                            <li class="lum-pager__item" data-role="page"><a href="#" class="lum-pager__link">4</a></li>
+                            <li class="lum-pager__item" data-role="page"><a href="#" class="lum-pager__link">5</a></li>
+                            <li class="lum-pager__item" data-role="gap" data-keep=""><span class="lum-pager__gap">…</span></li>
+                            <li class="lum-pager__item" data-role="page" data-keep=""><a href="#" class="lum-pager__link">1000</a></li>
+                            <li class="lum-pager__item" data-role="next">
+                                <a href="#" class="lum-pager__edge">
+                                    Next <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </main>

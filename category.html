@@ -318,21 +318,328 @@
         </nav>
     </div>
 </header>
-<section class="products-section mx-auto w-full max-w-[1440px]">
+<main class="products-section mx-auto w-full max-w-[1440px]">
 
-    <div class="products-section__layout flex w-full items-start gap-6">
+    <!-- =========================================
+         BREADCRUMB + DESCRIPTION
+    ========================================== -->
 
-        <!-- =====================================================
-             FILTER SIDEBAR
-        ====================================================== -->
+    <section class="products-section__intro px-4 pt-6">
 
-        <div class="products-section__sidebar hidden shrink-0 lg:block lg:w-60 xl:w-[280px]">
+        <nav class="lum-breadcrumb" aria-label="Breadcrumb">
+            <ol class="lum-breadcrumb__list">
 
-            <aside class="product-filters flex w-full flex-col gap-4 rounded-3xl border border-[#e5e5e5] px-6 py-5">
+                <li class="lum-breadcrumb__item">
+                    <a class="lum-breadcrumb__link" href="/">Home</a>
+
+                    <i
+                            class="lum-icon lum-icon--chevron-right lum-icon--xs lum-breadcrumb__sep"
+                            aria-hidden="true"
+                    ></i>
+                </li>
+
+                <li class="lum-breadcrumb__item">
+                    <a
+                            class="lum-breadcrumb__link"
+                            href="/collections/lights"
+                    >
+                        Lights
+                    </a>
+                </li>
+
+            </ol>
+        </nav>
+
+
+        <div class="lum-showmore">
+
+            <div class="lum-showmore__text">
+
+                Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                rich fabrics and amazing colors that will make you stand out.
+
+                Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                rich fabrics and amazing colors that will make you stand out.
+
+                Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                rich fabrics and amazing colors that will make you stand out.
+
+                Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                rich fabrics and amazing colors that will make you stand out.
+
+            </div>
+
+            <button
+                    class="lum-showmore__toggle"
+                    type="button"
+                    data-toggle=""
+                    aria-expanded="false"
+            >
+                <span class="lum-showmore__toggle-more">
+                    Show more
+                </span>
+
+                <span class="lum-showmore__toggle-less">
+                    Show less
+                </span>
+
+                <i
+                        class="lum-icon lum-icon--chevron-right lum-icon--xs lum-showmore__toggle-caret"
+                ></i>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CATEGORY ROW
+    ========================================== -->
+
+    <section class="products-section__categories py-2 lg:pb-6">
+
+        <div class="lum-catrow">
+
+            <div class="lum-container">
+
+                <div class="lum-catrow__scroll">
+
+                    <a href="#" class="lum-catcard is-active">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                        <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MOBILE TOOLBAR
+    ========================================== -->
+
+    <div class="products-toolbar flex justify-between px-4 pb-4 lg:hidden">
+
+        <div class="products-toolbar__actions flex gap-2">
+
+            <!-- FILTER -->
+            <button
+                    class="products-toolbar__button flex items-center justify-center gap-2 rounded-full border border-[#EBECF0] px-4 py-1"
+                    type="button"
+                    data-filter-open
+                    aria-controls="mobile-filters"
+                    aria-expanded="true"
+            >
+                <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+
+                <span class="text-[14px] leading-7">
+                    Filters
+                </span>
+            </button>
+
+
+            <!-- SORT -->
+            <button
+                    class="products-toolbar__button flex items-center justify-center gap-2 rounded-full border border-[#EBECF0] px-4 py-1"
+                    type="button"
+            >
+                <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+
+                <span class="text-[14px] leading-7">
+                    Sort By
+                </span>
+            </button>
+
+        </div>
+
+
+        <div class="products-toolbar__results flex items-center">
+
+            <span class="text-[12px] text-[#7A869A]">
+                959 results
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MOBILE FILTER DRAWER
+    ========================================== -->
+
+    <div
+            id="mobile-filters"
+            class="products-filter-drawer fixed inset-0 z-[1000] hidden items-end lg:hidden"
+            data-filter-drawer
+            aria-hidden="true"
+    >
+
+        <!-- BACKDROP -->
+        <button
+                class="products-filter-drawer__backdrop absolute inset-0 h-full w-full border-0 bg-black/50 p-0"
+                type="button"
+                data-filter-close
+                aria-label="Close filters"
+        ></button>
+
+
+        <!-- PANEL -->
+        <div
+                class="products-filter-drawer__panel relative z-10 min-h-[100dvh] w-full overflow-y-auto  bg-white px-4 pb-6 pt-2"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="mobile-filters-title"
+        >
+
+            <!-- HANDLE -->
+            <div
+                    class="products-filter-drawer__handle mx-auto mb-3 h-1 w-8 rounded-full bg-[#7A869A]"
+            ></div>
+
+
+            <!-- HEADER -->
+            <div
+                    class="products-filter-drawer__header flex items-center justify-between border-b border-[#EBECF0] pb-4"
+            >
+
+                <div class="products-filter-drawer__title-wrap flex items-center gap-2">
+
+                    <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+
+                    <h2
+                            id="mobile-filters-title"
+                            class="products-filter-drawer__title m-0 text-[20px] font-bold"
+                    >
+                        Filters
+                    </h2>
+
+                </div>
+
+
+                <button
+                        class="products-filter-drawer__close flex size-8 items-center justify-center border-0 bg-transparent text-[24px] leading-none"
+                        type="button"
+                        data-filter-close
+                        aria-label="Close filters"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- SELECTED FILTERS -->
+
+
+            <!-- FILTER CONTENT -->
+            <div class="products-filter-drawer__content w-full ">
 
                 <div class="lum-accordion">
 
-                    <!-- Price Range -->
+                    <!-- PRICE RANGE -->
                     <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="false">
@@ -347,31 +654,67 @@
                                 <div class="lum-accordion__details">
 
                                     <div class="lum-range" data-range="" data-min="0" data-max="10000">
+
                                         <div class="lum-range__fields">
+
                                             <div class="lum-range__field">
-                                                <span class="lum-range__field-label">From</span>
+
+                                    <span class="lum-range__field-label">
+                                        From
+                                    </span>
+
                                                 <input class="lum-range__input" type="number" data-range-from="" value="1000">
-                                                <span class="lum-range__suffix">$</span>
+
+                                                <span class="lum-range__suffix">
+                                        $
+                                    </span>
+
                                             </div>
+
                                             <div class="lum-range__field">
-                                                <span class="lum-range__field-label">To</span>
+
+                                    <span class="lum-range__field-label">
+                                        To
+                                    </span>
+
                                                 <input class="lum-range__input" type="number" data-range-to="" value="10000">
-                                                <span class="lum-range__suffix">$</span>
+
+                                                <span class="lum-range__suffix">
+                                        $
+                                    </span>
+
                                             </div>
+
                                         </div>
 
                                         <div class="lum-range__slider">
+
                                             <div class="lum-range__rail"></div>
+
                                             <div class="lum-range__fill" data-range-fill=""></div>
+
                                             <div class="lum-range__thumbs">
+
                                                 <input type="range" data-range-min="" min="0" max="10000" value="1000">
+
                                                 <input type="range" data-range-max="" min="0" max="10000" value="10000">
+
                                             </div>
+
                                         </div>
+
                                         <div class="lum-range__ends">
-                                            <span class="lum-range__end">Lowest</span>
-                                            <span class="lum-range__end">Highest</span>
+
+                                <span class="lum-range__end">
+                                    Lowest
+                                </span>
+
+                                            <span class="lum-range__end">
+                                    Highest
+                                </span>
+
                                         </div>
+
                                     </div>
 
                                 </div>
@@ -383,7 +726,7 @@
                     </div>
 
 
-                    <!-- Availability -->
+                    <!-- AVAILABILITY -->
                     <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="false">
@@ -400,27 +743,39 @@
                                     <div class="switch-container flex flex-col gap-4">
 
                                         <label class="lum-switch">
+
                                             <span>In Stock</span>
+
                                             <input class="lum-switch__input" type="checkbox">
+
                                             <span class="lum-switch__track">
-                                                <span class="lum-switch__thumb"></span>
-                                            </span>
+                                    <span class="lum-switch__thumb"></span>
+                                </span>
+
                                         </label>
 
                                         <label class="lum-switch">
+
                                             <span>In Stock</span>
+
                                             <input class="lum-switch__input" type="checkbox">
+
                                             <span class="lum-switch__track">
-                                                <span class="lum-switch__thumb"></span>
-                                            </span>
+                                    <span class="lum-switch__thumb"></span>
+                                </span>
+
                                         </label>
 
                                         <label class="lum-switch">
+
                                             <span>In Stock</span>
+
                                             <input class="lum-switch__input" type="checkbox">
+
                                             <span class="lum-switch__track">
-                                                <span class="lum-switch__thumb"></span>
-                                            </span>
+                                    <span class="lum-switch__thumb"></span>
+                                </span>
+
                                         </label>
 
                                     </div>
@@ -434,7 +789,7 @@
                     </div>
 
 
-                    <!-- Brands -->
+                    <!-- BRANDS -->
                     <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="true">
@@ -447,42 +802,79 @@
                             <div class="lum-accordion__inner">
 
                                 <div class="lum-accordion__details">
+
                                     <div class="switch-container flex flex-col gap-2">
 
                                         <div class="lum-fsearch-group" data-fsearch="">
+
                                             <div class="lum-fsearch">
+
                                                 <i class="lum-icon lum-icon--search lum-icon--sm lum-fsearch__icon"></i>
+
                                                 <input class="lum-fsearch__input" type="text" placeholder="Search Brand" data-fsearch-input="" aria-label="Search Brand">
+
                                             </div>
+
                                             <div class="lum-fsearch-list">
+
                                                 <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                                    <span class="lum-check__label">Nora</span>
+
+                                        <span class="lum-check__label">
+                                            Nora
+                                        </span>
+
                                                     <input class="lum-check__input" type="checkbox">
+
                                                     <span class="lum-check__box"></span>
+
                                                 </label>
+
                                                 <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                                    <span class="lum-check__label">ali</span>
+
+                                        <span class="lum-check__label">
+                                            ali
+                                        </span>
+
                                                     <input class="lum-check__input" type="checkbox">
+
                                                     <span class="lum-check__box"></span>
+
                                                 </label>
+
                                                 <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                                    <span class="lum-check__label">fix</span>
+
+                                        <span class="lum-check__label">
+                                            fix
+                                        </span>
+
                                                     <input class="lum-check__input" type="checkbox">
+
                                                     <span class="lum-check__box"></span>
+
                                                 </label>
+
                                                 <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                                    <span class="lum-check__label">loaosdjj</span>
+
+                                        <span class="lum-check__label">
+                                            loaosdjj
+                                        </span>
+
                                                     <input class="lum-check__input" type="checkbox">
+
                                                     <span class="lum-check__box"></span>
+
                                                 </label>
-                                                <p class="lum-fsearch__empty" data-fsearch-empty="" hidden="">No matches</p>
+
+                                                <p class="lum-fsearch__empty" data-fsearch-empty="" hidden>
+                                                    No matches
+                                                </p>
+
                                             </div>
+
                                         </div>
 
                                     </div>
 
-
-
                                 </div>
 
                             </div>
@@ -492,7 +884,7 @@
                     </div>
 
 
-                    <!-- Application -->
+                    <!-- APPLICATION -->
                     <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="true">
@@ -509,24 +901,51 @@
                                     <div class="switch-container flex flex-col gap-2">
 
                                         <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                            <span class="lum-check__label">Nora</span>
+
+                                <span class="lum-check__label">
+                                    Nora
+                                </span>
+
                                             <input class="lum-check__input" type="checkbox">
+
                                             <span class="lum-check__box"></span>
+
                                         </label>
+
                                         <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                            <span class="lum-check__label">ali</span>
+
+                                <span class="lum-check__label">
+                                    ali
+                                </span>
+
                                             <input class="lum-check__input" type="checkbox">
+
                                             <span class="lum-check__box"></span>
+
                                         </label>
+
                                         <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                            <span class="lum-check__label">fix</span>
+
+                                <span class="lum-check__label">
+                                    fix
+                                </span>
+
                                             <input class="lum-check__input" type="checkbox">
+
                                             <span class="lum-check__box"></span>
+
                                         </label>
+
                                         <label class="lum-check lum-fsearch-list__row" data-fsearch-item="">
-                                            <span class="lum-check__label">loaosdjj</span>
+
+                                <span class="lum-check__label">
+                                    loaosdjj
+                                </span>
+
                                             <input class="lum-check__input" type="checkbox">
+
                                             <span class="lum-check__box"></span>
+
                                         </label>
 
                                     </div>
@@ -538,6 +957,9 @@
                         </div>
 
                     </div>
+
+
+                    <!-- COLOR FAMILY -->
                     <div class="lum-accordion__item" data-accordion-item="" data-open="">
 
                         <button class="lum-accordion__summary" type="button" data-accordion-toggle="" aria-expanded="true">
@@ -552,14 +974,669 @@
                                 <div class="lum-accordion__details">
 
                                     <div class="lum-swatches">
-                                        <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Ocean</span></button>
-                                        <button class="lum-swatch" style="--_c:#27ae60" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Forest</span></button>
-                                        <button class="lum-swatch" style="--_c:#e2542c" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Sunset</span></button>
-                                        <button class="lum-swatch" style="--_c:#e84f8b" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Rose</span></button>
-                                        <button class="lum-swatch" style="--_c:#5b6b83" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Slate</span></button>
-                                        <button class="lum-swatch" style="--_c:#e74c3c" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Coral</span></button>
-                                        <button class="lum-swatch" style="--_c:#c9a227" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Sand</span></button>
-                                        <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Berry</span></button>
+
+                                        <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Ocean</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#27ae60" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Forest</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#e2542c" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Sunset</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#e84f8b" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Rose</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#5b6b83" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Slate</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#e74c3c" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Coral</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#c9a227" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Sand</span>
+                                        </button>
+
+                                        <button class="lum-swatch" style="--_c:#9b2fae" type="button">
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Berry</span>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         PRODUCTS LAYOUT
+    ========================================== -->
+
+    <div class="products-section__layout flex w-full items-start gap-6">
+
+
+        <!-- =========================================
+             DESKTOP FILTER SIDEBAR
+        ========================================== -->
+
+        <div
+                class="products-section__sidebar hidden shrink-0 lg:block lg:w-60 xl:w-[280px]"
+        >
+
+            <aside
+                    class="product-filters flex w-full flex-col gap-4 rounded-3xl border border-[#e5e5e5] px-6 py-5"
+                    aria-label="Product filters"
+            >
+
+                <!-- COMPONENT - DO NOT MODIFY -->
+                <div class="lum-accordion">
+
+
+                    <!-- PRICE RANGE -->
+                    <div
+                            class="lum-accordion__item"
+                            data-accordion-item=""
+                            data-open=""
+                    >
+
+                        <button
+                                class="lum-accordion__summary"
+                                type="button"
+                                data-accordion-toggle=""
+                                aria-expanded="false"
+                        >
+                            Accordion 1
+
+                            <i
+                                    class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
+                            ></i>
+                        </button>
+
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div
+                                            class="lum-range"
+                                            data-range=""
+                                            data-min="0"
+                                            data-max="10000"
+                                    >
+
+                                        <div class="lum-range__fields">
+
+                                            <div class="lum-range__field">
+
+                                                <span class="lum-range__field-label">
+                                                    From
+                                                </span>
+
+                                                <input
+                                                        class="lum-range__input"
+                                                        type="number"
+                                                        data-range-from=""
+                                                        value="1000"
+                                                >
+
+                                                <span class="lum-range__suffix">
+                                                    $
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="lum-range__field">
+
+                                                <span class="lum-range__field-label">
+                                                    To
+                                                </span>
+
+                                                <input
+                                                        class="lum-range__input"
+                                                        type="number"
+                                                        data-range-to=""
+                                                        value="10000"
+                                                >
+
+                                                <span class="lum-range__suffix">
+                                                    $
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="lum-range__slider">
+
+                                            <div class="lum-range__rail"></div>
+
+                                            <div
+                                                    class="lum-range__fill"
+                                                    data-range-fill=""
+                                            ></div>
+
+                                            <div class="lum-range__thumbs">
+
+                                                <input
+                                                        type="range"
+                                                        data-range-min=""
+                                                        min="0"
+                                                        max="10000"
+                                                        value="1000"
+                                                >
+
+                                                <input
+                                                        type="range"
+                                                        data-range-max=""
+                                                        min="0"
+                                                        max="10000"
+                                                        value="10000"
+                                                >
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="lum-range__ends">
+
+                                            <span class="lum-range__end">
+                                                Lowest
+                                            </span>
+
+                                            <span class="lum-range__end">
+                                                Highest
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY -->
+                    <div
+                            class="lum-accordion__item"
+                            data-accordion-item=""
+                            data-open=""
+                    >
+
+                        <button
+                                class="lum-accordion__summary"
+                                type="button"
+                                data-accordion-toggle=""
+                                aria-expanded="false"
+                        >
+                            Accordion 2
+
+                            <i
+                                    class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
+                            ></i>
+                        </button>
+
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="switch-container flex flex-col gap-4">
+
+                                        <label class="lum-switch">
+
+                                            <span>In Stock</span>
+
+                                            <input
+                                                    class="lum-switch__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-switch__track">
+                                                <span class="lum-switch__thumb"></span>
+                                            </span>
+
+                                        </label>
+
+
+                                        <label class="lum-switch">
+
+                                            <span>In Stock</span>
+
+                                            <input
+                                                    class="lum-switch__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-switch__track">
+                                                <span class="lum-switch__thumb"></span>
+                                            </span>
+
+                                        </label>
+
+
+                                        <label class="lum-switch">
+
+                                            <span>In Stock</span>
+
+                                            <input
+                                                    class="lum-switch__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-switch__track">
+                                                <span class="lum-switch__thumb"></span>
+                                            </span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BRANDS -->
+                    <div
+                            class="lum-accordion__item"
+                            data-accordion-item=""
+                            data-open=""
+                    >
+
+                        <button
+                                class="lum-accordion__summary"
+                                type="button"
+                                data-accordion-toggle=""
+                                aria-expanded="true"
+                        >
+                            Accordion Actions
+
+                            <i
+                                    class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
+                            ></i>
+                        </button>
+
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="switch-container flex flex-col gap-2">
+
+                                        <div
+                                                class="lum-fsearch-group"
+                                                data-fsearch=""
+                                        >
+
+                                            <div class="lum-fsearch">
+
+                                                <i
+                                                        class="lum-icon lum-icon--search lum-icon--sm lum-fsearch__icon"
+                                                ></i>
+
+                                                <input
+                                                        class="lum-fsearch__input"
+                                                        type="text"
+                                                        placeholder="Search Brand"
+                                                        data-fsearch-input=""
+                                                        aria-label="Search Brand"
+                                                >
+
+                                            </div>
+
+
+                                            <div class="lum-fsearch-list">
+
+                                                <label
+                                                        class="lum-check lum-fsearch-list__row"
+                                                        data-fsearch-item=""
+                                                >
+                                                    <span class="lum-check__label">
+                                                        Nora
+                                                    </span>
+
+                                                    <input
+                                                            class="lum-check__input"
+                                                            type="checkbox"
+                                                    >
+
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+
+
+                                                <label
+                                                        class="lum-check lum-fsearch-list__row"
+                                                        data-fsearch-item=""
+                                                >
+                                                    <span class="lum-check__label">
+                                                        ali
+                                                    </span>
+
+                                                    <input
+                                                            class="lum-check__input"
+                                                            type="checkbox"
+                                                    >
+
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+
+
+                                                <label
+                                                        class="lum-check lum-fsearch-list__row"
+                                                        data-fsearch-item=""
+                                                >
+                                                    <span class="lum-check__label">
+                                                        fix
+                                                    </span>
+
+                                                    <input
+                                                            class="lum-check__input"
+                                                            type="checkbox"
+                                                    >
+
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+
+
+                                                <label
+                                                        class="lum-check lum-fsearch-list__row"
+                                                        data-fsearch-item=""
+                                                >
+                                                    <span class="lum-check__label">
+                                                        loaosdjj
+                                                    </span>
+
+                                                    <input
+                                                            class="lum-check__input"
+                                                            type="checkbox"
+                                                    >
+
+                                                    <span class="lum-check__box"></span>
+                                                </label>
+
+
+                                                <p
+                                                        class="lum-fsearch__empty"
+                                                        data-fsearch-empty=""
+                                                        hidden
+                                                >
+                                                    No matches
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- APPLICATION -->
+                    <div
+                            class="lum-accordion__item"
+                            data-accordion-item=""
+                            data-open=""
+                    >
+
+                        <button
+                                class="lum-accordion__summary"
+                                type="button"
+                                data-accordion-toggle=""
+                                aria-expanded="true"
+                        >
+                            Accordion Actions
+
+                            <i
+                                    class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
+                            ></i>
+                        </button>
+
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="switch-container flex flex-col gap-2">
+
+                                        <label
+                                                class="lum-check lum-fsearch-list__row"
+                                                data-fsearch-item=""
+                                        >
+                                            <span class="lum-check__label">
+                                                Nora
+                                            </span>
+
+                                            <input
+                                                    class="lum-check__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-check__box"></span>
+                                        </label>
+
+
+                                        <label
+                                                class="lum-check lum-fsearch-list__row"
+                                                data-fsearch-item=""
+                                        >
+                                            <span class="lum-check__label">
+                                                ali
+                                            </span>
+
+                                            <input
+                                                    class="lum-check__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-check__box"></span>
+                                        </label>
+
+
+                                        <label
+                                                class="lum-check lum-fsearch-list__row"
+                                                data-fsearch-item=""
+                                        >
+                                            <span class="lum-check__label">
+                                                fix
+                                            </span>
+
+                                            <input
+                                                    class="lum-check__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-check__box"></span>
+                                        </label>
+
+
+                                        <label
+                                                class="lum-check lum-fsearch-list__row"
+                                                data-fsearch-item=""
+                                        >
+                                            <span class="lum-check__label">
+                                                loaosdjj
+                                            </span>
+
+                                            <input
+                                                    class="lum-check__input"
+                                                    type="checkbox"
+                                            >
+
+                                            <span class="lum-check__box"></span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COLOR FAMILY -->
+                    <div
+                            class="lum-accordion__item"
+                            data-accordion-item=""
+                            data-open=""
+                    >
+
+                        <button
+                                class="lum-accordion__summary"
+                                type="button"
+                                data-accordion-toggle=""
+                                aria-expanded="true"
+                        >
+                            Accordion Actions
+
+                            <i
+                                    class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
+                            ></i>
+                        </button>
+
+
+                        <div class="lum-accordion__body">
+
+                            <div class="lum-accordion__inner">
+
+                                <div class="lum-accordion__details">
+
+                                    <div class="lum-swatches">
+
+                                        <button
+                                                class="lum-swatch is-selected"
+                                                style="--_c:#2f80ed"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Ocean</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#27ae60"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Forest</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#e2542c"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Sunset</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#e84f8b"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Rose</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#5b6b83"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Slate</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#e74c3c"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Coral</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#c9a227"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Sand</span>
+                                        </button>
+
+
+                                        <button
+                                                class="lum-swatch"
+                                                style="--_c:#9b2fae"
+                                                type="button"
+                                        >
+                                            <span class="lum-swatch__chip"></span>
+                                            <span class="lum-swatch__name">Berry</span>
+                                        </button>
+
                                     </div>
 
                                 </div>
@@ -577,42 +1654,66 @@
         </div>
 
 
-        <!-- =====================================================
+        <!-- =========================================
              PRODUCTS
-        ====================================================== -->
+        ========================================== -->
 
-        <div class="products-section__main min-w-0 flex-1">
+        <section
+                class="products-section__main min-w-0 flex-1"
+                aria-label="Products"
+        >
 
-            <main class="products-section__content w-full min-w-0">
+            <div class="products-section__content min-w-0 w-full">
 
 
-                <!-- =====================================================
-                     SORT BAR
-                ====================================================== -->
+                <!-- =================================
+                     DESKTOP SORT BAR
+                ================================== -->
 
-                <div class="products-sort mb-6 flex w-full items-center justify-between rounded-2xl border border-[#e5e5e5] px-4 py-4">
+                <div
+                        class="products-sort mb-6 hidden w-full items-center justify-between rounded-2xl border border-[#e5e5e5] px-4 py-4 lg:flex"
+                >
 
-                    <div class="products-sort__content flex min-w-0 items-center gap-4">
+                    <div
+                            class="products-sort__content flex min-w-0 items-center gap-4"
+                    >
 
-                           <span class="products-sort__label shrink-0 font-bold text-[14px]">
-                               Sort By:
-                           </span>
+                        <span
+                                class="products-sort__label shrink-0 text-[14px] font-bold"
+                        >
+                            Sort By:
+                        </span>
 
-                        <div class="products-sort__options flex items-center gap-6">
 
-                            <button class="products-sort__option active whitespace-nowrap text-[14px]" type="button">
+                        <div
+                                class="products-sort__options flex items-center gap-6"
+                        >
+
+                            <button
+                                    class="products-sort__option active whitespace-nowrap text-[14px]"
+                                    type="button"
+                            >
                                 Featured
                             </button>
 
-                            <button class="products-sort__option whitespace-nowrap text-[14px]" type="button">
+                            <button
+                                    class="products-sort__option whitespace-nowrap text-[14px]"
+                                    type="button"
+                            >
                                 Best Sellers
                             </button>
 
-                            <button class="products-sort__option whitespace-nowrap text-[14px]" type="button">
+                            <button
+                                    class="products-sort__option whitespace-nowrap text-[14px]"
+                                    type="button"
+                            >
                                 Most Popular
                             </button>
 
-                            <button class="products-sort__option whitespace-nowrap text-[14px]" type="button">
+                            <button
+                                    class="products-sort__option whitespace-nowrap text-[14px]"
+                                    type="button"
+                            >
                                 New Arrivals
                             </button>
 
@@ -620,24 +1721,34 @@
 
                     </div>
 
-                    <div class="products-sort__result shrink-0 text-[#8b95a5] text-[12px]">
+
+                    <p
+                            class="products-sort__result m-0 shrink-0 text-[12px] text-[#8b95a5]"
+                    >
                         Showing 1–50 of 959 results
-                    </div>
+                    </p>
 
                 </div>
 
 
-                <!-- =====================================================
+                <!-- =================================
                      PRODUCT GRID
+                ================================== -->
 
-                ====================================================== -->
+                <div
+                        class="products-grid grid h-fit w-full grid-cols-2 content-start items-start overflow-hidden rounded-none border border-[#e5e5e5] bg-white lg:grid-cols-3 xl:grid-cols-4 xl:rounded-3xl"
+                >
 
-                <div class="products-grid grid h-fit w-full grid-cols-2 content-start items-start overflow-hidden rounded-none border border-[#e5e5e5] bg-white lg:grid-cols-3 xl:grid-cols-4 xl:rounded-3xl">
+                    <!-- کارت‌های خودت بدون هیچ تغییری -->
+
 
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -662,7 +1773,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -687,7 +1801,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -712,7 +1829,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -737,7 +1857,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -762,7 +1885,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -787,7 +1913,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -812,7 +1941,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -837,7 +1969,10 @@
                     <div class="lum-product-card">
 
                         <div class="lum-product-card__img">
-                            <img src="assets/img-product-card.png" alt="Orbit Stainless Steel MR16">
+                            <img
+                                    src="assets/img-product-card.png"
+                                    alt="Orbit Stainless Steel MR16"
+                            >
                         </div>
 
                         <div class="lum-product-card__content">
@@ -859,38 +1994,343 @@
                     </div>
 
                 </div>
-                <!-- middle page: both edges active, page 2 current, ellipsis before 1000 -->
-                <div class=" mt-10 w-auto flex  justify-center lg:justify-start border border-[#efefef] rounded-2xl">
-                    <nav class="lum-pager" aria-label="Pagination">
+
+
+                <!-- =================================
+                     PAGINATION
+                ================================== -->
+
+                <div
+                        class="products-section__pagination mt-10 flex w-auto justify-center rounded-2xl border border-[#efefef] lg:justify-start"
+                >
+
+                    <!-- COMPONENT - DO NOT MODIFY -->
+                    <nav
+                            class="lum-pager"
+                            aria-label="Pagination"
+                    >
+
                         <ul class="lum-pager__list">
-                            <li class="lum-pager__item" data-role="prev">
-                                <a href="#" class="lum-pager__edge">
-                                    <i class="lum-icon lum-icon--chevron-left lum-icon--sm"></i> Previous
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="prev"
+                            >
+
+                                <a
+                                        href="#"
+                                        class="lum-pager__edge"
+                                >
+                                    <i
+                                            class="lum-icon lum-icon--chevron-left lum-icon--sm"
+                                    ></i>
+
+                                    Previous
+                                </a>
+
+                            </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="page"
+                                    data-keep=""
+                            >
+                                <a
+                                        href="#"
+                                        class="lum-pager__link"
+                                >
+                                    1
                                 </a>
                             </li>
-                            <li class="lum-pager__item" data-role="page" data-keep=""><a href="#" class="lum-pager__link">1</a></li>
-                            <li class="lum-pager__item" data-role="page" data-keep="" aria-current="page"><a href="#" class="lum-pager__link">2</a></li>
-                            <li class="lum-pager__item" data-role="page"><a href="#" class="lum-pager__link">3</a></li>
-                            <li class="lum-pager__item" data-role="page"><a href="#" class="lum-pager__link">4</a></li>
-                            <li class="lum-pager__item" data-role="page"><a href="#" class="lum-pager__link">5</a></li>
-                            <li class="lum-pager__item" data-role="gap" data-keep=""><span class="lum-pager__gap">…</span></li>
-                            <li class="lum-pager__item" data-role="page" data-keep=""><a href="#" class="lum-pager__link">1000</a></li>
-                            <li class="lum-pager__item" data-role="next">
-                                <a href="#" class="lum-pager__edge">
-                                    Next <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="page"
+                                    data-keep=""
+                                    aria-current="page"
+                            >
+                                <a
+                                        href="#"
+                                        class="lum-pager__link"
+                                >
+                                    2
                                 </a>
                             </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="page"
+                            >
+                                <a
+                                        href="#"
+                                        class="lum-pager__link"
+                                >
+                                    3
+                                </a>
+                            </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="page"
+                            >
+                                <a
+                                        href="#"
+                                        class="lum-pager__link"
+                                >
+                                    4
+                                </a>
+                            </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="page"
+                            >
+                                <a
+                                        href="#"
+                                        class="lum-pager__link"
+                                >
+                                    5
+                                </a>
+                            </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="gap"
+                                    data-keep=""
+                            >
+                                <span class="lum-pager__gap">
+                                    …
+                                </span>
+                            </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="page"
+                                    data-keep=""
+                            >
+                                <a
+                                        href="#"
+                                        class="lum-pager__link"
+                                >
+                                    1000
+                                </a>
+                            </li>
+
+
+                            <li
+                                    class="lum-pager__item"
+                                    data-role="next"
+                            >
+
+                                <a
+                                        href="#"
+                                        class="lum-pager__edge"
+                                >
+                                    Next
+
+                                    <i
+                                            class="lum-icon lum-icon--chevron-right lum-icon--sm"
+                                    ></i>
+                                </a>
+
+                            </li>
+
                         </ul>
+
                     </nav>
+
                 </div>
 
-            </main>
+            </div>
 
-        </div>
+        </section>
 
     </div>
 
-</section>
+</main>
+<footer class="lum-footer">
+
+    <!-- ============ Top: logo + newsletter ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__top">
+            <a class="lum-footer__logo" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="54" viewBox="0 0 34 54" fill="none">
+                    <path d="M21.3247 42.1738H11.8966C11.6953 42.1738 11.496 42.2135 11.3101 42.2907C11.1242 42.3678 10.9552 42.4809 10.8129 42.6235C10.6706 42.7661 10.5577 42.9353 10.4807 43.1216C10.4037 43.3079 10.364 43.5076 10.364 43.7092V47.878C10.3653 48.5921 10.6249 49.2816 11.0948 49.8186C11.5647 50.3556 12.2129 50.7038 12.9194 50.7985V51.5837C12.9194 52.0478 13.1034 52.4928 13.431 52.821C13.7585 53.1491 14.2027 53.3334 14.6659 53.3334H18.5554C19.0186 53.3334 19.4628 53.1491 19.7904 52.821C20.1179 52.4928 20.3019 52.0478 20.3019 51.5837V50.7985C21.0084 50.7037 21.6566 50.3556 22.1265 49.8186C22.5964 49.2816 22.856 48.5921 22.8573 47.878V43.7092C22.8573 43.302 22.6958 42.9114 22.4084 42.6235C22.121 42.3356 21.7312 42.1738 21.3247 42.1738Z"
+                          fill="#C5E8CD"/>
+                    <path d="M19.3914 0.232819V12.4493C19.3914 12.5423 19.4097 12.6344 19.4452 12.7203C19.4807 12.8062 19.5328 12.8843 19.5984 12.95C19.6641 13.0158 19.742 13.068 19.8278 13.1035C19.9135 13.1391 20.0054 13.1575 20.0983 13.1574H24.0825C24.1675 13.1574 24.251 13.1804 24.3241 13.2239C24.3972 13.2674 24.4573 13.3299 24.498 13.4047C24.5387 13.4795 24.5585 13.5639 24.5553 13.649C24.5522 13.7342 24.5262 13.8169 24.4801 13.8885L14.7027 29.0712C14.6474 29.1572 14.5657 29.223 14.4699 29.2586C14.3742 29.2943 14.2695 29.2979 14.1715 29.269C14.0735 29.2401 13.9875 29.1802 13.9263 29.0982C13.8651 29.0162 13.832 28.9167 13.832 28.8143V16.2327C13.832 16.0449 13.7575 15.8648 13.625 15.732C13.4924 15.5992 13.3126 15.5245 13.1252 15.5245H9.14093C9.05589 15.5245 8.97242 15.5016 8.8993 15.4581C8.82618 15.4146 8.76611 15.3522 8.72541 15.2774C8.68472 15.2026 8.66491 15.1181 8.66807 15.033C8.67122 14.9479 8.69721 14.8652 8.74332 14.7936L18.2184 0.0801331C17.423 0.00224674 16.623 -0.0188986 15.8246 0.0168543C12.5041 0.173934 9.30699 1.3257 6.64702 3.32315C3.98705 5.3206 1.98662 8.07179 0.904525 11.2208C-0.177567 14.3697 -0.291508 17.7716 0.577444 20.9862C1.4464 24.2007 3.25825 27.0801 5.77858 29.2517C6.87126 30.2102 7.74497 31.3933 8.34024 32.7205C8.9355 34.0477 9.23834 35.4878 9.22815 36.9428V39.0212C9.22814 39.2572 9.27454 39.491 9.36471 39.7091C9.45488 39.9272 9.58706 40.1254 9.75367 40.2923C9.92029 40.4592 10.1181 40.5916 10.3358 40.682C10.5535 40.7723 10.7868 40.8188 11.0225 40.8188H22.1986C22.6745 40.8188 23.1309 40.6294 23.4674 40.2923C23.8039 39.9552 23.9929 39.4979 23.9929 39.0212V36.8075C23.9869 35.3802 24.2892 33.9685 24.8789 32.6693C25.4686 31.37 26.3318 30.2138 27.4093 29.2801C29.8083 27.2241 31.5726 24.5255 32.4955 21.5009C33.4184 18.4762 33.4616 15.2506 32.6201 12.2022C31.7787 9.15373 30.0874 6.40872 27.7444 4.28882C25.4015 2.16892 22.504 0.761961 19.3914 0.232819Z"
+                          fill="#15AE5C"/>
+                </svg>
+            </a>
+
+            <div class="lum-newsletter">
+                <p class="lum-newsletter__label">Stock Alerts, New Brands &amp; Promotions</p>
+                <form class="lum-newsletter__form" action="#" method="post">
+                    <input class="lum-newsletter__field" type="email" name="email" placeholder="Enter Your Email..."
+                           aria-label="Email">
+                    <button class="lum-button primary" type="submit">
+                        <span class="h__lum-button">
+                            <span class="text__lum-button">Send</span>
+                            <i class="lum-icon lum-icon--arrow-right lum-icon--sm"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="lum-line"></div>
+    <!-- ============ Middle: link columns ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__cols">
+
+            <!-- About (accordion on mobile) -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    About Lumera Electric
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body">
+                    <div class="lum-footer__links">
+                        <a class="lum-footer__link lum-footer__link--active" href="#">About us</a>
+                        <a class="lum-footer__link" href="#">Blog &amp; Resources</a>
+                        <a class="lum-footer__link" href="#">Installation and Code Disclaimer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help & Policies -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    Help &amp; Policies
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body">
+                    <div class="lum-footer__links">
+                        <a class="lum-footer__link" href="#">Shipping &amp; Delivery Info</a>
+                        <a class="lum-footer__link" href="#">Store &amp; Payment Policies</a>
+                        <a class="lum-footer__link" href="#">Terms of Use</a>
+                        <a class="lum-footer__link" href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade Accounts -->
+            <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
+                <p class="lum-footer__col-title" data-accordion-toggle>
+                    Trade Accounts
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                </p>
+                <div class="lum-footer__body">
+                    <div class="lum-footer__links">
+                        <a class="lum-footer__link" href="#">Open a Trade Account</a>
+                        <a class="lum-footer__link" href="#">Credit Application</a>
+                        <a class="lum-footer__link" href="#">Request a Quote</a>
+                        <a class="lum-footer__link" href="#">Press Conferences</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Need Help? (always open, not an accordion) -->
+            <div class="lum-footer__col">
+                <p class="lum-footer__col-title">Need Help?</p>
+                <div class="lum-footer__contact">
+                    <a class="lum-footer__contact-item" href="tel:+17473810270">
+                        <i class="lum-icon lum-icon--phone lum-icon--sm"></i> (747) 381-0270
+                    </a>
+                    <a class="lum-footer__contact-item" href="mailto:Info@lumeraelectric.com">
+                        <i class="lum-icon lum-icon--mail lum-icon--sm"></i> Info@lumeraelectric.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Socials (always open) -->
+            <div class="lum-footer__col">
+                <p class="lum-footer__col-title"> Join Us </p>
+                <div class="lum-socials">
+                    <a class="lum-socials__link lum-socials__link--brand" href="#" aria-label="YouTube">
+                        <i class="lum-icon lum-icon--youtube lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="X">
+                        <i class="lum-icon lum-icon--x-twitter lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="Facebook">
+                        <i class="lum-icon lum-icon--facebook lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="LinkedIn">
+                        <i class="lum-icon lum-icon--linkedin lum-icon--sm"></i>
+                    </a>
+                    <a class="lum-socials__link" href="#" aria-label="Instagram">
+                        <i class="lum-icon lum-icon--instagram lum-icon--sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lum-line"></div>
+    <!-- ============ Bottom: copyright + policies ============ -->
+    <div class="lum-container lum-footer__row">
+        <div class="lum-footer__bottom">
+            <p class="lum-footer__copy">&copy; 2026, Lumera Electric Powered by Shopify</p>
+            <div class="lum-footer__policies">
+                <a class="lum-footer__policy" href="#">Privacy policy</a>
+                <a class="lum-footer__policy" href="#">Refund policy</a>
+                <a class="lum-footer__policy" href="#">Terms of service</a>
+                <a class="lum-footer__policy" href="#">Privacy policy</a>
+                <a class="lum-footer__policy" href="#">Shipping policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    const filterDrawer = document.querySelector('[data-filter-drawer]');
+    const filterOpenButton = document.querySelector('[data-filter-open]');
+    const filterCloseButtons = document.querySelectorAll('[data-filter-close]');
+
+    function openFilterDrawer() {
+        if (!filterDrawer) return;
+
+        filterDrawer.classList.remove('hidden');
+        filterDrawer.classList.add('flex');
+
+        filterDrawer.setAttribute('aria-hidden', 'false');
+        filterOpenButton?.setAttribute('aria-expanded', 'true');
+
+        document.body.classList.add('overflow-hidden');
+    }
+
+    function closeFilterDrawer() {
+        if (!filterDrawer) return;
+
+        filterDrawer.classList.add('hidden');
+        filterDrawer.classList.remove('flex');
+
+        filterDrawer.setAttribute('aria-hidden', 'true');
+        filterOpenButton?.setAttribute('aria-expanded', 'false');
+
+
+    }
+
+    filterOpenButton?.addEventListener('click', openFilterDrawer);
+
+    filterCloseButtons.forEach((button) => {
+        button.addEventListener('click', closeFilterDrawer);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (
+            event.key === 'Escape' &&
+            !filterDrawer?.classList.contains('hidden')
+        ) {
+            closeFilterDrawer();
+        }
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/footer.js"></script>
 <script src="assets/header.js"></script>

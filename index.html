@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./assets/catCard.css">
     <link rel="stylesheet" href="./assets/lum-hotspots.css">
     <link rel="stylesheet" href="./assets/tabs.css">
-
+    <link rel="stylesheet" href="./assets/icons.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
@@ -388,9 +388,11 @@
     <section class="lum-cats">
         <div class="lum-container">
             <div class="lum-cats__inner">
-                <div class="lum-sec-head">
-                    <span class="lum-eyebrow lum-text-md">Browse the catalog</span>
-                    <h2 class="lum-h-md lum-sec-head__title">Shop by Product Category</h2>
+                <div class="lum-sec-head lum-sec-head--split" data-diraction="col">
+                    <div class="lum-sec-head__left">
+                        <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Contractor favorites</span>
+                        <h2 class="lum-h-md lum-sec-head__title">Most Ordered by Contractors</h2>
+                    </div>
                 </div>
                 <div class="lum-cats__grid">
                     <a href="#">
@@ -430,7 +432,7 @@
                     <div class="lum-tabs__list" role="tablist" aria-label="Example chip tabs">
                         <button class="lum-tabs__tab is-active" id="t4-1" role="tab" aria-selected="true"
                                 aria-controls="p4-1" type="button">
-                                <img src="./assets/brand-nora.png" alt="Nora">
+                            <img src="./assets/brand-nora.png" alt="Nora">
                             EnVision LED Lighting
                         </button>
                         <button class="lum-tabs__tab" id="t4-2" role="tab" aria-selected="false" aria-controls="p4-2"
@@ -1418,66 +1420,67 @@
     </section>
     <section class="lum-blog">
         <div class="lum-container">
-            <div class="lum-sec-head">
-                <h2 class="lum-h-md lum-sec-head__title">Insights &amp; Updates</h2>
-                <p class="lum-text-sm lum-system__desc">
-                    Stay informed with the latest tips, trends, and best practices in IT, virtualization, and
-                    cybersecurity.
-                    Our blog shares actionable advice, industry news, and expert insights to help your business stay
-                    secure,
-                    efficient, and ahead of the curve.
-                </p>
-            </div>
-
-            <div class="lum-blog__grid">
-                <article class="lum-post">
-                    <img class="lum-post__img" src="./assets/images/post-1.jpg" alt="">
-                    <div class="lum-post__body">
-                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
-                            silhouette that works best for your body and your moment.</p>
-                        <div class="lum-post__meta">
-                            <span class="lum-text-xxs">By Behnam Jafari</span>
-                            <span class="lum-text-xxs">21 August 2026</span>
-                        </div>
+            <div class="flex flex-col gap-6 lg:gap-10">
+                <div class="lum-sec-head lum-sec-head--split" data-diraction="col">
+                    <div class="lum-sec-head__left">
+                        <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Our Blod</span>
+                        <h2 class="lum-h-md lum-sec-head__title">Insights & Updates</h2>
+                        <p class="lum-text-lg lum-sec-head__desc">
+                            Explore proven products frequently selected for repeat jobs, replacements and everyday
+                            project installations, with clear pricing, availability and minimum order details.
+                        </p>
                     </div>
-                </article>
-                <article class="lum-post">
-                    <img class="lum-post__img" src="./assets/images/post-2.jpg" alt="">
-                    <div class="lum-post__body">
-                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
-                            silhouette that works best for your body and your moment.</p>
-                        <div class="lum-post__meta">
-                            <span class="lum-text-xxs">By Behnam Jafari</span>
-                            <span class="lum-text-xxs">21 August 2026</span>
+                </div>
+                <div class="lum-blog__grid grid lg:grid-cols-4 sm:grid-cols-2 gap-4 lg:gap-6">
+                    <article class="lum-post">
+                        <img class="lum-post__img" src="./assets/post.png" alt="">
+                        <div class="lum-post__body">
+                            <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                                silhouette that works best for your body and your moment.</p>
+                            <div class="lum-post__meta">
+                                <span class="lum-text-xxs">By Behnam Jafari</span>
+                                <span class="lum-text-xxs">21 August 2026</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="lum-post">
-                    <img class="lum-post__img" src="./assets/images/post-3.jpg" alt="">
-                    <div class="lum-post__body">
-                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
-                            silhouette that works best for your body and your moment.</p>
-                        <div class="lum-post__meta">
-                            <span class="lum-text-xxs">By Behnam Jafari</span>
-                            <span class="lum-text-xxs">21 August 2026</span>
+                    </article>
+                    <article class="lum-post">
+                        <img class="lum-post__img" src="./assets/post.png" alt="">
+                        <div class="lum-post__body">
+                            <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                                silhouette that works best for your body and your moment.</p>
+                            <div class="lum-post__meta">
+                                <span class="lum-text-xxs">By Behnam Jafari</span>
+                                <span class="lum-text-xxs">21 August 2026</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="lum-post">
-                    <img class="lum-post__img" src="./assets/images/post-4.jpg" alt="">
-                    <div class="lum-post__body">
-                        <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                        <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
-                            silhouette that works best for your body and your moment.</p>
-                        <div class="lum-post__meta">
-                            <span class="lum-text-xxs">By Behnam Jafari</span>
-                            <span class="lum-text-xxs">21 August 2026</span>
+                    </article>
+                    <article class="lum-post">
+                        <img class="lum-post__img" src="./assets/post.png" alt="">
+                        <div class="lum-post__body">
+                            <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                                silhouette that works best for your body and your moment.</p>
+                            <div class="lum-post__meta">
+                                <span class="lum-text-xxs">By Behnam Jafari</span>
+                                <span class="lum-text-xxs">21 August 2026</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                    <article class="lum-post">
+                        <img class="lum-post__img" src="./assets/post.png" alt="">
+                        <div class="lum-post__body">
+                            <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                                silhouette that works best for your body and your moment.</p>
+                            <div class="lum-post__meta">
+                                <span class="lum-text-xxs">By Behnam Jafari</span>
+                                <span class="lum-text-xxs">21 August 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>

@@ -89,3 +89,24 @@
         });
     });
 })();
+
+
+(function () {
+    document.querySelectorAll('[data-pswiper]').forEach(function (el) {
+        new Swiper(el.querySelector('.swiper'), {
+            slidesPerView: 1.15,
+            spaceBetween: 12,
+            watchOverflow: true,
+            navigation: {
+                prevEl: el.querySelector('.lum-pswiper__arrow--prev'),
+                nextEl: el.querySelector('.lum-pswiper__arrow--next'),
+            },
+            breakpoints: {
+                520:  { slidesPerView: 1.6 },
+                768:  { slidesPerView: 2.1 },
+                1024: { slidesPerView: 1.6 },
+                1280: { slidesPerView: 1.8 },
+            },
+        });
+    });
+})();

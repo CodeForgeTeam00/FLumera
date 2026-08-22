@@ -1,3 +1,4 @@
+/* lum-hotspots.js — tabs + hotspots, vanilla, no deps */
 (function () {
     'use strict';
 
@@ -60,10 +61,11 @@
     }
 
     function place(spot) {
-        var tile = spot.closest('.lum-hotspots__tile').getBoundingClientRect();
-        var s = spot.getBoundingClientRect();
-        spot.classList.toggle('is-flip', (s.left - tile.left) > tile.width  * 0.55);
-        spot.classList.toggle('is-up',   (s.top  - tile.top)  > tile.height * 0.6);
+        /* manual direction chosen by admin via data-direction: up | down | left | right.
+           default = right. */
+        var dir = spot.getAttribute('data-direction') || 'right';
+        spot.classList.remove('dir-up', 'dir-down', 'dir-left', 'dir-right');
+        spot.classList.add('dir-' + dir);
     }
 
     function closeAll(scope) {

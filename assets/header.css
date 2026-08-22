@@ -295,7 +295,7 @@
 .lum-icon-block__text { display: flex; flex-direction: column; }
 .lum-icon-block__title { font-size: var(--lum-text-sm); line-height: 1.2; white-space: nowrap; }
 .lum-icon-block__sub   { font-size: var(--lum-text-xs); color: var(--_muted); line-height: 1.2; }
-.lum-badge {
+header .lum-badge {
     position: absolute;
     inset-block-start: -6px;
     inset-inline-end: -6px;

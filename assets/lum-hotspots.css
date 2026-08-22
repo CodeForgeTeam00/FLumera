@@ -1,14 +1,7 @@
-/* ==========================================================================
-   lum-hotspots.css — Explore the System (Shop by Application)
-   Private --_ tokens on the block; media queries swap token values only.
-   ========================================================================== */
 .lum-hotspots{
     --_py: clamp(40px, 6vw, 88px);
-    --_cols: 1;
-    --_col-display: contents;   /* below desktop the columns disappear visually */
+    --_cols: 1;                 /* grid columns (of the outer grid) */
     --_gap: 16px;
-    --_grid-ratio: auto;        /* mobile: tiles define their own height */
-    --_tile-ratio: 4 / 3;
     --_tile-radius: 12px;
     --_grid-mt: 28px;
     --_tabs-mt: 20px;
@@ -17,8 +10,9 @@
     --_dot-size: 20px;
     --_dot-ring: 9px;
     --_card-w: 264px;
-    padding-block: var(--_py);
 
+    padding-block: var(--_py);
+    font-family: var(--lum-font);
 }
 @media (min-width: 768px){
     .lum-hotspots{ --_cols: 2; --_gap: 20px; }
@@ -26,10 +20,7 @@
 @media (min-width: 1024px){
     .lum-hotspots{
         --_cols: 3;
-        --_col-display: grid;
         --_gap: 24px;
-        --_grid-ratio: 13 / 11;
-        --_tile-ratio: auto;
         --_tile-radius: 16px;
         --_grid-mt: 40px;
         --_tab-h: 36px;
@@ -98,34 +89,39 @@
 /* --- panel & grid --- */
 .lum-hotspots__panel[hidden]{ display: none; }
 .lum-hotspots__grid{
-    display: grid;
-    grid-template-columns: repeat(var(--_cols), 1fr);
-    gap: 16px;
-    margin-block-start: var(--_grid-mt);
-    aspect-ratio: var(--_grid-ratio);
+    display: flex;
 }
 .lum-hotspots__col{
-    display: var(--_col-display);
-    gap: var(--_gap);
-    grid-template-rows: var(--_rows, 1fr 1fr);
-    min-block-size: 0;
+    display: flex;
+    flex-direction: column;   /* tiles stack under each other */
+    gap: 16px;
+    min-inline-size: 0;
 }
-.lum-hotspots__col--a{ --_rows: 5fr 7fr; }
-.lum-hotspots__col--b{ --_rows: 5fr 3fr 4fr; }
-.lum-hotspots__col--c{ --_rows: 3fr 9fr; }
+@media (min-width: 1024px){
+    .lum-hotspots__col--a{
+        width: 27.79%
+    }
+    .lum-hotspots__col--b{
+        width: 30.80%
+    }
+    .lum-hotspots__col--c{
+        width: 41.23%
+    }
+}
 
 .lum-hotspots__tile{
     position: relative;
     margin: 0;
     min-block-size: 0;
     min-inline-size: 0;
-    aspect-ratio: var(--_tile-ratio);
+    /* each tile keeps its OWN aspect-ratio (inline --_ar), same on every screen */
+    aspect-ratio: var(--_ar, 1 / 1);
 }
 .lum-hotspots__tile > img{
     display: block;
     inline-size: 100%;
     block-size: 100%;
-    object-fit: cover;
+    object-fit: cover;              /* fill the ratio box, no deform, one image size */
     border-radius: var(--_tile-radius);
     background: var(--lum-n-30); /* skeleton until image loads */
 }
@@ -143,12 +139,17 @@
     display: block;
     inline-size: 16px;
     block-size: 16px;
+
     border: 0;
     border-radius: 50%;
     background: var(--lum-n-0);
     box-shadow: 0 0 0 4px rgb(255 255 255 / .35), 0 2px 8px rgb(9 30 66 / .35);
     cursor: pointer;
     transition: scale .2s ease;
+    @media (min-width: 1024px){
+        inline-size: 12px;
+        block-size: 12px;
+    }
 }
 .lum-spot__dot:hover,
 .lum-spot.is-open .lum-spot__dot{ scale: 1.18; }
@@ -172,6 +173,7 @@
 }
 
 /* --- spot product card, uses lum-mini --- */
+/* default direction = right (card opens to the right of the dot) */
 .lum-spot__card{
     position: absolute;
     inset-block-start: 50%;
@@ -184,8 +186,23 @@
     box-shadow: 0 12px 32px rgb(9 30 66 / .22);
     z-index: 6;
 }
-.lum-spot.is-flip .lum-spot__card{ inset-inline-start: auto; inset-inline-end: calc(100% + 12px); }
-.lum-spot.is-up .lum-spot__card{ inset-block-start: auto; inset-block-end: 50%; translate: 0 50%; }
+/* four explicit, admin-chosen directions */
+.lum-spot.dir-right .lum-spot__card{
+    inset-inline-start: calc(100% + 12px); inset-inline-end: auto;
+    inset-block-start: 50%; inset-block-end: auto; translate: 0 -50%;
+}
+.lum-spot.dir-left .lum-spot__card{
+    inset-inline-start: auto; inset-inline-end: calc(100% + 12px);
+    inset-block-start: 50%; inset-block-end: auto; translate: 0 -50%;
+}
+.lum-spot.dir-up .lum-spot__card{
+    inset-block-start: auto; inset-block-end: calc(100% + 12px);
+    inset-inline-start: 50%; inset-inline-end: auto; translate: -50% 0;
+}
+.lum-spot.dir-down .lum-spot__card{
+    inset-block-start: calc(100% + 12px); inset-block-end: auto;
+    inset-inline-start: 50%; inset-inline-end: auto; translate: -50% 0;
+}
 
 /* --- mini product card --- */
 .lum-mini{ display: flex; gap: 10px; align-items: center; }
@@ -202,7 +219,7 @@
 .lum-mini__meta{ display: inline-flex; align-items: center; gap: 8px; }
 .lum-mini__price{ color: var(--lum-n-1000); font-weight: 700; }
 .lum-mini__old{ color: var(--lum-n-300); text-decoration: line-through; }
-.lum-mini .lum-badge{
+.lum-badge-card{
     position: static;
     background: var(--lum-primary);
     color: var(--lum-n-0);

@@ -185,6 +185,43 @@
     margin: 0 auto;
 }
 
+
+.lum-utility { background: var(--lum-primary); color: var(--lum-n-0); }
+.lum-utility__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 32px;
+}
+.lum-utility__links { display: flex; align-items: center; gap: 16px; }
+.lum-utility__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--lum-n-0);
+    text-decoration: none;
+}
+.lum-utility__link  span {
+    display: none;
+}
+.lum-utility__link:hover { opacity: .85; }
+@media screen and (min-width: 1024px) {
+    .lum-utility__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 40px;
+    }
+    .lum-utility__link  span {
+        display: inline-block;
+    }
+}
+
+
+
+
 /*-------------------- buttons --------------------- */
 .lum-button {
     --h: 40px;
@@ -359,7 +396,6 @@
     overflow: hidden;
 }
 .lum-accordion__item + .lum-accordion__item { border-block-start: 1px solid var(--lum-n-30); }
-
 .lum-accordion__summary {
     display: flex;
     align-items: center;
@@ -379,12 +415,10 @@
 .lum-accordion__summary:hover { background: var(--lum-n-10); }
 .lum-accordion__caret { color: var(--lum-n-500); transform: rotate(90deg); transition: transform .2s ease; flex-shrink: 0; } /* no chevron-down yet */
 .lum-accordion__item[data-open] .lum-accordion__caret { transform: rotate(-90deg); }
-
 .lum-accordion__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
 .lum-accordion__item[data-open] .lum-accordion__body { grid-template-rows: 1fr; }
 .lum-accordion__inner { min-block-size: 0; overflow: hidden; }
 .lum-accordion__details { padding: 0 16px 16px; color: var(--lum-n-600); font-size: var(--lum-text-sm); line-height: 1.7; }
-
 /* optional actions row (like MUI AccordionActions) */
 .lum-accordion__actions { display: flex; justify-content: flex-end; gap: 8px; padding: 0 16px 16px; }
 
@@ -443,14 +477,13 @@
 }
 .lum-range__field-label { inline-size: 40px; color: var(--lum-n-400); font-size: var(--lum-text-sm); }
 .lum-range__input {
-    flex: 1;
+    width: 100%;
     block-size: 44px;
     padding-inline: 16px;
     text-align: center;
     background: var(--lum-n-20);
     border: 1px solid var(--lum-n-30);
     border-radius: 8px;
-
     font-size: var(--lum-text-sm);
     color: var(--lum-n-1000);
     outline: none;
@@ -531,7 +564,7 @@
 .lum-catrow__scroll::-webkit-scrollbar { display: none; }
 
 .lum-catcard {
-    flex: 0 0 var(--_card);        /* fixed width, no shrink, no grow */
+    flex: 0 0 var(--_card);
     inline-size: var(--_card);
     scroll-snap-align: start;
     display: flex;
@@ -1180,3 +1213,232 @@
     font-size: var(--lum-text-xs);
     color: var(--lum-n-50);
 }
+/* ==========================================================================
+   VIEW-MORE DIVIDER (lum-viewmore) — centered button with a faint rule
+   running out to both edges. Rule is drawn with a flex line on each side.
+   ========================================================================== */
+.lum-viewmore {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    padding-block: 32px;
+    font-family: var(--lum-font);
+}
+.lum-viewmore::before,
+.lum-viewmore::after {
+    content: "";
+    flex: 1;                       /* each line fills the space to the edge */
+    block-size: 1px;
+    background: var(--lum-n-30);
+}
+.lum-viewmore__btn { flex: 0 0 auto; }  /* button keeps its size, lines flex */
+
+/* ==========================================================================
+   CATEGORY SHOWCASE (lum-showcase)
+   Two blocks side by side (desktop) / stacked (mobile). Each block:
+   banner + head (title + See All) + independent product Swiper (no tabs).
+   Private --_ tokens on the block; media query swaps values only. BP 1024.
+   ========================================================================== */
+.lum-showcase {
+    --_cols: 1;
+    --_gap: 24px;
+    --_banner-ratio: 466 / 271;
+    --_radius: 16px;
+    padding-block: clamp(32px, 5vw, 64px);
+    font-family: var(--lum-font);
+    .lum-pswiper { position: relative; padding: 0 16px 16px; }
+    .lum-pswiper .swiper { overflow: hidden; }
+    .lum-pswiper .swiper-slide { height: auto; }
+    .lum-pswiper__arrow {
+        position: absolute;
+        inset-block-start: 40%;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        inline-size: 32px;
+        block-size: 48px;
+        border-radius: 40%;
+        border: 1px solid var(--lum-n-30);
+        background: var(--lum-n-0);
+        color: var(--lum-n-700);
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgb(9 30 66 / .12);
+    }
+    .lum-pswiper__arrow--prev { inset-inline-start: 4px; }
+    .lum-pswiper__arrow--next { inset-inline-end: 4px; }
+    .lum-pswiper__arrow.swiper-button-disabled { opacity: 0; pointer-events: none; }
+}
+@media (min-width: 1024px){
+    .lum-showcase { --_cols: 2; --_gap: 32px; }
+}
+
+.lum-showcase__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--_cols), 1fr);
+    gap: var(--_gap);
+}
+
+/* ---- one block ---- */
+.lum-showcase__block {
+    border: 1px solid var(--lum-n-30);
+    border-radius: var(--_radius);
+    overflow: hidden;
+    background: var(--lum-n-0);
+    display: flex;
+    flex-direction: column;
+}
+.lum-showcase__banner {
+    display: block;
+    aspect-ratio: var(--_banner-ratio);
+    background: var(--lum-n-30);
+    overflow: hidden;
+}
+.lum-showcase__banner img { inline-size: 100%; block-size: 100%; object-fit: cover; display: block; }
+
+.lum-showcase__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+}
+.lum-showcase__title { margin: 0; color: var(--lum-n-1000); font-size: var(--lum-text-lg); font-weight: 700; }
+.lum-showcase__seeall {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--lum-primary);
+    font-size: var(--lum-text-sm);
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ---- product swiper (independent, no tabs) ---- */
+
+
+
+/* placeholder product card — REPLACE with your real horizontal product card */
+.demo-pcard {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 12px;
+    block-size: 100%;
+    &:hover {
+        border-color: var(--lum-primary);
+    }
+}
+
+
+
+
+.demo-pcard.is-active { border-color: var(--lum-primary); box-shadow: 0 0 0 2px rgba(21,174,92,.15); }
+.demo-pcard__img {
+    aspect-ratio: 4/5;
+    border-radius: 8px;
+    flex-shrink: 0;
+    img{
+        width: 60px;
+        height: 60px;
+    }
+
+}
+.demo-pcard__body { display: flex; flex-direction: column; gap: 6px; min-inline-size: 0; }
+.demo-pcard__name { font-size: var(--lum-text-xs); color: var(--lum-n-1000); line-height: 1.4; }
+.demo-pcard__meta { display: inline-flex; align-items: center; gap: 6px; }
+.demo-pcard__price { font-size: var(--lum-text-xs); font-weight: 700; color: var(--lum-n-1000); }
+
+/* ==========================================================================
+   BRAND NETWORK (lum-brandnet) — split head + logo grid with hairline dividers.
+   Dividers use the background+gap trick (grid bg shows through 1px gaps).
+   Private --_ tokens on the block; media query swaps values only. BP 1024.
+   ========================================================================== */
+.lum-brandnet {
+    --_cols: 2;
+    --_pad: 24px;
+    padding-block: clamp(32px, 5vw, 64px);
+    font-family: var(--lum-font);
+}
+@media (min-width: 768px){ .lum-brandnet { --_cols: 3; } }
+@media (min-width: 1024px){ .lum-brandnet { --_cols: 6; } }
+
+/* ---- head (split) ---- */
+.lum-brandnet__head { display: grid; gap: 16px; margin-block-end: 32px; }
+@media (min-width: 1024px){
+    .lum-brandnet__head { grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+}
+.lum-brandnet__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--lum-primary);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: 500;
+    margin-block-end: 12px;
+}
+.lum-brandnet__eyebrow::before { content: ""; inline-size: 24px; block-size: 1px; background: currentColor; }
+.lum-brandnet__title { margin: 0; color: var(--lum-n-1000); }
+.lum-brandnet__lead { margin: 0; color: var(--lum-n-500); font-size: var(--lum-text-sm); line-height: 1.7; }
+
+/* ---- logo grid ---- */
+.lum-brandnet__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--_cols), 1fr);
+    gap: 1px;                       /* hairline gap */
+    background: var(--lum-n-30);    /* shows through the gaps as dividers */
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+    overflow: hidden;
+}
+.lum-brandnet__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    background: var(--lum-n-0);      /* each cell opaque, so only gaps show grey */
+    transition: background-color .2s ease;
+    img{
+        width: 120px;
+        height: 120px;
+        aspect-ratio: 1/1;
+        @media (min-width: 1024px){
+            width: 170px;
+            height: 170px;
+        }
+    }
+}
+.lum-brandnet__cell:hover { background: var(--lum-n-10); }
+
+
+/* placeholder box until real logos are dropped in */
+.lum-brandnet__ph {
+    inline-size: 96px; block-size: 40px;
+    border-radius: 6px;
+    background: var(--lum-n-20);
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* last cell: View all */
+.lum-brandnet__all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--lum-n-900);
+    font-size: var(--lum-text-sm);
+}
+.lum-brandnet__all-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    inline-size: 32px; block-size: 32px;
+    border-radius: 50%;
+    color: var(--lum-n-900);
+}
+.lum-brandnet__cell--all:hover { background: var(--lum-n-10); }
+.lum-brandnet__cell--all:hover .lum-brandnet__all { color: var(--lum-primary); }

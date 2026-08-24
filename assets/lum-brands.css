@@ -3,7 +3,7 @@
     --_pad: 24px;
     --_gap: 24px;
     --_body-cols: 1fr;
-    --_body-gap: 24px;
+    --_body-gap: 32px;
     padding: var(--_pad) 0;
     background: linear-gradient(353deg, rgba(255, 255, 255, 0) 5.73%, #FAFBFC 94.27%);
     @media (min-width: 768px) {

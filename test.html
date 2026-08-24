@@ -18,122 +18,7 @@
     <link rel="stylesheet" href="./assets/tabs.css">
     <link rel="stylesheet" href="./assets/categoty.css">
     <link rel="stylesheet" href="./assets/icons.css">
-    <style>
-        /* ==========================================================================
-           FILTER DRAWER (lum-fdrawer) — mobile bottom sheet.
-           Layout: header (fixed) / content (scrolls) / footer (sticky).
-           Only the middle scrolls, so the two footer buttons always stay visible.
-           ========================================================================== */
-        .lum-fdrawer {
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            display: none;              /* toggled to flex when open */
-            align-items: flex-end;      /* sheet sits at the bottom */
-        }
-        .lum-fdrawer[data-open] { display: flex; }
 
-        .lum-fdrawer__backdrop {
-            position: absolute;
-            inset: 0;
-            border: 0;
-            padding: 0;
-            background: rgb(9 30 66 / .5);
-            cursor: pointer;
-        }
-
-        .lum-fdrawer__panel {
-            position: relative;
-            z-index: 1;
-            inline-size: 100%;
-            /* KEY FIX: max-height (a ceiling), not min-height. So content overflows and scrolls. */
-            max-block-size: 100dvh;
-            display: flex;
-            flex-direction: column;     /* header / content / footer */
-            background: var(--lum-n-0);
-            border-start-start-radius: 16px;
-            border-start-end-radius: 16px;
-            overflow: hidden;           /* radius clip; inner content does the scrolling */
-        }
-
-        /* grab handle */
-        .lum-fdrawer__handle {
-            inline-size: 32px;
-            block-size: 4px;
-            margin: 8px auto 4px;
-            border-radius: 999px;
-            background: var(--lum-n-70);
-            flex-shrink: 0;
-        }
-
-        /* header (fixed) */
-        .lum-fdrawer__header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 16px 16px;
-            border-block-end: 1px solid var(--lum-n-30);
-            flex-shrink: 0;
-        }
-        .lum-fdrawer__title-wrap { display: inline-flex; align-items: center; gap: 8px; }
-        .lum-fdrawer__title { margin: 0; font-size: var(--lum-text-lg); font-weight: 700; color: var(--lum-n-1000); }
-        .lum-fdrawer__close {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            inline-size: 32px;
-            block-size: 32px;
-            border: 0;
-            background: transparent;
-            color: var(--lum-n-900);
-            cursor: pointer;
-        }
-
-        /* content (the ONLY scrolling area) */
-        .lum-fdrawer__content {
-            flex: 1;
-            min-block-size: 0;          /* allows the flex child to actually shrink & scroll */
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 16px;
-        }
-
-        /* footer (sticky at the bottom of the sheet) */
-        .lum-fdrawer__footer {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            border-block-start: 1px solid var(--lum-n-30);
-            background: var(--lum-n-0);
-            flex-shrink: 0;
-        }
-        .lum-fdrawer__clear {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            border: 0;
-            background: transparent;
-            color:  #d64545;
-            font-family: var(--lum-font);
-            font-size: var(--lum-text-sm);
-            font-weight: 500;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-        .lum-fdrawer__apply {
-            flex: 1;
-            block-size: 48px;
-            border: 0;
-            border-radius: 10px;
-            background: var(--lum-primary);
-            color: var(--lum-n-0);
-            font-family: var(--lum-font);
-            font-size: var(--lum-text-md);
-            font-weight: 700;
-            cursor: pointer;
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -458,158 +343,142 @@
         </nav>
     </div>
 </header>
-<main class="products-section  px-4 2xl:px-0 w-full ">
+<main class="products-section  ">
     <div class="lum-container">
-        <section class="products-section__intro px-4 pt-6">
-            <nav class="lum-breadcrumb" aria-label="Breadcrumb">
-                <ol class="lum-breadcrumb__list">
-                    <li class="lum-breadcrumb__item">
-                        <a class="lum-breadcrumb__link" href="/">Home</a>
-                        <i
-                                class="lum-icon lum-icon--chevron-right lum-icon--xs lum-breadcrumb__sep"
-                                aria-hidden="true"
-                        ></i>
-                    </li>
-                    <li class="lum-breadcrumb__item">
-                        <a
-                                class="lum-breadcrumb__link"
-                                href="/collections/lights"
-                        >
-                            Lights
-                        </a>
-                    </li>
+        <div class="mb-6 lg:mb-10">
+            <section class="products-section__intro px-4 pt-6">
+                <nav class="lum-breadcrumb" aria-label="Breadcrumb">
+                    <ol class="lum-breadcrumb__list">
+                        <li class="lum-breadcrumb__item">
+                            <a class="lum-breadcrumb__link" href="/">Home</a>
+                            <i
+                                    class="lum-icon lum-icon--chevron-right lum-icon--xs lum-breadcrumb__sep"
+                                    aria-hidden="true"
+                            ></i>
+                        </li>
+                        <li class="lum-breadcrumb__item">
+                            <a
+                                    class="lum-breadcrumb__link"
+                                    href="/collections/lights"
+                            >
+                                Lights
+                            </a>
+                        </li>
 
-                </ol>
-            </nav>
-            <div class="lum-showmore">
-                <div class="lum-showmore__text">
-
-                    Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
-                    on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
-                    rich fabrics and amazing colors that will make you stand out.
-
-                    Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
-                    on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
-                    rich fabrics and amazing colors that will make you stand out.
-
-                    Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
-                    on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
-                    rich fabrics and amazing colors that will make you stand out.
-
-                    Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
-                    on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
-                    rich fabrics and amazing colors that will make you stand out.
-
+                    </ol>
+                </nav>
+                <div class="lum-showmore">
+                    <h2 class="lum-heading-md">Area Lights</h2>
+                    <div class="lum-showmore__text">
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                        Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine
+                        on your big night. Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with
+                        rich fabrics and amazing colors that will make you stand out.
+                    </div>
+                    <button class="lum-showmore__toggle" type="button" data-toggle="" aria-expanded="false">
+                        <span class="lum-showmore__toggle-more  lum-text-md">Show more</span>
+                        <span class="lum-showmore__toggle-less lum-text-md">Show less</span>
+                        <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-showmore__toggle-caret"></i>
+                    </button>
                 </div>
-                <button
-                        class="lum-showmore__toggle"
-                        type="button"
-                        data-toggle=""
-                        aria-expanded="false"
-                >
-                <span class="lum-showmore__toggle-more">
-                    Show more
-                </span>
-
-                    <span class="lum-showmore__toggle-less">
-                    Show less
-                </span>
-
-                    <i
-                            class="lum-icon lum-icon--chevron-right lum-icon--xs lum-showmore__toggle-caret"
-                    ></i>
-                </button>
-
-            </div>
-        </section>
-        <section class="products-section__categories py-2 lg:pb-6">
-            <div class="lum-catrow">
-                <div class="lum-container">
-                    <div class="lum-catrow__scroll">
-                        <a href="#" class="lum-catcard is-active">
+            </section>
+            <section class="products-section__categories pt-6">
+                <div class="lum-catrow">
+                    <div class="lum-container">
+                        <!-- TODO: type scroll -->
+                        <div class="lum-catrow__scroll">
+                            <a href="#" class="lum-catcard is-active">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
+                            </a>
+                            <a href="#" class="lum-catcard">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
 
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
+                            </a>
+                            <a href="#" class="lum-catcard">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
-                        <span class="lum-catcard__img">
-                            <img src="assets/berand-product.png" alt="">
-                        </span>
-
-                            <span class="lum-catcard__name">
-                            Category Name
-                        </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
+                            </a>
+                            <a href="#" class="lum-catcard">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
 
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
+                            </a>
+                            <a href="#" class="lum-catcard">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
 
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
+                            </a>
+                            <a href="#" class="lum-catcard">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
 
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
-                        <span class="lum-catcard__img">
-                            <img src="assets/berand-product.png" alt="">
-                        </span>
-                            <span class="lum-catcard__name">
-                            Category Name
-                        </span>
-                        </a>
-                        <a href="#" class="lum-catcard">
+                            </a>
+                            <a href="#" class="lum-catcard">
                         <span class="lum-catcard__img">
                             <img src="assets/berand-product.png" alt="">
                         </span>
 
-                            <span class="lum-catcard__name">
+                                <span class="lum-catcard__name">
                             Category Name
                         </span>
-                        </a>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+                                <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                            </a>
+                            <a href="#" class="lum-catcard">
+                        <span class="lum-catcard__img">
+                            <img src="assets/berand-product.png" alt="">
+                        </span>
+
+                                <span class="lum-catcard__name">
+                            Category Name
+                        </span>
+                            </a>
+                        </div>
 
                     </div>
-
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <div class="products-toolbar">
             <div class="products-toolbar__actions">
                 <button class="products-toolbar__button" type="button"
@@ -626,6 +495,9 @@
                 <span class="products-toolbar__results-text">959 results</span>
             </div>
         </div>
+
+
+
         <div class="products-section__layout">
             <div
                     class="products-section__sidebar"
@@ -650,7 +522,7 @@
                                 Accordion 1
 
                                 <i
-                                        class="lum-icon lum-icon--chevron-right lum-icon--xs lum-accordion__caret"
+                                        class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
                                 ></i>
                             </button>
                             <div class="lum-accordion__body">
@@ -781,7 +653,7 @@
                                 Accordion 2
 
                                 <i
-                                        class="lum-icon lum-icon--chevron-right lum-icon--xs lum-accordion__caret"
+                                        class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
                                 ></i>
                             </button>
 
@@ -868,7 +740,7 @@
                                 Accordion Actions
 
                                 <i
-                                        class="lum-icon lum-icon--chevron-right lum-icon--xs lum-accordion__caret"
+                                        class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
                                 ></i>
                             </button>
 
@@ -1012,7 +884,7 @@
                                 Accordion Actions
 
                                 <i
-                                        class="lum-icon lum-icon--chevron-right lum-icon--xs lum-accordion__caret"
+                                        class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
                                 ></i>
                             </button>
 
@@ -1119,7 +991,7 @@
                                 Accordion Actions
 
                                 <i
-                                        class="lum-icon lum-icon--chevron-right lum-icon--xs lum-accordion__caret"
+                                        class="lum-icon lum-icon--chevron-right lum-icon--sm lum-accordion__caret"
                                 ></i>
                             </button>
 
@@ -1232,21 +1104,21 @@
                         <div class="products-sort__content">
                             <span class="products-sort__label">Sort By:</span>
                             <div class="products-sort__options">
-                                <button class="products-sort__option active" type="button">
+                                <button class="products-sort__option lum-text-sm  active" type="button">
                                     Featured
                                 </button>
-                                <button class="products-sort__option" type="button">
+                                <button class="products-sort__option lum-text-sm " type="button">
                                     Best Sellers
                                 </button>
-                                <button class="products-sort__option" type="button">
+                                <button class="products-sort__option lum-text-sm " type="button">
                                     Most Popular
                                 </button>
-                                <button class="products-sort__option" type="button">
+                                <button class="products-sort__option lum-text-sm " type="button">
                                     New Arrivals
                                 </button>
                             </div>
                         </div>
-                        <p class="products-sort__result">Showing 1–50 of 959 results</p>
+                        <p class="products-sort__result">Showing <span>1–50</span> of <span>959</span> results</p>
                     </div>
                     <div class="products-grid">
                         <div class="lum-product-card">
@@ -1555,7 +1427,7 @@
                 <h2 class="lum-fdrawer__title" id="fdrawer-title">Filters</h2>
             </div>
             <button class="lum-fdrawer__close" type="button" data-filter-close aria-label="Close filters">
-                <i class="lum-icon lum-icon--x lum-icon--sm"></i>
+                <i style="" class="lum-icon lum-icon--focus lum-icon--close  lum-icon--sm"></i>
             </button>
         </div>
         <!-- YOUR CONTENT GOES HERE (accordions, range, switches, checkboxes...) -->
@@ -1952,7 +1824,7 @@
         </div>
         <div class="lum-fdrawer__footer">
             <button class="lum-fdrawer__clear" type="button">
-                <i class="lum-icon lum-icon--x lum-icon--sm"></i> Clear Filters
+                <i style="" class="lum-icon lum-icon--focus lum-icon--clear lum-icon--sm"></i>Clear Filters
             </button>
             <button class="lum-fdrawer__apply" type="button">View 256 Products</button>
         </div>

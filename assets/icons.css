@@ -192,3 +192,7 @@
   -webkit-mask-image: url("./close.svg");
   mask-image: url("./close.svg");
 }
+.lum-icon--clear {
+  -webkit-mask-image: url("./clear.svg");
+  mask-image: url("./clear.svg");
+}

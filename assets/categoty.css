@@ -1,0 +1,126 @@
+
+.products-sort__option {
+    color: #111111;
+    cursor: pointer;
+}
+
+.products-sort__option.active {
+    color: #00a651;
+    font-weight: bold;
+
+}
+/* products toolbar (mobile only) */
+.products-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+    padding-block-end: 16px;
+}
+@media (min-width: 1024px) { .products-toolbar { display: none; } }  /* lg:hidden */
+
+.products-toolbar__actions { display: flex; gap: 8px; }
+
+.products-toolbar__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-inline: 16px;
+    padding-block: 4px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 999px;
+    background: var(--lum-n-0);
+    cursor: pointer;
+}
+.products-toolbar__button-text { font-size: var(--lum-text-sm); line-height: 1.75; }
+
+.products-toolbar__results { display: flex; align-items: center; }
+.products-toolbar__results-text { font-size: var(--lum-text-xs); color: var(--lum-n-500); }
+
+/* ==========================================================================
+   PRODUCTS LAYOUT (sidebar + main)
+   Tailwind removed; tokens, logical properties, BP 1024. No !important.
+   ========================================================================== */
+
+/* layout: sidebar + main side by side */
+.products-section__layout {
+    display: flex;
+    inline-size: 100%;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+/* sidebar: hidden on mobile, shown from lg; fixed-ish width */
+.products-section__sidebar { display: none; flex-shrink: 0; }
+@media (min-width: 1024px) {
+    .products-section__sidebar { display: block; inline-size: 280px; }   /* lg:w-60 */
+}
+
+/* the filter card */
+.product-filters {
+    display: flex;
+    inline-size: 100%;
+    flex-direction: column;
+    gap: 16px;
+    padding-inline: 8px;
+    padding-block: 20px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 24px;
+    @media (min-width: 1280px) {
+        padding-inline: 24px;
+    }
+}
+
+/* switch stacks */
+.switch-container { display: flex; flex-direction: column; gap: 16px; }
+.switch-container--tight { display: flex; flex-direction: column; gap: 8px; }  /* the gap-2 ones */
+
+/* main column */
+.products-section__main { min-inline-size: 0; flex: 1; }
+.products-section__content { min-inline-size: 0; inline-size: 100%; }
+
+/* sort bar: hidden on mobile, flex from lg */
+.products-sort {
+    margin-block-end: 24px;
+    display: none;
+    inline-size: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+    padding-inline: 16px;
+    padding-block: 16px;
+}
+@media (min-width: 1024px) { .products-sort { display: flex; } }
+
+.products-sort__content { display: flex; min-inline-size: 0; align-items: center; gap: 16px; }
+.products-sort__label { flex-shrink: 0; font-size: var(--lum-text-sm); font-weight: 700; }
+.products-sort__options { display: flex; align-items: center; gap: 24px; }
+.products-sort__option { white-space: nowrap; font-size: var(--lum-text-sm); color: var(--lum-n-500); cursor: pointer; }
+.products-sort__option.active { color: var(--lum-primary); font-weight: 700; }
+.products-sort__result { margin: 0; flex-shrink: 0; font-size: var(--lum-text-xs); color: var(--lum-n-500); }
+
+.products-grid {
+    display: grid;
+    block-size: fit-content;
+    inline-size: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: start;
+    align-items: start;
+    overflow: hidden;
+    border: 1px solid var(--lum-n-30);
+    background: var(--lum-n-0);
+}
+@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { .products-grid { grid-template-columns: repeat(4, 1fr); border-radius: 24px; } }
+
+/* pagination wrap */
+.products-section__pagination {
+    margin-block-start: 40px;
+    display: flex;
+    inline-size: auto;
+    justify-content: center;
+    border: 1px solid var(--lum-n-20);
+    border-radius: 16px;
+}
+@media (min-width: 1024px) { .products-section__pagination { justify-content: flex-start; } }

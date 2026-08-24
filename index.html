@@ -95,7 +95,7 @@
 
             <div data-search class="lum-search__header">
                 <i class="lum-icon lum-icon--search lum-icon--sm"></i>
-                <input class="lum-search__input lum-text-sm" type="search"
+                <input class="lum-search__input lum-text-sm"
                        placeholder="Search products, SKU, UPC or brand" aria-label="Search" data-search-input>
                 <span class="lum-search__hint">Enter</span>
                 <span class="lum-search__dots" aria-hidden="true"><span></span><span></span><span></span></span>
@@ -113,49 +113,37 @@
                     <!-- state: empty (Recent + Popular Categories) -->
                     <div class="lum-search__panel" data-panel="empty">
                         <p class="lum-search__section-label">Recent Search</p>
-                        <div class="lum-search__chips">
+                        <div class="lum-search__chips mb-4">
                             <a class="lum-search__chip" href="#">Area Lights</a>
                             <a class="lum-search__chip" href="#">Wall Packs</a>
                             <a class="lum-search__chip" href="#">Strip Lights</a>
                         </div>
-                        <div class="lum-search__rule"></div>
                         <p class="lum-search__section-label">Popular Categories</p>
                         <div class="lum-search__cats">
                             <a class="lum-search__cat" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                <div class="lum-search__thumb">
+                                    <img src="./assets/brand-nora.png" alt="">
+                                </div>
+                                <span><span class="lum-search__cat-count">421 Product</span>
+                                    <br><span
                                         class="lum-search__cat-name">Category Name</span></span>
                             </a>
                             <a class="lum-search__cat" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                                <span><span class="lum-search__cat-count">421 Product</span><br><span
-                                        class="lum-search__cat-name">Category Name</span></span>
-                            </a>
-                            <a class="lum-search__cat" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                                <span><span class="lum-search__cat-count">421 Product</span><br><span
-                                        class="lum-search__cat-name">Category Name</span></span>
-                            </a>
-                            <a class="lum-search__cat" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                                <span><span class="lum-search__cat-count">421 Product</span><br><span
-                                        class="lum-search__cat-name">Category Name</span></span>
+                                <div class="lum-search__thumb">
+                                    <img src="./assets/brand-nora.png" alt="">
+                                </div>
+                                <span><span class="lum-search__cat-count">421 Product</span>
+                                    <br><span
+                                            class="lum-search__cat-name">Category Name</span></span>
                             </a>
                         </div>
                     </div>
-
-                    <!-- state: loading (skeleton) -->
                     <div class="lum-search__panel" data-panel="loading">
-                        <div class="lum-search__chips">
+                        <div class="lum-search__chips mb-4">
                             <span class="lum-skel lum-skel--chip"></span>
                             <span class="lum-skel lum-skel--chip"></span>
                             <span class="lum-skel lum-skel--chip"></span>
                         </div>
-                        <div class="lum-search__rule"></div>
                         <div class="lum-search__results">
                             <div class="lum-search__result">
                                 <span class="lum-skel lum-skel--thumb"></span>
@@ -183,33 +171,19 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- state: results (hardcoded for the static phase) -->
                     <div class="lum-search__panel" data-panel="results">
                         <p class="lum-search__section-label">Categories for &ldquo;<span
                                 data-search-term>Lighting</span>&rdquo;</p>
-                        <div class="lum-search__chips">
+                        <div class="lum-search__chips mb-4">
                             <a class="lum-search__chip" href="#">Area Lights</a>
                             <a class="lum-search__chip" href="#">Wall Packs</a>
                             <a class="lum-search__chip" href="#">Strip Lights</a>
                         </div>
-                        <div class="lum-search__rule"></div>
                         <div class="lum-search__results">
                             <a class="lum-search__result" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                                <span><span class="lum-search__result-kind">Category</span><br><span
-                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
-                            </a>
-                            <a class="lum-search__result" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                                <span><span class="lum-search__result-kind">Category</span><br><span
-                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
-                            </a>
-                            <a class="lum-search__result" href="#">
-                                <span class="lum-search__thumb"><i
-                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <div class="lum-search__image">
+                                    <img class="" src="assets/berand-product.png">
+                                </div>
                                 <span><span class="lum-search__result-kind">Category</span><br><span
                                         class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
                             </a>
@@ -236,11 +210,9 @@
                         <span class="lum-icon-block__sub">1 Items</span>
                     </span>
                 </a>
-                <a style="white-space: nowrap" class="lum-button outline" href="/pages/project-pricing">
-                    <span class="h__lum-button">
-                        <i class="lum-icon lum-icon--dollar-circle lum-icon--sm"></i>
+                <a style="white-space: nowrap" class="lum-button outline ms-2" href="/pages/project-pricing">
+                        <i class="lum-icon lum-icon--dollar-circle lum-icon--md"></i>
                         <span class="text__lum-button">Project pricing</span>
-                    </span>
                 </a>
             </div>
         </div>
@@ -259,7 +231,12 @@
                         <div class="lum-nav__panel">
                             <div class="lum-nav__cols">
                                 <div>
-                                    <p class="lum-nav__group-title">Outdoor Lighting</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                       <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">Area Lights</a>
                                         <a class="lum-nav__link" href="#">Wall Packs</a>
@@ -273,7 +250,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="lum-nav__group-title">Commercial Lighting</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                        <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">Troffers</a>
                                         <a class="lum-nav__link" href="#">High Bay</a>
@@ -286,7 +268,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="lum-nav__group-title">Indoor &amp; Residential</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                        <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">Vanity Lights</a>
                                         <a class="lum-nav__link" href="#">Pendants</a>
@@ -298,7 +285,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="lum-nav__group-title">Recessed &amp; Downlights</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                        <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">Recessed Housings</a>
                                         <a class="lum-nav__link" href="#">Fire-Rated Housings</a>
@@ -308,7 +300,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="lum-nav__group-title">Bulbs &amp; Lamps</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                        <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">General Bulbs</a>
                                         <a class="lum-nav__link" href="#">Tube Lamps</a>
@@ -317,14 +314,24 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="lum-nav__group-title">Tape, Rope &amp; Ribbon</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                        <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">Tape Light</a>
                                         <a class="lum-nav__link" href="#">Ribbon Light</a>
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="lum-nav__group-title">Emergency &amp; Exit</p>
+                                    <p class="lum-nav__group-title">
+                                        <span class="line"></span>
+                                        <span>
+                                            Outdoor Lighting
+                                       </span>
+                                    </p>
                                     <div class="lum-nav__links">
                                         <a class="lum-nav__link" href="#">Exit Signs</a>
                                     </div>
@@ -1207,11 +1214,11 @@
                     Select any product hotspot to review specifications, availability and ordering details.
                 </p>
             </header>
-
             <div class="lum-hotspots__tabs" role="tablist" aria-label="Shop by application">
-                <button class="lum-hotspots__tab lum-text-xs is-active" id="hs-tab-1" role="tab" aria-selected="true" aria-controls="hs-panel-1" type="button">Commercial Interior</button>
+                <button class="lum-hotspots__tab lum-text-xs is-active" id="hs-tab-1" role="tab" aria-selected="true"
+                        aria-controls="hs-panel-1" type="button">Commercial Interior
+                </button>
             </div>
-
             <!-- ================= panel 1 ================= -->
             <div class="lum-hotspots__panel is-active" id="hs-panel-1" role="tabpanel" aria-labelledby="hs-tab-1">
                 <div class="flex flex-col lg:flex-row  mt-6 lg:mt-10 items-center gap-4">
@@ -1219,12 +1226,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 417.76 / 522.01">
                             <img src="./assets/Banner-3-col.png" alt="Conference room with linear pendant lighting">
                             <div class="lum-spot" data-spot data-direction="left" style="--_x:20%; --_y:70%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
+                                                Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1238,12 +1247,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 97 / 180">
                             <img src="./assets/brand-banner-2.png" alt="Retail shelving with accent track lighting">
                             <div class="lum-spot" data-spot data-direction="right" style="--_x:60%; --_y:30%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED
+                                                Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1259,12 +1270,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 1 / 1">
                             <img src="./assets/Banner-3-col.png" alt="Hotel lounge with cove lighting">
                             <div class="lum-spot" data-spot data-direction="up" style="--_x:55%; --_y:16%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
+                                                Indirect/direct Linear 6152LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1278,12 +1291,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 4 / 3">
                             <img src="./assets/brand-banner-2.png" alt="Kitchen with under-cabinet LED strips">
                             <div class="lum-spot" data-spot data-direction="down" style="--_x:14%; --_y:22%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
+                                                Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1297,12 +1312,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 1 / 1">
                             <img src="./assets/brand-banner-2.png" alt="Electrical room with panelboards">
                             <div class="lum-spot" data-spot style="--_x:55%; --_y:42%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
+                                                Indirect/direct Linear 6152LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1319,12 +1336,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 199 / 112">
                             <img src="./assets/Banner-3-col.png" alt="Open office with recessed downlights">
                             <div class="lum-spot" data-spot style="--_x:46%; --_y:24%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X34B/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34B/DS 4" L-line LED
+                                                Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1338,12 +1357,14 @@
                         <figure class="lum-hotspots__tile" data-tile style="--_ar: 173 / 264">
                             <img src="./assets/brand-banner-2.png" alt="Corridor with wood slat wall and wall sconces">
                             <div class="lum-spot" data-spot style="--_x:55%; --_y:7%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X24W/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/Banner-3-col.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED Indirect/direct Linear 6162LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X24W/DS 4" L-line LED
+                                                Indirect/direct Linear 6162LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1354,12 +1375,14 @@
                                 </div>
                             </div>
                             <div class="lum-spot" data-spot style="--_x:84%; --_y:58%">
-                                <button class="lum-spot__dot" type="button" aria-expanded="false" aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
+                                <button class="lum-spot__dot" type="button" aria-expanded="false"
+                                        aria-label="View product: NL-LD-4X34D/DS L-line LED linear"></button>
                                 <div class="lum-spot__card" hidden>
                                     <a href="#" class="lum-mini">
                                         <img class="lum-mini__img" src="./assets/brand-banner-2.png" alt="">
                                         <div class="lum-mini__body">
-                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED Indirect/direct Linear 6152LM</h4>
+                                            <h4 class="lum-mini__title lum-text-xs">NL-LD-4X34D/DS 4" L-line LED
+                                                Indirect/direct Linear 6152LM</h4>
                                             <div class="lum-mini__meta">
                                                 <span class="lum-badge lum-text-2xs">SKU</span>
                                                 <span class="lum-mini__price lum-text-xs">$105</span>
@@ -1373,8 +1396,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
         <div class="lum-viewmore lg:mt-10 mt-6">
             <a class="lum-button primary lum-viewmore__btn" href="#">
@@ -1391,10 +1412,12 @@
             <div class="lum-showcase__grid">
                 <!-- BLOCK 1 -->
                 <div class="lum-showcase__block">
-                    <a class="lum-showcase__banner" href="#"><img src="assets/brand-banner-2.png" alt="Miniature Circuit Breaker"></a>
+                    <a class="lum-showcase__banner" href="#"><img src="assets/brand-banner-2.png"
+                                                                  alt="Miniature Circuit Breaker"></a>
                     <div class="lum-showcase__head">
                         <h3 class="lum-showcase__title">Miniature Circuit Breaker</h3>
-                        <a class="lum-showcase__seeall" href="#">See All <i class="lum-icon lum-icon--arrow-right lum-icon--xs"></i></a>
+                        <a class="lum-showcase__seeall" href="#">See All <i
+                                class="lum-icon lum-icon--arrow-right lum-icon--xs"></i></a>
                     </div>
                     <div class="lum-pswiper" data-pswiper>
                         <div class="swiper">
@@ -1467,18 +1490,21 @@
                             </div>
                         </div>
                         <button class="lum-pswiper__arrow lum-pswiper__arrow--prev" aria-label="Previous">
-                            <i class="lum-icon lum-icon--chevron-left lum-icon--sm" style="transform: rotate(180deg)"></i>
+                            <i class="lum-icon lum-icon--chevron-left lum-icon--sm"
+                               style="transform: rotate(180deg)"></i>
                         </button>
                         <button class="lum-pswiper__arrow lum-pswiper__arrow--next" aria-label="Next">
-                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm" ></i>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                         </button>
                     </div>
                 </div>
                 <div class="lum-showcase__block">
-                    <a class="lum-showcase__banner" href="#"><img src="assets/brand-banner-2.png" alt="Miniature Circuit Breaker"></a>
+                    <a class="lum-showcase__banner" href="#"><img src="assets/brand-banner-2.png"
+                                                                  alt="Miniature Circuit Breaker"></a>
                     <div class="lum-showcase__head">
                         <h3 class="lum-showcase__title">Miniature Circuit Breaker</h3>
-                        <a class="lum-showcase__seeall" href="#">See All <i class="lum-icon lum-icon--arrow-right lum-icon--xs"></i></a>
+                        <a class="lum-showcase__seeall" href="#">See All <i
+                                class="lum-icon lum-icon--arrow-right lum-icon--xs"></i></a>
                     </div>
                     <div class="lum-pswiper" data-pswiper>
                         <div class="swiper">
@@ -1551,10 +1577,11 @@
                             </div>
                         </div>
                         <button class="lum-pswiper__arrow lum-pswiper__arrow--prev" aria-label="Previous">
-                            <i class="lum-icon lum-icon--chevron-left lum-icon--sm" style="transform: rotate(180deg)"></i>
+                            <i class="lum-icon lum-icon--chevron-left lum-icon--sm"
+                               style="transform: rotate(180deg)"></i>
                         </button>
                         <button class="lum-pswiper__arrow lum-pswiper__arrow--next" aria-label="Next">
-                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm" ></i>
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                         </button>
                     </div>
                 </div>
@@ -1611,7 +1638,8 @@
                 <!-- View all -->
                 <a href="#" class="lum-brandnet__cell lum-brandnet__cell--all">
                 <span class="lum-brandnet__all">
-                    <span class="lum-brandnet__all-icon"><i class="lum-icon lum-icon--arrow-right lum-icon--sm"></i></span>
+                    <span class="lum-brandnet__all-icon"><i
+                            class="lum-icon lum-icon--arrow-right lum-icon--sm"></i></span>
                     View all Brands
                 </span>
                 </a>
@@ -1619,7 +1647,6 @@
 
         </div>
     </section>
-
     <section class="lum-cta">
         <div class="lum-container">
             <div class="lum-cta__inner">
@@ -1662,7 +1689,8 @@
                         <img class="lum-post__img" src="./assets/post.png" alt="">
                         <div class="lum-post__body">
                             <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down
+                                the
                                 silhouette that works best for your body and your moment.</p>
                             <div class="lum-post__meta">
                                 <span class="lum-text-xxs">By Behnam Jafari</span>
@@ -1674,7 +1702,8 @@
                         <img class="lum-post__img" src="./assets/post.png" alt="">
                         <div class="lum-post__body">
                             <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down
+                                the
                                 silhouette that works best for your body and your moment.</p>
                             <div class="lum-post__meta">
                                 <span class="lum-text-xxs">By Behnam Jafari</span>
@@ -1686,7 +1715,8 @@
                         <img class="lum-post__img" src="./assets/post.png" alt="">
                         <div class="lum-post__body">
                             <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down
+                                the
                                 silhouette that works best for your body and your moment.</p>
                             <div class="lum-post__meta">
                                 <span class="lum-text-xxs">By Behnam Jafari</span>
@@ -1698,7 +1728,8 @@
                         <img class="lum-post__img" src="./assets/post.png" alt="">
                         <div class="lum-post__body">
                             <h3 class="lum-post__title lum-h-xxs">How to Choose Your Prom Silhouette in 2026</h3>
-                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down the
+                            <p class="lum-post__excerpt lum-text-xs">From full ball gown to sleek column — we break down
+                                the
                                 silhouette that works best for your body and your moment.</p>
                             <div class="lum-post__meta">
                                 <span class="lum-text-xxs">By Behnam Jafari</span>
@@ -1749,7 +1780,7 @@
             <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
                 <p class="lum-footer__col-title" data-accordion-toggle>
                     About Lumera Electric
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-footer__col-caret"></i>
                 </p>
                 <div class="lum-footer__body">
                     <div class="lum-footer__links">
@@ -1764,7 +1795,7 @@
             <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
                 <p class="lum-footer__col-title" data-accordion-toggle>
                     Help &amp; Policies
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-footer__col-caret"></i>
                 </p>
                 <div class="lum-footer__body">
                     <div class="lum-footer__links">
@@ -1780,7 +1811,7 @@
             <div class="lum-footer__col lum-footer__col--accordion" data-accordion>
                 <p class="lum-footer__col-title" data-accordion-toggle>
                     Trade Accounts
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm lum-footer__col-caret"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-footer__col-caret"></i>
                 </p>
                 <div class="lum-footer__body">
                     <div class="lum-footer__links">
@@ -1848,7 +1879,7 @@
     <div class="lum-msearch__bar">
         <div class="lum-msearch__field">
             <i class="lum-icon lum-icon--search lum-icon--sm"></i>
-            <input class="lum-msearch__input" type="search" placeholder="Search products, SKU, UPC or brand"
+            <input class="lum-msearch__input"  placeholder="Search products, SKU, UPC or brand"
                    aria-label="Search" data-msearch-input>
             <span class="lum-search__dots" aria-hidden="true"><span></span><span></span><span></span></span>
             <button class="lum-search__clear" type="button" data-msearch-clear>
@@ -1868,29 +1899,26 @@
         <!-- state: empty -->
         <div class="lum-search__panel" data-panel="empty">
             <p class="lum-search__section-label">Recent Search</p>
-            <div class="lum-search__chips">
+            <div class="lum-search__chips mt-2 mb-6">
                 <a class="lum-search__chip" href="#">Area Lights</a>
                 <a class="lum-search__chip" href="#">Wall Packs</a>
                 <a class="lum-search__chip" href="#">Strip Lights</a>
             </div>
-            <div class="lum-search__rule"></div>
             <p class="lum-search__section-label">Popular Categories</p>
             <div class="lum-search__cats">
                 <a class="lum-search__cat" href="#">
-                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
+                    <div class="lum-search__thumb">
+                        <img src="./assets/brand-nora.png" alt="">
+                    </div>
+                    <span><span class="lum-search__cat-count">421 Product</span>
+                                    <br><span class="lum-search__cat-name">Category Name</span></span>
                 </a>
                 <a class="lum-search__cat" href="#">
-                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
-                </a>
-                <a class="lum-search__cat" href="#">
-                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
-                </a>
-                <a class="lum-search__cat" href="#">
-                    <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
-                    <span><span class="lum-search__cat-count">421 Product</span><br><span class="lum-search__cat-name">Category Name</span></span>
+                    <div class="lum-search__thumb">
+                        <img src="./assets/brand-nora.png" alt="">
+                    </div>
+                    <span><span class="lum-search__cat-count">421 Product</span>
+                                    <br><span class="lum-search__cat-name">Category Name</span></span>
                 </a>
             </div>
         </div>
@@ -1902,7 +1930,7 @@
                 <span class="lum-skel lum-skel--chip"></span>
                 <span class="lum-skel lum-skel--chip"></span>
             </div>
-            <div class="lum-search__rule"></div>
+
             <div class="lum-search__results">
                 <div class="lum-search__result">
                     <span class="lum-skel lum-skel--thumb"></span>
@@ -1937,7 +1965,7 @@
                 <a class="lum-search__chip" href="#">Wall Packs</a>
                 <a class="lum-search__chip" href="#">Strip Lights</a>
             </div>
-            <div class="lum-search__rule"></div>
+
             <div class="lum-search__results">
                 <a class="lum-search__result" href="#">
                     <span class="lum-search__thumb"><i class="lum-icon lum-icon--cube lum-icon--md"></i></span>
@@ -1971,7 +1999,9 @@
                           fill="#15AE5C"/>
                 </svg>
             </a>
-            <button class="lum-mobile-menu__close" type="button" aria-label="Close" data-lum-close-menu>&times;</button>
+            <button class="lum-mobile-menu__close" type="button" aria-label="Close" data-lum-close-menu>
+                <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+            </button>
         </div>
 
         <div class="lum-mobile-menu__body">
@@ -1979,23 +2009,23 @@
                 <button class="lum-mobile-row" type="button" data-open="lighting">
                     <span class="lum-mobile-row__lead"><i
                             class="lum-icon lum-icon--focus lum-icon--sm"></i> Lighting</span>
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="electrical">
                     <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i> Electrical</span>
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="controls">
                     <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--focus lum-icon--sm"></i> Lighting Controls</span>
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="hardware">
                     <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--screwdriver-bolt lum-icon--sm"></i> Hardware &amp; Fasteners</span>
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="brands">
                     <span class="lum-mobile-row__lead"><i class="lum-icon lum-icon--tag lum-icon--sm"></i> Brands</span>
-                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
             </div>
             <div class="lum-mobile-panel" data-level="1" data-panel="lighting">
@@ -2004,22 +2034,22 @@
                 </button>
                 <p class="lum-mobile-title">Lighting</p>
                 <button class="lum-mobile-row" type="button" data-open="lighting-outdoor">
-                    <span>Outdoor Lighting</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i></button>
+                    <span>Outdoor Lighting</span><i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i></button>
                 <button class="lum-mobile-row" type="button" data-open="lighting-commercial">
-                    <span>Commercial Lighting</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <span>Commercial Lighting</span><i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="lighting-indoor">
-                    <span>Indoor &amp; Residential</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <span>Indoor &amp; Residential</span><i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="lighting-recessed"><span>Recessed &amp; Downlights</span><i
-                        class="lum-icon lum-icon--chevron-right lum-icon--sm"></i></button>
+                        class="lum-icon lum-icon--chevron-right lum-icon--xs"></i></button>
                 <button class="lum-mobile-row" type="button" data-open="lighting-bulbs"><span>Bulbs &amp; Lamps</span><i
-                        class="lum-icon lum-icon--chevron-right lum-icon--sm"></i></button>
+                        class="lum-icon lum-icon--chevron-right lum-icon--xs"></i></button>
                 <button class="lum-mobile-row" type="button" data-open="lighting-tape">
-                    <span>Tape, Rope &amp; Ribbon</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <span>Tape, Rope &amp; Ribbon</span><i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
                 <button class="lum-mobile-row" type="button" data-open="lighting-emergency">
-                    <span>Emergency &amp; Exit</span><i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                    <span>Emergency &amp; Exit</span><i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
                 </button>
             </div>
             <div class="lum-mobile-panel" data-level="2" data-panel="lighting-outdoor">

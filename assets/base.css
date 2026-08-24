@@ -1114,7 +1114,11 @@
 .lum-cta__inner {
     display: flex;
     align-items: start;
-    gap: 20px;
+    gap: 16px;
+    @media screen and (min-width: 1024px) {
+        gap: 20px;
+    }
+
     flex-direction: column;
     padding: 24px;
     border-radius: 12px;
@@ -1124,13 +1128,14 @@
         flex-direction: row;
         align-items: center;
         padding: 24px 40px;
+        height: 156px;
     }
 }
 
 .lum-cta__icon {
     flex: 0 0 auto;
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
     border-radius: 999px;
     background: #fff;
     display: inline-flex;
@@ -1161,7 +1166,7 @@
     flex: 0 0 auto;
     display: grid;
     grid-template-columns:  1fr;
-    gap: 12px;
+    gap: 16px;
     @media screen and (min-width: 768px) {
         width: auto;
         grid-template-columns:  1fr 1fr;

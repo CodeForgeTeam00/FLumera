@@ -75,14 +75,14 @@
 }
 
 /* ---------- variant: chip (independent outlined chips, active = outline-button hover state) ---------- */
-.lum-tabs--chip .lum-tabs__list{ gap: 12px; }
+.lum-tabs--chip .lum-tabs__list{ gap: 16px; }
 .lum-tabs--chip .lum-tabs__tab{
     block-size: auto;
-    padding: 0 16px;
+    padding: 0 24px;
 
     height: 40px;
     border: 1px solid var(--lum-n-30);
-    border-radius: 12px;
+    border-radius: 16px;
     background: var(--lum-n-0);
     color: var(--lum-n-1000);
     @media (min-width: 1024px){

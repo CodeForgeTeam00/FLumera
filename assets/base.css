@@ -920,7 +920,7 @@
     .lum-eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         color: var(--lum-primary);
         text-transform: uppercase;
         letter-spacing: .06em;
@@ -934,7 +934,18 @@
     }
 
     .lum-sec-head__title {
-        color: var(--lum-n-900);
+        text-align: center;
+        font-size: 22.78px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        color: var(--lum-n-1000);
+        @media screen and (min-width: 1024px) {
+            font-size: 41.05px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 72px;
+        }
     }
 
     .lum-sec-head__desc {

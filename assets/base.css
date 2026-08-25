@@ -777,7 +777,7 @@
     border-radius: 8px;
     background: var(--_c);
     border: 1px solid var(--lum-n-30);
-    box-shadow: inset 0 0 0 3px var(--lum-n-0);  /* white inner gap, like the design */
+    box-shadow: inset 0 0 0 3px var(--lum-n-0);
     transition: box-shadow .2s ease;
 }
 .lum-swatch__name { font-size: var(--lum-text-md); color: var(--lum-n-1000); }

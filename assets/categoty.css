@@ -2,6 +2,8 @@
 .products-sort__option {
     color: #111111;
     cursor: pointer;
+    background: #fff;
+    border: none;
 }
 .products-sort__option.active {
     color: #00a651;
@@ -118,8 +120,8 @@
     border: 1px solid var(--lum-n-30);
     background: var(--lum-n-0);
 }
-@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1280px) { .products-grid { grid-template-columns: repeat(4, 1fr); border-radius: 24px; } }
+@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(3, 1fr);  border-radius: 24px; } }
+@media (min-width: 1280px) { .products-grid { grid-template-columns: repeat(4, 1fr); } }
 
 /* pagination wrap */
 .products-section__pagination {

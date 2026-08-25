@@ -12,41 +12,28 @@ new Swiper('.lum-hero__swiper', {
     },
 });
 
-(function () {
-    var swipers = [];
 
-    document.querySelectorAll('.lum-pswiper').forEach(function (el) {
-        var sw = new Swiper(el, {
-            slidesPerView: 1.4,
-            spaceBetween: 12,
-            watchOverflow: true,
-            navigation: {
-                prevEl: el.querySelector('.lum-pswiper__arrow--prev'),
-                nextEl: el.querySelector('.lum-pswiper__arrow--next'),
-            },
-            breakpoints: {
-                540:  { slidesPerView: 2.3 },
-                768:  { slidesPerView: 2.6 },
-                1024: { slidesPerView: 3.6 },
-                1280: { slidesPerView: 4.1 },
-            },
-        });
-        swipers.push(sw);
+
+var PRESETS = {
+    default: { base: 1.4, 540: 2.3, 768: 2.6, 1024: 3.6, 1280: 4.1 },
+    full:    { base: 1.2, 540: 2,   768: 3,   1024: 4,   1280: 5.2   },
+};
+
+document.querySelectorAll('.lum-pswiper').forEach(function (el) {
+    var preset = PRESETS[el.dataset.slide] || PRESETS.default;
+    new Swiper(el, {
+        slidesPerView: preset.base,
+        spaceBetween: 12,
+        watchOverflow: true,
+        navigation: {
+            prevEl: el.querySelector('.lum-pswiper__arrow--prev'),
+            nextEl: el.querySelector('.lum-pswiper__arrow--next'),
+        },
+        breakpoints: {
+            540:  { slidesPerView: preset[540] },
+            768:  { slidesPerView: preset[768] },
+            1024: { slidesPerView: preset[1024] },
+            1280: { slidesPerView: preset[1280] },
+        },
     });
-    document.addEventListener('lum-tabs:change', function () {
-        swipers.forEach(function (sw) { sw.update(); });
-    });
-})();
-
-
-
-function test(){
-    const elements = document.querySelectorAll('.lum-ordered__grid');
-    elements.forEach(function (element) {
-        console.log(element);
-
-    })
-
-}
-
-test()
+});

@@ -1,0 +1,256 @@
+
+.products-sort__option {
+    color: #111111;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+}
+.products-sort__option.active {
+    color: #00a651;
+    font-weight: bold;
+}
+/* products toolbar (mobile only) */
+.products-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+    padding-block-end: 16px;
+}
+@media (min-width: 1024px) { .products-toolbar { display: none; } }  /* lg:hidden */
+
+.products-toolbar__actions { display: flex; gap: 8px; }
+
+.products-toolbar__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-inline: 16px;
+    padding-block: 4px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 999px;
+    background: var(--lum-n-0);
+    cursor: pointer;
+}
+.products-toolbar__button-text { font-size: var(--lum-text-sm); line-height: 26px }
+
+.products-toolbar__results { display: flex; align-items: center; }
+.products-toolbar__results-text { font-size: var(--lum-text-xs); color: var(--lum-n-1000); }
+
+/* ==========================================================================
+   PRODUCTS LAYOUT (sidebar + main)
+   Tailwind removed; tokens, logical properties, BP 1024. No !important.
+   ========================================================================== */
+
+/* layout: sidebar + main side by side */
+.products-section__layout {
+    margin-bottom: 24px ;
+    display: grid;
+    grid-template-columns:  1fr;
+    @media (min-width: 1024px) {
+        margin-bottom: 284px ;
+        grid-template-columns: 280px 1fr;
+    }
+    inline-size: 100%;
+    gap: 24px;
+}
+
+.products-section__sidebar { display: none; flex-shrink: 0; }
+@media (min-width: 1024px) {
+    .products-section__sidebar { display: block; inline-size: 280px; }   /* lg:w-60 */
+}
+
+/* the filter card */
+.product-filters {
+    display: flex;
+    inline-size: 100%;
+    flex-direction: column;
+    gap: 16px;
+    padding-inline: 8px;
+    padding-block: 20px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 24px;
+    @media (min-width: 1280px) {
+        padding-inline: 24px;
+    }
+    .lum-accordion__details ,.lum-accordion__summary{
+        padding: 16px 0;
+    }
+
+
+}
+
+/* switch stacks */
+.switch-container { display: flex; flex-direction: column; gap: 16px; }
+.switch-container--tight { display: flex; flex-direction: column; gap: 8px; }  /* the gap-2 ones */
+
+/* main column */
+.products-section__main { min-inline-size: 0; flex: 1; }
+.products-section__content { min-inline-size: 0; inline-size: 100%; }
+
+/* sort bar: hidden on mobile, flex from lg */
+.products-sort {
+    margin-block-end: 24px;
+    display: none;
+    inline-size: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+    padding-inline: 16px;
+    padding-block: 16px;
+}
+@media (min-width: 1024px) { .products-sort { display: flex; } }
+
+.products-sort__content { display: flex; min-inline-size: 0; align-items: center; gap: 16px; }
+.products-sort__label { flex-shrink: 0; font-size: var(--lum-text-sm); font-weight: 700; }
+.products-sort__options { display: flex; align-items: center; gap: 16px; }
+.products-sort__option { white-space: nowrap; font-size: var(--lum-text-sm); color: var(--lum-n-500); cursor: pointer; }
+.products-sort__option.active { color: var(--lum-primary); font-weight: 700; }
+.products-sort__result { margin: 0; flex-shrink: 0; font-size: var(--lum-text-xs); color: var(--lum-n-100); }
+
+.products-grid {
+    display: grid;
+    block-size: fit-content;
+    inline-size: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: start;
+    align-items: start;
+    overflow: hidden;
+    border: 1px solid var(--lum-n-30);
+    background: var(--lum-n-0);
+}
+@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(3, 1fr);  border-radius: 24px; } }
+@media (min-width: 1280px) { .products-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* pagination wrap */
+.products-section__pagination {
+    margin-block-start: 40px;
+    display: flex;
+    inline-size: auto;
+    justify-content: center;
+
+    nav{
+        padding: 8px 16px;
+        border-radius: 16px;
+        border: 1px solid var(--lum-n-20);
+    }
+}
+@media (min-width: 1024px) { .products-section__pagination { justify-content: flex-start; } }
+
+/* ==========================================================================
+   FILTER DRAWER (lum-fdrawer) — mobile bottom sheet.
+   Layout: header (fixed) / content (scrolls) / footer (sticky).
+   Only the middle scrolls, so the two footer buttons always stay visible.
+   ========================================================================== */
+.lum-fdrawer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;              /* toggled to flex when open */
+    align-items: flex-end;      /* sheet sits at the bottom */
+}
+.lum-fdrawer[data-open] { display: flex; }
+
+.lum-fdrawer__backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    padding: 0;
+    background: rgb(9 30 66 / .5);
+    cursor: pointer;
+}
+
+.lum-fdrawer__panel {
+    position: relative;
+    z-index: 1;
+    inline-size: 100%;
+    /* KEY FIX: max-height (a ceiling), not min-height. So content overflows and scrolls. */
+    max-block-size: 100dvh;
+    display: flex;
+    flex-direction: column;     /* header / content / footer */
+    background: var(--lum-n-0);
+    border-start-start-radius: 16px;
+    border-start-end-radius: 16px;
+    overflow: hidden;           /* radius clip; inner content does the scrolling */
+}
+
+/* grab handle */
+.lum-fdrawer__handle {
+    inline-size: 32px;
+    block-size: 4px;
+    margin: 8px auto 4px;
+    border-radius: 999px;
+    background: var(--lum-n-70);
+    flex-shrink: 0;
+}
+
+/* header (fixed) */
+.lum-fdrawer__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 16px;
+    border-block-end: 1px solid var(--lum-n-30);
+    flex-shrink: 0;
+}
+.lum-fdrawer__title-wrap { display: inline-flex; align-items: center; gap: 8px; }
+.lum-fdrawer__title { margin: 0; font-size: var(--lum-text-lg); font-weight: 700; color: var(--lum-n-1000); }
+.lum-fdrawer__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 32px;
+    block-size: 32px;
+    border: 0;
+    background: transparent;
+    color: var(--lum-n-900);
+    cursor: pointer;
+}
+
+/* content (the ONLY scrolling area) */
+.lum-fdrawer__content {
+    flex: 1;
+    min-block-size: 0;          /* allows the flex child to actually shrink & scroll */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+}
+
+/* footer (sticky at the bottom of the sheet) */
+.lum-fdrawer__footer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px 16px;
+    border-block-start: 1px solid var(--lum-n-30);
+    background: var(--lum-n-0);
+    flex-shrink: 0;
+}
+.lum-fdrawer__clear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 0;
+    background: transparent;
+    color:  #d64545;
+    font-family: var(--lum-font);
+    font-size: var(--lum-text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.lum-fdrawer__apply {
+    flex: 1;
+    block-size: 48px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--lum-primary);
+    color: var(--lum-n-0);
+    font-family: var(--lum-font);
+    font-size: var(--lum-text-md);
+    font-weight: 700;
+    cursor: pointer;
+}

@@ -188,3 +188,11 @@
   -webkit-mask-image: url("./youtube.svg");
   mask-image: url("./youtube.svg");
 }
+.lum-icon--close {
+  -webkit-mask-image: url("./close.svg");
+  mask-image: url("./close.svg");
+}
+.lum-icon--clear {
+  -webkit-mask-image: url("./clear.svg");
+  mask-image: url("./clear.svg");
+}

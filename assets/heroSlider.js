@@ -18,7 +18,7 @@ new Swiper('.lum-hero__swiper', {
     document.querySelectorAll('.lum-pswiper').forEach(function (el) {
         var sw = new Swiper(el, {
             slidesPerView: 1.4,
-            spaceBetween: 16,
+            spaceBetween: 12,
             watchOverflow: true,
             navigation: {
                 prevEl: el.querySelector('.lum-pswiper__arrow--prev'),

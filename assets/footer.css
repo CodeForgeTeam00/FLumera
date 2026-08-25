@@ -50,7 +50,7 @@
 .lum-newsletter__field {
     flex: 1;
     padding-inline: 16px;
-    block-size: 48px;
+    block-size: 40px;
     background: var(--_field-bg);
     border: 1px solid var(--_border);
     border-radius: 8px;
@@ -58,15 +58,17 @@
     color: var(--_fg);
     outline: none;
     transition: border-color .2s ease, box-shadow .2s ease;
-
+    @media screen and (min-width: 1024px) {
+        block-size: 48px;
+    }
     &::placeholder { color: var(--_muted); }
     &:focus { border-color: var(--lum-primary); box-shadow: 0 0 0 3px rgba(21, 174, 92, .15); }
 }
 
 /* ---------- Middle: link columns ---------- */
-.lum-footer__cols { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.lum-footer__cols { display: grid; grid-template-columns: 1fr; gap: 16  px; }
 @media screen and (min-width: 1024px) {
-    .lum-footer__cols { grid-template-columns: repeat(5, 1fr); gap: 32px; align-items: start; }
+    .lum-footer__cols { grid-template-columns: repeat(5, 1fr); gap: 48px; align-items: start; }
 }
 
 .lum-footer__col-title {
@@ -81,7 +83,7 @@
     height: 44px;
 }
 .lum-footer__col-title[data-accordion-toggle] { background: var(--lum-n-20); cursor: pointer; }
-.lum-footer__links { display: flex; flex-direction: column; gap: 12px; }
+.lum-footer__links { display: flex; flex-direction: column; gap: 8px; }
 .lum-footer__link {
     font-size: var(--lum-text-md);
     color: var(--_link);
@@ -112,8 +114,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    inline-size: 36px;
-    block-size: 36px;
+    inline-size: 40px;
+    block-size: 40px;
     border-radius: 100px;
     color: var(--lum-n-500);
     background: var(--lum-n-0);
@@ -134,14 +136,22 @@
     .lum-footer__bottom { flex-direction: row; justify-content: space-between; }
 }
 .lum-footer__copy { font-size: var(--lum-text-sm); color: var(--_muted); }
-.lum-footer__policies { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.lum-footer__policies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    @media screen and (min-width: 1024px) {
+        gap: 32px;
+    }
+}
 .lum-footer__policy {
     position: relative;
     font-size: var(--lum-text-sm);
     color: var(--_link);
     padding-inline-start: 14px;
     transition: color .2s ease;
-
+    line-height: 2;
     &::before {
         content: "";
         position: absolute;

@@ -3252,7 +3252,7 @@
 }
 
 /* ---------- 2xl: min-width 1600px ---------- */
-@media (min-width: 1600px) {
+@media (min-width: 1536px) {
     .\32 xl\:gap-0{gap:0}
     .\32 xl\:gap-x-0{column-gap:0}
     .\32 xl\:gap-y-0{row-gap:0}

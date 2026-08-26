@@ -4,10 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="629a3bbc-5619-4fcd-bf15-0a95d8deb729" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/share.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/categoty.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/categoty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/gui.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -17,18 +37,84 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mj368&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CodeForgeTeam00/FLumera.git&quot;,
+    &quot;accountId&quot;: &quot;5951d8dd-643b-4d35-b087-2c0b528dd324&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3IAamDNzmpd6c3fAmq53UbFcKw1" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="2" id="Remove" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "single",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "gui",
     "javascript.preferred.runtime.type.id": "node",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "last_opened_file_path": "C:/Users/mj794/OneDrive/Dokumenty/project/New folder/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mj794\OneDrive\Dokumenty\project\New folder\assets" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.8665.259" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="629a3bbc-5619-4fcd-bf15-0a95d8deb729" name="Changes" comment="" />
+      <created>1787734412219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1787734412219</updated>
+      <workItem from="1787734415589" duration="6171000" />
+      <workItem from="1787751392907" duration="4406000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -57,11 +57,13 @@
   .lum-lg-icon--xl {
     --icon-size: var(--lum-icon-xl);
   }
-  .lum-icon--copy {
-    -webkit-mask-image: url("./copy.svg");
-    mask-image: url("./copy.svg");
-  }
+
 }
+.lum-icon--copy {
+  -webkit-mask-image: url("./copy.svg");
+  mask-image: url("./copy.svg");
+}
+
 .lum-icon--share {
   -webkit-mask-image: url("./share.svg");
   mask-image: url("./share.svg");

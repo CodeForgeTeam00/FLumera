@@ -1662,7 +1662,64 @@
             <template data-source>
                 <div>
                     <div   >
+                        <button
+                                class="products-toolbar__button"
+                                type="button"
+                                data-filter-open="openBtn"
+                                aria-controls="mobile-filters-2"
+                                aria-expanded="false"
+                        >
+                            <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+                            <span class="products-toolbar__button-text">Filters 2</span>
+                        </button>
 
+
+                        <div
+                                id="mobile-filters-2"
+                                class="lum-fdrawer"
+                                data-filter-drawer=""
+                                aria-hidden="true"
+                        >
+                            <button
+                                    class="lum-fdrawer__backdrop"
+                                    type="button"
+                                    data-filter-close=""
+                                    aria-label="Close filters"
+                            ></button>
+
+                            <div
+                                    class="lum-fdrawer__panel"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-labelledby="fdrawer-title-2"
+                            >
+                                <div class="lum-fdrawer__handle"></div>
+
+                                <div class="lum-fdrawer__header">
+                                    <div class="lum-fdrawer__title-wrap">
+                                        <i class="lum-icon lum-icon--message  lum-icon--sm"></i>
+
+                                        <h2
+                                                class="lum-fdrawer__title"
+                                                id="fdrawer-title-2"
+                                        >
+                                            Filters
+                                        </h2>
+                                    </div>
+
+                                    <button
+                                            class="lum-fdrawer__close"
+                                            type="button"
+                                            data-filter-close=""
+                                            aria-label="Close filters"
+                                    >
+                                        <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+                                    </button>
+                                </div>
+
+                                <div class="lum-fdrawer__content">
+
+                                </div>
                     </div>
                 </div>
             </template>

@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629a3bbc-5619-4fcd-bf15-0a95d8deb729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/message.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/share.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui-test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/categoty.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/categoty.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/gui-test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/gui.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1787734412219</updated>
       <workItem from="1787734415589" duration="6171000" />
-      <workItem from="1787751392907" duration="4406000" />
+      <workItem from="1787751392907" duration="8433000" />
     </task>
     <servers />
   </component>

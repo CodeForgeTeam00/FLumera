@@ -21,86 +21,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<button
-        class="products-toolbar__button"
-        type="button"
-        data-filter-open=""
-        aria-controls="mobile-filters-1"
-        aria-expanded="false"
->
-    <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
-    <span class="products-toolbar__button-text">Filters</span>
-</button>
 
-
-<div
-        id="mobile-filters-1"
-        class="lum-fdrawer"
-        data-filter-drawer=""
-        aria-hidden="true"
->
-    <button
-            class="lum-fdrawer__backdrop"
-            type="button"
-            data-filter-close=""
-            aria-label="Close filters"
-    ></button>
-
-    <div
-            class="lum-fdrawer__panel"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="fdrawer-title-1"
-    >
-        <div class="lum-fdrawer__handle"></div>
-
-        <div class="lum-fdrawer__header">
-            <div class="lum-fdrawer__title-wrap">
-                <i class="lum-icon lum-icon--focus lum-icon--sm"></i>
-
-                <h2
-                        class="lum-fdrawer__title"
-                        id="fdrawer-title-1"
-                >
-                    Filters
-                </h2>
-            </div>
-
-            <button
-                    class="lum-fdrawer__close"
-                    type="button"
-                    data-filter-close=""
-                    aria-label="Close filters"
-            >
-                <i class="lum-icon lum-icon--x lum-icon--sm"></i>
-            </button>
-        </div>
-
-        <div class="lum-fdrawer__content">
-
-        </div>
-
-        <div class="lum-fdrawer__footer">
-            <button class="lum-fdrawer__clear" type="button">
-                <i class="lum-icon lum-icon--x lum-icon--sm"></i>
-                Clear Filters
-            </button>
-
-            <button class="lum-fdrawer__apply" type="button">
-                View 256 Products
-            </button>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- FILTER 2 -->
 
 <button
         class="products-toolbar__button"
         type="button"
-        data-filter-open=""
+        data-filter-open="openBtn"
         aria-controls="mobile-filters-2"
         aria-expanded="false"
 >
@@ -132,13 +58,13 @@
 
         <div class="lum-fdrawer__header">
             <div class="lum-fdrawer__title-wrap">
-                <i class="lum-icon lum-icon--focus lum-icon--sm"></i>
+                <i class="lum-icon lum-icon--message  lum-icon--sm"></i>
 
                 <h2
                         class="lum-fdrawer__title"
                         id="fdrawer-title-2"
                 >
-                    Filters 2
+                    Filters
                 </h2>
             </div>
 
@@ -148,26 +74,33 @@
                     data-filter-close=""
                     aria-label="Close filters"
             >
-                <i class="lum-icon lum-icon--x lum-icon--sm"></i>
+                <i class="lum-icon lum-icon--close lum-icon--lg"></i>
             </button>
         </div>
 
         <div class="lum-fdrawer__content">
-
+            <div class="w-full flex items-center justify-between   border-[1px] border-[#EBECF0] rounded-[8px] p-3 bg-[#FAFBFC]  ">
+                <div>
+                <span class="text-[14.22px] leading-7 font-[400] text-[#7A869A]">
+                    lumeraelectric.com/product/S7593P
+                </span>
+                </div>
+                <i class="lum-icon lum-icon--copy  lum-icon--sm "></i>
+            </div>
         </div>
 
         <div class="lum-fdrawer__footer">
+            <button class="lum-fdrawer__apply" type="button">
+                Copy link
+            </button>
             <button class="lum-fdrawer__clear" type="button">
-                <i class="lum-icon lum-icon--x lum-icon--sm"></i>
-                Clear Filters
+                Cancel
             </button>
 
-            <button class="lum-fdrawer__apply" type="button">
-                View 256 Products
-            </button>
         </div>
     </div>
 </div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

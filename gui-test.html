@@ -21,7 +21,226 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Share button for testing */
+    .share-btn {
+        padding: 12px 20px;
+        border: 0;
+        border-radius: 8px;
+        background: #16b364;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Modal */
+    .share-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share-modal.is-open {
+        display: flex;
+    }
+
+    /* Background overlay */
+    .share-modal__overlay {
+        position: absolute;
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Modal content */
+    .share-modal__content {
+        position: relative;
+        z-index: 1;
+
+        width: 576px;
+        max-width: calc(100% - 40px);
+
+        padding: 72px 40px 40px;
+
+        background: #ffffff;
+        border-radius: 12px;
+
+        box-shadow:
+                0 20px 40px rgba(16, 24, 40, 0.12),
+                0 8px 16px rgba(16, 24, 40, 0.08);
+    }
+
+    /* Close */
+    .share-modal__close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 32px;
+        height: 32px;
+
+        padding: 0;
+        border: 0;
+        background: transparent;
+        font-weight: 300;
+        line-height: 1;
+
+        cursor: pointer;
+    }
+    .share-modal__close i {
+       color:  #253858;
+    }
+
+    /* Title */
+    .share-modal__title {
+        margin: 0;
+
+        color: #101828;
+
+        text-align: center;
+        font-size: 20.25px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    /* Description */
+    .share-modal__description {
+        margin: 4px 0 0;
+
+        color: #7A869A;
+
+        text-align: center;
+        font-size:14.22px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    /* Link box */
+    .share-modal__link-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 56px;
+
+        margin-top: 24px;
+        padding: 10px 12px;
+
+        border: 1px solid #EBECF0;
+        border-radius: 8px;
+
+        background: #FAFBFC;
+    }
+
+    /* Link text */
+    .share-modal__link {
+        overflow: hidden;
+
+        color: #667085;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /* Copy icon */
+    .share-modal__copy-icon {
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: 12px;
+        padding: 4px;
+
+        border: 0;
+        background: transparent;
+
+        color: #101828;
+
+        cursor: pointer;
+    }
+
+    /* Actions */
+    .share-modal__actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+
+        margin-top: 40px;
+    }
+
+    .share-modal__copy-btn,
+    .share-modal__cancel-btn {
+
+        height: 48px;
+
+        border-radius: 8px;
+
+        font-size: 14.22px;
+        font-weight: 500;
+
+        cursor: pointer;
+    }
+
+    .share-modal__copy-btn {
+        border: 1px solid #EBECF0;
+
+        background: #16b364;
+        color: #ffffff;
+    }
+
+    .share-modal__copy-btn:hover {
+        background: #15AE5C;
+    }
+
+    .share-modal__cancel-btn {
+        border: 1px solid #d0d5dd;
+
+        background: #ffffff;
+        color: #101828;
+    }
+
+    .share-modal__cancel-btn:hover {
+        background: #f9fafb;
+    }
+
+
+    /* ============================= */
+    /* Hidden under 1024px */
+    /* ============================= */
+
+    @media (max-width: 1023px) {
+        .share-modal {
+            display: none !important;
+        }
+
+        .share-btn {
+            display: none;
+        }
+    }
+</style>
 
 <button
         class="products-toolbar__button"
@@ -31,7 +250,7 @@
         aria-expanded="false"
 >
     <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
-    <span class="products-toolbar__button-text">Filters 2</span>
+    <span class="products-toolbar__button-text">share</span>
 </button>
 
 
@@ -58,11 +277,191 @@
 
         <div class="lum-fdrawer__header">
             <div class="lum-fdrawer__title-wrap">
-                <i class="lum-icon lum-icon--message  lum-icon--sm"></i>
+
+                <i class="lum-icon lum-icon--share lum-icon--sm"></i>
 
                 <h2
                         class="lum-fdrawer__title"
                         id="fdrawer-title-2"
+                >
+                    Filters
+                </h2>
+
+            </div>
+
+            <button
+                    class="lum-fdrawer__close"
+                    type="button"
+                    data-filter-close=""
+                    aria-label="Close filters"
+            >
+                <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+            </button>
+        </div>
+
+
+        <div class="lum-fdrawer__content">
+
+            <div class="w-full flex items-center justify-between border-[1px] border-[#EBECF0] rounded-[8px] p-3 bg-[#FAFBFC]">
+
+                <div>
+                    <span
+                            data-copy-source
+                            class="text-[14.22px] leading-7 font-[400] text-[#7A869A]"
+                    >
+                        lumeraelectric.com/product/S7593P
+                    </span>
+                </div>
+
+
+                <!-- Copy Icon -->
+                <button
+                        type="button"
+                        data-copy-link
+                        aria-label="Copy link"
+                        class="border-0 bg-transparent p-0 cursor-pointer"
+                >
+                    <i class="lum-icon lum-icon--copy lum-icon--sm"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="lum-fdrawer__footer">
+
+            <!-- Copy Link -->
+            <a
+                    class="lum-button primary"
+                    href="#"
+                    data-copy-link
+            >
+                <span class="h__lum-button">
+                    <span class="text__lum-button">
+                        Copy link
+                    </span>
+                </span>
+            </a>
+
+
+            <!-- Cancel -->
+            <a
+                    class="lum-button outline"
+                    href="#"
+                    data-filter-close
+            >
+                <span class="h__lum-button">
+                    <span class="text__lum-button">
+                        Cancel
+                    </span>
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+<button id="shareBtn" class="share-btn">
+    Share Product
+</button>
+
+<div id="shareModal" class="share-modal">
+    <div class="share-modal__overlay"></div>
+
+    <div class="share-modal__content">
+        <button
+                id="closeModalBtn"
+                class="share-modal__close"
+                type="button"
+                aria-label="Close"
+
+        >
+            <i class="lum-icon lum-icon--close lum-icon--sm"></i>
+        </button>
+
+        <h2 class="share-modal__title">
+            Share This Product
+        </h2>
+
+        <p class="share-modal__description">
+            Copy the product link and share it with anyone.
+        </p>
+
+        <div class="share-modal__link-box">
+      <span id="productLink" class="share-modal__link">
+        lumeraelectric.com/product/S7593P
+      </span>
+
+            <button
+                    id="copyIconBtn"
+                    class="share-modal__copy-icon"
+                    type="button"
+                    aria-label="Copy product link"
+            >
+                <i class="lum-icon lum-icon--copy lum-icon--sm"></i>
+            </button>
+        </div>
+
+        <div class="share-modal__actions">
+            <button id="copyBtn" class="share-modal__copy-btn" type="button">
+                Copy link
+            </button>
+
+            <button id="cancelBtn" class="share-modal__cancel-btn" type="button">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<button
+        class="products-toolbar__button"
+        type="button"
+        data-filter-open="openBtn"
+        aria-controls="mobile-filters-3"
+        aria-expanded="false"
+>
+    <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+    <span class="products-toolbar__button-text">Color</span>
+</button>
+
+
+<div
+        id="mobile-filters-3"
+        class="lum-fdrawer"
+        data-filter-drawer=""
+        aria-hidden="true"
+>
+    <button
+            class="lum-fdrawer__backdrop"
+            type="button"
+            data-filter-close=""
+            aria-label="Close filters"
+    ></button>
+
+    <div
+            class="lum-fdrawer__panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="fdrawer-title-2"
+    >
+        <div class="lum-fdrawer__handle"></div>
+
+        <div class="lum-fdrawer__header">
+            <div class="lum-fdrawer__title-wrap">
+
+                <h2
+                        class="lum-fdrawer__title"
+                        id="fdrawer-title-3"
                 >
                     Filters
                 </h2>
@@ -77,32 +476,171 @@
                 <i class="lum-icon lum-icon--close lum-icon--lg"></i>
             </button>
         </div>
-
         <div class="lum-fdrawer__content">
-            <div class="w-full flex items-center justify-between   border-[1px] border-[#EBECF0] rounded-[8px] p-3 bg-[#FAFBFC]  ">
-                <div>
-                <span class="text-[14.22px] leading-7 font-[400] text-[#7A869A]">
-                    lumeraelectric.com/product/S7593P
-                </span>
-                </div>
-                <i class="lum-icon lum-icon--copy  lum-icon--sm "></i>
+            <div>
+            <div class="flex gap-2 ">
+                <span class="text-[12.64px] leading-6 font-[700]">Color Selected:</span>
+                <span class="text-[12.64px] leading-6 font-[500]">Blue</span>
+            </div>
+            <div class="grid grid-cols-10 gap-2 mt-2">
+                <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#27ae60" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#e2542c" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#e84f8b" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#5b6b83" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#e74c3c" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#c9a227" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                </button>
+                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                </button>
             </div>
         </div>
+        </div>
+
 
         <div class="lum-fdrawer__footer">
-            <button class="lum-fdrawer__apply" type="button">
-                Copy link
-            </button>
-            <button class="lum-fdrawer__clear" type="button">
-                Cancel
-            </button>
+            <a class="lum-button primary" href="#"><span class="h__lum-button"><span class="text__lum-button">Primary</span></span></a>
+            <a class="lum-button outline" href="#"><span class="h__lum-button"><span class="text__lum-button">Outline</span></span></a>
 
         </div>
     </div>
 </div>
 
+<!--js mobile share -->
+<script>
+
+    (function () {
+
+        document.addEventListener('click', function (e) {
+
+            var copyBtn = e.target.closest('[data-copy-link]');
+
+            if (!copyBtn) return;
+
+            e.preventDefault();
+
+            var drawer = copyBtn.closest('[data-filter-drawer]');
+
+            if (!drawer) return;
+
+            var source = drawer.querySelector('[data-copy-source]');
+
+            if (!source) return;
+
+            var text = source.textContent.trim();
+
+            navigator.clipboard.writeText(text)
+                .then(function () {
+                    console.log('Copied:', text);
+                })
+                .catch(function (err) {
+                    console.error('Copy failed:', err);
+                });
+
+        });
+
+    })();
 
 
+
+
+    const shareBtn = document.getElementById("shareBtn");
+    const shareModal = document.getElementById("shareModal");
+
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    const copyBtn = document.getElementById("copyBtn");
+    const copyIconBtn = document.getElementById("copyIconBtn");
+
+    const productLink = document.getElementById("productLink");
+    const overlay = document.querySelector(".share-modal__overlay");
+
+
+    function openModal() {
+        // Modal should only work from 1024px and above
+        if (window.innerWidth < 1024) {
+            return;
+        }
+
+        shareModal.classList.add("is-open");
+
+        document.body.style.overflow = "hidden";
+    }
+
+
+    function closeModal() {
+        shareModal.classList.remove("is-open");
+
+        document.body.style.overflow = "";
+    }
+
+
+    async function copyProductLink() {
+        const link = productLink.textContent.trim();
+
+        try {
+            await navigator.clipboard.writeText(link);
+
+            copyBtn.textContent = "Copied!";
+
+            setTimeout(() => {
+                copyBtn.textContent = "Copy link";
+            }, 1500);
+
+        } catch (error) {
+            console.error("Copy failed:", error);
+        }
+    }
+
+
+    /* Open */
+    shareBtn.addEventListener("click", openModal);
+
+
+    /* Close */
+    closeModalBtn.addEventListener("click", closeModal);
+
+    cancelBtn.addEventListener("click", closeModal);
+
+    overlay.addEventListener("click", closeModal);
+
+
+    /* Copy */
+    copyBtn.addEventListener("click", copyProductLink);
+
+    copyIconBtn.addEventListener("click", copyProductLink);
+
+
+    /* ESC close */
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+
+
+    /* If screen becomes smaller than 1024px, close modal */
+    window.addEventListener("resize", () => {
+        if (window.innerWidth < 1024) {
+            closeModal();
+        }
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/footer.js"></script>
 <script src="assets/header.js"></script>

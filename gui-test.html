@@ -226,6 +226,387 @@
         background: #f9fafb;
     }
 
+    /*................................................*/
+    /* =========================
+   Favorite Drawer Content
+========================= */
+
+    .favorite-login {
+        width: 100%;
+    }
+
+
+    /* Intro */
+
+    .favorite-login__intro {
+        text-align: center;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .favorite-login__title {
+        margin: 0 0 4px;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .favorite-login__description {
+        font-size: 14.22px;
+        font-weight: 500;
+        line-height: 28px;
+        color: #7A869A;
+    }
+
+
+    /* Personal / Business */
+
+    .favorite-login__switch {
+        width: max-content;
+
+        display: flex;
+        align-items: center;
+
+        margin: 0 auto 26px;
+        padding: 4px;
+
+        border-radius: 14px;
+        background: #EBECF0;
+    }
+
+    .favorite-login__switch-btn {
+        height: 38px;
+
+        padding: 0 13px;
+
+        border: 0;
+        border-radius: 11px;
+
+        background: transparent;
+
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 400;
+
+        color: #101010;
+
+        cursor: pointer;
+    }
+
+    .favorite-login__switch-btn.is-active {
+        background: #FFFFFF;
+
+        box-shadow:
+                0 1px 2px rgba(16, 24, 40, 0.08),
+                0 2px 5px rgba(16, 24, 40, 0.12);
+    }
+
+
+    .favorite-login__label {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+
+        color: #101828;
+    }
+
+    .favorite-login__label span {
+        color: #12B76A;
+    }
+
+
+
+    /* Terms */
+
+    .favorite-login__terms {
+        margin: 32px 0 16px;
+        text-align: center;
+        font-size: 12.64px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #7A869A;
+    }
+
+    .favorite-login__terms a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+    /* Continue Button */
+
+    .favorite-login__continue {
+        width: 100%;
+        height: 48px;
+
+        border: 0;
+        border-radius: 8px;
+
+        background: #15AE5C;
+        color: #FFFFFF;
+
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        transition:
+                background 0.2s ease,
+                transform 0.1s ease;
+    }
+
+    .favorite-login__continue:hover {
+        background: #0FA457;
+    }
+
+    .favorite-login__continue:active {
+        transform: scale(0.99);
+    }
+
+
+    /* Divider */
+
+    .favorite-login__divider {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        margin: 12px 0;
+    }
+
+    .favorite-login__divider span {
+        flex: 1;
+        height: 1px;
+
+        background: #EBECF0;
+    }
+
+    .favorite-login__divider p {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        color: #7A869A;
+    }
+
+
+    /* Shop Button */
+
+    .favorite-login__shop {
+        width: 100%;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        border: 1px solid #EBECF0;
+        border-radius: 8px;
+
+        background: #FFFFFF;
+        color: #101010;
+
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+    }
+
+
+    /* Shop icon */
+
+    .favorite-login__shop-icon {
+        color: #5433EB;
+
+    }
+    .favorite-login__shop-span{
+        font-size: 14.22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    .favorite-login__shop-icon::after {
+        content: "";
+
+        position: absolute;
+
+        width: 8px;
+        height: 8px;
+
+        top: -6px;
+        left: -4px;
+
+        border-radius: 50%;
+
+        background: #5A31F4;
+    }
+    /* =========================
+   Email Field
+========================= */
+
+    .favorite-login__field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* Label */
+
+    .favorite-login__label {
+        display: block;
+        margin-bottom: 8px;
+        gap:4px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+
+        color: #101828;
+    }
+
+    .favorite-login__label span {
+        color: #15AE5C;
+        font-size: 11.24px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+
+    /* Input */
+
+    .favorite-login__input {
+        width: 100%;
+        height: 48px;
+
+        box-sizing: border-box;
+
+        padding: 10px 12px;
+
+        border: 1px solid #DFE1E6;
+        border-radius: 8px;
+        outline: none;
+
+        background: #FFFFFF;
+        font-size: 14.22px;
+        font-weight: 500;
+        line-height: 28px;
+
+        transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+    }
+    .favorite-login-tabs .lum-tabs__list {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Placeholder */
+
+    .favorite-login__input::placeholder {
+        color: #7A869A;
+        opacity: 1;
+    }
+
+
+    /* Hover */
+
+    .favorite-login__input:hover:not(:disabled) {
+        border-color: #15AE5C;
+    }
+
+
+    /* =========================
+       Focus State
+    ========================= */
+
+    .favorite-login__input:focus {
+        border-color: #12B76A;
+
+        box-shadow:
+                0 0 0 3px rgba(18, 183, 106, 0.14);
+    }
+
+
+    /* =========================
+       Filled State
+       مثل عکس وسط
+    ========================= */
+
+    .favorite-login__input:not(:placeholder-shown):not(:focus) {
+        border-color: #DFE1E6;
+        box-shadow: none;
+    }
+
+
+    /* =========================
+       Error State
+    ========================= */
+
+    .favorite-login__field.is-error .favorite-login__input {
+        border-color: #F04438;
+        box-shadow: none;
+    }
+
+    .favorite-login__field.is-error .favorite-login__input:focus {
+        border-color: #F04438;
+
+        box-shadow:
+                0 0 0 3px rgba(240, 68, 56, 0.10);
+    }
+
+
+    /* Error Message */
+
+    .favorite-login__error {
+        display: none;
+
+        margin: 7px 0 0;
+
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 400;
+
+        color: #F04438;
+    }
+
+    .favorite-login__field.is-error .favorite-login__error {
+        display: block;
+    }
+
+
+    /* =========================
+       Disabled
+    ========================= */
+
+    .favorite-login__input:disabled {
+        background: #F7F8FA;
+        border-color: #EBECF0;
+
+        color: #A5ADBA;
+
+        cursor: not-allowed;
+    }
+
+    .favorite-login__input:disabled::placeholder {
+        color: #A5ADBA;
+    }
+
 
     /* ============================= */
     /* Hidden under 1024px */
@@ -423,6 +804,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <button
         class="products-toolbar__button"
         type="button"
@@ -517,6 +913,204 @@
             <a class="lum-button outline" href="#"><span class="h__lum-button"><span class="text__lum-button">Outline</span></span></a>
 
         </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div>
+    <div>
+
+        <button
+                class="products-toolbar__button"
+                type="button"
+                data-filter-open="openBtn"
+                aria-controls="mobile-filters-4"
+                aria-expanded="false"
+        >
+            <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+            <span class="products-toolbar__button-text">Filters 4</span>
+        </button>
+
+
+        <div
+                id="mobile-filters-4"
+                class="lum-fdrawer"
+                data-filter-drawer=""
+                aria-hidden="true"
+        >
+
+            <button
+                    class="lum-fdrawer__backdrop"
+                    type="button"
+                    data-filter-close=""
+                    aria-label="Close filters"
+            ></button>
+
+
+            <div
+                    class="lum-fdrawer__panel"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="fdrawer-title-4"
+            >
+
+                <div class="lum-fdrawer__handle"></div>
+
+
+                <!-- Header -->
+                <div class="lum-fdrawer__header">
+
+                    <div class="lum-fdrawer__title-wrap">
+
+                        <i class="lum-icon lum-icon--heart lum-icon--sm"></i>
+
+                        <h2
+                                class="lum-fdrawer__title"
+                                id="fdrawer-title-4"
+                        >
+                            Save to Favorites
+                        </h2>
+
+                    </div>
+
+                    <button
+                            class="lum-fdrawer__close"
+                            type="button"
+                            data-filter-close=""
+                            aria-label="Close filters"
+                    >
+                        <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Content -->
+                <div class="lum-fdrawer__content">
+
+                    <div class="favorite-login">
+
+
+                        <!-- Title -->
+                        <div class="favorite-login__intro">
+
+                            <h3 class="favorite-login__title">
+                                Sign in To Account
+                            </h3>
+
+                            <p class="favorite-login__description">
+                                Enter your email to sign in or create an account
+                                and save this item to your favorites.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Personal / Business -->
+                        <div class="favorite-login-tabs">
+                            <div class="lum-tabs lum-tabs--pill " data-tabs="">
+                                <div class="lum-tabs__list" role="tablist">
+                                    <button class="lum-tabs__tab is-active" id="g1-1" role="tab" aria-controls="g1p-1" type="button">Lighting
+                                    </button>
+                                    <button class="lum-tabs__tab" id="g1-2" role="tab" aria-controls="g1p-2" tabindex="-1" type="button">Electrical
+                                    </button>
+                                </div>
+
+                                    <div class="lum-tabs__panel " id="g1p-1">
+                                        <!-- Terms -->
+                                        <div class="favorite-login__field" data-email-field>
+
+                                            <label
+                                                    for="favorite-email-4"
+                                                    class="favorite-login__label"
+                                            >
+                                                Email
+                                                <span>(required)</span>
+                                            </label>
+
+                                            <input
+                                                    id="favorite-email-4"
+                                                    class="favorite-login__input"
+                                                    type="email"
+                                                    placeholder="Enter Your Email"
+                                                    autocomplete="email"
+                                                    data-email-input
+                                            >
+
+                                            <p
+                                                    class="favorite-login__error"
+                                                    data-email-error
+                                                    aria-live="polite"
+                                            >
+                                                Invalid Email code. Please try again.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                        <p class="favorite-login__terms">
+                                            By continuing, you agree to our
+                                            <a href="#">Terms</a>
+                                            &amp;
+                                            <a href="#">Privacy Policy.</a>
+                                        </p>
+
+                                    <div class="lum-tabs__panel" id="g1p-2" hidden=""></div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Continue -->
+                        <button
+                                type="button"
+                                class="favorite-login__continue"
+                        >
+                           <span class="favorite-login__shop-span">
+                               Continue
+                           </span>
+                        </button>
+
+
+                        <!-- OR -->
+                        <div class="favorite-login__divider">
+
+                            <span></span>
+
+                            <p>or</p>
+
+                            <span></span>
+
+                        </div>
+
+
+                        <!-- Shop Button -->
+                        <button
+                                type="button"
+                                class="favorite-login__shop"
+                        >
+                                <i class="lum-icon lum-icon--Shop lum-icon--lg favorite-login__shop-icon ">
+
+                                </i>
+
+                            <span class="favorite-login__shop-span">
+                                Sign in with Shop
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 </div>
 

@@ -545,7 +545,6 @@
 
     /* =========================
        Filled State
-       مثل عکس وسط
     ========================= */
 
     .favorite-login__input:not(:placeholder-shown):not(:focus) {
@@ -606,8 +605,197 @@
     .favorite-login__input:disabled::placeholder {
         color: #A5ADBA;
     }
+    /*..............................................................*/
+    /* =========================
+   Favorite Verify
+     ========================= */
+
+    .favorite-verify {
+        width: 100%;
+    }
 
 
+    /* Intro */
+
+    .favorite-verify__intro {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .favorite-verify__title {
+        margin: 0 0 12px;
+
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 700;
+
+        color: #101828;
+    }
+
+    .favorite-verify__description {
+        max-width: 390px;
+        margin: 0 auto;
+
+        font-size: 18px;
+        line-height: 36px;
+        font-weight: 400;
+
+        color: #7A869A;
+    }
+
+    .favorite-verify__input:first-of-type {
+        border-radius: 10px 0 0 10px;
+    }
+
+
+    .favorite-verify__input:last-of-type {
+        border-radius: 0 10px 10px 0;
+    }
+
+
+    /* Focus */
+    .favorite-verify__input:focus {
+        position: relative;
+        z-index: 1;
+
+        border-color: #12B76A;
+        box-shadow: 0 0 0 3px rgba(18, 183, 106, 0.12);
+    }
+
+    /* =========================
+       OTP Inputs
+    ========================= */
+
+    .favorite-verify__code {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        margin-bottom: 52px;
+    }
+
+    .favorite-verify__input {
+        width: 40px;
+        height: 40px;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        border: 1px solid #EBECF0;
+        border-radius: 10px;
+        outline: none;
+
+        text-align: center;
+
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 400;
+
+        transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+    }
+
+
+    /* Hover */
+
+    .favorite-verify__input:hover {
+        border-color: #B3BAC5;
+    }
+
+
+
+
+    .favorite-verify__input:focus {
+        border-color: #12B76A;
+
+        box-shadow:
+                0 0 0 3px rgba(18, 183, 106, 0.12);
+    }
+
+
+    /* =========================
+       Resend / Edit
+    ========================= */
+
+    .favorite-verify__actions {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        margin-bottom: 32px;
+
+        font-size: 11.24px;
+        line-height: 20px;
+    }
+
+    .favorite-verify__resend {
+        color: #7A869A;
+    }
+    .favorite-verify__edit-email-text{
+        font-size: 11.24px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .favorite-verify__timer {
+        color: inherit;
+    }
+
+    .favorite-verify__dot {
+        white: 4px;
+        color: #A5ADBA;
+    }
+
+
+    /* Edit email */
+
+    .favorite-verify__edit {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        padding: 0;
+
+        border: 0;
+        outline: 0;
+
+        background: transparent;
+        color: #0C8CE9;
+
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+
+        cursor: pointer;
+    }
+
+    .favorite-verify__edit:hover {
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       Terms
+    ========================= */
+
+    .favorite-verify__terms {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+
+    /* =========================
+       Responsive
+    ========================= */
     /* ============================= */
     /* Hidden under 1024px */
     /* ============================= */
@@ -1065,14 +1253,10 @@
 
 
                         <!-- Continue -->
-                        <button
-                                type="button"
-                                class="favorite-login__continue"
-                        >
-                           <span class="favorite-login__shop-span">
-                               Continue
-                           </span>
-                        </button>
+                        <div class="demo-row">
+                            <a class="lum-button primary" href="#"><span class="h__lum-button"><span class="text__lum-button">Primary</span></span></a>
+
+                        </div>
 
 
                         <!-- OR -->
@@ -1113,6 +1297,292 @@
 
     </div>
 </div>
+
+<div>
+    <div>
+
+        <button
+                class="products-toolbar__button"
+                type="button"
+                data-filter-open="openBtn"
+                aria-controls="mobile-filters-5"
+                aria-expanded="false"
+        >
+            <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+            <span class="products-toolbar__button-text">Filters 5</span>
+        </button>
+
+
+        <div
+                id="mobile-filters-5"
+                class="lum-fdrawer"
+                data-filter-drawer=""
+                aria-hidden="true"
+        >
+
+            <button
+                    class="lum-fdrawer__backdrop"
+                    type="button"
+                    data-filter-close=""
+                    aria-label="Close filters"
+            ></button>
+
+
+            <div
+                    class="lum-fdrawer__panel"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="fdrawer-title-5"
+            >
+
+                <div class="lum-fdrawer__handle"></div>
+
+
+                <!-- Header -->
+                <div class="lum-fdrawer__header">
+
+                    <div class="lum-fdrawer__title-wrap">
+
+                        <i class="lum-icon lum-icon--heart lum-icon--sm"></i>
+
+                        <h2
+                                class="lum-fdrawer__title"
+                                id="fdrawer-title-5"
+                        >
+                            Save to Favorites
+                        </h2>
+
+                    </div>
+
+                    <button
+                            class="lum-fdrawer__close"
+                            type="button"
+                            data-filter-close=""
+                            aria-label="Close filters"
+                    >
+                        <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Content -->
+                <div class="lum-fdrawer__content">
+
+                    <div class="favorite-login">
+
+                        <!-- Title -->
+                        <div class="favorite-login__intro">
+
+                            <h3 class="favorite-login__title">
+                                Verify Your Identity
+                            </h3>
+
+                            <p class="favorite-login__description">
+                                Enter the 6-digit verification code we sent to
+                                your phone number.
+                            </p>
+
+                        </div>
+
+
+                        <!-- OTP -->
+                        <div
+                                class="favorite-login favorite-verify"
+                                data-otp-form
+                        >
+
+                            <!-- Verification Code -->
+                            <div class="favorite-verify__code">
+
+                                <input
+                                        class="favorite-verify__input"
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="[0-9]*"
+                                        maxlength="1"
+                                        autocomplete="one-time-code"
+                                        aria-label="Digit 1"
+                                        data-otp-input
+                                >
+
+                                <input
+                                        class="favorite-verify__input"
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="[0-9]*"
+                                        maxlength="1"
+                                        aria-label="Digit 2"
+                                        data-otp-input
+                                >
+
+                                <input
+                                        class="favorite-verify__input"
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="[0-9]*"
+                                        maxlength="1"
+                                        aria-label="Digit 3"
+                                        data-otp-input
+                                >
+
+                                <input
+                                        class="favorite-verify__input"
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="[0-9]*"
+                                        maxlength="1"
+                                        aria-label="Digit 4"
+                                        data-otp-input
+                                >
+
+                                <input
+                                        class="favorite-verify__input"
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="[0-9]*"
+                                        maxlength="1"
+                                        aria-label="Digit 5"
+                                        data-otp-input
+                                >
+
+                                <input
+                                        class="favorite-verify__input"
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="[0-9]*"
+                                        maxlength="1"
+                                        aria-label="Digit 6"
+                                        data-otp-input
+                                >
+
+                            </div>
+
+
+                            <!-- Final OTP Value -->
+                            <input
+                                    type="hidden"
+                                    name="otp"
+                                    data-otp-value
+                            >
+
+                            <!-- Resend / Edit Email -->
+                            <div class="favorite-verify__actions">
+
+                                <span class="favorite-verify__resend">
+                                    Resend code in
+
+                                    <span
+                                            class="favorite-verify__timer"
+                                            data-otp-timer
+                                    >
+                                        00:50
+                                    </span>
+                                </span>
+
+                                <button
+                                        type="button"
+                                        class="favorite-verify__resend-button"
+                                        data-otp-resend
+                                        hidden
+                                >
+                                    Resend code
+                                </button>
+
+
+                                <span class="favorite-verify__dot">
+                                    •
+                                </span>
+
+
+                                <button
+                                        type="button"
+                                        class="favorite-verify__edit"
+                                >
+
+                                    <i class="lum-icon--square-pen lum-icon lum-icon--sm"></i>
+
+                                    <span class="favorite-verify__edit-email-text">
+                                        Edit Email
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Terms -->
+                            <p class="favorite-login__terms favorite-verify__terms">
+                                By continuing, you agree to our
+                                <a href="#">Terms</a>
+                                &amp;
+                                <a href="#">Privacy Policy.</a>
+                            </p>
+
+
+                            <!-- Continue -->
+                            <div class="demo-row">
+
+                                <a
+                                        class="lum-button primary is-disabled"
+                                        href="#"
+                                        data-otp-submit
+                                        aria-disabled="true"
+                                >
+                                    <span class="h__lum-button">
+                                        <span class="text__lum-button">
+                                            Continue
+                                        </span>
+                                    </span>
+                                </a>
+
+                            </div>
+
+
+                            <!-- OR -->
+                            <div class="favorite-login__divider">
+
+                                <span></span>
+
+                                <p>or</p>
+
+                                <span></span>
+
+                            </div>
+
+
+                            <!-- Shop Button -->
+                            <button
+                                    type="button"
+                                    class="favorite-login__shop"
+                            >
+
+                                <i
+                                        class="lum-icon lum-icon--Shop lum-icon--lg favorite-login__shop-icon"
+                                ></i>
+
+                                <span class="favorite-login__shop-span">
+                                    Sign in with Shop
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
 
 <!--js mobile share -->
 <script>
@@ -1234,6 +1704,329 @@
             closeModal();
         }
     });
+
+
+
+
+
+
+
+
+
+    (function () {
+
+        document.querySelectorAll('[data-otp-form]').forEach(function (otpForm) {
+
+            var inputs = Array.from(
+                otpForm.querySelectorAll('[data-otp-input]')
+            );
+
+            var otpValue = otpForm.querySelector('[data-otp-value]');
+            var error = otpForm.querySelector('[data-otp-error]');
+
+            var drawer = otpForm.closest('[data-filter-drawer]');
+
+            var submitBtn = drawer.querySelector('[data-otp-submit]');
+
+            var timerEl = otpForm.querySelector('[data-otp-timer]');
+            var resendText = otpForm.querySelector('.favorite-verify__resend');
+            var resendBtn = otpForm.querySelector('[data-otp-resend]');
+
+            var timer = 50;
+            var interval;
+
+
+            /* -------------------------
+               OTP value
+            ------------------------- */
+
+            function updateOTP() {
+
+                var otp = inputs.map(function (input) {
+                    return input.value;
+                }).join('');
+
+
+                otpValue.value = otp;
+
+
+                var isComplete = otp.length === inputs.length;
+
+
+                submitBtn.classList.toggle('is-disabled', !isComplete);
+
+                submitBtn.setAttribute(
+                    'aria-disabled',
+                    isComplete ? 'false' : 'true'
+                );
+
+
+                if (isComplete) {
+
+                    otpForm.classList.remove('is-error');
+
+                    otpForm.dispatchEvent(
+                        new CustomEvent('otp:complete', {
+                            detail: {
+                                code: otp
+                            }
+                        })
+                    );
+
+                }
+
+            }
+
+
+            /* -------------------------
+               Inputs
+            ------------------------- */
+
+            inputs.forEach(function (input, index) {
+
+                input.addEventListener('input', function () {
+
+                    /* فقط عدد */
+                    input.value = input.value
+                        .replace(/\D/g, '')
+                        .slice(0, 1);
+
+
+                    /* حذف Error */
+                    otpForm.classList.remove('is-error');
+
+
+                    /* برو خانه بعدی */
+                    if (
+                        input.value &&
+                        index < inputs.length - 1
+                    ) {
+
+                        inputs[index + 1].focus();
+
+                    }
+
+
+                    updateOTP();
+
+                });
+
+
+                /* Keyboard */
+                input.addEventListener('keydown', function (e) {
+
+                    /* Backspace */
+
+                    if (e.key === 'Backspace') {
+
+                        if (!input.value && index > 0) {
+
+                            e.preventDefault();
+
+                            inputs[index - 1].value = '';
+
+                            inputs[index - 1].focus();
+
+                            updateOTP();
+
+                        }
+
+                    }
+
+
+                    /* Left */
+
+                    if (
+                        e.key === 'ArrowLeft' &&
+                        index > 0
+                    ) {
+
+                        e.preventDefault();
+
+                        inputs[index - 1].focus();
+
+                    }
+
+
+                    /* Right */
+
+                    if (
+                        e.key === 'ArrowRight' &&
+                        index < inputs.length - 1
+                    ) {
+
+                        e.preventDefault();
+
+                        inputs[index + 1].focus();
+
+                    }
+
+                });
+
+
+                /* Paste */
+
+                input.addEventListener('paste', function (e) {
+
+                    e.preventDefault();
+
+
+                    var paste = (
+                        e.clipboardData ||
+                        window.clipboardData
+                    )
+                        .getData('text')
+                        .replace(/\D/g, '')
+                        .slice(0, inputs.length);
+
+
+                    if (!paste) return;
+
+
+                    inputs.forEach(function (item) {
+                        item.value = '';
+                    });
+
+
+                    paste.split('').forEach(function (digit, i) {
+
+                        if (inputs[i]) {
+                            inputs[i].value = digit;
+                        }
+
+                    });
+
+
+                    var nextIndex = Math.min(
+                        paste.length,
+                        inputs.length
+                    ) - 1;
+
+
+                    if (inputs[nextIndex]) {
+                        inputs[nextIndex].focus();
+                    }
+
+
+                    updateOTP();
+
+                });
+
+            });
+
+
+            /* -------------------------
+               Continue
+            ------------------------- */
+
+            submitBtn.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+
+                var otp = otpValue.value;
+
+
+                if (otp.length !== inputs.length) {
+
+                    inputs.find(function (input) {
+                        return !input.value;
+                    })?.focus();
+
+                    return;
+                }
+
+
+                console.log('OTP:', otp);
+
+
+                /*
+                 * اینجا درخواست API بزن
+                 *
+                 * verifyOtp(otp)
+                 */
+
+            });
+
+
+            /* -------------------------
+               Timer
+            ------------------------- */
+
+            function startTimer() {
+
+                clearInterval(interval);
+
+                timer = 50;
+
+                resendText.hidden = false;
+                resendBtn.hidden = true;
+
+
+                timerEl.textContent = '00:50';
+
+
+                interval = setInterval(function () {
+
+                    timer--;
+
+
+                    timerEl.textContent =
+                        '00:' +
+                        String(timer).padStart(2, '0');
+
+
+                    if (timer <= 0) {
+
+                        clearInterval(interval);
+
+                        resendText.hidden = true;
+                        resendBtn.hidden = false;
+
+                    }
+
+                }, 1000);
+
+            }
+
+
+            /* -------------------------
+               Resend
+            ------------------------- */
+
+            resendBtn.addEventListener('click', function () {
+
+                /*
+                 * API resend code
+                 */
+
+                console.log('Resend OTP');
+
+
+                inputs.forEach(function (input) {
+                    input.value = '';
+                });
+
+
+                otpValue.value = '';
+
+                otpForm.classList.remove('is-error');
+
+                updateOTP();
+
+                inputs[0].focus();
+
+                startTimer();
+
+            });
+
+
+            startTimer();
+            updateOTP();
+
+        });
+
+    })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/footer.js"></script>

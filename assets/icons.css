@@ -59,6 +59,10 @@
   }
 
 }
+.lum-icon--square-pen{
+  -webkit-mask-image: url("./square-pen.svg");
+  mask-image: url("./square-pen.svg");
+}
 .lum-icon--Shop{
   -webkit-mask-image: url("./Shop Icon.svg");
   mask-image: url("./Shop Icon.svg");

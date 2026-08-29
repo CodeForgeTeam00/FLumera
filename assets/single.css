@@ -9,3 +9,20 @@
         display: block;
     }
 }
+
+
+
+
+.lum-product-tabs__link.is-active {
+    color: #15AE5C;
+}
+
+.lum-product-tabs__link.is-active::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 0;
+    height: 4px;
+    background: #15AE5C;
+}

@@ -781,6 +781,94 @@
     .favorite-verify__edit:hover {
         text-decoration: underline;
     }
+    /* =====================================
+   Rate Review - Comment
+===================================== */
+
+    .rate-review__comment {
+        width: 100%;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    /* Label */
+
+    .rate-review__comment-label {
+        display: flex;
+        align-items: center;
+
+        gap: 4px;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+
+    .rate-review__comment-label-text {
+        color: #101010;
+    }
+
+
+    .rate-review__comment-required {
+        color: #15AE5C;
+    }
+
+
+    /* Textarea */
+
+    .rate-review__comment-textarea {
+        display: block;
+
+        width: 100%;
+        height: 76px;
+
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 8px;
+
+        border: 1px solid #DFE1E6;
+        border-radius: 8px;
+
+        outline: none;
+
+        resize: none;
+
+        background: #FFFFFF;
+        color: #7A869A;
+
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+
+    }
+
+
+    /* Placeholder */
+
+    .rate-review__comment-textarea::placeholder {
+        color: #7A869A;
+        opacity: 1;
+    }
+
+
+    /* Hover */
+
+    .rate-review__comment-textarea:hover {
+        border-color: #B3BAC5;
+    }
+
 
 
     /* =========================
@@ -809,6 +897,356 @@
             display: none;
         }
     }
+
+
+
+
+
+
+
+    /* ================================
+   Rate & Review
+================================ */
+
+    .rate-review {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    /* Field */
+
+    .rate-review__field {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin: 0;
+        padding: 0;
+
+        border: 0;
+    }
+
+
+    /* Label */
+
+    .rate-review__label {
+        font-size: 12.64px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .rate-review__label span {
+        color: #15AE5C;
+        font-size: 11.24px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+
+    /* ================================
+       Input
+    ================================ */
+
+    .rate-review__input {
+        width: 100%;
+        height: 40px;
+
+        box-sizing: border-box;
+
+        padding: 6px 16px;
+
+        border: 1px solid #7A869A;
+        border-radius: 8px;
+
+        outline: none;
+
+        background: #FFFFFF;
+        color: #101010;
+
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 20px;
+
+        transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+    }
+
+    .rate-review__input::placeholder {
+        color: #7A869A;
+        opacity: 1;
+    }
+
+    .rate-review__input:hover {
+        border-color: #C1C7D0;
+    }
+
+    .rate-review__input:focus {
+        border-color: #15AE5C;
+
+        box-shadow:
+                0 0 0 3px rgba(21, 174, 92, 0.12);
+    }
+
+
+    /* ================================
+       Rating
+    ================================ */
+
+    .rate-review__rating {
+        display: flex;
+        gap: 8px;
+    }
+
+
+    .rate-review__rating-list {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        margin: 8px 0 0px 0;
+    }
+
+
+    .rate-review__rating-item {
+        position: relative;
+
+        flex: 1 1 0;
+        min-width: 0;
+        height: 76px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        border: 1px solid #EBECF0;
+        border-radius: 8px;
+
+        background: #FFFFFF;
+
+        cursor: pointer;
+    }
+
+
+    .rate-review__rating-input {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+
+        opacity: 0;
+        pointer-events: none;
+    }
+
+
+    .rate-review__star {
+        position: relative;
+
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .rate-review__star-empty,
+    .rate-review__star-filled {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+
+    .rate-review__star-empty {
+        display: block;
+    }
+
+    .rate-review__star-filled {
+        display: none;
+    }
+
+
+    /* 1 ستاره */
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 1)
+    .rate-review__star-empty {
+        display: none;
+    }
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 1)
+    .rate-review__star-filled {
+        display: block;
+    }
+
+
+    /* 2 ستاره */
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 2)
+    .rate-review__star-empty {
+        display: none;
+    }
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 2)
+    .rate-review__star-filled {
+        display: block;
+    }
+
+
+    /* 3 ستاره */
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 3)
+    .rate-review__star-empty {
+        display: none;
+    }
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 3)
+    .rate-review__star-filled {
+        display: block;
+    }
+
+
+    /* 4 ستاره */
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 4)
+    .rate-review__star-empty {
+        display: none;
+    }
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 4)
+    .rate-review__star-filled {
+        display: block;
+    }
+
+
+    /* 5 ستاره */
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 5)
+    .rate-review__star-empty {
+        display: none;
+    }
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 5)
+    .rate-review__star-filled {
+        display: block;
+    }
+
+
+    /* border آیتم‌های فعال */
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 1),
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 2),
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 3),
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 4),
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 5) {
+        border-color: #15AE5C;
+    }
+    .rate-review__star-empty {
+        display: block;
+        color: #FAAD14;
+    }
+
+    .rate-review__star-filled {
+        display: none;
+        color: #FAAD14;
+    }
+    .rate-review__rating-text {
+        font-size: 11.24px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #7A869A;
+    }
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 1)
+    .rate-review__rating-text,
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 2)
+    .rate-review__rating-text,
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 3)
+    .rate-review__rating-text,
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 4)
+    .rate-review__rating-text,
+
+    .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+    .rate-review__rating-item:nth-child(-n + 5)
+    .rate-review__rating-text {
+        color: #101010;
+    }
+
+    /* ================================
+       Textarea
+    ================================ */
+
 </style>
 
 <button
@@ -1580,8 +2018,319 @@
     </div>
 </div>
 
+<button
+        class="products-toolbar__button"
+        type="button"
+        data-filter-open="openBtn"
+        aria-controls="mobile-filters-6"
+        aria-expanded="false"
+>
+    <i class="lum-icon lum-icon--cart lum-icon--sm"></i>
+    <span class="products-toolbar__button-text">Rate & Review</span>
+</button>
 
 
+<div
+        id="mobile-filters-6"
+        class="lum-fdrawer"
+        data-filter-drawer=""
+        aria-hidden="true"
+>
+    <button
+            class="lum-fdrawer__backdrop"
+            type="button"
+            data-filter-close=""
+            aria-label="Close filters"
+    ></button>
+
+    <div
+            class="lum-fdrawer__panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="fdrawer-title-6"
+    >
+
+        <div class="lum-fdrawer__handle"></div>
+
+
+        <!-- Header -->
+        <div class="lum-fdrawer__header">
+
+            <div class="lum-fdrawer__title-wrap">
+
+                <i class="lum-icon lum-icon--message lum-icon--sm"></i>
+
+                <h2
+                        class="lum-fdrawer__title"
+                        id="fdrawer-title-6"
+                >
+                    Rate & Review
+                </h2>
+
+            </div>
+
+
+            <button
+                    class="lum-fdrawer__close"
+                    type="button"
+                    data-filter-close=""
+                    aria-label="Close filters"
+            >
+                <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Content -->
+        <div class="lum-fdrawer__content">
+
+            <form
+                    class="rate-review"
+                    id="rate-review-form-6"
+            >
+
+                <!-- Full Name -->
+                <div class="rate-review__field">
+
+                    <label
+                            class="rate-review__label"
+                            for="review-name-6"
+                    >
+                        Full Name
+                        <span>(required)</span>
+                    </label>
+
+                    <input
+                            id="review-name-6"
+                            class="rate-review__input"
+                            type="text"
+                            name="name"
+                            placeholder="Enter Your Name"
+                            autocomplete="name"
+                            required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="rate-review__field">
+
+                    <label
+                            class="rate-review__label"
+                            for="review-email-6"
+                    >
+                        Email
+                        <span>(required)</span>
+                    </label>
+
+                    <input
+                            id="review-email-6"
+                            class="rate-review__input"
+                            type="email"
+                            name="email"
+                            placeholder="Enter Your Email"
+                            autocomplete="email"
+                            required
+                    >
+
+                </div>
+
+
+                <!-- Rate -->
+                <fieldset class="rate-review__field rate-review__rating">
+
+                    <legend class="rate-review__label">
+                        Your Rate
+                        <span>(required)</span>
+                    </legend>
+
+                    <div class="rate-review__rating-list">
+
+
+                        <!-- Poor -->
+                        <label class="rate-review__rating-item">
+
+                            <input
+                                    class="rate-review__rating-input"
+                                    type="radio"
+                                    name="review-rating-6"
+                                    value="1"
+                                    required
+                            >
+
+                            <span class="rate-review__star">
+                                <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                                <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                            </span>
+
+                            <span class="rate-review__rating-text">
+                                Poor
+                            </span>
+
+                        </label>
+
+
+                        <!-- Okay -->
+                        <label class="rate-review__rating-item">
+
+                            <input
+                                    class="rate-review__rating-input"
+                                    type="radio"
+                                    name="review-rating-6"
+                                    value="2"
+                            >
+
+                            <span class="rate-review__star">
+                                <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                                <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                            </span>
+
+                            <span class="rate-review__rating-text">
+                                Okay
+                            </span>
+
+                        </label>
+
+
+                        <!-- Good -->
+                        <label class="rate-review__rating-item">
+
+                            <input
+                                    class="rate-review__rating-input"
+                                    type="radio"
+                                    name="review-rating-6"
+                                    value="3"
+                            >
+
+                            <span class="rate-review__star">
+                                <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                                <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                            </span>
+
+                            <span class="rate-review__rating-text">
+                                Good
+                            </span>
+
+                        </label>
+
+
+                        <!-- Great -->
+                        <label class="rate-review__rating-item">
+
+                            <input
+                                    class="rate-review__rating-input"
+                                    type="radio"
+                                    name="review-rating-6"
+                                    value="4"
+                            >
+
+                            <span class="rate-review__star">
+                                <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                                <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                            </span>
+
+                            <span class="rate-review__rating-text">
+                                Great
+                            </span>
+
+                        </label>
+
+
+                        <!-- Top -->
+                        <label class="rate-review__rating-item">
+
+                            <input
+                                    class="rate-review__rating-input"
+                                    type="radio"
+                                    name="review-rating-6"
+                                    value="5"
+                            >
+
+                            <span class="rate-review__star">
+                                <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                                <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                            </span>
+
+                            <span class="rate-review__rating-text">
+                                Top
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Comment -->
+                <div class="rate-review__comment">
+
+                    <label
+                            class="rate-review__comment-label"
+                            for="review-comment-6"
+                    >
+
+                        <span class="rate-review__comment-label-text">
+                            Your Comment
+                        </span>
+
+                        <span class="rate-review__comment-required">
+                            (required)
+                        </span>
+
+                    </label>
+
+
+                    <textarea
+                            id="review-comment-6"
+                            class="rate-review__comment-textarea"
+                            name="comment"
+                            placeholder="Type your message here."
+                            required
+                    ></textarea>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="lum-fdrawer__footer">
+
+            <button
+                    class="lum-button primary"
+                    type="submit"
+                    form="rate-review-form-6"
+            >
+                <span class="h__lum-button">
+                    <span class="text__lum-button">
+                        Submit Review
+                    </span>
+                </span>
+            </button>
+
+
+            <button
+                    class="lum-button outline"
+                    type="button"
+                    data-filter-close
+            >
+                <span class="h__lum-button">
+                    <span class="text__lum-button">
+                        Cancel
+                    </span>
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 <!--js mobile share -->

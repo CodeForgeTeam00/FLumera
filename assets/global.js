@@ -110,3 +110,94 @@
         });
     });
 })();
+
+(function () {
+
+    var openBtns = document.querySelectorAll('[data-filter-open]');
+
+
+    function updateBodyScroll() {
+        var hasOpenDrawer = document.querySelector(
+            '[data-filter-drawer][data-open]'
+        );
+
+        document.body.style.overflow = hasOpenDrawer ? 'hidden' : '';
+    }
+
+
+    function open(openBtn) {
+
+        var drawerId = openBtn.getAttribute('aria-controls');
+        var drawer = document.getElementById(drawerId);
+
+        if (!drawer) return;
+
+
+        drawer.setAttribute('data-open', '');
+        drawer.setAttribute('aria-hidden', 'false');
+
+        openBtn.setAttribute('aria-expanded', 'true');
+
+        updateBodyScroll();
+    }
+
+
+    function close(drawer) {
+
+        if (!drawer) return;
+
+
+        drawer.removeAttribute('data-open');
+        drawer.setAttribute('aria-hidden', 'true');
+
+
+        var drawerId = drawer.getAttribute('id');
+
+        var openBtn = document.querySelector(
+            '[data-filter-open][aria-controls="' + drawerId + '"]'
+        );
+
+        if (openBtn) {
+            openBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        updateBodyScroll();
+    }
+
+
+    openBtns.forEach(function (openBtn) {
+
+        openBtn.addEventListener('click', function () {
+            open(openBtn);
+        });
+
+    });
+
+
+    document.querySelectorAll('[data-filter-close]').forEach(function (closeBtn) {
+
+        closeBtn.addEventListener('click', function () {
+
+            var drawer = closeBtn.closest('[data-filter-drawer]');
+
+            close(drawer);
+
+        });
+
+    });
+
+
+    document.addEventListener('keydown', function (e) {
+
+        if (e.key !== 'Escape') return;
+
+
+        document
+            .querySelectorAll('[data-filter-drawer][data-open]')
+            .forEach(function (drawer) {
+                close(drawer);
+            });
+
+    });
+
+})();

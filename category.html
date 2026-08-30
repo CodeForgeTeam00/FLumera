@@ -2047,29 +2047,5 @@
 <script src="assets/lum-hotspots.js"></script>
 <script src="assets/tabs.js"></script>
 <script src="assets/global.js"></script>
-<script>
-    (function () {
-        'use strict';
-        var drawer = document.querySelector('[data-filter-drawer]');
-        var openBtn = document.querySelector('[data-filter-open]');
-        var closeBtns = document.querySelectorAll('[data-filter-close]');
-
-        function open() {
-            drawer.setAttribute('data-open', '');
-            drawer.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';   // lock page scroll behind the sheet
-        }
-        function close() {
-            drawer.removeAttribute('data-open');
-            drawer.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-        openBtn && openBtn.addEventListener('click', open);
-        closeBtns.forEach(function (b) { b.addEventListener('click', close); });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && drawer.hasAttribute('data-open')) close();
-        });
-    })();
-</script>
 </body>
 </html>

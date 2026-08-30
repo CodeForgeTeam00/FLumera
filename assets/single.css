@@ -64,6 +64,29 @@
     transform: translateY(-50%);
 }
 
+
+.lum-slider-gallery__actions {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .lum-slider-gallery__actions {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        cursor: pointer;
+        gap: 16px;
+        padding: 16px;
+
+        color: #091E42;
+    }
+}
+
 .lum-slider-gallery__prev { left: 12px; }
 .lum-slider-gallery__next { right: 12px; }
 
@@ -387,7 +410,7 @@ line-height: 28px;
 .lum-featured-specifics__see-all-text,
 .lum-featured-specifics__see-all-icon {
     color: #15324B;
-    
+
 }
 
 .lum-featured-specifics__see-all-text {

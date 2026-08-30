@@ -13,6 +13,15 @@
             aspect-ratio: 1/1;
         }
 
+        .swiper.lum-slider-gallery__thumbs {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .swiper.lum-slider-gallery__thumbs {
+        display: block;
+    }
+}
 
 .lum-product-single {
     display: grid;
@@ -53,6 +62,29 @@
     color: #253858;
     cursor: pointer;
     transform: translateY(-50%);
+}
+
+
+.lum-slider-gallery__actions {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .lum-slider-gallery__actions {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        cursor: pointer;
+        gap: 16px;
+        padding: 16px;
+
+        color: #091E42;
+    }
 }
 
 .lum-slider-gallery__prev { left: 12px; }
@@ -165,9 +197,9 @@
 }
 
 .lum-product-option__title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 28px;
 }
 
 .lum-product-option__choices,
@@ -186,22 +218,28 @@
     border-radius: 8px;
 }
 
-.lum-product-option__choice:hover,
-.lum-product-temperature__card:hover {
+
+.is-unavailable-card {
+    color: #B3BAC5;
+    background: #F4F5F7;
+    border-color: #EBECF0;
+     text-decoration: line-through;
+     
+}
+
+.lum-product-option__choice:not(.is-unavailable-card):hover,
+.lum-product-temperature__card:not(.is-unavailable-card):hover {
     border-color: #15AE5C;
     box-shadow: 0 0 0 2px rgba(21, 174, 92, 0.25);
 }
 
 .lum-product-option__choice-text {
-    font-size: 14.22px;
+    font-size: 11.22px;
     font-weight: 500;
-    line-height: 28px;
+    line-height: 20px;
 }
 
-.lum-product-option__choice-text--responsive {
-    font-size: 11.24px;
-    line-height: 16px;
-}
+
 
 .lum-product-option__see-all {
     color: #15AE5C;
@@ -221,7 +259,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
     border: 1px solid #EBECF0;
     border-radius: 8px;
 }
@@ -267,7 +304,7 @@
 
 .lum-product-base__label {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: #000;
     font-size: 16px;
     font-weight: 700;
@@ -287,9 +324,15 @@
     background: #fff;
     color: #000;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 28px;
     text-align: left;
     cursor: pointer;
+}
+
+.lum-select__value {
+font-size: 14.22px;
+font-weight: 500;
+line-height: 28px; 
 }
 
 .lum-product-base .lum-select__icon {
@@ -329,9 +372,12 @@
     background: #fff;
     color: #000;
     font-size: 14px;
-    line-height: 20px;
+    line-height:28px;
     text-align: left;
     cursor: pointer;
+    font-size: 12.64px; 
+    font-weight: 500;
+    line-height: 20px; 
 }
 
 .lum-product-base .lum-select__option:hover,
@@ -364,6 +410,7 @@
 .lum-featured-specifics__see-all-text,
 .lum-featured-specifics__see-all-icon {
     color: #15324B;
+
 }
 
 .lum-featured-specifics__see-all-text {
@@ -496,7 +543,7 @@
     }
 
     .lum-product-single__shipping {
-        margin-top: 8px;
+        margin-top: 4px;
     }
 
     .lum-product-single__shipping--mobile {
@@ -514,7 +561,7 @@
         border-bottom: 1px solid #EBECF0;
     }
 
-    .lum-product-option__choice-text--responsive {
+      .lum-product-option__choice-text {
         font-size: 14.22px;
         line-height: 28px;
     }
@@ -558,6 +605,10 @@
         align-items: center;
         justify-content: space-between;
     }
+    .lum-product-option__title {
+    font-size: 16px;
+    line-height: 32px;
+}
 }
 
 @media screen and (min-width: 1280px) {
@@ -596,8 +647,9 @@
 
 .lum-product-tabs__link {
     position: relative;
-
-    padding: 16px 8px;
+  font-size: 16px;
+  line-height: 32px;
+    padding: 8px 16px;
 
     color: #B3BAC5;
 }
@@ -619,6 +671,8 @@
 .lum-product-tabs__section-title {
     color: #15AE5C;
     font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 
@@ -654,7 +708,7 @@
 
     width: fit-content;
 
-    margin-top: 16px;
+    margin-top: 8px;
 
     gap: 4px;
 
@@ -809,9 +863,9 @@
 
 
 .lum-product-sticky-card__title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 36px;
 }
 
 
@@ -939,6 +993,7 @@
     right: 8px;
     bottom: 0;
     height: 4px;
+    padding: 0 8px;
     background: #15AE5C;
 }
 

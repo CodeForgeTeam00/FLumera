@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desktop Share Modal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/lum-brands.css">
+    <link rel="stylesheet" href="./assets/catCard.css">
+    <link rel="stylesheet" href="./assets/lum-hotspots.css">
+    <link rel="stylesheet" href="./assets/tabs.css">
+    <link rel="stylesheet" href="./assets/icons.css">
+    <link rel="stylesheet" href="assets/Lum-utilities.css">
+    <link rel="stylesheet" href="assets/gui.css">
+    <link rel="stylesheet" href="assets/">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container-modal {
+            max-width: 500px;
+        }
+
+        /* Block: Share Trigger */
+        .share-btn,
+        .verify-btn,
+        .empty-modal-btn {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 8px;
+            background: #16b364;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Block: Share Modal */
+        .share-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .share-modal.is-open {
+            display: flex;
+        }
+
+        /* Element: Share Modal Overlay */
+        .share-modal__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Element: Share Modal Content */
+        .share-modal__content {
+            position: relative;
+            z-index: 1;
+            width: 500px;
+            padding: 72px 40px 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow:
+                    0 20px 40px rgba(16, 24, 40, 0.12),
+                    0 8px 16px rgba(16, 24, 40, 0.08);
+        }
+
+        /* Element: Share Modal Close */
+        .share-modal__close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            font-weight: 300;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .share-modal__close i {
+            color: #253858;
+        }
+
+        /* Element: Title */
+        .share-modal__title {
+            margin: 0;
+            color: #101828;
+            text-align: center;
+            font-size: 20.25px;
+            font-weight: 700;
+            line-height: 36px;
+        }
+
+        /* Element: Description */
+        .share-modal__description {
+            max-width: 400px;
+            margin: 4px 0 0;
+            color: #7A869A;
+            text-align: center;
+            font-size: 14.22px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+
+        /* Element: Link Box */
+        .share-modal__link-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 56px;
+            margin-top: 24px;
+            padding: 10px 12px;
+            border: 1px solid #EBECF0;
+            border-radius: 8px;
+            background: #FAFBFC;
+        }
+
+        /* Element: Link */
+        .share-modal__link {
+            overflow: hidden;
+            color: #667085;
+            font-size: 16px;
+            font-weight: 400;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        /* Element: Copy Action */
+        .share-modal__copy-icon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 12px;
+            padding: 4px;
+            border: 0;
+            background: transparent;
+            color: #101828;
+            cursor: pointer;
+        }
+
+        /* Element: Actions */
+        .share-modal__actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 40px;
+        }
+
+        /* Block: Verify Modal */
+        .favorite-verify__code {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            margin:16px 0 52px 0;
+        }
+
+        .favorite-verify__input {
+            width: 40px;
+            height: 40px;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            border: 1px solid #EBECF0;
+            border-radius: 10px;
+            outline: none;
+
+            text-align: center;
+
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 400;
+
+            transition:
+                    border-color 0.2s ease,
+                    box-shadow 0.2s ease;
+        }
+        /* State: Hover */
+
+        .favorite-verify__input:hover {
+            border-color: #B3BAC5;
+        }
+
+
+        .verify-modal__error {
+            display: none;
+            margin: 8px 0 0;
+            color: #F04438;
+            text-align: center;
+            font-size: 11.24px;
+            line-height: 20px;
+        }
+
+        .verify-modal.is-error .verify-modal__error {
+            display: block;
+        }
+
+        .verify-modal__meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 52px;
+            color: #7A869A;
+            font-size: 11.24px;
+            line-height: 20px;
+        }
+
+        .verify-modal__link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: #0C8CE9;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .verify-modal__link-button[hidden] {
+            display: none;
+        }
+
+        #verifyCodeBtn[aria-disabled="true"] {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .favorite-verify__input:first-of-type {
+            border-radius: 10px 0 0 10px;
+        }
+
+
+        .favorite-verify__input:last-of-type {
+            border-radius: 0 10px 10px 0;
+        }
+
+
+        /* State: Focus */
+        .favorite-verify__input:focus {
+            position: relative;
+            z-index: 1;
+
+            border-color: #12B76A;
+            box-shadow: 0 0 0 3px rgba(18, 183, 106, 0.12);
+        }
+
+        /* Block: Favorite Login Modal */
+        .favorite-modal .share-modal__content {
+            padding: 72px 40px 40px;
+        }
+
+        .favorite-login {
+            width: 100%;
+        }
+
+        .favorite-login__intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .favorite-login__title {
+            margin: 0 0 4px;
+            color: #101010;
+            font-size: 20.25px;
+            font-weight: 700;
+            line-height: 36px;
+        }
+
+        .favorite-login__description {
+            max-width: 400px;
+            margin: 0;
+            color: #7A869A;
+            font-size: 14.22px;
+            font-weight: 500;
+            line-height: 28px;
+            text-align: center;
+        }
+
+
+
+        .favorite-login__field {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 24px;
+        }
+
+        .favorite-login__label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14.22px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+
+        .favorite-login__label span {
+            color: #15AE5C;
+            font-size: 12.64px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        .favorite-login__input {
+            width: 100%;
+            height: 48px;
+            padding: 10px 12px;
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+            outline: none;
+            background: #FFFFFF;
+            color: #101010;
+            font-size: 14.22px;
+            font-weight: 500;
+            line-height: 28px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .favorite-login__input::placeholder {
+            color: #7A869A;
+            opacity: 1;
+        }
+
+        .favorite-login__input:focus {
+            border-color: #15AE5C;
+            box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.12);
+        }
+
+        .favorite-login__error {
+            display: none;
+            margin: 7px 0 0;
+            color: #F04438;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .favorite-login__terms {
+            margin: 52px 0 16px;
+            color: #7A869A;
+            text-align: center;
+            font-size: 12.64px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        .favorite-login__terms a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .favorite-login__continue {
+            width: 100%;
+            min-height: 56px;
+        }
+
+        .favorite-login__divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .favorite-login__divider span {
+            flex: 1;
+            height: 1px;
+            background: #EBECF0;
+        }
+
+        .favorite-login__divider p {
+            margin: 0;
+            color: #7A869A;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .favorite-login__shop {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 0;
+            border: 1px solid #EBECF0;
+            border-radius: 8px;
+            background: #FFFFFF;
+            color: #101010;
+            font-family: inherit;
+            font-size: 14.22px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+        }
+
+        .favorite-login__shop-icon {
+            color: #5433EB;
+        }
+        .favorite-login-tabs .lum-tabs__list {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .favorite-login-tabs .lum-tabs__tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Desktop only */
+        @media (max-width: 1023px) {
+            .share-modal {
+                display: none !important;
+            }
+
+            .share-btn,
+            .verify-btn,
+            .empty-modal-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<button id="shareBtn" class="share-btn" type="button">
+    Share Product
+</button>
+
+<div id="shareModal" class="share-modal">
+    <div class="share-modal__overlay"></div>
+
+    <div class="container-modal share-modal__content">
+        <button
+                id="closeModalBtn"
+                class="share-modal__close"
+                type="button"
+                aria-label="Close"
+        >
+            <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+        </button>
+
+        <h2 class="share-modal__title">
+            Share This Product
+        </h2>
+
+        <p class="share-modal__description">
+            Copy the product link and share it with anyone.
+        </p>
+
+        <div class="share-modal__link-box">
+            <span id="productLink" class="share-modal__link">
+                lumeraelectric.com/product/S7593P
+            </span>
+
+            <button
+                    id="copyIconBtn"
+                    class="share-modal__copy-icon"
+                    type="button"
+                    aria-label="Copy product link"
+            >
+                <i class="lum-icon lum-icon--copy lum-icon--sm"></i>
+            </button>
+        </div>
+
+        <div class="share-modal__actions">
+            <a class="lum-button primary" id="copyBtn" href="#">
+                <span class="h__lum-button">
+                    <span class="text__lum-button">Copy link</span>
+                </span>
+            </a>
+
+            <a class="lum-button outline" id="cancelBtn" href="#">
+                <span class="h__lum-button">
+                    <span class="text__lum-button">Cancel</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<button id="verifyBtn" class="verify-btn" type="button">
+    Verify Identity
+</button>
+
+<div id="verifyModal" class="share-modal verify-modal" aria-hidden="true">
+    <div id="verifyOverlay" class="share-modal__overlay"></div>
+
+    <div class="container-modal share-modal__content">
+        <button
+                id="closeVerifyModalBtn"
+                class="share-modal__close"
+                type="button"
+                aria-label="Close"
+        >
+            <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+        </button>
+
+        <h2 class="share-modal__title">
+            Verify Your Identity
+        </h2>
+
+        <p class="share-modal__description">
+            Enter the 6-digit verification code we sent to your phone number.
+        </p>
+        <div class="favorite-verify__code">
+
+            <input
+                    class="favorite-verify__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="1"
+                    autocomplete="one-time-code"
+                    aria-label="Digit 1"
+                    data-otp-input
+            >
+
+            <input
+                    class="favorite-verify__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="1"
+                    aria-label="Digit 2"
+                    data-otp-input
+            >
+
+            <input
+                    class="favorite-verify__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="1"
+                    aria-label="Digit 3"
+                    data-otp-input
+            >
+
+            <input
+                    class="favorite-verify__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="1"
+                    aria-label="Digit 4"
+                    data-otp-input
+            >
+
+            <input
+                    class="favorite-verify__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="1"
+                    aria-label="Digit 5"
+                    data-otp-input
+            >
+
+            <input
+                    class="favorite-verify__input"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="1"
+                    aria-label="Digit 6"
+                    data-otp-input
+            >
+
+        </div>
+
+
+
+        <p id="verifyError" class="verify-modal__error" aria-live="polite">
+            Invalid verification code. Please try again.
+        </p>
+
+        <div class="verify-modal__meta">
+            <span id="resendCountdown">
+                Resend code in <span id="resendTimer">00:50</span>
+            </span>
+
+            <button id="resendCodeBtn" class="verify-modal__link-button" type="button" hidden>
+                Resend code
+            </button>
+
+            <span>•</span>
+
+            <button id="editEmailBtn" class="verify-modal__link-button" type="button">
+                <i class="lum-icon lum-icon--square-pen lum-icon--sm"></i>
+                <span>Edit Email</span>
+            </button>
+        </div>
+
+        <div class="share-modal__actions">
+            <button class="lum-button primary" id="verifyCodeBtn" type="button" aria-disabled="true">
+                <span class="h__lum-button">
+                    <span class="text__lum-button">Verify Code</span>
+                </span>
+            </button>
+
+            <button class="lum-button outline" id="cancelVerifyBtn" type="button">
+                <span class="h__lum-button">
+                    <span class="text__lum-button">Cancel</span>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Favorite Desktop Modal -->
+<button id="emptyModalBtn" class="empty-modal-btn" type="button">
+    Open Favorite Modal
+</button>
+
+<div id="emptyModal" class="share-modal favorite-modal" aria-hidden="true">
+
+    <div
+            id="emptyModalOverlay"
+            class="share-modal__overlay"
+    ></div>
+
+    <div class="container-modal share-modal__content">
+
+        <!-- Close -->
+        <button
+                id="closeEmptyModalBtn"
+                class="share-modal__close"
+                type="button"
+                aria-label="Close"
+        >
+            <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+        </button>
+
+
+        <div class="favorite-login">
+
+            <!-- Title -->
+            <div class="favorite-login__intro">
+
+                <h3 class="favorite-login__title">
+                    Sign in To Account
+                </h3>
+
+                <p class="favorite-login__description">
+                    Enter your email to sign in or create an account
+                    and save this item to your favorites.
+                </p>
+
+            </div>
+
+
+            <!-- Personal / Business -->
+            <div class="favorite-login-tabs">
+
+                <div class="lum-tabs lum-tabs--pill" data-tabs="">
+
+                    <div
+                            class="lum-tabs__list"
+                            role="tablist"
+                    >
+
+                        <button
+                                class="lum-tabs__tab is-active"
+                                id="g1-1"
+                                role="tab"
+                                aria-controls="g1p-1"
+                                type="button"
+                        >
+                            Personal
+                        </button>
+
+                        <button
+                                class="lum-tabs__tab"
+                                id="g1-2"
+                                role="tab"
+                                aria-controls="g1p-2"
+                                tabindex="-1"
+                                type="button"
+                        >
+                            Business
+                        </button>
+
+                    </div>
+
+
+                    <!-- Personal Content -->
+                    <div
+                            class="lum-tabs__panel"
+                            id="g1p-1"
+                    >
+
+                        <div
+                                class="favorite-login__field"
+                                data-email-field
+                        >
+
+                            <label
+                                    for="favorite-email-4"
+                                    class="favorite-login__label"
+                            >
+                                Email
+                                <span>(required)</span>
+                            </label>
+
+                            <input
+                                    id="favorite-email-4"
+                                    class="favorite-login__input"
+                                    type="email"
+                                    placeholder="Enter Your Email"
+                                    autocomplete="email"
+                                    data-email-input
+                            >
+
+                            <p
+                                    class="favorite-login__error"
+                                    data-email-error
+                                    aria-live="polite"
+                            >
+                                Invalid Email code. Please try again.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Business Content -->
+                    <div
+                            class="lum-tabs__panel"
+                            id="g1p-2"
+                            hidden
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Terms -->
+            <p class="favorite-login__terms">
+                By continuing, you agree to our
+                <a href="#">Terms</a>
+                &amp;
+                <a href="#">Privacy Policy.</a>
+            </p>
+
+
+            <!-- Continue -->
+            <div class="favorite-login__continue">
+
+                <a
+                        class="lum-button primary"
+                        href="#"
+                >
+                    <span class="h__lum-button">
+                        <span class="text__lum-button">
+                            Continue
+                        </span>
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- OR -->
+            <div class="favorite-login__divider">
+
+                <span></span>
+
+                <p>or</p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- Shop -->
+            <button
+                    type="button"
+                    class="favorite-login__shop"
+            >
+
+                <i
+                        class="lum-icon lum-icon--Shop lum-icon--lg favorite-login__shop-icon"
+                ></i>
+
+                <span class="favorite-login__shop-span">
+                    Sign in with Shop
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const shareBtn = document.getElementById("shareBtn");
+    const shareModal = document.getElementById("shareModal");
+
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    const copyBtn = document.getElementById("copyBtn");
+    const copyIconBtn = document.getElementById("copyIconBtn");
+
+    const productLink = document.getElementById("productLink");
+    const overlay = document.querySelector(".share-modal__overlay");
+
+    function openModal() {
+        if (window.innerWidth < 1024) {
+            return;
+        }
+
+        shareModal.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        shareModal.classList.remove("is-open");
+        document.body.style.overflow = "";
+    }
+
+    async function copyProductLink() {
+        const link = productLink.textContent.trim();
+
+        try {
+            await navigator.clipboard.writeText(link);
+
+            copyBtn.textContent = "Copied!";
+
+            setTimeout(() => {
+                copyBtn.textContent = "Copy link";
+            }, 1500);
+        } catch (error) {
+            console.error("Copy failed:", error);
+        }
+    }
+
+    shareBtn.addEventListener("click", openModal);
+
+    closeModalBtn.addEventListener("click", closeModal);
+    cancelBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+
+    copyBtn.addEventListener("click", copyProductLink);
+    copyIconBtn.addEventListener("click", copyProductLink);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth < 1024) {
+            closeModal();
+        }
+    });
+
+    /* Verify modal - independent from Share modal */
+    const verifyBtn = document.getElementById("verifyBtn");
+    const verifyModal = document.getElementById("verifyModal");
+    const closeVerifyModalBtn = document.getElementById("closeVerifyModalBtn");
+    const cancelVerifyBtn = document.getElementById("cancelVerifyBtn");
+    const verifyOverlay = document.getElementById("verifyOverlay");
+    const verifyCodeBtn = document.getElementById("verifyCodeBtn");
+    const resendCountdown = document.getElementById("resendCountdown");
+    const resendTimer = document.getElementById("resendTimer");
+    const resendCodeBtn = document.getElementById("resendCodeBtn");
+    const verifyInputs = Array.from(verifyModal.querySelectorAll("[data-otp-input]"));
+
+    let verifySeconds = 50;
+    let verifyTimerInterval = null;
+
+    function getVerifyCode() {
+        return verifyInputs.map((input) => input.value).join("");
+    }
+
+    function updateVerifyButton() {
+        const complete = getVerifyCode().length === verifyInputs.length;
+        verifyCodeBtn.setAttribute("aria-disabled", complete ? "false" : "true");
+    }
+
+    function resetVerifyInputs() {
+        verifyInputs.forEach((input) => {
+            input.value = "";
+        });
+        updateVerifyButton();
+    }
+
+    function startVerifyTimer() {
+        clearInterval(verifyTimerInterval);
+        verifySeconds = 50;
+        resendCountdown.hidden = false;
+        resendCodeBtn.hidden = true;
+        resendTimer.textContent = "00:50";
+
+        verifyTimerInterval = setInterval(() => {
+            verifySeconds -= 1;
+            resendTimer.textContent = `00:${String(verifySeconds).padStart(2, "0")}`;
+
+            if (verifySeconds <= 0) {
+                clearInterval(verifyTimerInterval);
+                resendCountdown.hidden = true;
+                resendCodeBtn.hidden = false;
+            }
+        }, 1000);
+    }
+
+    function openVerifyModal() {
+        if (window.innerWidth < 1024) {
+            return;
+        }
+
+        verifyModal.classList.add("is-open");
+        verifyModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        resetVerifyInputs();
+        startVerifyTimer();
+
+        setTimeout(() => verifyInputs[0].focus(), 0);
+    }
+
+    function closeVerifyModal() {
+        verifyModal.classList.remove("is-open");
+        verifyModal.setAttribute("aria-hidden", "true");
+        clearInterval(verifyTimerInterval);
+        document.body.style.overflow = "";
+    }
+
+    verifyInputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/\D/g, "").slice(0, 1);
+
+            if (input.value && index < verifyInputs.length - 1) {
+                verifyInputs[index + 1].focus();
+            }
+
+            updateVerifyButton();
+        });
+
+        input.addEventListener("keydown", (event) => {
+            if (event.key === "Backspace" && !input.value && index > 0) {
+                event.preventDefault();
+                verifyInputs[index - 1].value = "";
+                verifyInputs[index - 1].focus();
+                updateVerifyButton();
+            }
+
+            if (event.key === "ArrowLeft" && index > 0) {
+                event.preventDefault();
+                verifyInputs[index - 1].focus();
+            }
+
+            if (event.key === "ArrowRight" && index < verifyInputs.length - 1) {
+                event.preventDefault();
+                verifyInputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener("paste", (event) => {
+            event.preventDefault();
+
+            const pasted = event.clipboardData
+                .getData("text")
+                .replace(/\D/g, "")
+                .slice(0, verifyInputs.length);
+
+            if (!pasted) {
+                return;
+            }
+
+            verifyInputs.forEach((item) => {
+                item.value = "";
+            });
+
+            pasted.split("").forEach((digit, digitIndex) => {
+                if (verifyInputs[digitIndex]) {
+                    verifyInputs[digitIndex].value = digit;
+                }
+            });
+
+            const focusIndex = Math.min(pasted.length, verifyInputs.length) - 1;
+            verifyInputs[focusIndex].focus();
+            updateVerifyButton();
+        });
+    });
+
+    verifyBtn.addEventListener("click", openVerifyModal);
+    closeVerifyModalBtn.addEventListener("click", closeVerifyModal);
+    cancelVerifyBtn.addEventListener("click", closeVerifyModal);
+    verifyOverlay.addEventListener("click", closeVerifyModal);
+
+    verifyCodeBtn.addEventListener("click", () => {
+        if (verifyCodeBtn.getAttribute("aria-disabled") === "true") {
+            return;
+        }
+
+        const code = getVerifyCode();
+        console.log("Verification code:", code);
+        // Call your verification API here.
+    });
+
+    resendCodeBtn.addEventListener("click", () => {
+        resetVerifyInputs();
+        startVerifyTimer();
+        verifyInputs[0].focus();
+        console.log("Resend verification code");
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && verifyModal.classList.contains("is-open")) {
+            closeVerifyModal();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth < 1024) {
+            closeVerifyModal();
+        }
+    });
+
+    /* Empty modal - independent */
+    const emptyModalBtn = document.getElementById("emptyModalBtn");
+    const emptyModal = document.getElementById("emptyModal");
+    const closeEmptyModalBtn = document.getElementById("closeEmptyModalBtn");
+    const emptyModalOverlay = document.getElementById("emptyModalOverlay");
+
+    function openEmptyModal() {
+        if (window.innerWidth < 1024) {
+            return;
+        }
+
+        emptyModal.classList.add("is-open");
+        emptyModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeEmptyModal() {
+        emptyModal.classList.remove("is-open");
+        emptyModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    emptyModalBtn.addEventListener("click", openEmptyModal);
+    closeEmptyModalBtn.addEventListener("click", closeEmptyModal);
+    emptyModalOverlay.addEventListener("click", closeEmptyModal);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && emptyModal.classList.contains("is-open")) {
+            closeEmptyModal();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth < 1024) {
+            closeEmptyModal();
+        }
+    });
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/footer.js"></script>
+<script src="assets/header.js"></script>
+<script src="assets/heroSlider.js"></script>
+<script src="assets/lum-hotspots.js"></script>
+<script src="assets/global.js"></script>
+<script src="assets/tabs.js"></script>
+</body>
+
+</html>

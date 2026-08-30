@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,8 +18,8 @@
     <link rel="stylesheet" href="./assets/tabs.css">
     <link rel="stylesheet" href="./assets/icons.css">
     <link rel="stylesheet" href="assets/Lum-utilities.css">
+    <link rel="stylesheet" href="assets/gui.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
 <style>
@@ -30,8 +31,11 @@
         margin: 0;
         font-family: Arial, sans-serif;
     }
+    .container-modal {
+        max-width: 500px;
+    }
 
-    /* Share button for testing */
+    /* Block: Share Trigger */
     .share-btn {
         padding: 12px 20px;
         border: 0;
@@ -42,7 +46,7 @@
         cursor: pointer;
     }
 
-    /* Modal */
+    /* Block: Share Modal */
     .share-modal {
         position: fixed;
         inset: 0;
@@ -57,7 +61,7 @@
         display: flex;
     }
 
-    /* Background overlay */
+    /* Element: Share Modal Overlay */
     .share-modal__overlay {
         position: absolute;
         inset: 0;
@@ -65,13 +69,13 @@
         background: rgba(0, 0, 0, 0.3);
     }
 
-    /* Modal content */
+    /* Element: Share Modal Content */
     .share-modal__content {
         position: relative;
         z-index: 1;
 
-        width: 576px;
-        max-width: calc(100% - 40px);
+        width: 500px;
+
 
         padding: 72px 40px 40px;
 
@@ -83,7 +87,7 @@
                 0 8px 16px rgba(16, 24, 40, 0.08);
     }
 
-    /* Close */
+    /* Element: Share Modal Close */
     .share-modal__close {
         position: absolute;
         top: 24px;
@@ -105,10 +109,10 @@
         cursor: pointer;
     }
     .share-modal__close i {
-       color:  #253858;
+        color: #253858;
     }
 
-    /* Title */
+    /* Element: Title */
     .share-modal__title {
         margin: 0;
 
@@ -120,19 +124,19 @@
         line-height: 36px;
     }
 
-    /* Description */
+    /* Element: Description */
     .share-modal__description {
         margin: 4px 0 0;
 
         color: #7A869A;
 
         text-align: center;
-        font-size:14.22px;
+        font-size: 14.22px;
         font-weight: 500;
         line-height: 28px;
     }
 
-    /* Link box */
+    /* Element: Link Box */
     .share-modal__link-box {
         display: flex;
         align-items: center;
@@ -150,7 +154,7 @@
         background: #FAFBFC;
     }
 
-    /* Link text */
+    /* Element: Link */
     .share-modal__link {
         overflow: hidden;
 
@@ -163,7 +167,7 @@
         text-overflow: ellipsis;
     }
 
-    /* Copy icon */
+    /* Element: Copy Action */
     .share-modal__copy-icon {
         flex-shrink: 0;
 
@@ -182,7 +186,7 @@
         cursor: pointer;
     }
 
-    /* Actions */
+    /* Element: Actions */
     .share-modal__actions {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -225,18 +229,14 @@
     .share-modal__cancel-btn:hover {
         background: #f9fafb;
     }
-
-    /*................................................*/
-    /* =========================
-   Favorite Drawer Content
-========================= */
+    /* Block: Favorite Login */
 
     .favorite-login {
         width: 100%;
     }
 
 
-    /* Intro */
+    /* Element: Intro */
 
     .favorite-login__intro {
         text-align: center;
@@ -263,64 +263,7 @@
     }
 
 
-    /* Personal / Business */
-
-    .favorite-login__switch {
-        width: max-content;
-
-        display: flex;
-        align-items: center;
-
-        margin: 0 auto 26px;
-        padding: 4px;
-
-        border-radius: 14px;
-        background: #EBECF0;
-    }
-
-    .favorite-login__switch-btn {
-        height: 38px;
-
-        padding: 0 13px;
-
-        border: 0;
-        border-radius: 11px;
-
-        background: transparent;
-
-        font-family: inherit;
-        font-size: 16px;
-        font-weight: 400;
-
-        color: #101010;
-
-        cursor: pointer;
-    }
-
-    .favorite-login__switch-btn.is-active {
-        background: #FFFFFF;
-
-        box-shadow:
-                0 1px 2px rgba(16, 24, 40, 0.08),
-                0 2px 5px rgba(16, 24, 40, 0.12);
-    }
-
-
-    .favorite-login__label {
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 500;
-
-        color: #101828;
-    }
-
-    .favorite-login__label span {
-        color: #12B76A;
-    }
-
-
-
-    /* Terms */
+    /* Element: Terms */
 
     .favorite-login__terms {
         margin: 32px 0 16px;
@@ -339,37 +282,8 @@
 
     /* Continue Button */
 
-    .favorite-login__continue {
-        width: 100%;
-        height: 48px;
 
-        border: 0;
-        border-radius: 8px;
-
-        background: #15AE5C;
-        color: #FFFFFF;
-
-        font-family: inherit;
-        font-size: 16px;
-        font-weight: 500;
-
-        cursor: pointer;
-
-        transition:
-                background 0.2s ease,
-                transform 0.1s ease;
-    }
-
-    .favorite-login__continue:hover {
-        background: #0FA457;
-    }
-
-    .favorite-login__continue:active {
-        transform: scale(0.99);
-    }
-
-
-    /* Divider */
+    /* Element: Divider */
 
     .favorite-login__divider {
         width: 100%;
@@ -398,7 +312,7 @@
     }
 
 
-    /* Shop Button */
+    /* Element: Shop Button */
 
     .favorite-login__shop {
         width: 100%;
@@ -425,7 +339,7 @@
     }
 
 
-    /* Shop icon */
+    /* Element: Shop Icon */
 
     .favorite-login__shop-icon {
         color: #5433EB;
@@ -453,9 +367,7 @@
 
         background: #5A31F4;
     }
-    /* =========================
-   Email Field
-========================= */
+    /* Element: Email Field */
 
     .favorite-login__field {
         width: 100%;
@@ -464,12 +376,12 @@
     }
 
 
-    /* Label */
+    /* Element: Label */
 
     .favorite-login__label {
         display: block;
         margin-bottom: 8px;
-        gap:4px;
+        gap: 4px;
         font-size: 12px;
         line-height: 18px;
         font-weight: 500;
@@ -485,7 +397,7 @@
     }
 
 
-    /* Input */
+    /* Element: Input */
 
     .favorite-login__input {
         width: 100%;
@@ -516,7 +428,7 @@
     }
 
 
-    /* Placeholder */
+    /* State: Placeholder */
 
     .favorite-login__input::placeholder {
         color: #7A869A;
@@ -524,7 +436,7 @@
     }
 
 
-    /* Hover */
+    /* State: Hover */
 
     .favorite-login__input:hover:not(:disabled) {
         border-color: #15AE5C;
@@ -570,7 +482,7 @@
     }
 
 
-    /* Error Message */
+    /* Element: Error Message */
 
     .favorite-login__error {
         display: none;
@@ -605,44 +517,15 @@
     .favorite-login__input:disabled::placeholder {
         color: #A5ADBA;
     }
-    /*..............................................................*/
-    /* =========================
-   Favorite Verify
-     ========================= */
+    /* Block: Favorite Verification */
 
     .favorite-verify {
         width: 100%;
     }
 
 
-    /* Intro */
+    /* Element: Intro */
 
-    .favorite-verify__intro {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 24px;
-    }
-
-    .favorite-verify__title {
-        margin: 0 0 12px;
-
-        font-size: 22px;
-        line-height: 28px;
-        font-weight: 700;
-
-        color: #101828;
-    }
-
-    .favorite-verify__description {
-        max-width: 390px;
-        margin: 0 auto;
-
-        font-size: 18px;
-        line-height: 36px;
-        font-weight: 400;
-
-        color: #7A869A;
-    }
 
     .favorite-verify__input:first-of-type {
         border-radius: 10px 0 0 10px;
@@ -654,7 +537,7 @@
     }
 
 
-    /* Focus */
+    /* State: Focus */
     .favorite-verify__input:focus {
         position: relative;
         z-index: 1;
@@ -663,9 +546,7 @@
         box-shadow: 0 0 0 3px rgba(18, 183, 106, 0.12);
     }
 
-    /* =========================
-       OTP Inputs
-    ========================= */
+    /* Element: OTP Inputs */
 
     .favorite-verify__code {
         width: 100%;
@@ -702,13 +583,11 @@
     }
 
 
-    /* Hover */
+    /* State: Hover */
 
     .favorite-verify__input:hover {
         border-color: #B3BAC5;
     }
-
-
 
 
     .favorite-verify__input:focus {
@@ -719,9 +598,7 @@
     }
 
 
-    /* =========================
-       Resend / Edit
-    ========================= */
+    /* Element: OTP Actions */
 
     .favorite-verify__actions {
         width: 100%;
@@ -751,7 +628,7 @@
     }
 
     .favorite-verify__dot {
-        white: 4px;
+        width: 4px;
         color: #A5ADBA;
     }
 
@@ -781,9 +658,7 @@
     .favorite-verify__edit:hover {
         text-decoration: underline;
     }
-    /* =====================================
-   Rate Review - Comment
-===================================== */
+    /* Element: Review Comment */
 
     .rate-review__comment {
         width: 100%;
@@ -796,7 +671,7 @@
     }
 
 
-    /* Label */
+    /* Element: Label */
 
     .rate-review__comment-label {
         display: flex;
@@ -824,7 +699,7 @@
     }
 
 
-    /* Textarea */
+    /* Element: Textarea */
 
     .rate-review__comment-textarea {
         display: block;
@@ -855,7 +730,7 @@
     }
 
 
-    /* Placeholder */
+    /* State: Placeholder */
 
     .rate-review__comment-textarea::placeholder {
         color: #7A869A;
@@ -863,13 +738,65 @@
     }
 
 
-    /* Hover */
+    /* State: Hover */
 
     .rate-review__comment-textarea:hover {
         border-color: #B3BAC5;
     }
 
 
+    /* Block: Share Drawer */
+    .share-drawer__link-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        border: 1px solid #EBECF0;
+        border-radius: 8px;
+        background: #FAFBFC;
+    }
+
+    .share-drawer__link {
+        color: #7A869A;
+        font-size: 14.22px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .share-drawer__copy-button {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    /* Block: Color Filter */
+    .color-filter__selection {
+        display: flex;
+        gap: 8px;
+    }
+
+    .color-filter__selection-label,
+    .color-filter__selection-value {
+        font-size: 12.64px;
+        line-height: 24px;
+    }
+
+    .color-filter__selection-label {
+        font-weight: 700;
+    }
+
+    .color-filter__selection-value {
+        font-weight: 500;
+    }
+
+    .color-filter__swatches {
+        display: grid;
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+    }
 
     /* =========================
        Terms
@@ -881,12 +808,8 @@
     }
 
 
-    /* =========================
-       Responsive
-    ========================= */
-    /* ============================= */
+    /* Responsive */
     /* Hidden under 1024px */
-    /* ============================= */
 
     @media (max-width: 1023px) {
         .share-modal {
@@ -899,14 +822,7 @@
     }
 
 
-
-
-
-
-
-    /* ================================
-   Rate & Review
-================================ */
+    /* Block: Rate Review */
 
     .rate-review {
         width: 100%;
@@ -918,7 +834,7 @@
     }
 
 
-    /* Field */
+    /* Element: Field */
 
     .rate-review__field {
         width: 100%;
@@ -937,7 +853,7 @@
     }
 
 
-    /* Label */
+    /* Element: Label */
 
     .rate-review__label {
         font-size: 12.64px;
@@ -1013,7 +929,7 @@
         width: 100%;
         display: flex;
         gap: 8px;
-        margin: 8px 0 0px 0;
+        margin: 8px 0 0;
     }
 
 
@@ -1079,7 +995,7 @@
     }
 
 
-    /* 1 ستاره */
+
     .rate-review__rating-list:has(
     .rate-review__rating-input[value="1"]:checked
 )
@@ -1097,7 +1013,7 @@
     }
 
 
-    /* 2 ستاره */
+
     .rate-review__rating-list:has(
     .rate-review__rating-input[value="2"]:checked
 )
@@ -1115,7 +1031,7 @@
     }
 
 
-    /* 3 ستاره */
+
     .rate-review__rating-list:has(
     .rate-review__rating-input[value="3"]:checked
 )
@@ -1133,7 +1049,7 @@
     }
 
 
-    /* 4 ستاره */
+
     .rate-review__rating-list:has(
     .rate-review__rating-input[value="4"]:checked
 )
@@ -1151,7 +1067,7 @@
     }
 
 
-    /* 5 ستاره */
+
     .rate-review__rating-list:has(
     .rate-review__rating-input[value="5"]:checked
 )
@@ -1169,7 +1085,7 @@
     }
 
 
-    /* border آیتم‌های فعال */
+
     .rate-review__rating-list:has(
     .rate-review__rating-input[value="1"]:checked
 )
@@ -1309,12 +1225,12 @@
 
         <div class="lum-fdrawer__content">
 
-            <div class="w-full flex items-center justify-between border-[1px] border-[#EBECF0] rounded-[8px] p-3 bg-[#FAFBFC]">
+            <div class="share-drawer__link-box">
 
                 <div>
                     <span
                             data-copy-source
-                            class="text-[14.22px] leading-7 font-[400] text-[#7A869A]"
+                            class="share-drawer__link"
                     >
                         lumeraelectric.com/product/S7593P
                     </span>
@@ -1326,7 +1242,7 @@
                         type="button"
                         data-copy-link
                         aria-label="Copy link"
-                        class="border-0 bg-transparent p-0 cursor-pointer"
+                        class="share-drawer__copy-button"
                 >
                     <i class="lum-icon lum-icon--copy lum-icon--sm"></i>
                 </button>
@@ -1373,11 +1289,10 @@
 <button id="shareBtn" class="share-btn">
     Share Product
 </button>
-
-<div id="shareModal" class="share-modal">
+<div id="shareModal" class="share-modal ">
     <div class="share-modal__overlay"></div>
 
-    <div class="share-modal__content">
+    <div class=" container-modal share-modal__content">
         <button
                 id="closeModalBtn"
                 class="share-modal__close"
@@ -1412,37 +1327,12 @@
         </div>
 
         <div class="share-modal__actions">
-            <button id="copyBtn" class="share-modal__copy-btn" type="button">
-                Copy link
-            </button>
+            <a class="lum-button primary" id="copyBtn" href="#"><span class="h__lum-button"><span class="text__lum-button">Copy link</span></span></a>
+            <a class="lum-button outline" id="cancelBtn" href="#"><span class="h__lum-button"><span class="text__lum-button">Cancel</span></span></a>
 
-            <button id="cancelBtn" class="share-modal__cancel-btn" type="button">
-                Cancel
-            </button>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <button
@@ -1474,7 +1364,7 @@
             class="lum-fdrawer__panel"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="fdrawer-title-2"
+            aria-labelledby="fdrawer-title-3"
     >
         <div class="lum-fdrawer__handle"></div>
 
@@ -1500,37 +1390,37 @@
         </div>
         <div class="lum-fdrawer__content">
             <div>
-            <div class="flex gap-2 ">
-                <span class="text-[12.64px] leading-6 font-[700]">Color Selected:</span>
-                <span class="text-[12.64px] leading-6 font-[500]">Blue</span>
+                <div class="color-filter__selection">
+                    <span class="color-filter__selection-label">Color Selected:</span>
+                    <span class="color-filter__selection-value">Blue</span>
+                </div>
+                <div class="color-filter__swatches">
+                    <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#27ae60" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#e2542c" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#e84f8b" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#5b6b83" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#e74c3c" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#c9a227" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                    <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
+                    </button>
+                </div>
             </div>
-            <div class="grid grid-cols-10 gap-2 mt-2">
-                <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#27ae60" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#e2542c" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#e84f8b" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#5b6b83" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#e74c3c" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#c9a227" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-                <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span>
-                </button>
-            </div>
-        </div>
         </div>
 
 
@@ -1541,10 +1431,6 @@
         </div>
     </div>
 </div>
-
-
-
-
 
 
 <div>
@@ -1638,7 +1524,7 @@
 
                         <!-- Personal / Business -->
                         <div class="favorite-login-tabs">
-                            <div class="lum-tabs lum-tabs--pill " data-tabs="">
+                            <div class="lum-tabs lum-tabs--pill" data-tabs="">
                                 <div class="lum-tabs__list" role="tablist">
                                     <button class="lum-tabs__tab is-active" id="g1-1" role="tab" aria-controls="g1p-1" type="button">Lighting
                                     </button>
@@ -1646,48 +1532,47 @@
                                     </button>
                                 </div>
 
-                                    <div class="lum-tabs__panel " id="g1p-1">
-                                        <!-- Terms -->
-                                        <div class="favorite-login__field" data-email-field>
+                                <div class="lum-tabs__panel" id="g1p-1">
+                                    <!-- Terms -->
+                                    <div class="favorite-login__field" data-email-field>
 
-                                            <label
-                                                    for="favorite-email-4"
-                                                    class="favorite-login__label"
-                                            >
-                                                Email
-                                                <span>(required)</span>
-                                            </label>
+                                        <label
+                                                for="favorite-email-4"
+                                                class="favorite-login__label"
+                                        >
+                                            Email
+                                            <span>(required)</span>
+                                        </label>
 
-                                            <input
-                                                    id="favorite-email-4"
-                                                    class="favorite-login__input"
-                                                    type="email"
-                                                    placeholder="Enter Your Email"
-                                                    autocomplete="email"
-                                                    data-email-input
-                                            >
+                                        <input
+                                                id="favorite-email-4"
+                                                class="favorite-login__input"
+                                                type="email"
+                                                placeholder="Enter Your Email"
+                                                autocomplete="email"
+                                                data-email-input
+                                        >
 
-                                            <p
-                                                    class="favorite-login__error"
-                                                    data-email-error
-                                                    aria-live="polite"
-                                            >
-                                                Invalid Email code. Please try again.
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                        <p class="favorite-login__terms">
-                                            By continuing, you agree to our
-                                            <a href="#">Terms</a>
-                                            &amp;
-                                            <a href="#">Privacy Policy.</a>
+                                        <p
+                                                class="favorite-login__error"
+                                                data-email-error
+                                                aria-live="polite"
+                                        >
+                                            Invalid Email code. Please try again.
                                         </p>
 
-                                    <div class="lum-tabs__panel" id="g1p-2" hidden=""></div>
+                                    </div>
+                                </div>
+                                <p class="favorite-login__terms">
+                                    By continuing, you agree to our
+                                    <a href="#">Terms</a>
+                                    &amp;
+                                    <a href="#">Privacy Policy.</a>
+                                </p>
+
+                                <div class="lum-tabs__panel" id="g1p-2" hidden=""></div>
                             </div>
                         </div>
-
 
 
                         <!-- Continue -->
@@ -1714,9 +1599,9 @@
                                 type="button"
                                 class="favorite-login__shop"
                         >
-                                <i class="lum-icon lum-icon--Shop lum-icon--lg favorite-login__shop-icon ">
+                            <i class="lum-icon lum-icon--Shop lum-icon--lg favorite-login__shop-icon">
 
-                                </i>
+                            </i>
 
                             <span class="favorite-login__shop-span">
                                 Sign in with Shop
@@ -2369,8 +2254,6 @@
     })();
 
 
-
-
     const shareBtn = document.getElementById("shareBtn");
     const shareModal = document.getElementById("shareModal");
 
@@ -2425,7 +2308,7 @@
     shareBtn.addEventListener("click", openModal);
 
 
-    /* Close */
+    /* Element: Share Modal Close */
     closeModalBtn.addEventListener("click", closeModal);
 
     cancelBtn.addEventListener("click", closeModal);
@@ -2453,13 +2336,6 @@
             closeModal();
         }
     });
-
-
-
-
-
-
-
 
 
     (function () {
@@ -2535,17 +2411,17 @@
 
                 input.addEventListener('input', function () {
 
-                    /* فقط عدد */
+
                     input.value = input.value
                         .replace(/\D/g, '')
                         .slice(0, 1);
 
 
-                    /* حذف Error */
+
                     otpForm.classList.remove('is-error');
 
 
-                    /* برو خانه بعدی */
+
                     if (
                         input.value &&
                         index < inputs.length - 1
@@ -2690,7 +2566,6 @@
 
 
                 /*
-                 * اینجا درخواست API بزن
                  *
                  * verifyOtp(otp)
                  */

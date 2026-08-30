@@ -441,6 +441,361 @@
             justify-content: center;
             text-align: center;
         }
+        /* Desktop Rate Review Modal */
+
+        .rate-review-modal .share-modal__content {
+            width: 500px;
+
+            padding: 72px 40px 40px;
+        }
+
+
+        .rate-review-modal__intro {
+            margin-bottom: 24px;
+        }
+
+
+        .rate-review-modal__title {
+            margin: 0 0 4px;
+
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+
+            color: #101010;
+        }
+
+
+        .rate-review-modal__description {
+            margin: 0;
+
+            font-size: 14.22px;
+            line-height: 28px;
+            font-weight: 500;
+
+            color: #7A869A;
+        }
+
+
+        .rate-review-modal .rate-review {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+
+        .rate-review-modal .rate-review__field {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 8px;
+
+            margin: 0;
+            padding: 0;
+
+            border: 0;
+        }
+
+
+        .rate-review-modal .rate-review__label,
+        .rate-review-modal .rate-review__comment-label {
+            margin: 0;
+
+            font-size: 14.22px;
+            font-weight: 500;
+            line-height: 28px;
+
+            color: #101010;
+        }
+
+
+        .rate-review-modal .rate-review__label span,
+        .rate-review-modal .rate-review__comment-required {
+            color: #15AE5C;
+            font-size: 12.64px;
+            font-weight: 500;
+            line-height: 20px
+        }
+
+
+        .rate-review-modal .rate-review__input {
+            width: 100%;
+            height: 48px;
+
+            padding: 10px 12px;
+
+            border: 1px solid #EBECF0;
+            border-radius: 8px;
+
+            outline: none;
+
+            font-family: inherit;
+            font-size: 12.64px;
+
+            background: #FFFFFF;
+        }
+
+
+        .rate-review-modal .rate-review__input::placeholder,
+        .rate-review-modal .rate-review__comment-textarea::placeholder {
+            color: #7A869A;
+            opacity: 1;
+        }
+
+
+        .rate-review-modal .rate-review__input:focus,
+        .rate-review-modal .rate-review__comment-textarea:focus {
+            border-color: #15AE5C;
+
+            box-shadow:
+                    0 0 0 3px rgba(21, 174, 92, 0.12);
+        }
+
+
+        /* Rating */
+
+        .rate-review-modal .rate-review__rating-list {
+            width: 100%;
+
+            display: flex;
+
+            gap: 8px;
+
+            margin-top: 8px ;
+        }
+
+
+        .rate-review-modal .rate-review__rating-item {
+            position: relative;
+
+            flex: 1 1 0;
+
+            height: 68px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            border: 1px solid #EBECF0;
+            border-radius: 8px;
+
+            cursor: pointer;
+        }
+
+
+        .rate-review-modal .rate-review__rating-input {
+            position: absolute;
+
+            width: 1px;
+            height: 1px;
+
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+        .rate-review-modal .rate-review__star {
+            position: relative;
+
+            width: 20px;
+            height: 20px;
+        }
+
+
+        .rate-review-modal .rate-review__star-empty,
+        .rate-review-modal .rate-review__star-filled {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            color: #FAAD14;
+        }
+
+
+        .rate-review-modal .rate-review__star-empty {
+            display: block;
+        }
+
+
+        .rate-review-modal .rate-review__star-filled {
+            display: none;
+        }
+
+
+        .rate-review-modal .rate-review__rating-text {
+            font-size: 12.64px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+
+            color: #7A869A;
+        }
+
+
+        /* Selected rating */
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 1),
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 2),
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 3),
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 4),
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 5) {
+            border-color: #15AE5C;
+        }
+
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 1)
+        .rate-review__star-empty,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 2)
+        .rate-review__star-empty,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 3)
+        .rate-review__star-empty,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 4)
+        .rate-review__star-empty,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 5)
+        .rate-review__star-empty {
+            display: none;
+        }
+
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="1"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 1)
+        .rate-review__star-filled,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="2"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 2)
+        .rate-review__star-filled,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="3"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 3)
+        .rate-review__star-filled,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="4"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 4)
+        .rate-review__star-filled,
+
+        .rate-review-modal .rate-review__rating-list:has(
+    .rate-review__rating-input[value="5"]:checked
+)
+        .rate-review__rating-item:nth-child(-n + 5)
+        .rate-review__star-filled {
+            display: block;
+        }
+
+
+        /* Comment */
+
+        .rate-review-modal .rate-review__comment {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .rate-review-modal .rate-review__comment-label {
+            display: flex;
+            align-items: center;
+
+            gap: 4px;
+        }
+
+
+        .rate-review-modal .rate-review__comment-textarea {
+            width: 100%;
+            height: 68px;
+
+            padding: 8px;
+
+            resize: none;
+
+            border: 1px solid #EBECF0;
+            border-radius: 8px;
+
+            outline: none;
+
+            font-family: inherit;
+            font-size: 12.64px;
+
+            background: #FFFFFF;
+        }
+
+
+        /* Footer */
+
+        .rate-review-modal__actions {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 8px;
+
+            margin-top: 36px;
+        }
+
+
+        .rate-review-modal__actions .lum-button {
+            width: 100%;
+        }
 
         /* Desktop only */
         @media (max-width: 1023px) {
@@ -831,6 +1186,297 @@
     </div>
 
 </div>
+<!-- Desktop Rate & Review Trigger -->
+<button
+        id="rateReviewDesktopBtn"
+        class="rate-review-modal__trigger"
+        type="button"
+>
+    Rate & Review
+</button>
+
+
+<!-- Desktop Rate & Review Modal -->
+<div
+        id="rateReviewDesktopModal"
+        class="share-modal rate-review-modal"
+        aria-hidden="true"
+>
+
+    <div
+            id="rateReviewDesktopOverlay"
+            class="share-modal__overlay"
+    ></div>
+
+
+    <div class="share-modal__content rate-review-modal__content">
+
+        <!-- Close -->
+        <button
+                id="closeRateReviewDesktopBtn"
+                class="share-modal__close"
+                type="button"
+                aria-label="Close"
+        >
+            <i class="lum-icon lum-icon--close lum-icon--lg"></i>
+        </button>
+
+
+        <!-- Intro -->
+        <div class="rate-review-modal__intro">
+
+            <h2 class="rate-review-modal__title">
+                Rate & Review This Product
+            </h2>
+
+            <p class="rate-review-modal__description">
+                Share your experience to help others choose
+            </p>
+
+        </div>
+
+
+        <form
+                id="rate-review-desktop-form"
+                class="rate-review"
+        >
+
+            <!-- Full Name -->
+            <div class="rate-review__field">
+
+                <label
+                        class="rate-review__label"
+                        for="review-name-desktop"
+                >
+                    Full Name
+                    <span>(required)</span>
+                </label>
+
+                <input
+                        id="review-name-desktop"
+                        class="rate-review__input"
+                        type="text"
+                        name="name"
+                        placeholder="Enter Your Name"
+                        autocomplete="name"
+                        required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="rate-review__field">
+
+                <label
+                        class="rate-review__label"
+                        for="review-email-desktop"
+                >
+                    Email
+                    <span>(required)</span>
+                </label>
+
+                <input
+                        id="review-email-desktop"
+                        class="rate-review__input"
+                        type="email"
+                        name="email"
+                        placeholder="Enter Your Email"
+                        autocomplete="email"
+                        required
+                >
+
+            </div>
+
+
+            <!-- Rate -->
+            <fieldset class="rate-review__field rate-review__rating">
+
+                <legend class="rate-review__label">
+                    Your Rate
+                    <span>(required)</span>
+                </legend>
+
+
+                <div class="rate-review__rating-list">
+
+                    <!-- Poor -->
+                    <label class="rate-review__rating-item">
+
+                        <input
+                                class="rate-review__rating-input"
+                                type="radio"
+                                name="review-rating-desktop"
+                                value="1"
+                                required
+                        >
+
+                        <span class="rate-review__star">
+                            <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                            <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                        </span>
+
+                        <span class="rate-review__rating-text">
+                            Poor
+                        </span>
+
+                    </label>
+
+
+                    <!-- Okay -->
+                    <label class="rate-review__rating-item">
+
+                        <input
+                                class="rate-review__rating-input"
+                                type="radio"
+                                name="review-rating-desktop"
+                                value="2"
+                        >
+
+                        <span class="rate-review__star">
+                            <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                            <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                        </span>
+
+                        <span class="rate-review__rating-text">
+                            Okay
+                        </span>
+
+                    </label>
+
+
+                    <!-- Good -->
+                    <label class="rate-review__rating-item">
+
+                        <input
+                                class="rate-review__rating-input"
+                                type="radio"
+                                name="review-rating-desktop"
+                                value="3"
+                        >
+
+                        <span class="rate-review__star">
+                            <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                            <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                        </span>
+
+                        <span class="rate-review__rating-text">
+                            Good
+                        </span>
+
+                    </label>
+
+
+                    <!-- Great -->
+                    <label class="rate-review__rating-item">
+
+                        <input
+                                class="rate-review__rating-input"
+                                type="radio"
+                                name="review-rating-desktop"
+                                value="4"
+                        >
+
+                        <span class="rate-review__star">
+                            <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                            <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                        </span>
+
+                        <span class="rate-review__rating-text">
+                            Great
+                        </span>
+
+                    </label>
+
+
+                    <!-- Top -->
+                    <label class="rate-review__rating-item">
+
+                        <input
+                                class="rate-review__rating-input"
+                                type="radio"
+                                name="review-rating-desktop"
+                                value="5"
+                        >
+
+                        <span class="rate-review__star">
+                            <i class="lum-icon lum-icon--square-star-0 rate-review__star-empty"></i>
+                            <i class="lum-icon lum-icon--square-star-1 rate-review__star-filled"></i>
+                        </span>
+
+                        <span class="rate-review__rating-text">
+                            Top
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- Comment -->
+            <div class="rate-review__comment">
+
+                <label
+                        class="rate-review__comment-label"
+                        for="review-comment-desktop"
+                >
+                    <span class="rate-review__comment-label-text">
+                        Your Comment
+                    </span>
+
+                    <span class="rate-review__comment-required">
+                        (required)
+                    </span>
+                </label>
+
+                <textarea
+                        id="review-comment-desktop"
+                        class="rate-review__comment-textarea"
+                        name="comment"
+                        placeholder="Type your message here."
+                        required
+                ></textarea>
+
+            </div>
+
+        </form>
+
+
+        <!-- Actions -->
+        <div class="rate-review-modal__actions">
+
+            <button
+                    class="lum-button primary"
+                    type="submit"
+                    form="rate-review-desktop-form"
+            >
+                <span class="h__lum-button">
+                    <span class="text__lum-button">
+                        Submit Review
+                    </span>
+                </span>
+            </button>
+
+
+            <button
+                    id="cancelRateReviewDesktopBtn"
+                    class="lum-button outline"
+                    type="button"
+            >
+                <span class="h__lum-button">
+                    <span class="text__lum-button">
+                        Cancel
+                    </span>
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script>
     const shareBtn = document.getElementById("shareBtn");
@@ -1096,6 +1742,67 @@
             closeEmptyModal();
         }
     });
+    const rateReviewDesktopBtn =
+        document.getElementById('rateReviewDesktopBtn');
+
+    const rateReviewDesktopModal =
+        document.getElementById('rateReviewDesktopModal');
+
+    const closeRateReviewDesktopBtn =
+        document.getElementById('closeRateReviewDesktopBtn');
+
+    const cancelRateReviewDesktopBtn =
+        document.getElementById('cancelRateReviewDesktopBtn');
+
+    const rateReviewDesktopOverlay =
+        document.getElementById('rateReviewDesktopOverlay');
+
+
+    function openRateReviewDesktop() {
+        if (window.innerWidth < 1024) return;
+
+        rateReviewDesktopModal.classList.add('is-open');
+
+        rateReviewDesktopModal.setAttribute(
+            'aria-hidden',
+            'false'
+        );
+
+        document.body.style.overflow = 'hidden';
+    }
+
+
+    function closeRateReviewDesktop() {
+        rateReviewDesktopModal.classList.remove('is-open');
+
+        rateReviewDesktopModal.setAttribute(
+            'aria-hidden',
+            'true'
+        );
+
+        document.body.style.overflow = '';
+    }
+
+
+    rateReviewDesktopBtn.addEventListener(
+        'click',
+        openRateReviewDesktop
+    );
+
+    closeRateReviewDesktopBtn.addEventListener(
+        'click',
+        closeRateReviewDesktop
+    );
+
+    cancelRateReviewDesktopBtn.addEventListener(
+        'click',
+        closeRateReviewDesktop
+    );
+
+    rateReviewDesktopOverlay.addEventListener(
+        'click',
+        closeRateReviewDesktop
+    );
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

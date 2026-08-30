@@ -59,6 +59,46 @@
   }
 
 }
+.lum-icon--refresh {
+  -webkit-mask-image: url("./refresh.svg");
+  mask-image: url("./refresh.svg");
+}
+.lum-icon--shopping-bag {
+  -webkit-mask-image: url("./shopping-bag.svg");
+  mask-image: url("./shopping-bag.svg");
+}
+.lum-icon--star {
+  -webkit-mask-image: url("./star.svg");
+  mask-image: url("./star.svg");
+}
+.lum-icon--discount {
+  -webkit-mask-image: url("./discount.svg");
+  mask-image: url("./discount.svg");
+}
+
+.lum-icon--cloud-upload {
+  -webkit-mask-image: url("./cloud-upload.svg");
+  mask-image: url("./cloud-upload.svg");
+}
+
+.lum-icon--file-add {
+  -webkit-mask-image: url("./file-add.svg");
+  mask-image: url("./file-add.svg");
+}
+.lum-icon--balance {
+  -webkit-mask-image: url("./balance.svg");
+  mask-image: url("./balance.svg");
+}
+
+.lum-icon--dislike {
+  -webkit-mask-image: url("./dislike.svg");
+  mask-image: url("./dislike.svg");
+}
+
+.lum-icon--like {
+  -webkit-mask-image: url("./like.svg");
+  mask-image: url("./like.svg");
+}
 .lum-icon--square-star-1{
   -webkit-mask-image: url("./star-1.svg");
   mask-image: url("./star-1.svg");

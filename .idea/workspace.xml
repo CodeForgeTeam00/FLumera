@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629a3bbc-5619-4fcd-bf15-0a95d8deb729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/Icon-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Icon-5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Icon-6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/balance.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/cloud-upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/discount.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/dislike.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/file-add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/like.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/shopping-bag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/star.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/giu-test-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/giu-test-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/gui-test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +99,7 @@
       <workItem from="1787917157771" duration="12077000" />
       <workItem from="1787988533279" duration="12329000" />
       <workItem from="1788006024110" duration="14303000" />
-      <workItem from="1788075676179" duration="13849000" />
+      <workItem from="1788075676179" duration="16184000" />
     </task>
     <servers />
   </component>

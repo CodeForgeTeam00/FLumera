@@ -370,6 +370,7 @@
             align-items: center;
             flex-wrap: wrap;
         }
+
     </style>
 </head>
 <body>
@@ -1588,14 +1589,58 @@
             </div>
             <template data-source>
                 <div class="lum-swatches">
-                    <button class="lum-swatch is-selected" style="--_c:#2f80ed" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Ocean</span></button>
-                    <button class="lum-swatch" style="--_c:#27ae60" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Forest</span></button>
-                    <button class="lum-swatch" style="--_c:#e2542c" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Sunset</span></button>
-                    <button class="lum-swatch" style="--_c:#e84f8b" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Rose</span></button>
-                    <button class="lum-swatch" style="--_c:#5b6b83" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Slate</span></button>
-                    <button class="lum-swatch" style="--_c:#e74c3c" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Coral</span></button>
-                    <button class="lum-swatch" style="--_c:#c9a227" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Sand</span></button>
-                    <button class="lum-swatch" style="--_c:#9b2fae" type="button"><span class="lum-swatch__chip"></span><span class="lum-swatch__name">Berry</span></button>
+                    <button class="lum-swatch " style="--_c:#2f80ed" type="button">
+                        <span class="lum-swatch__chip"></span>
+                        <span class="lum-text-md">Ocean</span>
+                    </button>
+                    <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip is-selected lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                        <span class=" lum-text-md">Forest</span>
+                    </button>
+                    <button class="lum-swatch " disabled style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                        <span class=" lum-text-md">Forest</span>
+                    </button>
+                </div>
+            </template>
+        </div>
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name">input</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <div class="lum-field">
+                    <label class="lum-field__label" for="e1">Email <span>(required)</span></label>
+                    <input class="lum-field__input" id="e1" type="email" placeholder="Enter Your Email" autocomplete="email">
+                    <p class="lum-field__error">Invalid Email code. Please try again.</p>
+                </div>
+
+                <!-- FOCUS (forced with modifier for preview) -->
+                <div class="lum-field ">
+                    <label class="lum-field__label" for="e2">Email <span>(required)</span></label>
+                    <input class="lum-field__input" id="e2" type="email" value="j.behnam.1996@gmail.com" autocomplete="email">
+                    <p class="lum-field__error">Invalid Email code. Please try again.</p>
+                </div>
+
+                <!-- ERROR -->
+                <div class="lum-field lum-field--error">
+                    <label class="lum-field__label" for="e3">Email <span>(required)</span></label>
+                    <input class="lum-field__input" id="e3" type="email" value="bekslfo;;/cpm" autocomplete="email">
+                    <p class="lum-field__error">Invalid Email code. Please try again.</p>
                 </div>
             </template>
         </div>
@@ -1726,6 +1771,47 @@
                 </div>
             </template>
         </div>
+        <div class="lum-demo" data-demo data-view="preview">
+            <div class="lum-demo__bar"><span class="lum-demo__name"> accordion</span>
+                <div class="lum-demo__actions">
+                    <div class="lum-demo__toggle">
+                        <button class="lum-demo__tab is-active" data-view-btn="preview" type="button">Preview</button>
+                        <button class="lum-demo__tab" data-view-btn="code" type="button">Code</button>
+                    </div>
+                    <button class="lum-demo__copy" data-copy type="button">Copy</button>
+                </div>
+            </div>
+            <div class="lum-demo__preview" data-preview></div>
+            <div class="lum-demo__code">
+                <pre><code data-code></code></pre>
+            </div>
+            <template data-source>
+                <div class="favorite-verify">
+                    <div class="favorite-verify__code" data-otp>
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1"  aria-label="Digit 1">
+                        <input class="favorite-verify__input " type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+                    </div>
+                </div>
+
+                <!-- ERROR (all boxes danger + message) -->
+                <div class="favorite-verify favorite-verify--error">
+                    <div class="favorite-verify__code" data-otp>
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" value="0" aria-label="Digit 1">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" value="0" aria-label="Digit 2">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" value="0" aria-label="Digit 3">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" value="0" aria-label="Digit 4">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" value="0" aria-label="Digit 5">
+                        <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" value="0" aria-label="Digit 6">
+                    </div>
+                    <p class="favorite-verify__error">Invalid verification code. Please try again.</p>
+                </div>
+
+            </template>
+        </div>
     </div>
 
 
@@ -1816,6 +1902,9 @@
             });
         });
     })();
+
+
+
 </script>
 <script src="assets/global.js"></script>
 </body>

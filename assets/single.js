@@ -32,46 +32,34 @@
         },
     });
 
-
     const selects = document.querySelectorAll("[data-lum-select]");
-
     selects.forEach((select) => {
         const trigger = select.querySelector(".lum-select__trigger");
         const value = select.querySelector(".lum-select__value");
         const options = select.querySelectorAll(".lum-select__option");
-
         if (!trigger || !value) return;
-
         const closeSelect = () => {
             select.classList.remove("is-open");
             trigger.setAttribute("aria-expanded", "false");
         };
-
         const openSelect = () => {
             select.classList.add("is-open");
             trigger.setAttribute("aria-expanded", "true");
         };
-
         trigger.addEventListener("click", (event) => {
             event.stopPropagation();
-
             const isOpen = select.classList.contains("is-open");
-
             selects.forEach((otherSelect) => {
                 if (otherSelect === select) return;
-
                 otherSelect.classList.remove("is-open");
-
                 const otherTrigger = otherSelect.querySelector(
                     ".lum-select__trigger"
                 );
-
                 otherTrigger?.setAttribute(
                     "aria-expanded",
                     "false"
                 );
             });
-
             if (isOpen) {
                 closeSelect();
             } else {
@@ -267,3 +255,4 @@
             );
         });
     });
+

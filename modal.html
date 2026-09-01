@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumera — Unified Modal System</title>
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/modal.css">
+    <link rel="stylesheet" href="./assets/Lum-utilities.css">
+    <link rel="stylesheet" href="./assets/icons.css">
+
+</head>
+<body style="padding:40px; display:flex; gap:12px; flex-wrap:wrap;">
+
+<!-- triggers -->
+<button class="lum-button primary" data-modal-open="share"><span class="h__lum-button"><span class="text__lum-button">Share</span></span>
+</button>
+<button class="lum-button outline" data-modal-open="color"><span class="h__lum-button"><span
+        class="text__lum-button">Add to favorites</span></span></button>
+<button class="lum-button outline" data-modal-open="review"><span class="h__lum-button"><span class="text__lum-button">Write a review</span></span>
+</button>
+<button class="lum-button primary" data-modal-open="favorite"><span class="h__lum-button"><span class="text__lum-button">Add to favorites</span></span></button>
+<!-- ============ SHARE MODAL (fully built as the template) ============ -->
+<div class="lum-modal" id="modal-share" data-modal>
+    <button class="lum-modal__overlay" type="button" data-modal-close aria-label="Close"></button>
+    <div class="lum-modal__panel" role="dialog" aria-modal="true" aria-labelledby="share-title">
+        <div class="lum-modal__handle"></div>
+        <button class="lum-modal__close" type="button" data-modal-close aria-label="Close">
+            <i class="lum-icon lum-icon--close lum-icon--md"></i>
+        </button>
+        <h2 class="lum-modal__ title lum-heading-xs text-center" id="share-title">Share This Product</h2>
+        <p class="lum-modal__desc  text-center">Copy the product link and share it with anyone.</p>
+        <div class="lum-modal__content py-4 lg:py-10">
+            <div class="lum-modal__linkbox" id="linkBox" data-copy-link>
+                <span class="" id="productLink">lumeraelectric.com/product/S7593P</span>
+                <button class="lum-modal__copy-icon" type="button" id="copyIconBtn" aria-label="Copy link">
+                    <i class="lum-icon lum-icon--copy  lum-icon--sm"></i>
+                    <i class="lum-icon  lum-icon--clipboard-check  lum-icon--md"></i>
+                </button>
+            </div>
+        </div>
+        <div class="lum-modal__actions pt-4 lg:tp-0 ">
+            <button class="lum-button primary" type="button" data-copy-link>
+                <span class="h__lum-button"><span class="text__lum-button">Copy link</span></span>
+            </button>
+            <button class="lum-button outline" type="button" data-modal-close>
+                <span class="h__lum-button"><span class="text__lum-button">Cancel</span></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="lum-modal" id="modal-color" data-modal>
+    <button class="lum-modal__overlay" type="button" data-modal-close aria-label="Close"></button>
+    <div class="lum-modal__panel" role="dialog" aria-modal="true">
+        <div class="lum-modal__handle"></div>
+        <button class="lum-modal__close" type="button" data-modal-close aria-label="Close">
+            <i class="lum-icon lum-icon--close lum-icon--md"></i>
+        </button>
+        <h2 class="lum-modal__ title lum-heading-xs">Share This Product</h2>
+        <p class="lum-modal__desc  ">Copy the product link and share it with anyone.</p>
+        <div class="lum-modal__content py-4 lg:py-10 ">
+            <p class=" mb-2 lum-text-sm  flex gap-2"><span class="lum-bold">Color Selected:</span> <span>Blue</span></p>
+            <div class="lum-swatches flex gap-2 flex-wrap">
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+                <button disabled class="lum-swatch " style="--_c:#27ae60" type="button">
+                        <span class="lum-swatch__chip  lg">
+                           <i class="lum-icon lum-icon--close "></i>
+                        </span>
+                </button>
+            </div>
+        </div>
+        <div class="lum-modal__actions pt-4 lg:py-0 ">
+            <button class="lum-button primary" type="button">
+                <span class="h__lum-button"><span class="text__lum-button">Select Color</span></span>
+            </button>
+            <button class="lum-button outline" type="button" data-modal-close>
+                <span class="h__lum-button"><span class="text__lum-button">Cancel</span></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="lum-modal" id="modal-favorite" data-modal>
+    <button class="lum-modal__overlay" type="button" data-modal-close aria-label="Close"></button>
+    <div class="lum-modal__panel">
+        <button class="lum-modal__close" type="button" data-modal-close aria-label="Close">
+            <i class="lum-icon lum-icon--close lum-icon--md"></i>
+        </button>
+
+        <!-- ===== STEP 1: email ===== -->
+        <div class="lum-step is-active" data-step="1">
+            <h2 class="lum-modal__title lum-heading-xs text-center">Sign in To Account</h2>
+            <p class="lum-modal__desc text-center">Enter your email to sign in or create an account and save this item to your favorites.</p>
+            <div class="lum-modal__content py-4 lg:py-10">
+                <form>
+                    <div class="lum-field">
+                        <label class="lum-field__label mb-2" for="e1">Email <span>(required)</span></label>
+                        <input class="lum-field__input" id="e1" type="email" placeholder="Enter Your Email" autocomplete="email">
+                        <p class="lum-field__error">Invalid Email code. Please try again.</p>
+                    </div>
+                    <p style="color: #7A869A" class="lum-text-xs py-4 lg:pb-4 text-center lg:pt-6">
+                        By continuing, you agree to our Terms & Privacy Policy.
+                    </p>
+                    <div class="favorite-login__continue">
+                        <button class="lum-button primary" type="button" data-step-next="2">
+                            <span class="h__lum-button"><span class="text__lum-button">Continue</span></span>
+                        </button>
+                    </div>
+                    <div class="divider"><span></span><p>or</p><span></span></div>
+                    <a href="#" class="lum-button outline">
+                        <i style="color: #5433EB" class="lum-icon lum-icon--Shop lum-icon--lg favorite-login__shop-icon"></i>
+                        <span class="favorite-login__shop-span">Sign in with Shop</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <!-- ===== STEP 2: verify code ===== -->
+        <div class="lum-step" data-step="2">
+            <h2 class="lum-modal__title text-center">Verify Your Identity</h2>
+            <p class="lum-modal__desc text-center mb-4">Enter the 6-digit verification code we sent to your phone number.</p>
+            <div class="favorite-verify mb-14 flex justify-center">
+                <div class="favorite-verify__code " data-otp="">
+                    <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 1">
+                    <input class="favorite-verify__input " type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+                    <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+                    <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+                    <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+                    <input class="favorite-verify__input" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+                </div>
+            </div>
+
+            <p class="verify-modal__error text-center" aria-live="polite">Invalid verification code. Please try again.</p>
+
+            <div class="verify-modal__meta text-center flex justify-center items-center gap-2 py-4">
+                <span class="lum-text-xs" style="color: #7A869A" id="resendCountdown">Resend code in <span id="resendTimer">00:50</span></span>
+                <span style="color: #7A869A">•</span>
+                <button class="verify-modal__link-button" type="button" data-step-back="1">
+                    <i style="color: #1677FF" class="lum-icon lum-icon--square-pen lum-icon--sm"></i>
+                    <span style="color: #1677FF">Edit Email</span>
+                </button>
+            </div>
+
+            <div class="lum-modal__actions pt-4 lg:tp-0 ">
+                <button class="lum-button primary" type="button" data-copy-link>
+                    <span class="h__lum-button"><span class="text__lum-button">Verify Code </span></span>
+                </button>
+                <button class="lum-button outline"  type="button" data-modal-close>
+                    <span class="h__lum-button"><span class="text__lum-button">Cancel</span></span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="./assets/global.js"></script>
+
+</body>
+</html>

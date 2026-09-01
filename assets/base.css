@@ -5,7 +5,14 @@
     text-decoration: none;
     list-style: none;
 }
-
+button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.pointer{
+    cursor: pointer;
+}
 :root {
     --lum-primary-1: #ecf7ee;
     --lum-primary-2: #c5e8cd;
@@ -18,6 +25,12 @@
     --lum-primary-9: #03411f;
     --lum-primary-10: #011c0a;
     --lum-primary: var(--lum-primary-6);
+    --lum-danger: #ff6666;
+    --lum-success: #12B76A;
+    --lum-star:    #FAAD14;
+    --lum-shop:    #5433EB;
+    --lum-shop-dot:#5A31F4;
+    --lum-info:    #0C8CE9;
     --lum-n-1000: #000000;
     --lum-n-900: #091e42;
     --lum-n-800: #172b4d;
@@ -43,6 +56,7 @@
     --lum-w-body: 500;
     --lum-w-heading: 700;
     --lum-heading-md:20.25px;
+    --lum-heading-xs:16px;
 
     --lum-text-lg: 16px;
     --lum-text-lg-lh: 32px;
@@ -56,8 +70,7 @@
     --lum-text-xxs-lh: 12px;
     --lum-text-xxxs: 8.88px;
     --lum-text-xxxs-lh: 12px;
-
-
+    --lum-h-heading-xs: 32px;
     --lum-h-heading-md: 36px;
     --lum-h-lg: 22.78px;
     --lum-h-lg-lh: 40px;
@@ -88,7 +101,7 @@
 
 @media screen and (min-width: 1024px) {
     :root {
-
+        --lum-heading-xs: 20.25px ;
         --lum-heading-md:32.44px;
         --lum-text-lg: 18px;
         --lum-text-lg-lh: 36px;
@@ -103,6 +116,7 @@
         --lum-text-xxxs: 9.99px;
         --lum-text-xxxs-lh: 12px;
         --lum-h-heading-md: 56px;
+        --lum-h-heading-xs: 32px;
         --lum-h-lg: 41.05px;
         --lum-h-lg-lh: 72px;
         --lum-h-lg-w: 900;
@@ -117,6 +131,10 @@
     }
 }
 
+.text-primary {
+    color: var(--lum-primary) !important;
+}
+
 /* ---------- Typography utilities ---------- */
 .lum-text-lg, .lum-text-md, .lum-text-sm,
 .lum-text-xs, .lum-text-2xs, .lum-text-3xs {
@@ -128,12 +146,19 @@
     font-weight: var(--lum-w-heading);
 }
 
-
+.lum-bold{
+    font-weight: var(--lum-w-heading);
+}
 /*heading*/
 .lum-heading-md{
     font-size: var(--lum-heading-md);
     font-weight: var(--lum-w-heading);
     line-height: var(--lum-h-heading-md);
+}
+.lum-heading-xs{
+    font-size: var(--lum-heading-xs);
+    font-weight: var(--lum-w-heading);
+    line-height: var(--lum-h-heading-xs);
 }
 
 /*=======================*/
@@ -298,6 +323,49 @@
         color: var(--lum-n-30);
     }
 }
+
+
+/* ==========================================================================
+   EMAIL FIELD (lum-field) — states: default / focus / error.
+   (used here with a fallback so the demo renders standalone)
+   ========================================================================== */
+.lum-field {
+    --_danger: var(--lum-danger);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.lum-field__label { font-size: var(--lum-text-sm); font-weight: 700; color: var(--lum-n-900); }
+.lum-field__label span { color: var(--lum-primary   ); font-weight: 500; }
+
+.lum-field__input {
+    block-size: 48px;
+    padding-inline: 16px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 8px;
+    background: var(--lum-n-0);
+    font-family: inherit;
+    font-size: var(--lum-text-sm);
+    color: var(--lum-n-1000);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.lum-field__input::placeholder { color: var(--lum-n-100); }
+.lum-field__input:focus{
+    border-color: var(--lum-primary);
+    box-shadow: 0 0 0 3px rgba(21, 174, 92, .15);
+}
+
+.lum-field--error .lum-field__input {
+    border-color: var(--_danger);
+    box-shadow: 0 0 0 3px rgba(255, 102, 102, .15);
+}
+.lum-field__error {
+    font-size: var(--lum-text-xs);
+    color: var(--_danger);
+    display: none;
+}
+.lum-field--error .lum-field__error { display: block; }
 /* ==========================================================================
    BREADCRUMB (lum-breadcrumb)
    ========================================================================== */
@@ -753,12 +821,6 @@
        and the ellipsis. Hide the rest. */
     .lum-pager__item[data-role="page"]:not([data-keep]) { display: none; }
 }
-.lum-swatches {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px 16px;
-    padding: 16px 0;
-}
 
 .lum-swatch {
     --_c: var(--lum-n-40);          /* fallback colour */
@@ -770,24 +832,49 @@
     background: transparent;
     cursor: pointer;
 
+    .lum-swatch__chip {
+        inline-size: 24px;
+        block-size: 24px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--_c);
+        border: 1px solid var(--lum-n-30);
+        box-shadow: inset 0 0 0 2px var(--lum-n-0);
+        transition: box-shadow .2s ease;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        i{
+            display: none;
+            color: var(--lum-n-0);
+            width: 16px;
+            height: 16px;
+        }
+        &.lg{
+            @media screen and (min-width: 1024px) {
+                inline-size: 40px;
+                block-size: 40px;
+                box-shadow: inset 0 0 0 4px var(--lum-n-0);
+                i{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+        &.is-selected{
+            box-shadow: inset 0 0 0 3px var(--lum-n-0), 0 0 0 2px var(--lum-primary);
+        }
+    }
+    &:disabled{
+        color: var(--lum-n-1000);
+        i{
+            display: inline-block;
+        }
+    }
 }
-.lum-swatch__chip {
-    inline-size: 24px;
-    block-size: 24px;
-    border-radius: 8px;
-    background: var(--_c);
-    border: 1px solid var(--lum-n-30);
-    box-shadow: inset 0 0 0 3px var(--lum-n-0);
-    transition: box-shadow .2s ease;
-}
-.lum-swatch__name { font-size: var(--lum-text-md); color: var(--lum-n-1000); }
 
-/* selected: primary ring hugging the chip (keeps the white inner gap) */
-.lum-swatch.is-selected .lum-swatch__chip {
-    box-shadow: inset 0 0 0 3px var(--lum-n-0), 0 0 0 2px var(--lum-primary);
-}
-.lum-swatch:focus-visible { outline: 0; }
-.lum-swatch:focus-visible .lum-swatch__chip { box-shadow: inset 0 0 0 3px var(--lum-n-0), 0 0 0 2px var(--lum-primary); }
+
+
 
 
 /*-------------------- Input -------------------- */

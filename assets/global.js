@@ -61,16 +61,19 @@
 
 (function () {
     'use strict';
-    /* single-select demo; swap toggle logic for multi-select if needed */
     document.querySelectorAll('.lum-swatches').forEach(function (group) {
+
         group.addEventListener('click', function (e) {
             var btn = e.target.closest('.lum-swatch');
             if (!btn) return;
-            group.querySelectorAll('.lum-swatch').forEach(function (s) { s.classList.toggle('is-selected', s === btn); });
+
+            if (btn.classList.contains('disabled')) return;
+            group.querySelectorAll('.lum-swatch').forEach(function (s) {
+                s.querySelector('.lum-swatch__chip').classList.toggle('is-selected', s === btn);
+            });
         });
     });
 })();
-
 
 (function () {
     document.querySelectorAll('[data-fsearch]').forEach(function (group) {
@@ -200,4 +203,132 @@
 
     });
 
+})();
+
+
+(function () {
+    function openModal(id) {
+        var modal = document.getElementById('modal-' + id);
+        if (!modal) return;
+        modal.setAttribute('data-open', '');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(modal) {
+        modal.removeAttribute('data-open');
+        if (!document.querySelector('.lum-modal[data-open]')) document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-modal-open]');
+        if (opener) {
+            openModal(opener.getAttribute('data-modal-open'));
+            return;
+        }
+        var closer = e.target.closest('[data-modal-close]');
+        if (closer) {
+            closeModal(closer.closest('.lum-modal'));
+        }
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            var open = document.querySelector('.lum-modal[data-open]');
+            if (open) closeModal(open);
+        }
+    });
+})();
+// copy link
+(function () {
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-copy-link]');
+        if (!btn) return;
+        e.preventDefault();
+        var link = document.getElementById('productLink');
+        if (!link) return;
+        navigator.clipboard.writeText(link.textContent.trim());
+        var box = document.getElementById('linkBox');
+        if (box) box.classList.add('is-copied');
+        var label = document.querySelector('.lum-modal__actions .text__lum-button');
+        var original = label ? label.textContent : null;
+        if (label) label.textContent = 'Copied!';
+        setTimeout(function () {
+            if (box) box.classList.remove('is-copied');
+            if (label && original !== null) label.textContent = original;
+        }, 1500);
+    });
+})();
+
+
+/* OTP inputs: auto-advance, backspace-back, paste-to-fill.
+Works for any number of inputs in a [data-otp] group. */
+(function () {
+    'use strict';
+    document.querySelectorAll('[data-otp]').forEach(function (group) {
+        var inputs = Array.prototype.slice.call(group.querySelectorAll('input'));
+
+        function onlyDigits(str) { return (str || '').replace(/\D/g, ''); }
+
+        inputs.forEach(function (input, i) {
+            // typing a digit -> keep 1 char, move to next
+            input.addEventListener('input', function () {
+                var v = onlyDigits(input.value);
+                input.value = v.slice(-1);            // keep last digit only
+                if (input.value && i < inputs.length - 1) inputs[i + 1].focus();
+            });
+
+            // backspace on empty -> go back
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Backspace' && !input.value && i > 0) {
+                    inputs[i - 1].focus();
+                    inputs[i - 1].value = '';
+                    e.preventDefault();
+                }
+                // arrow keys move between boxes
+                if (e.key === 'ArrowLeft'  && i > 0) { inputs[i - 1].focus(); e.preventDefault(); }
+                if (e.key === 'ArrowRight' && i < inputs.length - 1) { inputs[i + 1].focus(); e.preventDefault(); }
+            });
+
+            // paste a full code -> spread across boxes
+            input.addEventListener('paste', function (e) {
+                e.preventDefault();
+                var digits = onlyDigits((e.clipboardData || window.clipboardData).getData('text'));
+                if (!digits) return;
+                for (var k = 0; k < inputs.length; k++) {
+                    inputs[k].value = digits[k] || '';
+                }
+                // focus the next empty box, or the last one
+                var next = inputs.findIndex(function (inp) { return !inp.value; });
+                (next === -1 ? inputs[inputs.length - 1] : inputs[next]).focus();
+            });
+        });
+    });
+})();
+
+/* generic modal open/close (shared controller) */
+(function () {
+    'use strict';
+    document.addEventListener('click', function (e) {
+        var o = e.target.closest('[data-modal-open]');
+        if (o) { var m = document.getElementById('modal-' + o.getAttribute('data-modal-open')); if (m){ m.setAttribute('data-open',''); document.body.style.overflow='hidden'; } return; }
+        var c = e.target.closest('[data-modal-close]');
+        if (c) { var mm = c.closest('.lum-modal'); mm.removeAttribute('data-open'); if(!document.querySelector('.lum-modal[data-open]')) document.body.style.overflow=''; }
+    });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ var m=document.querySelector('.lum-modal[data-open]'); if(m){ m.removeAttribute('data-open'); document.body.style.overflow=''; } } });
+})();
+
+/* step switching — specific to this modal */
+(function () {
+    'use strict';
+    function goTo(modal, n) {
+        modal.querySelectorAll('.lum-step').forEach(function (s) {
+            s.classList.toggle('is-active', s.getAttribute('data-step') === n);
+        });
+    }
+    document.addEventListener('click', function (e) {
+        var next = e.target.closest('[data-step-next]');
+        var back = e.target.closest('[data-step-back]');
+        var trigger = next || back;
+        if (!trigger) return;
+        var modal = trigger.closest('.lum-modal');
+        if (!modal) return;
+        goTo(modal, trigger.getAttribute(next ? 'data-step-next' : 'data-step-back'));
+    });
 })();

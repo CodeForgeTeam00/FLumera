@@ -1,0 +1,92 @@
+.lum-checkout-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+}
+.checkout__layout{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.lum-checkout-product__image {
+
+}
+
+.lum-checkout-product__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 8px;
+}
+
+.lum-checkout-product__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.lum-checkout-product__price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.lum-checkout-product__price del{
+    text-decoration: line-through;
+    color: var(--lum-n-200);
+}
+
+.lum-checkout-product__meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lum-checkout-product__attribute {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.lum-checkout-product__attribute-label     {
+    color: var(--lum-n-700);
+
+
+}
+
+.lum-checkout-product__temperature{
+    width: 42px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+.lum-checkout-product__actions {
+    height: 36px;
+    width: 129px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+    padding: 0 16px;
+    margin: 4px 0 0 0;
+}
+.lum-checkout-product__color {
+    width: 16px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    background-color: #1677ff;
+
+    border: 2px solid white;
+    outline: 1px solid #1677ff;
+}
+
+.lum-checkout-product__quantity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

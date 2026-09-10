@@ -51,7 +51,7 @@
     align-items: center;
     gap: 8px;
 }
-.lum-checkout-product__attribute-label     {
+ .lum-checkout-summary__progress-limit.lum-checkout-summary__progress-limit {
     color: var(--lum-n-700);
 
 
@@ -89,4 +89,80 @@
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+.lum-checkout-summary{
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+}
+.lum-checkout-summary__row--total{
+    border-top: 1px dashed var(--lum-n-30);
+}
+
+.lum-checkout-summary__progress {
+    display: flex;
+    flex-direction: column;
+    height: 87px;
+    padding: 16px;
+    margin: 4px 0 0 0;
+
+    background: var(--lum-n-10);
+    border-radius: 16px;
+}
+
+.lum-checkout-summary__progress-text {
+    color: var(--lum-n-700);
+}
+
+.lum-checkout-summary__progress-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+.lum-checkout-summary__progress-track {
+    width: 100%;
+    height: 8px;
+
+    background: var(--lum-n-30);
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.lum-checkout-summary__progress-fill {
+    display: block;
+
+    width: 34%;
+    height: 100%;
+
+    background: var(--lum-primary-6);
+    border-radius: inherit;
+}
+
+ {
+    color: var(--lum-n-700);
+
+}
+
+.lum-checkout-summary__checkout {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--lum-n-40);
+    color: var(--lum-n-300);
+
+    font-family: inherit;
+    font-size: var(--lum-text-sm);
+
+    cursor: not-allowed;
 }

@@ -422,125 +422,195 @@
         <div class="checkout__layout">
             <div class="checkout-bag flex flex-col gap-6 w-full">
 
-            <h2 class="checkout-bag__title lum-h-xs">
-                Bag
-            </h2>
+                <h2 class="checkout-bag__title lum-heading-xs">
+                    Bag
+                </h2>
 
-            <ul class="checkout-bag__list w-full">
+                <ul class="checkout-bag__list w-full">
 
-                <li class="lum-checkout-product">
+                    <li class="lum-checkout-product">
 
-                    <div class="lum-checkout-product__media">
-                        <img
-                                class="lum-checkout-product__image"
-                                src="assets/img-pourdact-card.png"
-                                alt="ABBA Lighting SCB05 LED Wall Light S7593P"
-                        >
-                    </div>
+                        <div class="lum-checkout-product__media">
+                            <img
+                                    class="lum-checkout-product__image"
+                                    src="assets/img-pourdact-card.png"
+                                    alt="ABBA Lighting SCB05 LED Wall Light S7593P"
+                            >
+                        </div>
 
-                    <div class="lum-checkout-product__content">
+                        <div class="lum-checkout-product__content">
 
-                        <div class="lum-checkout-product__header">
+                            <div class="lum-checkout-product__header">
 
-                            <h3 class="lum-checkout-product__title lum-text-lg">
-                                ABBA Lighting SCB05 LED Wall Light S7593P
-                            </h3>
+                                <h3 class="lum-checkout-product__title lum-text-lg">
+                                    ABBA Lighting SCB05 LED Wall Light S7593P
+                                </h3>
 
-                            <div class="lum-checkout-product__price">
+                                <div class="lum-checkout-product__price">
 
-                                <del class="lum-checkout-product__old-price lum-text-lg">
-                                    $1000
-                                </del>
+                                    <del class="lum-checkout-product__old-price lum-text-lg">
+                                        $1000
+                                    </del>
 
-                                <strong class="lum-checkout-product__current-price lum-h-xs">
-                                    $1000
-                                </strong>
+                                    <strong class="lum-checkout-product__current-price lum-h-xs">
+                                        $1000
+                                    </strong>
+
+                                </div>
 
                             </div>
 
-                        </div>
+                            <div class="lum-checkout-product__meta">
 
-                        <div class="lum-checkout-product__meta">
-
-                            <div class="lum-checkout-product__attribute">
+                                <div class="lum-checkout-product__attribute">
 
                                <span class="lum-checkout-product__attribute-label lum-text-xs">
                                    Color:
                                </span>
 
-                                <span class="lum-checkout-product__color"></span>
+                                    <span class="lum-checkout-product__color"></span>
 
-                            </div>
+                                </div>
 
-                            <div class="lum-checkout-product__attribute">
+                                <div class="lum-checkout-product__attribute">
 
                                <span class="lum-checkout-product__attribute-label lum-text-xs">
                                    Wattage:
                                </span>
 
-                                <span class="lum-checkout-product__attribute-value lum-text-sm">
+                                    <span class="lum-checkout-product__attribute-value lum-text-sm">
                                    6W
                                </span>
 
-                            </div>
+                                </div>
 
-                            <div class="lum-checkout-product__attribute">
+                                <div class="lum-checkout-product__attribute">
 
                                <span class="lum-checkout-product__attribute-label lum-text-xs">
                                    Color Temperature:
                                </span>
 
-                                <img
-                                        class="lum-checkout-product__temperature"
-                                        src="assets/color-temperature.png"
-                                        alt=""
+                                    <img
+                                            class="lum-checkout-product__temperature"
+                                            src="assets/color-temperature.png"
+                                            alt=""
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="lum-checkout-product__actions">
+
+                                <button
+                                        class="lum-checkout-product__remove"
+                                        type="button"
+                                        aria-label="Remove product"
                                 >
+                                    <i class="lum-icon lum-icon--clear lum-icon--md"></i>
+                                </button>
+
+                                <button
+                                        class="lum-checkout-product__quantity"
+                                        type="button"
+                                        aria-label="Product quantity"
+                                >
+                            <span class="lum-text-lg">
+                                1
+                            </span>
+                                </button>
+
+                                <button
+                                        class="lum-checkout-product__increase"
+                                        type="button"
+                                        aria-label="Increase quantity"
+                                >
+                            <i class="lum-icon lum-icon--plus lum-icon--xs">
+
+                            </i>
+                                </button>
 
                             </div>
 
                         </div>
 
-                        <div class="lum-checkout-product__actions">
+                    </li>
 
-                            <button
-                                    class="lum-checkout-product__remove"
-                                    type="button"
-                                    aria-label="Remove product"
-                            >
-                                <i class="lum-icon lum-icon--clear lum-icon--md"></i>
-                            </button>
+                </ul>
 
-                            <button
-                                    class="lum-checkout-product__quantity"
-                                    type="button"
-                                    aria-label="Product quantity"
-                            >
-                            <span class="lum-text-lg">
-                                1
-                            </span>
-                            </button>
+            </div>
+            <div class=" lum-checkout-summary w-full flex flex-col gap-4 p-7">
+                <h2 class="lum-checkout-summary__title lum-heading-xs">
+                    Payment info
+                </h2>
+                <div class="lum-checkout-summary__promo flex justify-between py-2">
 
-                            <button
-                                    class="lum-checkout-product__increase"
-                                    type="button"
-                                    aria-label="Increase quantity"
-                            >
-                            <span class="lum-text-lg">
-                                +
-                            </span>
-                            </button>
+                    <span class="lum-checkout-summary__promo-text">
+                        Do you have a Promo Code?
+                    </span>
 
+                    <button class="lum-checkout-summary__promo-action flex gap-2 items-center" type="button">
+                         <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
+                         <span>Add</span>
+
+                    </button>
+                </div>
+                <div class="lum-checkout-summary__details">
+                    <div class="lum-checkout-summary__row flex justify-between py-2">
+                        <span class="lum-checkout-summary__label">Subtotal</span>
+                        <span class="lum-checkout-summary__value">$66.00</span>
+                    </div>
+                    <div class="lum-checkout-summary__row flex justify-between py-2">
+                        <span class="lum-checkout-summary__label">
+                            Estimated Shipping & Handling
+                        </span>
+
+                        <span class="lum-checkout-summary__value">
+                            $2.00
+                        </span>
+                    </div>
+                    <div class="lum-checkout-summary__row flex justify-between py-2">
+                       <span class="lum-checkout-summary__label">
+                           Estimated Tax
+                       </span>
+
+                        <span class="lum-checkout-summary__value">
+                           $2.00
+                        </span>
+                    </div>
+                    <div class="lum-checkout-summary__row lum-checkout-summary__row--total flex justify-between py-2">
+                        <span class="lum-checkout-summary__label lum-heading-xs">
+                            Total
+                        </span>
+                        <span class="lum-checkout-summary__value lum-heading-xs">
+                            $68.00
+                        </span>
+                    </div>
+                </div>
+                <div class="lum-checkout-summary__progress">
+
+                    <p class="lum-checkout-summary__progress-text lum-text-sm  ">
+                        Add $132 more to place your order.
+                    </p>
+
+                    <div class="lum-checkout-summary__progress-row">
+
+                        <div class="lum-checkout-summary__progress-track">
+                            <span class="lum-checkout-summary__progress-fill"></span>
                         </div>
+
+                        <span class="lum-checkout-summary__progress-limit">
+                           $200
+                       </span>
 
                     </div>
 
-                </li>
+                </div>
 
-            </ul>
-
-        </div>
-            <div class="w-full p-7 border">
-
+                    <button disabled  class="lum-button">
+                        <span>Check Out</span>
+                        <i class="lum-icon lum-icon--arrow-right-tight lum-icon--lg"></i>
+                    </button>
             </div>
         </div>
     </section>

@@ -316,7 +316,12 @@ button{
         box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
 
     }
-
+    &:disabled{
+        color: var(--lum-n-200);
+        background: var(--lum-n-40);
+        border-color: var(--lum-n-40);
+        box-shadow: none;
+    }
     &.glass {
         background: rgba(255, 255, 255, 0.30);
         border-color: var(--lum-border);

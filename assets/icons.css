@@ -59,6 +59,14 @@
   }
 
 }
+.lum-icon--minus {
+  -webkit-mask-image: url("./minus.svg");
+  mask-image: url("./minus.svg");
+}
+.lum-icon--plus {
+  -webkit-mask-image: url("./plus.svg");
+  mask-image: url("./plus.svg");
+}
 .lum-icon--refresh {
   -webkit-mask-image: url("./refresh.svg");
   mask-image: url("./refresh.svg");

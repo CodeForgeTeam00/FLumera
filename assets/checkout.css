@@ -1,0 +1,258 @@
+/* ==================================================
+   Checkout Layout
+   ================================================== */
+.checkout__layout {
+    display: grid;
+    padding: 16px;
+    grid-template-columns: 1fr;
+    align-items: start;
+    width: 100%;
+    gap: 16px;
+    justify-content: space-between;
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 380px;
+        padding: 40px 0 0 0;
+        gap:40px;
+    }
+    @media (min-width: 1280px) {
+        grid-template-columns: 1fr 500px;
+        gap: 72px;
+    }
+}
+
+/* ==================================================
+   Checkout Bag
+   ================================================== */
+
+/* Mobile: Bag second */
+.checkout-bag {
+    order: 3;
+    @media (min-width: 1024px) {
+            order: initial;
+    }
+}
+
+.lum-checkout__border {
+    order: 2;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+}
+
+.lum-checkout-product__old-price {
+    text-decoration: line-through;
+    color: var(--lum-n-200);
+}
+
+
+/* ---------- Product Attribute Label ---------- */
+
+/* Mobile behavior */
+.lum-checkout-product__attribute-label {
+    flex-basis: 100%;
+}
+
+@media (min-width: 1024px) {
+    .lum-checkout-product__attribute-label {
+        flex-basis: auto;
+    }
+}
+
+
+/* ---------- Product Temperature ---------- */
+
+.lum-checkout-product__temperature {
+    width: 42px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+
+/* ---------- Product Actions ---------- */
+
+.lum-checkout-product__actions {
+    height: 36px;
+    width: 129px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 16px;
+    padding: 0 16px;
+    margin: 4px 0 0;
+}
+
+
+/* ---------- Product Color ---------- */
+
+.lum-checkout-product__color {
+    width: 16px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #1677ff;
+    border: 2px solid white;
+    outline: 1px solid #1677ff;
+}
+
+
+/* ---------- Product Quantity ---------- */
+
+.lum-checkout-product__quantity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* ==================================================
+   Checkout Summary
+   ================================================== */
+
+/* Mobile: Summary first */
+.lum-checkout-summary {
+    order: 1;
+}
+
+@media (min-width: 1024px) {
+    .lum-checkout-summary {
+        order: initial;
+        border: 1px solid var(--lum-n-30);
+        border-radius: 16px;
+    }
+}
+
+
+/* ---------- Summary Total ---------- */
+
+.lum-checkout-summary__row--total {
+    border-top: 1px dashed var(--lum-n-30);
+}
+
+@media (min-width: 1024px) {
+    .lum-checkout-summary__row--total {
+        border-top: 1px dashed var(--lum-n-30);
+    }
+}
+
+
+/* ---------- Summary Label ---------- */
+
+.lum-checkout-summary__label-s {
+    color: var(--lum-n-700);
+}
+
+
+/* ---------- Summary Progress ---------- */
+
+.lum-checkout-summary__progress {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 4px 0 0;
+    background: var(--lum-n-10);
+    border-radius: 16px;
+}
+
+@media (min-width: 1024px) {
+    .lum-checkout-summary__progress {
+        display: flex;
+        height: 88px;
+        padding: 16px;
+        margin: 0 0 0 0;
+    }
+}
+
+
+/* ---------- Summary Progress Text ---------- */
+
+.lum-checkout-summary__progress-text {
+    color: var(--lum-n-700);
+}
+
+
+/* ---------- Summary Progress Row ---------- */
+
+.lum-checkout-summary__progress-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+@media (min-width: 1024px) {
+    .lum-checkout-summary__progress-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 0;
+    }
+}
+
+
+/* ---------- Summary Progress Track ---------- */
+
+.lum-checkout-summary__progress-track {
+    width: 100%;
+    height: 8px;
+    background: var(--lum-n-30);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* ---------- Summary Progress Fill ---------- */
+
+.lum-checkout-summary__progress-fill {
+    display: block;
+    width: 34%;
+    height: 100%;
+    background: var(--lum-primary-6);
+    border-radius: inherit;
+}
+
+
+/* ---------- Summary Progress Limit ---------- */
+
+.lum-checkout-summary__progress-limit {
+    color: var(--lum-n-700);
+}
+
+
+/* ---------- Summary Color ---------- */
+
+.lum-checkout-summary-color {
+    color: var(--lum-n-700);
+}
+
+
+/* ---------- Summary Promo Action ---------- */
+
+.lum-checkout-summary__promo-action {
+    line-height: var(--lum-h-xxs-lh);
+    font-size: 16px;
+    color: #1677ff;
+}
+
+
+/* ---------- Summary Typography ---------- */
+
+.checkout-primary-line-height {
+    line-height: var(--lum-h-xxs-lh);
+    font-weight: var(--lum-w-body);
+}
+
+
+/* ==================================================
+   Mobile Product Purchase
+   ================================================== */
+
+.lum-product-purchase {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    padding: 16px 12px;
+    border-top: 1px solid var(--lum-n-30);
+    background: var(--lum-n-0);
+}

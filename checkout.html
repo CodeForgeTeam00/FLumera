@@ -387,49 +387,14 @@
     </div>
 </header>
 <main>
-    <!--    <nav class="lum-container pt-10 pb-9">-->
-    <!--        <ol class="flex justify-center items-center gap-6">-->
-    <!--            <li class="lg:flex flex-col gap-2">-->
-    <!--                <span>-->
-    <!--                    <i></i>-->
-    <!--                </span>-->
-    <!--                <span>-->
-    <!--                    Shipping Cart-->
-    <!--                </span>-->
-    <!--                <span></span>-->
-    <!--            </li>-->
-    <!--            <li class="lg:flex flex-col gap-2">-->
-    <!--                <span>-->
-    <!--                    <i></i>-->
-    <!--                </span>-->
-    <!--                <span>-->
-    <!--                    Checkout-->
-    <!--                </span>-->
-    <!--                <span></span>-->
-    <!--            </li>-->
-    <!--            <li class="lg:flex flex-col gap-2">-->
-    <!--                <span>-->
-    <!--                    <i></i>-->
-    <!--                </span>-->
-    <!--                <span>-->
-    <!--                    Order Result-->
-    <!--                </span>-->
-    <!--                <span></span>-->
-    <!--            </li>-->
-    <!--        </ol>-->
-    <!--    </nav>-->
-    <section class="lum-container pt-10 ">
+    <section class="lum-container  ">
         <div class="checkout__layout">
             <div class="checkout-bag flex flex-col gap-6 w-full">
-
                 <h2 class="checkout-bag__title lum-heading-xs">
                     Bag
                 </h2>
-
-                <ul class="checkout-bag__list w-full">
-
-                    <li class="lum-checkout-product">
-
+                <ul class="checkout-bag__list w-full flex flex-col gap-2">
+                    <li class="lum-checkout-product flex items-center justify-between">
                         <div class="lum-checkout-product__media">
                             <img
                                     class="lum-checkout-product__image"
@@ -437,71 +402,42 @@
                                     alt="ABBA Lighting SCB05 LED Wall Light S7593P"
                             >
                         </div>
-
-                        <div class="lum-checkout-product__content">
-
-                            <div class="lum-checkout-product__header">
-
+                        <div class="lum-checkout-product__content w-full flex flex-col gap-2 ps-4 lg:px-4">
+                            <div class="lum-checkout-product__header flex flex-col-reveres lg:flex-row lg:items-center lg:justify-between ">
                                 <h3 class="lum-checkout-product__title lum-text-lg">
                                     ABBA Lighting SCB05 LED Wall Light S7593P
                                 </h3>
-
-                                <div class="lum-checkout-product__price">
-
+                                <div class="lum-checkout-product__price flex items-center gap-2">
                                     <del class="lum-checkout-product__old-price lum-text-lg">
                                         $1000
                                     </del>
-
-                                    <strong class="lum-checkout-product__current-price lum-h-xs">
+                                    <strong class="lum-checkout-product__current-price lum-heading-xs ">
                                         $1000
                                     </strong>
-
                                 </div>
-
                             </div>
-
-                            <div class="lum-checkout-product__meta">
-
-                                <div class="lum-checkout-product__attribute">
-
-                               <span class="lum-checkout-product__attribute-label lum-text-xs">
-                                   Color:
-                               </span>
-
+                            <div class="lum-checkout-product__meta flex flex-wrap items-center gap-1.5">
+                                <div class="lum-checkout-product__attribute flex  items-center ">
+                               <span class="lum-checkout-product__attribute-label lum-text-xs flex  items-center">Color:</span>
                                     <span class="lum-checkout-product__color"></span>
-
                                 </div>
-
-                                <div class="lum-checkout-product__attribute">
-
-                               <span class="lum-checkout-product__attribute-label lum-text-xs">
-                                   Wattage:
-                               </span>
-
-                                    <span class="lum-checkout-product__attribute-value lum-text-sm">
-                                   6W
-                               </span>
-
+                                <div class="lum-checkout-product__attribute flex items-center gap-2">
+                                    <span class="lum-checkout-product__attribute-label lum-text-xs">Wattage:</span>
+                                    <span class="lum-checkout-product__attribute-value lum-text-sm">6W</span>
                                 </div>
-
-                                <div class="lum-checkout-product__attribute">
-
+                                <div class="lum-checkout-product__attribute flex  items-center">
                                <span class="lum-checkout-product__attribute-label lum-text-xs">
                                    Color Temperature:
                                </span>
-
                                     <img
                                             class="lum-checkout-product__temperature"
                                             src="assets/color-temperature.png"
                                             alt=""
                                     >
-
                                 </div>
 
                             </div>
-
                             <div class="lum-checkout-product__actions">
-
                                 <button
                                         class="lum-checkout-product__remove"
                                         type="button"
@@ -511,7 +447,7 @@
                                 </button>
 
                                 <button
-                                        class="lum-checkout-product__quantity"
+                                        class="lum-checkout-product__quantity flex items-center"
                                         type="button"
                                         aria-label="Product quantity"
                                 >
@@ -525,9 +461,7 @@
                                         type="button"
                                         aria-label="Increase quantity"
                                 >
-                            <i class="lum-icon lum-icon--plus lum-icon--xs">
-
-                            </i>
+                                    <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
                                 </button>
 
                             </div>
@@ -535,50 +469,200 @@
                         </div>
 
                     </li>
+                    <li class="lum-checkout-product flex items-center justify-between">
+                        <div class="lum-checkout-product__media">
+                            <img
+                                    class="lum-checkout-product__image"
+                                    src="assets/img-pourdact-card.png"
+                                    alt="ABBA Lighting SCB05 LED Wall Light S7593P"
+                            >
+                        </div>
+                        <div class="lum-checkout-product__content w-full flex flex-col gap-2 ps-4 lg:px-4">
+                            <div class="lum-checkout-product__header flex flex-col-reveres lg:flex-row lg:items-center lg:justify-between ">
+                                <h3 class="lum-checkout-product__title lum-text-lg">
+                                    ABBA Lighting SCB05 LED Wall Light S7593P
+                                </h3>
+                                <div class="lum-checkout-product__price flex items-center gap-2">
+                                    <del class="lum-checkout-product__old-price lum-text-lg">
+                                        $1000
+                                    </del>
+                                    <strong class="lum-checkout-product__current-price lum-heading-xs ">
+                                        $1000
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="lum-checkout-product__meta flex flex-wrap items-center gap-1.5">
+                                <div class="lum-checkout-product__attribute">
+                                    <span class="lum-checkout-product__attribute-label lum-text-xs">Color:</span>
+                                    <span class="lum-checkout-product__color"></span>
+                                </div>
+                                <div class="lum-checkout-product__attribute flex items-center gap-2">
+                                    <span class="lum-checkout-product__attribute-label lum-text-xs">Wattage:</span>
+                                    <span class="lum-checkout-product__attribute-value lum-text-sm">6W</span>
+                                </div>
+                                <div class="lum-checkout-product__attribute">
+                               <span class="lum-checkout-product__attribute-label lum-text-xs">
+                                   Color Temperature:
+                               </span>
+                                    <img
+                                            class="lum-checkout-product__temperature"
+                                            src="assets/color-temperature.png"
+                                            alt=""
+                                    >
+                                </div>
 
+                            </div>
+                            <div class="lum-checkout-product__actions">
+                                <button
+                                        class="lum-checkout-product__remove"
+                                        type="button"
+                                        aria-label="Remove product"
+                                >
+                                    <i class="lum-icon lum-icon--clear lum-icon--md"></i>
+                                </button>
+
+                                <button
+                                        class="lum-checkout-product__quantity flex items-center"
+                                        type="button"
+                                        aria-label="Product quantity"
+                                >
+                            <span class="lum-text-lg">
+                                1
+                            </span>
+                                </button>
+
+                                <button
+                                        class="lum-checkout-product__increase"
+                                        type="button"
+                                        aria-label="Increase quantity"
+                                >
+                                    <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+                    <li class="lum-checkout-product flex items-center justify-between">
+                        <div class="lum-checkout-product__media">
+                            <img
+                                    class="lum-checkout-product__image"
+                                    src="assets/img-pourdact-card.png"
+                                    alt="ABBA Lighting SCB05 LED Wall Light S7593P"
+                            >
+                        </div>
+                        <div class="lum-checkout-product__content w-full flex flex-col gap-2 ps-4 lg:px-4">
+                            <div class="lum-checkout-product__header flex flex-col-reveres lg:flex-row lg:items-center lg:justify-between ">
+                                <h3 class="lum-checkout-product__title lum-text-lg">
+                                    ABBA Lighting SCB05 LED Wall Light S7593P
+                                </h3>
+                                <div class="lum-checkout-product__price flex items-center gap-2">
+                                    <del class="lum-checkout-product__old-price lum-text-lg">
+                                        $1000
+                                    </del>
+                                    <strong class="lum-checkout-product__current-price lum-heading-xs ">
+                                        $1000
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="lum-checkout-product__meta flex flex-wrap items-center gap-1.5">
+                                <div class="lum-checkout-product__attribute">
+                                    <span class="lum-checkout-product__attribute-label lum-text-xs">Color:</span>
+                                    <span class="lum-checkout-product__color"></span>
+                                </div>
+                                <div class="lum-checkout-product__attribute flex items-center gap-2">
+                                    <span class="lum-checkout-product__attribute-label lum-text-xs">Wattage:</span>
+                                    <span class="lum-checkout-product__attribute-value lum-text-sm">6W</span>
+                                </div>
+                                <div class="lum-checkout-product__attribute">
+                               <span class="lum-checkout-product__attribute-label lum-text-xs">
+                                   Color Temperature:
+                               </span>
+                                    <img
+                                            class="lum-checkout-product__temperature"
+                                            src="assets/color-temperature.png"
+                                            alt=""
+                                    >
+                                </div>
+
+                            </div>
+                            <div class="lum-checkout-product__actions">
+                                <button
+                                        class="lum-checkout-product__remove"
+                                        type="button"
+                                        aria-label="Remove product"
+                                >
+                                    <i class="lum-icon lum-icon--clear lum-icon--md"></i>
+                                </button>
+
+                                <button
+                                        class="lum-checkout-product__quantity flex items-center"
+                                        type="button"
+                                        aria-label="Product quantity"
+                                >
+                            <span class="lum-text-lg">
+                                1
+                            </span>
+                                </button>
+
+                                <button
+                                        class="lum-checkout-product__increase"
+                                        type="button"
+                                        aria-label="Increase quantity"
+                                >
+                                    <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </li>
                 </ul>
-
             </div>
-            <div class=" lum-checkout-summary w-full flex flex-col gap-4 p-7">
+            <div class="lum-checkout__border lg:hidden "></div>
+            <div class=" lum-checkout-summary w-full flex flex-col gap-4 lg:p-4 xl:p-8">
                 <h2 class="lum-checkout-summary__title lum-heading-xs">
                     Payment info
                 </h2>
-                <div class="lum-checkout-summary__promo flex justify-between py-2">
 
-                    <span class="lum-checkout-summary__promo-text">
-                        Do you have a Promo Code?
-                    </span>
+                <div class="lum-checkout-summary__details checkout-primary-line-height">
+                    <div class="lum-checkout-summary__promo flex justify-between py-2">
+                        <span class="lum-checkout-summary__promo-text lum-checkout-summary-color lum-text-md ">
+                            Do you have a Promo Code?
+                        </span>
+                        <button class="lum-checkout-summary__promo-action flex items-center gap-2 " type="button">
+                            <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
+                            <span class="">Add</span>
 
-                    <button class="lum-checkout-summary__promo-action flex gap-2 items-center" type="button">
-                         <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
-                         <span>Add</span>
+                        </button>
 
-                    </button>
-                </div>
-                <div class="lum-checkout-summary__details">
+                    </div>
+
                     <div class="lum-checkout-summary__row flex justify-between py-2">
-                        <span class="lum-checkout-summary__label">Subtotal</span>
-                        <span class="lum-checkout-summary__value">$66.00</span>
+                        <span class="lum-checkout-summary__label lum-checkout-summary-color lum-text-md">Subtotal</span>
+                        <span class="lum-checkout-summary__value lum-text-md">$66.00</span>
                     </div>
                     <div class="lum-checkout-summary__row flex justify-between py-2">
-                        <span class="lum-checkout-summary__label">
+                        <span class="lum-checkout-summary__label lum-checkout-summary-color lum-text-md">
                             Estimated Shipping & Handling
                         </span>
 
-                        <span class="lum-checkout-summary__value">
-                            $2.00
+                        <span class="lum-checkout-summary__value lum-text-md">
+                            $2.00000
                         </span>
                     </div>
                     <div class="lum-checkout-summary__row flex justify-between py-2">
-                       <span class="lum-checkout-summary__label">
+                       <span class="lum-checkout-summary__label lum-checkout-summary-color lum-text-md">
                            Estimated Tax
                        </span>
 
-                        <span class="lum-checkout-summary__value">
+                        <span class="lum-checkout-summary__value lum-text-md">
                            $2.00
                         </span>
                     </div>
-                    <div class="lum-checkout-summary__row lum-checkout-summary__row--total flex justify-between py-2">
+                    <div class="lum-checkout-summary__row lum-checkout-summary__row--total flex justify-between py-2   ">
                         <span class="lum-checkout-summary__label lum-heading-xs">
                             Total
                         </span>
@@ -587,31 +671,31 @@
                         </span>
                     </div>
                 </div>
-                <div class="lum-checkout-summary__progress">
+                <div class="hidden lg:block ">
+                    <div class=" hidden lum-checkout-summary__progress   ">
 
-                    <p class="lum-checkout-summary__progress-text lum-text-sm  ">
-                        Add $132 more to place your order.
-                    </p>
+                        <p class="lum-checkout-summary__progress-text lum-text-sm  ">
+                            Add $132 more to place your order.
+                        </p>
 
-                    <div class="lum-checkout-summary__progress-row">
+                        <div class="lum-checkout-summary__progress-row">
 
-                        <div class="lum-checkout-summary__progress-track">
-                            <span class="lum-checkout-summary__progress-fill"></span>
-                        </div>
+                            <div class="lum-checkout-summary__progress-track">
+                                <span class="lum-checkout-summary__progress-fill"></span>
+                            </div>
 
-                        <span class="lum-checkout-summary__progress-limit">
+                            <span class="lum-checkout-summary__progress-limit">
                            $200
                        </span>
-
+                        </div>
                     </div>
-
                 </div>
-
-                    <button disabled  class="lum-button">
-                        <span>Check Out</span>
-                        <i class="lum-icon lum-icon--arrow-right-tight lum-icon--lg"></i>
+                    <button disabled  class="lum-button hidden lg:flex">
+                        <span class="lum-text-sm ">Check Out</span>
+                        <i class="lum-icon lum-icon--arrow-right-tight lum-icon--sm"></i>
                     </button>
             </div>
+
         </div>
     </section>
 </main>
@@ -937,6 +1021,39 @@
     </div>
 </footer>
 <!-- ============ Mobile full-screen search ============ -->
+<div class="lum-product-purchase lg:hidden">
+    <div class="lum-product-purchase__inner">
+        <div class="lum-checkout-summary__progress">
+
+            <p class="lum-checkout-summary__progress-text lum-text-sm  ">
+                Add $132 more to place your order.
+            </p>
+
+            <div class="lum-checkout-summary__progress-row">
+
+                <div class="lum-checkout-summary__progress-track">
+                    <span class="lum-checkout-summary__progress-fill"></span>
+                </div>
+
+                <span class="lum-checkout-summary__progress-limit">
+                           $200
+                       </span>
+            </div>
+        </div>
+        <div class="lum-checkout-summary__row lum-checkout-summary__row--total flex items-center gap-2 py-2 border-">
+            <span class="lum-checkout-summary__label-s ">
+                Total:
+            </span>
+            <span class="lum-checkout-summary__value lum-h-md">
+                $68.00
+            </span>
+        </div>
+        <button disabled="" class="lum-button">
+            <span class="lum-text-sm ">Check Out</span>
+            <i class="lum-icon lum-icon--arrow-right-tight lum-icon--sm"></i>
+        </button>
+    </div>
+</div>
 <div class="lum-msearch" data-msearch data-state="empty">
     <div class="lum-msearch__bar">
         <div class="lum-msearch__field">

@@ -31,7 +31,6 @@
             order: initial;
     }
 }
-
 .lum-checkout__border {
     order: 2;
     border: 1px solid var(--lum-n-30);
@@ -42,8 +41,6 @@
     text-decoration: line-through;
     color: var(--lum-n-200);
 }
-
-
 /* ---------- Product Attribute Label ---------- */
 
 /* Mobile behavior */
@@ -56,8 +53,6 @@
         flex-basis: auto;
     }
 }
-
-
 /* ---------- Product Temperature ---------- */
 
 .lum-checkout-product__temperature {
@@ -66,7 +61,10 @@
     border-radius: 4px;
 }
 
-
+.lum-checkout-product__media{
+    aspect-ratio: 1;
+    object-fit: contain;
+}
 /* ---------- Product Actions ---------- */
 
 .lum-checkout-product__actions {
@@ -80,8 +78,6 @@
     padding: 0 16px;
     margin: 4px 0 0;
 }
-
-
 /* ---------- Product Color ---------- */
 
 .lum-checkout-product__color {
@@ -92,16 +88,6 @@
     border: 2px solid white;
     outline: 1px solid #1677ff;
 }
-
-
-/* ---------- Product Quantity ---------- */
-
-.lum-checkout-product__quantity {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
 
 /* ==================================================
    Checkout Summary
@@ -119,8 +105,6 @@
         border-radius: 16px;
     }
 }
-
-
 /* ---------- Summary Total ---------- */
 
 .lum-checkout-summary__row--total {
@@ -132,17 +116,12 @@
         border-top: 1px dashed var(--lum-n-30);
     }
 }
-
-
 /* ---------- Summary Label ---------- */
 
 .lum-checkout-summary__label-s {
     color: var(--lum-n-700);
 }
-
-
 /* ---------- Summary Progress ---------- */
-
 .lum-checkout-summary__progress {
     display: flex;
     flex-direction: column;
@@ -160,34 +139,11 @@
         margin: 0 0 0 0;
     }
 }
-
-
 /* ---------- Summary Progress Text ---------- */
 
 .lum-checkout-summary__progress-text {
     color: var(--lum-n-700);
 }
-
-
-/* ---------- Summary Progress Row ---------- */
-
-.lum-checkout-summary__progress-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 0;
-}
-
-@media (min-width: 1024px) {
-    .lum-checkout-summary__progress-row {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 0;
-    }
-}
-
-
 /* ---------- Summary Progress Track ---------- */
 
 .lum-checkout-summary__progress-track {
@@ -197,8 +153,6 @@
     border-radius: 8px;
     overflow: hidden;
 }
-
-
 /* ---------- Summary Progress Fill ---------- */
 
 .lum-checkout-summary__progress-fill {
@@ -208,39 +162,27 @@
     background: var(--lum-primary-6);
     border-radius: inherit;
 }
-
-
 /* ---------- Summary Progress Limit ---------- */
 
 .lum-checkout-summary__progress-limit {
     color: var(--lum-n-700);
 }
-
-
 /* ---------- Summary Color ---------- */
 
 .lum-checkout-summary-color {
     color: var(--lum-n-700);
 }
-
-
 /* ---------- Summary Promo Action ---------- */
 
 .lum-checkout-summary__promo-action {
-    line-height: var(--lum-h-xxs-lh);
-    font-size: 16px;
     color: #1677ff;
 }
-
-
 /* ---------- Summary Typography ---------- */
 
 .checkout-primary-line-height {
     line-height: var(--lum-h-xxs-lh);
     font-weight: var(--lum-w-body);
 }
-
-
 /* ==================================================
    Mobile Product Purchase
    ================================================== */

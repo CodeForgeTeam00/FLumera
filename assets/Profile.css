@@ -1,0 +1,134 @@
+.lum-account-layout {
+    display: grid;
+
+
+    @media (min-width: 1024px) {
+
+    }
+    @media (min-width: 1280px) {
+        grid-template-columns:1fr 1134px  ;
+        gap: 24px;
+    }
+}
+
+.lum-account-sidebar {
+    border: 1px solid var(--lum-border);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+
+}
+
+.lum-account-sidebar__profile {
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-bottom: 1px solid var(--lum-border);
+    padding: 0 24px 24px 24px;
+}
+
+.lum-account-sidebar__avatar {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: var(--lum-n-1000);
+    justify-content: center;
+    @media (min-width: 1024px) {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+.lum-account-sidebar__abbreviation{
+    color: var(--lum-n-0);
+}
+.lum-account-sidebar__nav{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    @media (min-width: 1024px) {
+        padding: 24px;
+    }
+
+}
+.lum-account-sidebar__item{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+}
+.lum-account-sidebar__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px 24px;
+
+    color: var(--lum-n-100);
+    border-radius: 8px;
+}
+
+.lum-account-sidebar__item--active {
+    color: var(--lum-primary-6);
+    background: var(--lum-primary-1);
+}
+
+.lum-account-sidebar__item--active::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 20px;
+
+    transform: translateY(-50%) translateX(-25%);
+
+    background: var(--lum-primary-6);
+    border-radius:  4px   ;
+}
+.lum-account-info{
+    border: 1px solid var(--lum-border);
+    border-radius: 24px;
+}
+.lum-account-info__header{
+    border-bottom: 1px solid var(--lum-border);
+}
+.lum-primary-border{
+    border: 1px solid var(--lum-border);
+}
+.lum-primary-border-t{
+    border-top: 1px solid var(--lum-border);
+}
+.lum-primary-border-b{
+    border-bottom: 1px solid var(--lum-border);
+}
+.lum-primary-border-r{
+        border-right: 1px solid var(--lum-border);
+}
+.lum-primary-border-l{
+    border-left: 1px solid var(--lum-border);
+}
+.lum-border-dashed{
+    border-bottom: 1px dashed var(--lum-n-20);
+}
+.lum-account-info__row-label{
+ width:128px ;
+}
+.lum-account-sidebar__item--active {
+    color: var(--lum-primary-6);
+}
+.lum-account-sidebar__item-icon ,.lum-account-sidebar__item-span{
+    color: var(--lum-n-100);
+}
+
+.primary-color-text{
+    color: var(--lum-n-700);
+}

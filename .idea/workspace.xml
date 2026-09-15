@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629a3bbc-5619-4fcd-bf15-0a95d8deb729" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/Profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/logout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/checkout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -66,6 +70,7 @@
     &quot;git.auto.fetch.suggestion.counter&quot;: &quot;1&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/mj794/OneDrive/Dokumenty/project/New folder/assets&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -111,6 +116,13 @@
       <workItem from="1789215195113" duration="1626000" />
       <workItem from="1789223755033" duration="9207000" />
       <workItem from="1789285450808" duration="19210000" />
+      <workItem from="1789371489812" duration="900000" />
+      <workItem from="1789372646442" duration="41000" />
+      <workItem from="1789372741140" duration="9000" />
+      <workItem from="1789377289773" duration="195000" />
+      <workItem from="1789377502507" duration="6228000" />
+      <workItem from="1789386340980" duration="13199000" />
+      <workItem from="1789460371394" duration="5523000" />
     </task>
     <servers />
   </component>

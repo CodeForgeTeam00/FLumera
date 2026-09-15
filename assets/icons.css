@@ -59,6 +59,10 @@
   }
 
 }
+.lum-icon--marker-pin{
+  -webkit-mask-image: url("./marker-pin.svg");
+  mask-image: url("./marker-pin.svg");
+}
 .lum-icon--logout {
   -webkit-mask-image: url("./logout.svg");
   mask-image: url("logout.svg");

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./assets/Profile.css">
 
 </head>
-<body>
+<body class="overflow-hidden ">
 <header class="lum-header">
     <div class="lum-container">
         <div class="desktop__header">
@@ -47,8 +47,8 @@
         </div>
     </div>
 </header>
-<main class="p-4 lg:pt-10 ">
-    <div class="lum-container lum-account-layout">
+<main class="p-4 lg:pt-10 overflow-hidden    ">
+    <div class="lum-container lum-account-layout ">
 
         <aside class="lum-account-sidebar">
 
@@ -92,12 +92,12 @@
 
         </aside>
 
-        <div class="lum-orders flex flex-col gap-4 ">
+        <div class="lum-orders  flex flex-col gap-4 ">
             <div class="flex items-center gap-2 ">
                 <i class="lum-icon--home lum-icon lum-icon-lg"></i>
                 <h1 class="lum-h-sm">Dashboard</h1>
             </div>
-            <section class="lum-account-info">
+            <section class="lum-account-info lum-primary-border">
 
                 <div class="lum-account-info__header flex items-center justify-between py-4 px-6 ">
 
@@ -131,17 +131,17 @@
                 </dl>
 
             </section>
-            <section class="lum-address lum-primary-border px-6 py-4">
+            <section class="lum-address lum-primary-border  ">
 
-                <div class="lum-address__header">
+                <div class="lum-address__header flex items-center lum-primary-border-b justify-between px-6 py-4 ">
 
-                    <h2 class="lum-address__title">
+                    <h2 class="lum-address__title lum-h-2xs ">
                         Address
                     </h2>
 
-                    <button class="lum-address__add" type="button">
-                        <i class="lum-icon lum-icon--plus lum-icon--sm"></i>
-                        <span>Add</span>
+                    <button class="lum-address__add flex items-center gap-2" type="button">
+                        <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
+                        <span class="lum-text-md">Add</span>
                     </button>
 
                 </div>
@@ -149,20 +149,21 @@
 
                 <ul class="lum-address__list">
 
-                    <li class="lum-address__item">
+                    <li class="lum-address__item lum-address__item--active flex items-center gap-4 px-6 py-4 lum-primary-border-b">
 
-                        <div class="lum-address__icon">
-                            <i class="lum-icon lum-icon--location lum-icon--lg"></i>
+                        <div class="lum-address__icon flex items-center justify-center">
+                            <i class="lum-icon lum-icon--marker-pin lum-icon--xl"></i>
                         </div>
 
                         <div class="lum-address__content">
 
-                            <div class="lum-address__name">
-                                <strong>Behi Jafari</strong>
-                                <span class="lum-address__badge">Default</span>
+                            <div class="lum-address__name flex gap-2 items-center">
+                                <strong class="lum-h-2xs">Behi Jafari</strong>
+
+                                <span class="lum-address__badge lum-text-sm">Default</span>
                             </div>
 
-                            <p class="lum-address__text">
+                            <p class="lum-address__text lum-text-lg primary-color-text">
                                 20501 Ventura Blvd 114, Woodland Hills CA 91364, United States
                             </p>
 
@@ -173,19 +174,21 @@
                     </li>
 
 
-                    <li class="lum-address__item">
+                    <li class="lum-address__item flex items-center gap-4 px-6 py-4 lum-primary-border-b">
 
-                        <div class="lum-address__icon">
-                            <i class="lum-icon lum-icon--location lum-icon--lg"></i>
+                        <div class="lum-address__icon flex items-center justify-center">
+                            <i class="lum-icon lum-icon--marker-pin lum-icon--xl"></i>
                         </div>
 
                         <div class="lum-address__content">
 
-                            <strong class="lum-address__name">
-                                Behi Jafari
-                            </strong>
+                            <div class="lum-address__name flex gap-2 items-center">
+                                <strong class="lum-h-2xs">Behi Jafari</strong>
 
-                            <p class="lum-address__text">
+                                <span class="lum-address__badge lum-text-sm">Default</span>
+                            </div>
+
+                            <p class="lum-address__text lum-text-lg primary-color-text">
                                 20501 Ventura Blvd 114, Woodland Hills CA 91364, United States
                             </p>
 
@@ -196,19 +199,21 @@
                     </li>
 
 
-                    <li class="lum-address__item">
+                    <li class="lum-address__item flex items-center gap-4 px-6 py-4">
 
-                        <div class="lum-address__icon">
-                            <i class="lum-icon lum-icon--location lum-icon--lg"></i>
+                        <div class="lum-address__icon flex items-center justify-center">
+                            <i class="lum-icon lum-icon--marker-pin lum-icon--xl"></i>
                         </div>
 
                         <div class="lum-address__content">
 
-                            <strong class="lum-address__name">
-                                Behi Jafari
-                            </strong>
+                            <div class="lum-address__name flex gap-2 items-center">
+                                <strong class="lum-h-2xs">Behi Jafari</strong>
 
-                            <p class="lum-address__text">
+                                <span class="lum-address__badge lum-text-sm">Default</span>
+                            </div>
+
+                            <p class="lum-address__text lum-text-lg primary-color-text">
                                 20501 Ventura Blvd 114, Woodland Hills CA 91364, United States
                             </p>
 
@@ -221,10 +226,58 @@
                 </ul>
 
             </section>
+            <section class="lum-marketing-preferences lum-primary-border ">
+
+                <div class="lum-marketing-preferences__header px-6 py-4 lum-primary-border-b ">
+                    <h2 class="lum-marketing-preferences__title lum-h-2xs">Marketing preferences</h2>
+                </div>
+
+                <div class="lum-marketing-preferences__item">
+
+                    <div class="lum-marketing-preferences__content px-6 py-4 flex justify-between items-center">
+                        <div class="flex gap-2 items-center">
+                            <i class="lum-icon lum-icon--mail lum-icon--xl"></i>
+
+                            <span class="lum-marketing-preferences__label lum-text-lg ">Email</span>
+                        </div>
+                        <label class="lum-switch">
+                            <input class="lum-switch__input" type="checkbox">
+                            <span class="lum-switch__track"><span class="lum-switch__thumb"></span></span>
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+            </section>
         </div>
 
 
     </div>
+    <nav class="lum-footer-links lum-container items-center justify-center gap-6 flex pb-8  pt-20" aria-label="Footer links">
+
+        <a class="lum-footer-links__item lum-text-sm " href="#">
+            Refund policy
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm " href="#">
+            Shipping
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm " href="#">
+            Privacy policy
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm " href="#">
+            Terms of service
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm " href="#">
+            Contact information
+        </a>
+
+    </nav>
 </main>
 
 <script>
@@ -241,6 +294,18 @@
             });
 
             item.classList.add('lum-account-sidebar__item--active');
+        });
+    });
+    const addressItems = document.querySelectorAll('.lum-address__item');
+
+    addressItems.forEach((item) => {
+        item.addEventListener('click', () => {
+
+            addressItems.forEach((address) => {
+                address.classList.remove('lum-address__item--active');
+            });
+
+            item.classList.add('lum-address__item--active');
         });
     });
 </script>

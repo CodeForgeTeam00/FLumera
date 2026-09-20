@@ -9,3 +9,25 @@
 .lum-brand-card__name{
     color: var(--lum-n-900);
 }
+.lum-contractor-favorites{
+    background-color: var(--lum-primary-6);
+    border-radius: 40px;
+    padding:  24px 16px ;
+    @media (min-width: 1280px) {
+        padding:  72px 16px ;
+    }
+}
+.lum-brand-logo-grid {
+    gap: 1px;
+    background: var(--lum-border);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.lum-brand-logo-grid__item {
+    background: var(--lum-n-0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

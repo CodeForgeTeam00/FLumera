@@ -3,3 +3,9 @@
     margin-inline-end: 8px;
     border-inline-end: 1px solid var(--lum-border);
 }
+.lum-brand-card__media{
+    border-radius: 24px;
+}
+.lum-brand-card__name{
+    color: var(--lum-n-900);
+}

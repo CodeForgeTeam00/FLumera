@@ -1,0 +1,647 @@
+<!doctype html>
+<html class="   " lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/lum-brands.css">
+    <link rel="stylesheet" href="./assets/catCard.css">
+    <link rel="stylesheet" href="./assets/lum-hotspots.css">
+    <link rel="stylesheet" href="./assets/tabs.css">
+    <link rel="stylesheet" href="./assets/icons.css">
+    <link rel="stylesheet" href="./assets/single.css">
+    <link rel="stylesheet" href="assets/Lum-utilities.css">
+    <link rel="stylesheet" href="./assets/modal.css">
+    <link rel="stylesheet" href="./assets/checkout.css">
+    <link rel="stylesheet" href="./assets/Profile.css">
+
+</head>
+<body class=" ">
+<!--<header class="lum-header">-->
+<!--    <div class="lum-container">-->
+<!--        <div class="desktop__header">-->
+<!--            <a href="#" class="logo__desktop-header" aria-label="Lumera home">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="54" viewBox="0 0 34 54" fill="none">-->
+<!--                    <path d="M21.3247 42.1758H11.8965C11.6953 42.1758 11.496 42.2155 11.31 42.2926C11.1241 42.3698 10.9552 42.4829 10.8128 42.6255C10.6705 42.768 10.5576 42.9373 10.4806 43.1236C10.4036 43.3098 10.364 43.5095 10.364 43.7111V47.8799C10.3652 48.5941 10.6249 49.2835 11.0947 49.8205C11.5646 50.3576 12.2129 50.7057 12.9194 50.8005V51.5857C12.9194 52.0497 13.1034 52.4948 13.4309 52.8229C13.7584 53.151 14.2027 53.3354 14.6659 53.3354H18.5553C19.0185 53.3354 19.4628 53.151 19.7903 52.8229C20.1178 52.4948 20.3018 52.0497 20.3018 51.5857V50.8005C21.0083 50.7057 21.6566 50.3575 22.1264 49.8205C22.5963 49.2835 22.856 48.5941 22.8572 47.8799V43.7111C22.8572 43.3039 22.6958 42.9134 22.4084 42.6255C22.1209 42.3375 21.7311 42.1758 21.3247 42.1758Z"-->
+<!--                          fill="#C5E8CD"/>-->
+<!--                    <path d="M19.3914 0.232819V12.4493C19.3914 12.5423 19.4097 12.6344 19.4452 12.7203C19.4807 12.8062 19.5328 12.8843 19.5984 12.95C19.6641 13.0158 19.742 13.068 19.8278 13.1035C19.9135 13.1391 20.0054 13.1575 20.0983 13.1574H24.0825C24.1675 13.1574 24.251 13.1804 24.3241 13.2239C24.3972 13.2674 24.4573 13.3299 24.498 13.4047C24.5387 13.4795 24.5585 13.5639 24.5553 13.649C24.5522 13.7342 24.5262 13.8169 24.4801 13.8885L14.7027 29.0712C14.6474 29.1572 14.5657 29.223 14.4699 29.2586C14.3742 29.2943 14.2695 29.2979 14.1715 29.269C14.0735 29.2401 13.9875 29.1802 13.9263 29.0982C13.8651 29.0162 13.832 28.9167 13.832 28.8143V16.2327C13.832 16.0449 13.7575 15.8648 13.625 15.732C13.4924 15.5992 13.3126 15.5245 13.1252 15.5245H9.14093C9.05589 15.5245 8.97242 15.5016 8.8993 15.4581C8.82618 15.4146 8.76611 15.3522 8.72541 15.2774C8.68472 15.2026 8.66491 15.1181 8.66807 15.033C8.67122 14.9479 8.69721 14.8652 8.74332 14.7936L18.2184 0.0801331C17.423 0.00224674 16.623 -0.0188986 15.8246 0.0168543C12.5041 0.173934 9.30699 1.3257 6.64702 3.32315C3.98705 5.3206 1.98662 8.07179 0.904525 11.2208C-0.177567 14.3697 -0.291508 17.7716 0.577444 20.9862C1.4464 24.2007 3.25825 27.0801 5.77858 29.2517C6.87126 30.2102 7.74497 31.3933 8.34024 32.7205C8.9355 34.0477 9.23834 35.4878 9.22815 36.9428V39.0212C9.22814 39.2572 9.27454 39.491 9.36471 39.7091C9.45488 39.9272 9.58706 40.1254 9.75367 40.2923C9.92029 40.4592 10.1181 40.5916 10.3358 40.682C10.5535 40.7723 10.7868 40.8188 11.0225 40.8188H22.1986C22.6745 40.8188 23.1309 40.6294 23.4674 40.2923C23.8039 39.9552 23.9929 39.4979 23.9929 39.0212V36.8075C23.9869 35.3802 24.2892 33.9685 24.8789 32.6693C25.4686 31.37 26.3318 30.2138 27.4093 29.2801C29.8083 27.2241 31.5726 24.5255 32.4955 21.5009C33.4184 18.4762 33.4616 15.2506 32.6201 12.2022C31.7787 9.15373 30.0874 6.40872 27.7444 4.28882C25.4015 2.16892 22.504 0.761961 19.3914 0.232819Z"-->
+<!--                          fill="#15AE5C"/>-->
+<!--                </svg>-->
+<!--            </a>-->
+
+
+<!--            <div class="lum-header__actions">-->
+
+<!--                <a style="white-space: nowrap" class="lum-button outline ms-2" href="/pages/project-pricing">-->
+<!--                    <i class="lum-icon lum-icon&#45;&#45;dollar-circle lum-icon&#45;&#45;md"></i>-->
+<!--                    <span class="text__lum-button">Project pricing</span>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+<main class="lg:p-0 p-4 lg:pt-10 overflow-hidden">
+    <div class="lum-container lum-account-layout">
+
+        <aside class="lum-account-sidebar">
+
+            <div class="lum-account-sidebar__profile">
+
+                <div class="lum-account-sidebar__avatar">
+                    <span class="lum-account-sidebar__abbreviation lum-text-lg">BJ</span>
+                </div>
+
+                <div class="lum-account-sidebar__user">
+                    <h2 class="lum-account-sidebar__name lum-text-lg">Benam Jafari</h2>
+
+                    <p class="lum-account-sidebar__email lum-account-sidebar__email--secondary lum-text-md">
+                        j.behnam.1996@gmail.com</p>
+                </div>
+
+            </div>
+
+            <nav class="lum-account-sidebar__nav">
+
+                <a class="lum-account-sidebar__item lum-account-sidebar__item--active" href="#"
+                   data-account-tab="dashboard">
+                    <i class="lum-icon lum-icon--home lum-icon-lg lum-account-sidebar__item-icon"></i>
+                    <span class="lum-account-sidebar__item-label">Dashboard</span>
+                </a>
+
+                <a class="lum-account-sidebar__item" href="#" data-account-tab="orders">
+                    <i class="lum-icon lum-icon--shopping-bag lum-icon-lg lum-account-sidebar__item-icon"></i>
+                    <span class="lum-account-sidebar__item-label">Orders</span>
+                </a>
+
+                <a class="lum-account-sidebar__item" href="#">
+                    <i class="lum-icon lum-icon--logout lum-icon-lg lum-account-sidebar__item-icon"></i>
+                    <span class="lum-account-sidebar__item-label">log out
+                        
+                    </span>
+                </a>
+
+                <a class="lum-account-sidebar__item" href="#">
+                    <i class="lum-icon lum-icon--logout lum-icon-lg lum-account-sidebar__item-icon"></i>
+                    <span class="lum-account-sidebar__item-label">Log out From all Devices</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <div class="lum-dashboard lum-account-panel lum-account-panel--active flex flex-col gap-4"
+             data-account-panel="dashboard">
+
+            <div class="lum-dashboard__heading hidden lg:flex items-center gap-2">
+                <i class="lum-icon--home lum-icon lum-icon-lg"></i>
+                <h1 class="lum-h-sm">Dashboard</h1>
+            </div>
+
+            <section class="lum-account-info lum-primary-border">
+
+                <div class="lum-account-info__header flex items-center justify-between lum-primary-border-b px-4 py-2 lg:py-4 lg:px-6">
+
+                    <h2 class="lum-account-info__title lum-h-2xs">Personal information</h2>
+
+                    <button class="lum-account-info__edit flex items-center gap-2" type="button">
+                        <i class="lum-icon lum-icon--square-pen lum-icon--sm"></i>
+                        <span class="lum-text-md">Edit</span>
+                    </button>
+
+                </div>
+
+
+                <dl class="lum-account-info__details flex flex-col px-4 py-2 lg:py-4 lg:px-6">
+
+                    <div class="lum-account-info__row lum-account-info__row--dashed flex flex-col lg:flex-row lg:gap-2 lg:py-2">
+                        <dt class="lum-account-info__row-label lum-account-info__row-label--secondary lum-text-lg">First
+                            Name:
+                        </dt>
+                        <dd class="lum-text-lg">mohammad</dd>
+                    </div>
+
+                    <div class="lum-account-info__row lum-account-info__row--dashed flex flex-col lg:flex-row lg:gap-2 py-1 lg:py-2">
+                        <dt class="lum-account-info__row-label lum-account-info__row-label--secondary lum-text-lg">Last
+                            Name:
+                        </dt>
+                        <dd class="lum-text-lg">Jafari</dd>
+                    </div>
+
+                    <div class="lum-account-info__row flex flex-col lg:flex-row lg:gap-2 lg:py-2">
+                        <dt class="lum-account-info__row-label lum-account-info__row-label--secondary lum-text-lg">
+                            Email:
+                        </dt>
+                        <dd class="lum-text-lg">j.behnam.1996@gmail.com</dd>
+                    </div>
+
+                </dl>
+
+            </section>
+
+
+            <section class="lum-address lum-primary-border">
+
+                <div class="lum-address__header flex items-center lum-primary-border-b justify-between px-4 py-2 lg:px-6 lg:py-4">
+
+                    <h2 class="lum-address__title lum-h-2xs">
+                        Address
+                    </h2>
+
+                    <button class="lum-address__add flex items-center gap-2" type="button">
+                        <i class="lum-icon lum-icon--plus lum-icon--xs"></i>
+                        <span class="lum-text-md">Add</span>
+                    </button>
+
+                </div>
+
+
+                <ul class="lum-address__list">
+
+                    <li class="lum-address__item lum-address__item--active flex lg:items-center justify-between gap-4 px-4 py-2 lg:px-6 lg:py-4 lum-primary-border-b">
+
+                        <div class="flex lg:items-center gap-4">
+
+                            <div class="lum-address__icon p-4 flex items-center justify-center">
+                                <i class="lum-icon lum-icon--marker-pin lum-icon--xl"></i>
+                            </div>
+
+                            <div class="lum-address__content">
+
+                                <div class="lum-address__name flex gap-2 items-center">
+                                    <strong class="lum-h-2xs">Behi Jafari</strong>
+                                    <span class="lum-address__badge lum-text-sm">Default</span>
+                                </div>
+
+                                <p class="lum-address__text lum-address__text--secondary lum-text-lg">
+                                    20501 Ventura Blvd 114, Woodland Hills CA 91364, United States
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex lg:items-center">
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                        </div>
+
+                    </li>
+
+
+                    <li class="lum-address__item flex lg:items-center justify-between gap-4 px-4 py-2 lg:px-6 lg:py-4 lum-primary-border-b">
+
+                        <div class="flex lg:items-center gap-4">
+
+                            <div class="lum-address__icon p-4 flex items-center justify-center">
+                                <i class="lum-icon lum-icon--marker-pin lum-icon--xl"></i>
+                            </div>
+
+                            <div class="lum-address__content">
+
+                                <div class="lum-address__name flex gap-2 items-center">
+                                    <strong class="lum-h-2xs">Behi Jafari</strong>
+                                    <span class="lum-address__badge lum-text-sm">Default</span>
+                                </div>
+
+                                <p class="lum-address__text lum-address__text--secondary lum-text-lg">
+                                    20501 Ventura Blvd 114, Woodland Hills CA 91364, United States
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex lg:items-center">
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                        </div>
+
+                    </li>
+
+
+                    <li class="lum-address__item flex lg:items-center justify-between gap-4 px-4 py-2 lg:px-6 lg:py-4">
+
+                        <div class="flex lg:items-center gap-4">
+
+                            <div class="lum-address__icon p-4 flex items-center justify-center">
+                                <i class="lum-icon lum-icon--marker-pin lum-icon--xl"></i>
+                            </div>
+
+                            <div class="lum-address__content">
+
+                                <div class="lum-address__name flex gap-2 items-center">
+                                    <strong class="lum-h-2xs">Behi Jafari</strong>
+                                    <span class="lum-address__badge lum-text-sm">Default</span>
+                                </div>
+
+                                <p class="lum-address__text lum-address__text--secondary lum-text-lg">
+                                    20501 Ventura Blvd 114, Woodland Hills CA 91364, United States
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex lg:items-center">
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="lum-marketing-preferences lum-primary-border">
+
+                <div class="lum-marketing-preferences__header px-4 py-2 lg:px-6 lg:py-4 lum-primary-border-b">
+                    <h2 class="lum-marketing-preferences__title lum-h-2xs">Marketing preferences</h2>
+                </div>
+
+                <div class="lum-marketing-preferences__item">
+
+                    <div class="lum-marketing-preferences__content px-4 py-2 lg:px-6 lg:py-4 flex justify-between items-center">
+
+                        <div class="flex gap-2 items-center">
+                            <i class="lum-icon lum-icon--mail lum-icon--xl"></i>
+                            <span class="lum-marketing-preferences__label lum-text-lg">Email</span>
+                        </div>
+
+                        <label class="lum-switch">
+                            <input class="lum-switch__input" type="checkbox">
+                            <span class="lum-switch__track"><span class="lum-switch__thumb"></span></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <div class="lum-orders lum-account-panel flex flex-col " data-account-panel="orders">
+
+            <div class="lum-orders__heading flex items-center gap-2">
+                <i class="lum-icon lum-icon--shopping-bag lum-icon-lg"></i>
+                <h1 class="lum-h-sm">Orders</h1>
+            </div>
+            <div class=" py-3 lg:py-4">
+                <div class="lum-tabs lum-tabs--pill" data-tabs="">
+                    <div class="lum-tabs__list" role="tablist">
+                        <button class="lum-tabs__tab is-active" id="g1-1" role="tab" aria-controls="g1p-1"
+                                type="button">Lighting
+                        </button>
+                        <button class="lum-tabs__tab" id="g1-2" role="tab" aria-controls="g1p-2" tabindex="-1"
+                                type="button">Electrical
+                        </button>
+                        <button class="lum-tabs__tab" id="g1-3" role="tab" aria-controls="g1p-3" tabindex="-1"
+                                type="button">Control
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class=" lum-orders__list  py-4 lg:py-5  lum-primary-border flex flex-col gap-5   " id="g1p-1">
+                    <article class="lum-order-card px-6">
+
+                        <div class="lum-order-card__header">
+
+                            <div class="lum-order-card__summary">
+
+                                <div class="lum-order-card__icon flex items-center justify-center">
+                                    <i class="lum-icon lum-icon--shopping-bag lum-icon--sm"></i>
+                                </div>
+
+                                <div class="lum-order-card__info">
+
+                                    <h3 class="lum-order-card__title lum-text-md">
+                                        Order - 349123
+                                    </h3>
+
+                                    <div class="lum-order-card__meta">
+
+                                         <span class="lum-order-card__status flex items-center gap-1">
+                                             <i class="lum-icon lum-icon--cube lum-icon--xs"></i>
+                                             <span class="lum-text-sm">Status</span>
+                                         </span>
+
+                                        <span class="lum-order-card__price lum-text-sm">
+                                             $2000
+                                         </span>
+
+                                        <span class="lum-order-card__date lum-text-sm">
+                                             11 September 2026
+                                         </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <a class="lum-order-card__details  flex items-center  gap-2 " href="#">
+                                    <span class="lum-text-md ">More Details</span>
+                                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="lum-order-card__products">
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                        </div>
+
+                    </article>
+                    <div class="lum-primary-border-b"></div>
+                    <article class="lum-order-card px-6">
+
+                        <div class="lum-order-card__header">
+
+                            <div class="lum-order-card__summary">
+
+                                <div class="lum-order-card__icon flex items-center justify-center">
+                                    <i class="lum-icon lum-icon--shopping-bag lum-icon--sm"></i>
+                                </div>
+
+                                <div class="lum-order-card__info">
+
+                                    <h3 class="lum-order-card__title lum-text-md">
+                                        Order - 349123
+                                    </h3>
+
+                                    <div class="lum-order-card__meta">
+
+                                         <span class="lum-order-card__status flex items-center gap-1">
+                                             <i class="lum-icon lum-icon--cube lum-icon--xs"></i>
+                                             <span class="lum-text-sm">Status</span>
+                                         </span>
+
+                                        <span class="lum-order-card__price lum-text-sm">
+                                             $2000
+                                         </span>
+
+                                        <span class="lum-order-card__date lum-text-sm">
+                                             11 September 2026
+                                         </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <a class="lum-order-card__details  flex items-center  gap-2 " href="#">
+                                    <span class="lum-text-md ">More Details</span>
+                                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="lum-order-card__products">
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                        </div>
+
+                    </article>
+                    <div class="lum-primary-border-b"></div>
+                    <article class="lum-order-card px-6">
+
+                        <div class="lum-order-card__header">
+
+                            <div class="lum-order-card__summary">
+
+                                <div class="lum-order-card__icon flex items-center justify-center">
+                                    <i class="lum-icon lum-icon--shopping-bag lum-icon--sm"></i>
+                                </div>
+
+                                <div class="lum-order-card__info">
+
+                                    <h3 class="lum-order-card__title lum-text-md">
+                                        Order - 349123
+                                    </h3>
+
+                                    <div class="lum-order-card__meta">
+
+                                         <span class="lum-order-card__status flex items-center gap-1">
+                                             <i class="lum-icon lum-icon--cube lum-icon--xs"></i>
+                                             <span class="lum-text-sm">Status</span>
+                                         </span>
+
+                                        <span class="lum-order-card__price lum-text-sm">
+                                             $2000
+                                         </span>
+
+                                        <span class="lum-order-card__date lum-text-sm">
+                                             11 September 2026
+                                         </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="">
+                                <a class="lum-order-card__details  flex items-center  gap-2 " href="#">
+                                    <span class="lum-text-md ">More Details</span>
+                                    <i class="lum-icon lum-icon--chevron-right lum-icon--sm"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="lum-order-card__products">
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                            <div class="lum-order-card__product">
+                                <img class="lum-order-card__image" src="./assets/img-pourdact-card.png" alt="">
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="lum-tabs__panel" id="g1p-2" hidden="">Electrical panel</div>
+    <div class="lum-tabs__panel" id="g1p-3" hidden="">Control panel</div>
+
+
+    <nav class="lum-footer-links lum-container justify-center gap-3 lg:gap-6 flex flex-wrap pb-8 px-2 pt-20"
+         aria-label="Footer links">
+
+        <a class="lum-footer-links__item lum-text-sm" href="#">
+            Refund policy
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm" href="#">
+            Shipping
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm" href="#">
+            Privacy policy
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm" href="#">
+            Terms of service
+        </a>
+
+        <a class="lum-footer-links__item lum-text-sm" href="#">
+            Contact information
+        </a>
+
+    </nav>
+
+</main>
+
+
+<nav class="lum-account-mobile-nav">
+
+    <a class="lum-account-mobile-nav__item lum-account-mobile-nav__item--active" href="#" data-account-tab="dashboard">
+        <i class="lum-icon lum-icon--home lum-icon--md"></i>
+        <span class="lum-account-mobile-nav__label lum-text-2xs">Dashboard</span>
+    </a>
+
+    <a class="lum-account-mobile-nav__item" href="#" data-account-tab="orders">
+        <i class="lum-icon lum-icon--shopping-bag lum-icon--md"></i>
+        <span class="lum-account-mobile-nav__label lum-text-2xs">Orders</span>
+    </a>
+
+    <a class="lum-account-mobile-nav__item" href="#">
+        <i class="lum-icon lum-icon--logout lum-icon--md"></i>
+        <span class="lum-account-mobile-nav__label lum-text-2xs">Log out</span>
+    </a>
+
+    <a class="lum-account-mobile-nav__item" href="#">
+        <i class="lum-icon lum-icon--monitor lum-icon--md"></i>
+        <span class="lum-account-mobile-nav__label lum-text-2xs">Sign out all</span>
+    </a>
+
+</nav>
+
+
+<script>
+
+    const accountTabs = document.querySelectorAll('[data-account-tab]');
+    const accountPanels = document.querySelectorAll('[data-account-panel]');
+
+    accountTabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const target = tab.dataset.accountTab;
+
+            accountPanels.forEach((panel) => {
+                panel.classList.remove('lum-account-panel--active');
+            });
+
+            const targetPanel = document.querySelector(`[data-account-panel="${target}"]`);
+
+            if (targetPanel) {
+                targetPanel.classList.add('lum-account-panel--active');
+            }
+
+            document.querySelectorAll('.lum-account-sidebar__item[data-account-tab]').forEach((item) => {
+                item.classList.remove('lum-account-sidebar__item--active');
+
+                if (item.dataset.accountTab === target) {
+                    item.classList.add('lum-account-sidebar__item--active');
+                }
+            });
+
+            document.querySelectorAll('.lum-account-mobile-nav__item[data-account-tab]').forEach((item) => {
+                item.classList.remove('lum-account-mobile-nav__item--active');
+
+                if (item.dataset.accountTab === target) {
+                    item.classList.add('lum-account-mobile-nav__item--active');
+                }
+            });
+        });
+    });
+    const addressItems = document.querySelectorAll('.lum-address__item');
+
+    addressItems.forEach((item) => {
+        item.addEventListener('click', () => {
+
+            addressItems.forEach((address) => {
+                address.classList.remove('lum-address__item--active');
+            });
+
+            item.classList.add('lum-address__item--active');
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/footer.js"></script>
+<script src="assets/header.js"></script>
+<script src="assets/heroSlider.js"></script>
+<script src="assets/lum-hotspots.js"></script>
+<script src="assets/tabs.js"></script>
+<script src="assets/global.js"></script>
+<script src="assets/single.js"></script>
+</body>
+</html>

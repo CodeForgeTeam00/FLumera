@@ -1,0 +1,365 @@
+.lum-account-layout {
+    display: grid;
+    align-items: start;
+
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 380px 1fr ;
+        gap: 24px
+    }
+    @media (min-width: 1280px) {
+    ;
+
+    }
+}
+
+.lum-account-sidebar {
+    border: 1px solid var(--lum-border);
+    border-radius: 24px;
+    display: none;
+    flex-direction: column;
+    padding: 24px 0;
+    @media (min-width: 1024px) {
+        display: flex;
+
+    }
+
+}
+
+
+.lum-account-sidebar__profile {
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-bottom: 1px solid var(--lum-border);
+    padding: 0 24px 24px 24px;
+}
+
+.lum-account-sidebar__avatar {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: var(--lum-n-1000);
+    justify-content: center;
+    @media (min-width: 1024px) {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+.lum-account-sidebar__abbreviation {
+    color: var(--lum-n-0);
+}
+
+.lum-account-sidebar__email--secondary {
+    color: var(--lum-n-700);
+}
+
+.lum-account-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    @media (min-width: 1024px) {
+        padding: 24px;
+    }
+
+}
+
+.lum-account-sidebar__item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+}
+
+.lum-account-sidebar__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px 24px;
+
+    color: var(--lum-n-100);
+    border-radius: 8px;
+}
+
+.lum-account-sidebar__item--active {
+    color: var(--lum-primary-6);
+    background: var(--lum-primary-1);
+}
+
+.lum-account-sidebar__item--active::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 20px;
+
+    transform: translateY(-50%) translateX(-25%);
+
+    background: var(--lum-primary-6);
+    border-radius: 4px;
+}
+
+.lum-account-info, .lum-address, .lum-marketing-preferences {
+    border-radius: 24px;
+}
+
+.lum-account-info__row--dashed {
+    border-bottom: 1px dashed var(--lum-n-20);
+}
+
+.lum-account-info__row-label {
+    width: 128px;
+}
+
+.lum-account-info__row-label--secondary {
+    color: var(--lum-n-700);
+}
+
+.lum-account-sidebar__item--active {
+    color: var(--lum-primary-6);
+}
+
+.lum-account-sidebar__item-icon, .lum-account-sidebar__item-label {
+    color: var(--lum-n-100);
+}
+
+.lum-address {
+
+}
+
+.lum-address__text {
+    max-width: 976px;
+}
+
+.lum-address__text--secondary {
+    color: var(--lum-n-700);
+}
+
+.lum-address__icon {
+
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background: var(--lum-n-20);
+    @media (min-width: 1024px) {
+        width: 64px;
+        height: 64px;
+
+    }
+}
+
+.lum-address__add, .lum-account-info__edit {
+    color: #1677FF;
+}
+
+.lum-address__item {
+    cursor: pointer;
+}
+
+.lum-footer-links__item {
+    color: var(--lum-n-100);
+}
+
+.lum-address__badge {
+    display: none;
+    color: var(--lum-primary-6);
+}
+
+.lum-address__item--active .lum-address__badge {
+    display: inline-flex;
+}
+
+.lum-address__item--active .lum-address__badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 8px;
+    border-radius: 999px;
+
+    color: var(--lum-primary-6);
+    background: var(--lum-primary-1);
+}
+
+.lum-account-mobile-nav {
+    position: sticky;
+    right: 16px;
+    bottom: 30px;
+    left: 16px;
+    z-index: 50;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+
+    padding: 8px 16px;
+
+    background: var(--lum-n-0);
+    border: 1px solid var(--lum-border);
+    border-radius: 999px;
+}
+
+.lum-account-mobile-nav__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+
+    color: var(--lum-n-1000);
+}
+
+.lum-account-mobile-nav__item--active {
+    color: var(--lum-primary-6);
+}
+
+.lum-account-mobile-nav__item--active::after {
+    content: "";
+
+    position: absolute;
+    bottom: -2px;
+
+    width: 6px;
+    height: 2px;
+
+    background: var(--lum-primary-6);
+    border-radius: 999px;
+}
+
+.lum-orders__list {
+    border-radius: 24px;
+
+}
+
+.lum-order-card__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    gap: 16px;
+    @media (min-width: 1024px) {
+
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 14px;
+
+    }
+}
+
+.lum-order-card__summary {
+
+
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+}
+
+.lum-order-card__icon {
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 100%;
+    background: var(--lum-n-20);
+}
+
+.lum-order-card__info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.lum-order-card__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lum-order-card__status {
+    color: #1677FF;
+}
+
+.lum-order-card__details {
+
+    color: var(--lum-n-700);
+}
+
+.lum-order-card__products {
+    display: flex;
+    gap: 8px;
+    border-top: 1px dashed var(--lum-n-20);
+    overflow-x: auto;
+    margin-top: 8px;
+    padding-top: 8px;
+
+    @media (min-width: 1024px) {
+        margin-top: 16px;
+        padding-top: 16px;
+    }
+
+
+}
+
+.lum-order-card__product {
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border: 1px solid var(--lum-border);
+    border-radius: 8px;
+}
+
+.lum-order-card__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+    .lum-account-mobile-nav {
+        display: none;
+    }
+}
+
+.lum-account-panel {
+    display: none;
+}
+
+.lum-account-panel--active {
+    display: flex;
+}
+.lum-orders {
+    min-width: 0;
+}
+
+.lum-order-card {
+    min-width: 0;
+}
+
+
+
+.lum-order-card__product {
+    flex: 0 0 56px;
+}

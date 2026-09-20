@@ -59,6 +59,23 @@
   }
 
 }
+.lum-icon--monitor{
+  -webkit-mask-image: url("./monitor.svg");
+  mask-image: url("./monitor.svg");
+}
+.lum-icon--marker-pin{
+  -webkit-mask-image: url("./marker-pin.svg");
+  mask-image: url("./marker-pin.svg");
+}
+.lum-icon--logout {
+  -webkit-mask-image: url("./logout.svg");
+  mask-image: url("logout.svg");
+}
+
+.lum-icon--home {
+  -webkit-mask-image: url("home.svg");
+  mask-image: url("home.svg");
+}
 .lum-icon--minus {
   -webkit-mask-image: url("./minus.svg");
   mask-image: url("./minus.svg");

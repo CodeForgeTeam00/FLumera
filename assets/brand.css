@@ -1,0 +1,5 @@
+.lum-brand-stats__item:not(:last-child) {
+    padding-inline-end: 8px;
+    margin-inline-end: 8px;
+    border-inline-end: 1px solid var(--lum-border);
+}

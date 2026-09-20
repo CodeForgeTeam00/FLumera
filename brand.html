@@ -345,11 +345,11 @@
     </div>
 </header>
 <main class="" >
-    <section class="px-4">
+    <section class="lum-brand-hero px-4 pt-6">
         <div class="lum-sec-head lum-sec-head--split" data-diraction="col">
             <div class="lum-sec-head__left">
                 <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Powering Possibilities</span>
-                <div class="flex flex-col gap-2">
+                <div class="lum-brand-hero__content flex flex-col gap-2">
                     <h2 class="lum-h-md lum-sec-head__title">Discover the Brands Behind Better Solutions</h2>
                     <p class="lum-text-lg lum-sec-head__desc">
                         Explore our complete portfolio of trusted brands, bringing together industry expertise,
@@ -370,8 +370,136 @@
                         <li class="lum-brand-stats__item">
                             <span class="lum-text-sm">Complete A-Z Access</span>
                         </li>
-
                     </ul>
+                </div>
+            </div>
+            <div data-search class="lum-search__header justify-center">
+                <i class="lum-icon lum-icon--search lum-icon--sm"></i>
+                <input class="lum-search__input lum-text-sm" type="search"
+                       placeholder="Search products, SKU, UPC or brand" aria-label="Search" data-search-input>
+                <span class="lum-search__hint">Enter</span>
+                <span class="lum-search__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <button class="lum-search__clear " type="button" data-search-clear>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M8.5 3.5L3.5 8.5M3.5 3.5L8.5 8.5" stroke="black" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                    Clear
+                </button>
+
+                <!-- ===== dropdown: empty | loading | results ===== -->
+                <div class="lum-search__dropdown">
+
+                    <!-- state: empty (Recent + Popular Categories) -->
+                    <div class="lum-search__panel" data-panel="empty">
+                        <p class="lum-search__section-label">Recent Search</p>
+                        <div class="lum-search__chips">
+                            <a class="lum-search__chip" href="#">Area Lights</a>
+                            <a class="lum-search__chip" href="#">Wall Packs</a>
+                            <a class="lum-search__chip" href="#">Strip Lights</a>
+                        </div>
+                        <div class="lum-search__rule"></div>
+                        <p class="lum-search__section-label">Popular Categories</p>
+                        <div class="lum-search__cats">
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                            <a class="lum-search__cat" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__cat-count">421 Product</span><br><span
+                                        class="lum-search__cat-name">Category Name</span></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- state: loading (skeleton) -->
+                    <div class="lum-search__panel" data-panel="loading">
+                        <div class="lum-search__chips">
+                            <span class="lum-skel lum-skel--chip"></span>
+                            <span class="lum-skel lum-skel--chip"></span>
+                            <span class="lum-skel lum-skel--chip"></span>
+                        </div>
+                        <div class="lum-search__rule"></div>
+                        <div class="lum-search__results">
+                            <div class="lum-search__result">
+                                <span class="lum-skel lum-skel--thumb"></span>
+                                <span style="flex:1">
+                                    <span class="lum-skel lum-skel--line"
+                                          style="inline-size:30%;margin-block-end:8px"></span>
+                                    <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                                </span>
+                            </div>
+                            <div class="lum-search__result">
+                                <span class="lum-skel lum-skel--thumb"></span>
+                                <span style="flex:1">
+                                    <span class="lum-skel lum-skel--line"
+                                          style="inline-size:30%;margin-block-end:8px"></span>
+                                    <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                                </span>
+                            </div>
+                            <div class="lum-search__result">
+                                <span class="lum-skel lum-skel--thumb"></span>
+                                <span style="flex:1">
+                                    <span class="lum-skel lum-skel--line"
+                                          style="inline-size:30%;margin-block-end:8px"></span>
+                                    <span class="lum-skel lum-skel--line" style="inline-size:70%"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- state: results (hardcoded for the static phase) -->
+                    <div class="lum-search__panel" data-panel="results">
+                        <p class="lum-search__section-label">Categories for &ldquo;<span
+                                data-search-term>Lighting</span>&rdquo;</p>
+                        <div class="lum-search__chips">
+                            <a class="lum-search__chip" href="#">Area Lights</a>
+                            <a class="lum-search__chip" href="#">Wall Packs</a>
+                            <a class="lum-search__chip" href="#">Strip Lights</a>
+                        </div>
+                        <div class="lum-search__rule"></div>
+                        <div class="lum-search__results">
+                            <a class="lum-search__result" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__result-kind">Category</span><br><span
+                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                            </a>
+                            <a class="lum-search__result" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__result-kind">Category</span><br><span
+                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                            </a>
+                            <a class="lum-search__result" href="#">
+                                <span class="lum-search__thumb"><i
+                                        class="lum-icon lum-icon--cube lum-icon--md"></i></span>
+                                <span><span class="lum-search__result-kind">Category</span><br><span
+                                        class="lum-search__result-title">Orbit Stainless Steel MR16 Well Light SS5011AP</span></span>
+                            </a>
+                        </div>
+                        <div class="flex justify-between  items-center ">
+                            <span class="lum-text-sm">Try: Prom, Red Dresses ...</span>
+                            <span class="lum-text-sm">Press / to focus</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -380,7 +508,7 @@
         <div class="lum-brand-directory__content flex flex-col justify-center">
 
             <div class="lum-brand-directory__filters flex justify-center items-center ">
-                <div class="lum-tabs lum-tabs--pill" data-tabs="">
+                <div class="lum-tabs lum-tabs--pill flex justify-center mb-4 lg:mb-6 w-full" data-tabs="">
                     <div class="lum-tabs__list" role="tablist">
                         <button class="lum-tabs__tab is-active" id="g1-1" role="tab" aria-controls="g1p-1" type="button">All
                         </button>
@@ -409,89 +537,89 @@
                 </div>
             </div>
 
-            <div class="lum-brand-directory__grid grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2  lg:gap-y-4 lg:gap-x-6 gap-4">
+            <div class="lum-brand-directory__grid grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2  lg:gap-y-4 lg:gap-x-6 gap-4">
 
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
                 <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
 
                     <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
-                        <img class="lum-brand-card__media" src="assets/Picture.png" alt="">
+                        <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
                     </div>
                     <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
                 </div>
@@ -508,19 +636,19 @@
             </a>
         </div>
     </section>
-    <section class=" py-20">
-        <div class=" lum-contractor-favorites lum-contractor-favorites__container  flex flex-col gap-6">
-            <div class="lum-container">
+    <section class=" lg:py-20 ">
+        <div class=" lum-contractor-favorites  ">
+            <div class="lum-contractor-favorites__container lum-container flex flex-col lg:gap-6 gap-4">
                 <div class="lum-contractor-favorites__header flex flex-col gap-6 ">
 
                     <div class="lum-sec-head lum-sec-head--split " data-diraction="row">
 
                         <div class="lum-sec-head__left">
-                            <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Contractor favorites</span>
+                            <span class="lum-eyebrow lum-eyebrow--start lum-text-md text-center lg:text-start">Contractor favorites</span>
                             <h2 class="lum-h-md lum-sec-head__title">Most Ordered by Contractors</h2>
                         </div>
 
-                        <p class="lum-text-lg lum-sec-head__desc">
+                        <p class="lum-text-lg lum-sec-head__desc text-center lg:text-start">
                             Explore proven products frequently selected for repeat jobs, replacements and everyday
                             project installations, with clear pricing, availability and minimum order details.
                         </p>
@@ -599,6 +727,142 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="lum-brand-index px-4">
+        <div class="lum-brand-index__container lum-container ">
+            <div class="lum-brand-index__content flex flex-col gap-6">
+                <div class="lum-sec-head lum-sec-head--split" data-diraction="col">
+                    <div class="lum-sec-head__left">
+                        <span class="lum-eyebrow lum-eyebrow--start lum-text-md">Powering Possibilities</span>
+                        <div class="flex flex-col gap-2">
+                            <h2 class="lum-h-md lum-sec-head__title">Discover the Brands Behind Better Solutions</h2>
+                            <p class="lum-text-lg lum-sec-head__desc">
+                                Explore our complete portfolio of trusted brands, bringing together industry expertise,
+                                innovative products, and reliable solutions across every category.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lum-brand-alphabet flex justify-center flex-wrap gap-4">
+
+                    <button class="lum-brand-alphabet__item lum-brand-alphabet__item--active" type="button">A</button>
+                    <button class="lum-brand-alphabet__item" type="button">B</button>
+                    <button class="lum-brand-alphabet__item" type="button">C</button>
+                    <button class="lum-brand-alphabet__item" type="button">D</button>
+                    <button class="lum-brand-alphabet__item" type="button">E</button>
+                    <button class="lum-brand-alphabet__item" type="button">F</button>
+                    <button class="lum-brand-alphabet__item" type="button">G</button>
+                    <button class="lum-brand-alphabet__item" type="button">H</button>
+                    <button class="lum-brand-alphabet__item" type="button">I</button>
+                    <button class="lum-brand-alphabet__item" type="button">J</button>
+                    <button class="lum-brand-alphabet__item" type="button">K</button>
+                    <button class="lum-brand-alphabet__item" type="button">L</button>
+                    <button class="lum-brand-alphabet__item" type="button">M</button>
+                    <button class="lum-brand-alphabet__item" type="button">N</button>
+                    <button class="lum-brand-alphabet__item" type="button">O</button>
+                    <button class="lum-brand-alphabet__item" type="button">P</button>
+                    <button class="lum-brand-alphabet__item" type="button">Q</button>
+                    <button class="lum-brand-alphabet__item" type="button">R</button>
+                    <button class="lum-brand-alphabet__item" type="button">S</button>
+                    <button class="lum-brand-alphabet__item" type="button">T</button>
+                    <button class="lum-brand-alphabet__item" type="button">U</button>
+                    <button class="lum-brand-alphabet__item" type="button">V</button>
+                    <button class="lum-brand-alphabet__item" type="button">W</button>
+                    <button class="lum-brand-alphabet__item" type="button">X</button>
+                    <button class="lum-brand-alphabet__item" type="button">Y</button>
+                    <button class="lum-brand-alphabet__item" type="button">Z</button>
+                </div>
+                <div class="lum-brand-index__grid grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2  lg:gap-y-4 lg:gap-x-6 gap-4">
+
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+                    <div class="lum-brand-card flex flex-col items-center justify-center  lg:gap-2">
+
+                        <div class="lum-brand-card__media  p-6 lum-primary-border flex justify-center items-center">
+                            <img class="lum-brand-card__image" src="assets/Picture.png" alt="">
+                        </div>
+                        <span class="lum-brand-card__name lum-text-lg">Nora Lighting</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </section>
 </main>
 <footer class="lum-footer">
@@ -1228,6 +1492,20 @@
         </div>
     </div>
 </div>
+<script>
+    const alphabetItems = document.querySelectorAll('.lum-brand-alphabet__item');
+
+    alphabetItems.forEach((item) => {
+        item.addEventListener('click', () => {
+
+            alphabetItems.forEach((button) => {
+                button.classList.remove('lum-brand-alphabet__item--active');
+            });
+
+            item.classList.add('lum-brand-alphabet__item--active');
+        });
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/footer.js"></script>
 <script src="assets/header.js"></script>

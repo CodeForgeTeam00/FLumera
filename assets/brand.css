@@ -19,7 +19,7 @@
 }
 .lum-brand-logo-grid {
     gap: 1px;
-    background: var(--lum-border);
+    background: var(--lum-n-30);
     border-radius: 24px;
     overflow: hidden;
 }
@@ -30,4 +30,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.lum-brand-alphabet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.lum-brand-alphabet__item {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--lum-n-0);
+    border: 1px solid var(--lum-border);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.lum-brand-alphabet__item--active {
+    color: var(--lum-primary-6);
+    border-color: var(--lum-primary-6);
+    box-shadow: 0 0 0 4px rgba(21, 174, 92, 0.25);
+
+}
+
+.lum-contractor-favorites{
+    .lum-eyebrow{
+        color: var(--lum-n-0);
+        &:before{
+            background: var(--lum-n-0);
+        }
+    }
+    .lum-sec-head__title ,  .lum-sec-head__desc , .lum-tabs__tab {
+        color: var(--lum-n-0);
+    }
+    .lum-tabs__list{
+        background: rgba(255, 255 , 255 , 0.10);
+    }
+
 }

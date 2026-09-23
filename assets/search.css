@@ -1,0 +1,6 @@
+.lum-search-result-header__count{
+    color: var(--lum-n-100);
+}
+.lum-search-result-header__query{
+    color: var(--lum-n-200);
+}

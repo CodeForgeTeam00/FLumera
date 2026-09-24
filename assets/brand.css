@@ -75,3 +75,81 @@
     }
 
 }
+
+.lum-search-field {
+    width: 100%;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lum-search-field__control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding:6px 16px;
+    @media (min-width: 1024px) {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    background: var(--lum-n-10);
+    border: 1px solid var(--lum-border);
+    border-radius: 8px;
+}
+
+.lum-search-field__icon {
+    flex-shrink: 0;
+    color: var(--lum-n-100);
+}
+
+.lum-search-field__input {
+    width: 100%;
+
+    color: var(--lum-n-100);
+    background: transparent;
+
+    border: 0;
+    outline: 0;
+}
+
+.lum-search-field__input::placeholder {
+    color: var(--lum-n-300);
+}
+
+.lum-search-field__input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.lum-search-field__key {
+    display: none;
+    @media (min-width: 1024px) {
+        flex-shrink: 0;
+        display: flex;
+        padding: 0 8px;
+
+        color: var(--lum-n-50);
+
+        border: 1px solid var(--lum-border);
+        border-radius: 4px;
+
+    }
+
+}
+
+.lum-search-field__footer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: 16px;
+
+    color: var(--lum-n-100);
+}
+
+
+

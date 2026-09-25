@@ -1,0 +1,48 @@
+.header-blog{
+    padding: 20px 0;
+    width: 100%;
+}
+.header-blog__inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header-blog__navigation{
+    display: flex;
+    align-items: center;
+}
+.header-blog__main{
+    display: flex;
+    gap: 24px;
+}
+.header-blog__nav{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.header-blog__nav-item{
+    display: flex;
+    align-items: center;
+    padding:8px;
+}
+.header-blog__actions{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-blog__action {
+    position: relative;
+}
+
+.header-blog__action::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 50%;
+    width: 1px;
+    height: 24px;
+    background: var(--lum-border);
+    transform: translateY(-50%);
+}

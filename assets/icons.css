@@ -59,6 +59,10 @@
   }
 
 }
+.lum-icon--menu{
+  -webkit-mask-image: url("./menu.svg");
+  mask-image: url("./menu.svg");
+}
 .lum-icon--monitor{
   -webkit-mask-image: url("./monitor.svg");
   mask-image: url("./monitor.svg");

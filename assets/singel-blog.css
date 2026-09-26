@@ -1,0 +1,137 @@
+.container-blog {
+    width: 100%;
+    max-width: 1168px;
+    margin: 0 auto;
+}
+.blog-meta__avatar{
+    overflow: hidden;
+    border-radius: 100%;
+    border: var(--border);
+    width: 28px;
+    height: 28px;
+}
+.blog-meta__date-text,.blog-meta__author-name,.blog-meta__date-icon{
+    color: var(--lum-n-300);
+}
+.img-blog{
+    border-radius: 24px;
+}
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid var(--lum-border);
+    border-radius: 24px;
+}
+
+.faq__item {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    transition: background-color 300ms;
+}
+
+.faq__item:hover {
+    background: #e5e7eb;
+}
+
+.faq__trigger {
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    background: transparent;
+    border: 0;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq__icon {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    background: var(--lum-n-0);
+    border: 1px solid var(--lum-n-30);
+    border-radius: 50%;
+}
+
+.faq__minus-icon {
+    display: none;
+}
+
+.faq__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+
+}
+
+.faq__content-inner {
+    overflow: hidden;
+}
+
+.faq__text {
+    padding: 0 32px 32px;
+
+    color: var(--lum-n-100);
+}
+
+
+/* open */
+
+.faq__item--open .faq__content {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+
+.faq__item--open .faq__icon {
+    padding: 6px;
+}
+
+.faq__item--open .faq__plus-icon {
+    display: none;
+}
+
+.faq__item--open .faq__minus-icon {
+    display: block;
+    color: var(--lum-primary-6);
+}
+
+@media (min-width: 1024px) {
+    .faq__trigger {
+        padding: 24px;
+    }
+
+    .faq__icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+.faq__item.faq__item--open {
+    background-color: var(--lum-n-0);
+}
+
+.faq__item--open .faq__title,
+.faq__item--open .faq__text {
+    color: var(--lum-n-0);
+}
+
+
+.faq__item.faq__item--open {
+    background-color: var(--lum-primary-6);
+}
+
+.faq__item.faq__item--open:hover {
+    background-color: var(--lum-primary-6);
+}

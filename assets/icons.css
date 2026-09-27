@@ -59,9 +59,13 @@
   }
 
 }
-.lum-icon--menu{
-  -webkit-mask-image: url("./menu.svg");
-  mask-image: url("./menu.svg");
+.lum-icon--download{
+  -webkit-mask-image: url("./download.svg");
+  mask-image: url("./download.svg");
+}
+.lum-icon--upload{
+  -webkit-mask-image: url("./upload.svg");
+  mask-image: url("./upload.svg");
 }
 .lum-icon--monitor{
   -webkit-mask-image: url("./monitor.svg");

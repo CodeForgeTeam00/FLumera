@@ -1,0 +1,147 @@
+
+.lum-credit__description{
+    color: var(--lum-n-300);
+}
+
+.lum-credit__drop input[type="file"] {
+    display: none;
+}
+
+.lum-payment-info {
+    display: grid;
+    border: 1px solid var(--lum-border);
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 16px;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+        border-radius: 32px;
+        overflow: hidden;
+        background: var(--lum-n-0);
+
+    }
+
+}
+
+.lum-payment-info__item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:  8px 16px;
+    @media (min-width: 1024px) {
+        padding: 16px;
+        text-align: center;
+    }
+}
+
+.lum-payment-info__item:not(:last-child) {
+    border-inline-end: 1px solid var(--lum-border);
+}
+
+
+.lum-payment-info__label {
+    color: var(--lum-n-300);
+}
+
+.lum-credit-upload {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--lum-n-0);
+    border: 1px solid var(--lum-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    @media (min-width: 1024px) {
+        padding: 40px;
+        border-radius: 24px;
+
+    }
+}
+
+.lum-credit-upload__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 0 16px 0;
+    @media (min-width: 1024px){
+        margin: 0 0 24px 0;
+    }
+
+}
+
+.lum-credit-upload__title {
+    color: var(--lum-n-900);
+}
+
+.lum-credit-upload__description {
+    color: var(--lum-n-300);
+}
+
+.lum-credit-upload__form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lum-credit-upload__label {
+    color: var(--lum-n-900);
+}
+
+.lum-credit-upload__dropzone {
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding:  16px;
+    border: 1px dashed var(--lum-border);
+    border-radius: 16px;
+    @media (min-width: 1024px) {
+        padding: 40px 16px;
+        border-radius: 20px;
+
+    }
+}
+
+.lum-credit-upload__input {
+    display: none;
+}
+
+.lum-credit-upload__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    color: var(--lum-n-50);
+}
+
+.lum-credit-upload__icon {
+    flex-shrink: 0;
+}
+
+.lum-credit-upload__support {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding-inline-start: 10px;
+
+    color: var(--lum-n-100);
+}
+
+.lum-credit-upload__support-icon {
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid currentColor;
+    border-radius: 50%;
+}

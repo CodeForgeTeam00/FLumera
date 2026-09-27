@@ -178,9 +178,11 @@
                     </h2>
 
                     <p class="lum-why-choose__description lum-text-md">
-                        We don’t just fix problems after they happen. Our team monitors, secures, and maintains your environment
+                        We don’t just fix problems after they happen. Our team monitors, secures, and maintains your
+                        environment
                         around the clock to prevent costly disruptions.
-                        You get predictable performance, clear communication, and IT that actually supports your business goals.
+                        You get predictable performance, clear communication, and IT that actually supports your
+                        business goals.
                     </p>
 
                 </div>
@@ -314,40 +316,313 @@
     </section>
 
 </section>
+<section class="px-4 2xl:px-0 lg:pt-20 pt-6 ">
+    <div class="lum-container">
+        <div class="lum-credit__grid grid grid-cols-1  lg:grid-cols-2 gap-6   lg:gap-20  lg:pt-16 lg:pb-20">
+            <div class="lum-credit__intro flex flex-col   ">
+                <div class="flex flex-col gap-4">
+                    <h2 class="lum-credit__title lum-h-md">
+                        How do you apply for a credit account?
+                    </h2>
 
-<script>
-    /* drop zone: visual feedback + filename echo. Real upload/submit wired later. */
-    (function () {
-        'use strict';
-        document.querySelectorAll('[data-drop]').forEach(function (drop) {
-            var input = drop.querySelector('[data-drop-input]');
-            var text = drop.querySelector('[data-drop-text]');
-            ['dragenter', 'dragover'].forEach(function (ev) {
-                drop.addEventListener(ev, function (e) {
-                    e.preventDefault();
-                    drop.classList.add('is-dragover');
-                });
-            });
-            ['dragleave', 'drop'].forEach(function (ev) {
-                drop.addEventListener(ev, function (e) {
-                    e.preventDefault();
-                    drop.classList.remove('is-dragover');
-                });
-            });
-            drop.addEventListener('drop', function (e) {
-                if (e.dataTransfer.files.length) {
-                    input.files = e.dataTransfer.files;
-                    showName();
-                }
-            });
-            input.addEventListener('change', showName);
+                    <p class="lum-credit__description lum-text-lg">
+                        Approved trade accounts can buy on Net terms instead of paying at checkout.
+                        Download the application,
+                        complete and sign it, and email it back for review.
+                    </p>
+                </div>
+                <div class="lg:pt-10 pt-6">
+                    <div class="container-blog">
 
-            function showName() {
-                if (input.files.length) text.textContent = input.files[0].name;
-            }
-        });
-    })();
-</script>
+                        <div class="faq mt-4">
+
+                            <div class="faq__item lum-primary-border">
+                                <button class="faq__trigger" type="button" aria-expanded="false">
+                                   <span class="faq__title lum-text-lg">
+                                          1. How quickly do you respond to IT or security issues?
+                                    </span>
+
+                                    <div class="faq__icon">
+                                        <i class="faq__plus-icon lum-icon lum-icon--plus lum-icon--xs"></i>
+                                        <i class="faq__minus-icon lum-icon lum-icon--minus lum-icon--xs"></i>
+                                    </div>
+                                </button>
+
+                                <div class="faq__content">
+                                    <div class="faq__content-inner">
+                                        <div class="faq__text lum-text-md">
+                                            Our team monitors systems around the clock and responds to critical issues
+                                            within minutes,
+                                            not hours. Most problems are identified and handled before they impact your
+                                            operations,
+                                            and urgent incidents follow a defined escalation process to restore
+                                            stability as
+                                            fast as possible.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="lum-credit-process">
+
+                <!-- Desktop -->
+                <div class="lum-credit-process__timeline lum-credit-process__timeline--desktop">
+
+                    <div class="lum-credit-process__line">
+                        <span class="lum-credit-process__progress"></span>
+                    </div>
+
+
+                    <!-- Step 1 -->
+                    <div class="lum-credit-process__row">
+
+                        <div class="lum-credit-process__side lum-credit-process__side--left">
+                            <div class="lum-credit-process__icon-wrapper lum-credit-process__icon-wrapper--left">
+                                <img class="lum-credit-process__icon" src="./assets/magic-wand.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="lum-credit-process__marker">
+                <span class="lum-credit-process__number lum-credit-process__number--active">
+                    1
+                </span>
+                        </div>
+
+                        <div class="lum-credit-process__side lum-credit-process__side--right">
+                            <div class="lum-credit-process__content lum-credit-process__content--right">
+
+                                <h3 class="lum-credit-process__title lum-h-2xs">
+                                    Create a Trade Account
+                                </h3>
+
+                                <p class="lum-credit-process__description lum-text-sm">
+                                    Create a Lumera Electric trade account if you don’t already have one.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 2 -->
+                    <div class="lum-credit-process__row">
+
+                        <div class="lum-credit-process__side lum-credit-process__side--left">
+                            <div class="lum-credit-process__content lum-credit-process__content--left">
+
+                                <h3 class="lum-credit-process__title lum-h-2xs">
+                                    Complete the Application
+                                </h3>
+
+                                <p class="lum-credit-process__description lum-text-sm">
+                                    Download, complete, and sign the credit application and personal guarantee.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lum-credit-process__marker">
+                <span class="lum-credit-process__number">
+                    2
+                </span>
+                        </div>
+
+                        <div class="lum-credit-process__side lum-credit-process__side--right">
+                            <div class="lum-credit-process__icon-wrapper lum-credit-process__icon-wrapper--right">
+                                <img class="lum-credit-process__icon" src="./assets/magic-wand.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 3 -->
+                    <div class="lum-credit-process__row">
+
+                        <div class="lum-credit-process__side lum-credit-process__side--left">
+                            <div class="lum-credit-process__icon-wrapper lum-credit-process__icon-wrapper--left">
+                                <img class="lum-credit-process__icon" src="./assets/magic-wand.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="lum-credit-process__marker">
+                              <span class="lum-credit-process__number">
+                                  3
+                              </span>
+                        </div>
+
+                        <div class="lum-credit-process__side lum-credit-process__side--right">
+                            <div class="lum-credit-process__content lum-credit-process__content--right">
+
+                                <h3 class="lum-credit-process__title lum-h-2xs">
+                                    Submit Your Documents
+                                </h3>
+
+                                <p class="lum-credit-process__description lum-text-sm">
+                                    Submit your completed application and resale certificate, if applicable.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 4 -->
+                    <div class="lum-credit-process__row">
+
+                        <div class="lum-credit-process__side lum-credit-process__side--left">
+                            <div class="lum-credit-process__content lum-credit-process__content--left">
+
+                                <h3 class="lum-credit-process__title lum-h-2xs">
+                                    Review &amp; Approval
+                                </h3>
+
+                                <p class="lum-credit-process__description lum-text-sm">
+                                    We’ll verify your references and respond within 3 business days.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lum-credit-process__marker">
+                             <span class="lum-credit-process__number">
+                                 4
+                             </span>
+                        </div>
+
+                        <div class="lum-credit-process__side lum-credit-process__side--right">
+                            <div class="lum-credit-process__icon-wrapper lum-credit-process__icon-wrapper--right">
+                                <img class="lum-credit-process__icon" src="./assets/magic-wand.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mobile -->
+                <div class="lum-credit-process__timeline lum-credit-process__timeline--mobile" lum-text-sm>
+
+                    <div class="lum-credit-process__mobile-line">
+                        <span class="lum-credit-process__progress"></span>
+                    </div>
+
+
+                    <!-- Step 1 -->
+                    <div class="lum-credit-process__mobile-item">
+
+                        <div class="lum-credit-process__marker">
+                            <span class="lum-credit-process__number lum-credit-process__number--active">
+                                1
+                            </span>
+                        </div>
+
+                        <div class="lum-credit-process__content">
+
+                            <h3 class="lum-credit-process__title lum-h-2xs">
+                                Create a Trade Account
+                            </h3>
+
+                            <p class="lum-credit-process__description lum-text-sm">
+                                Create a Lumera Electric trade account if you don’t already have one.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 2 -->
+                    <div class="lum-credit-process__mobile-item">
+
+                        <div class="lum-credit-process__marker">
+                            <span class="lum-credit-process__number">
+                                2
+                            </span>
+                        </div>
+
+                        <div class="lum-credit-process__content">
+
+                            <h3 class="lum-credit-process__title lum-h-2xs">
+                                Submit Your Documents
+                            </h3>
+
+                            <p class="lum-credit-process__description lum-text-sm">
+                                Submit your completed application and resale certificate, if applicable.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 3 -->
+                    <div class="lum-credit-process__mobile-item">
+
+                        <div class="lum-credit-process__marker">
+                          <span class="lum-credit-process__number">
+                              3
+                          </span>
+                        </div>
+
+                        <div class="lum-credit-process__content">
+
+                            <h3 class="lum-credit-process__title lum-h-2xs">
+                                Complete the Application
+                            </h3>
+
+                            <p class="lum-credit-process__description lum-text-sm">
+                                Download, complete, and sign the credit application and personal guarantee.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 4 -->
+                    <div class="lum-credit-process__mobile-item">
+
+                        <div class="lum-credit-process__marker">
+                               <span class="lum-credit-process__number">
+                                   4
+                               </span>
+                        </div>
+
+                        <div class="lum-credit-process__content">
+
+                            <h3 class="lum-credit-process__title lum-h-2xs">
+                                Review Approval
+                            </h3>
+
+                            <p class="lum-credit-process__description lum-text-sm">
+                                We’ll verify your references and respond within 3 business days.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<script src="./assets/credit-application.script.js"></script>
+<script src="assets/faq.script.js"></script>
 
 </body>
 </html>

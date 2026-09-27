@@ -145,3 +145,302 @@
     border: 1px solid currentColor;
     border-radius: 50%;
 }
+/*...............................................................................................................................*/
+.lum-why-choose {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 1920px;
+
+    margin-inline: auto;
+    padding-block: 24px;
+}
+
+
+/* Decor */
+
+.lum-why-choose__decor {
+    display: none;
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.lum-why-choose__circle {
+    position: absolute;
+
+    width: 85vw;
+    max-width: 1632px;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+}
+
+.lum-why-choose__circle--top-gradient {
+    top: -25vw;
+    left: -45vw;
+
+    background: radial-gradient(
+            circle,
+            rgba(245, 245, 245, 0.9) 0%,
+            rgba(245, 245, 245, 0) 70%
+    );
+}
+
+.lum-why-choose__circle--top-border {
+    top: -25vw;
+    left: -43vw;
+
+    border: 1px solid var(--lum-border);
+}
+
+.lum-why-choose__circle--bottom-gradient {
+    right: -37vw;
+    bottom: -72vw;
+
+    transform: rotate(-45deg);
+
+    background: radial-gradient(
+            circle,
+            rgba(245, 245, 245, 0.9) 0%,
+            rgba(245, 245, 245, 0) 70%
+    );
+}
+
+.lum-why-choose__circle--bottom-border {
+    right: -36vw;
+    bottom: -69vw;
+
+    border: 1px solid var(--lum-border);
+}
+
+.lum-why-choose__dots {
+    position: absolute;
+
+    top: 155px;
+    right: 90px;
+
+    width: 241px;
+    height: 109px;
+}
+
+
+/* Container */
+
+.lum-why-choose__container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1540px;
+
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+
+/* Content */
+
+.lum-why-choose__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* Header */
+
+.lum-why-choose__header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+.lum-why-choose__badge {
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 12px;
+    margin-block-end: 12px;
+
+    border: 1px solid var(--lum-primary-6);
+    border-radius: 30px;
+}
+
+.lum-why-choose__badge-text {
+    color: var(--lum-primary-6);
+}
+
+.lum-why-choose__title {
+    margin: 0 0 24px;
+    color: var(--lum-n-900);
+    text-align: center;
+}
+
+.lum-why-choose__description {
+    margin: 0;
+    color: var(--lum-n-300);
+    text-align: center;
+}
+
+
+/* Grid */
+
+.lum-why-choose__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+
+/* Feature Card */
+
+.lum-feature-card {
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.lum-feature-card__body {
+    height: 100%;
+    min-height: 120px;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    border-radius: 16px;
+    gap: 16px;
+    background: var(--lum-n-0);
+    border: 1px solid var(--lum-border);
+    transition:
+            border-color 200ms ease,
+            box-shadow 200ms ease;
+    @media (min-width: 1024px) {
+        padding: 32px;
+        border-radius: 24px;
+
+    }
+
+}
+
+
+
+.lum-feature-card__body:hover {
+    border-color: var(--lum-primary-6);
+
+    box-shadow: 0 0 2px 2px rgba(25, 154, 213, 0.25);
+}
+
+
+/* Card Header */
+
+.lum-feature-card__header {
+    display: flex;
+
+    gap: 16px;
+}
+
+.lum-feature-card__icon {
+    width: 32px;
+    height: 32px;
+    color: var(--lum-primary-6);
+    flex-shrink: 0;
+}
+
+.lum-feature-card__title {
+    margin: 0;
+
+    color: var(--lum-n-900);
+
+
+    text-align: left;
+}
+
+
+/* Card Description */
+
+.lum-feature-card__description {
+
+
+    color: var(--lum-n-300);
+
+
+    text-align: left;
+
+
+    overflow: hidden;
+}
+
+
+/* Bottom Accent */
+
+.lum-feature-card__accent {
+    height: 8px;
+
+    margin-inline: 24px;
+
+    background: var(--lum-primary-6);
+
+    border-radius: 0 0 16px 16px;
+}
+@media (min-width: 640px) {
+
+    .lum-why-choose__grid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .lum-why-choose {
+        padding-block: 96px;
+    }
+
+    .lum-why-choose__decor {
+        display: block;
+    }
+
+    .lum-why-choose__content {
+        gap: 40px;
+    }
+
+    .lum-why-choose__header {
+        max-width: 900px;
+    }
+
+    .lum-why-choose__badge {
+        height: 32px;
+    }
+
+
+
+
+
+}
+
+
+@media (min-width: 1280px) {
+
+    .lum-why-choose__container {
+        padding-inline: 0;
+    }
+    .lum-why-choose__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+}

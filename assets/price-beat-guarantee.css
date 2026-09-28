@@ -1,0 +1,15 @@
+.lum-field__textarea {
+    min-height: 72px;
+    resize: vertical;
+    padding: 8px;
+}
+.lum-field__textarea {
+    min-height: 80px;
+    resize: none;
+}
+.lum-credit-upload__actions{
+
+    @media (min-width: 1024px) {
+        max-width:140px;
+    }
+}

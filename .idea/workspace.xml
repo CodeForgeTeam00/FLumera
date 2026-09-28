@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629a3bbc-5619-4fcd-bf15-0a95d8deb729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/faq.script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/magic-wand.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/price-beat-guarantee.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/price-beat-guarantee.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/credit-application.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/credit-application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/credit-application.html" beforeDir="false" afterPath="$PROJECT_DIR$/credit-application.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/singel-blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/singel-blog.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -140,7 +138,8 @@
       <workItem from="1790255601413" duration="16827000" />
       <workItem from="1790343415975" duration="9426000" />
       <workItem from="1790408914847" duration="24086000" />
-      <workItem from="1790498855538" duration="24021000" />
+      <workItem from="1790498855538" duration="25286000" />
+      <workItem from="1790585088794" duration="8452000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/Lum-utilities.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/header.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/lum-brands.css">
+    <link rel="stylesheet" href="./assets/catCard.css">
+    <link rel="stylesheet" href="./assets/lum-hotspots.css">
+    <link rel="stylesheet" href="./assets/tabs.css">
+    <link rel="stylesheet" href="./assets/categoty.css">
+    <link rel="stylesheet" href="./assets/icons.css">
+    <link rel="stylesheet" href="./assets/brand.css">
+    <link rel="stylesheet" href="./assets/header-blog.css">
+    <link rel="stylesheet" href="./assets/singel-blog.css">
+    <link rel="stylesheet" href="./assets/category-blog.css">
+
+</head>
+<body>
+
+<header class="header-blog lum-primary-border-b">
+    <div class="header-blog__container lum-container">
+
+        <div class="header-blog__inner ">
+            <div class="header-blog__icon-menu">
+                <i class="lum-icon lum-icon--menu lum-icon--md"></i>
+            </div>
+            <div class="header-blog__main">
+                <div class="header-blog__logo">
+                    <img class="header-blog__logo-image" src="./assets/Logo.svg" alt="">
+                </div>
+                <nav class="header-blog__navigation">
+                    <ul class="header-blog__nav">
+                        <li class="header-blog__nav-item">
+                            <a class="header-blog__nav-link lum-text-lg">
+                                Lighting
+                            </a>
+                        </li>
+
+                        <li class="header-blog__nav-item">
+                            <a class="header-blog__nav-link lum-text-lg">
+                                Electrical
+                            </a>
+                        </li>
+
+                        <li class="header-blog__nav-item">
+                            <a class="header-blog__nav-link lum-text-lg">
+                                Ventilation
+                            </a>
+                        </li>
+
+                        <li class="header-blog__nav-item">
+                            <a class="header-blog__nav-link lum-text-lg">
+                                Safety
+                            </a>
+                        </li>
+
+                        <li class="header-blog__nav-item">
+                            <a class="header-blog__nav-link lum-text-lg">
+                                Networking
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="header-blog__actions">
+
+                <div class="header-blog__search">
+                    <i class="header-blog__search-icon lum-icon lum-icon--search lum-icon--lg"></i>
+                </div>
+
+                <div class="header-blog__action ">
+
+                </div>
+
+                <button class="header-blog__button">
+
+                    <a class="header-blog__button-link lum-button primary " href="#">
+
+                        <span class="header-blog__button-content h__lum-button flex items-center gap-2">
+
+                            <i class="header-blog__button-icon lum-icon lum-icon--home lum-icon--lg"></i>
+
+                            <span class="header-blog__button-text text__lum-button lum-text-sm">
+                                Back To Home
+                            </span>
+
+                        </span>
+
+                    </a>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+<main class="">
+    <div class="lum-container">
+        <div class="lg:py-6 py-5  2xl:px-0 px-4">
+            <nav class="lum-breadcrumb" aria-label="Breadcrumb">
+                <ol class="lum-breadcrumb__list flex items-center  ">
+                    <li class="flex items-center">
+                        <i class="lum-icon lum-icon--home lum-icon--sm lum-breadcrumb__sep" aria-hidden="true"></i>
+                    </li>
+                    <li class="lum-breadcrumb__item">
+                        <a class="lum-breadcrumb__link" href="/">Home</a>
+                        <i class="lum-icon lum-icon--chevron-right lum-icon--xs lum-breadcrumb__sep"
+                           aria-hidden="true"></i>
+                    </li>
+                </ol>
+            </nav>
+            <div class="lum-credit__intro flex flex-col gap-2 pt-2   ">
+                <h2 class="lum-credit__title lum-h-md">
+                    Category Name
+                </h2>
+
+                <p class="lum-credit__description lum-text-lg">
+                    Browse the stunning Jovani 2025 prom dress collection featuring gorgeous designs made to shine on
+                    your big night.
+                    Our prom dresses come in beautiful mermaid, A-line, and ball gown styles with rich fabrics and
+                    amazing colors that will make you stand out.
+                </p>
+            </div>
+            <div class="lum-blog-filter flex gap-2 lg:py-6 py-4 w-full lg:justify-start justify-center px-6 "
+                 aria-label="Filter blog posts by subcategory ">
+
+                <button
+                        class="lum-blog-filter__item lum-blog-filter__item--active py-2 px-3" type="button"
+                        data-category="all" aria-pressed="true">
+                    <span class="lum-text-md">all</span>
+                </button>
+
+                <button
+                        class="lum-blog-filter__item py-2 px-3" type="button" data-category="lighting"
+                        aria-pressed="false">
+                    <span class="lum-text-md">Subcategory</span>
+                </button>
+
+                <button
+                        class="lum-blog-filter__item py-2 px-3" type="button" data-category="electrical"
+                        aria-pressed="false">
+                    <span class="lum-text-md">Subcategory</span>
+                </button>
+
+                <button
+                        class="lum-blog-filter__item py-2 px-3" type="button" data-category="safety"
+                        aria-pressed="false">
+                    <span class="lum-text-md">Subcategory</span>
+                </button>
+            </div>
+            <div class=" lg:py-6 py-4  grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1  lg:gap-4 gap-2 lum-primary-border-t ">
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="primary-project-card ">
+
+                    <a
+                            class="primary-project-card__image"
+                            href="#"
+                    >
+                        <img
+                                class="primary-project-card__image-element"
+                                src="assets/Image-test.png"
+                                alt="Two massing models on site plan"
+                                loading="lazy"
+                                decoding="async"
+                        >
+                    </a>
+
+                    <div class="primary-project-card__content">
+
+                        <div class="primary-project-card__category">
+                            <a
+                                    class="primary-project-card__label lum-text-sm"
+                                    href="https://aggcg.com/category/permits-planning/"
+                            >
+                                LA Permits &amp; Planning
+                            </a>
+                        </div>
+
+                        <h3 class="primary-project-card__title lum-h-2xs">
+                            <a
+                                    class="primary-project-card__title-link"
+                                    href="https://aggcg.com/like-for-like-rebuild-los-angeles/"
+                            >
+                                Like-for-Like vs Larger Rebuild After the Palisades Fire:
+                                Which Permit Path Applies?
+                            </a>
+                        </h3>
+
+                        <div class="primary-project-card__info">
+
+                            <div class="primary-project-card__author">
+                                <span class="primary-project-card__author-prefix lum-text-xs">
+                                    by
+                                </span>
+
+                                <span class="primary-project-card__author-name lum-text-xs">
+                                    Jacob Aghelian
+                                </span>
+                            </div>
+
+                            <div class="primary-project-card__date">
+                                <i
+                                        class="primary-project-card__date-icon icon icon-calendar icon-xs"
+                                        aria-hidden="true"
+                                ></i>
+
+                                <time
+                                        class="primary-project-card__date-text lum-text-xs"
+                                        datetime="2026-09-28"
+                                >
+                                    28 September 2026
+                                </time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            </div>
+            <nav class="lum-pager pb-15" aria-label="Pagination">
+
+                <ul class="lum-pager__list">
+
+                    <!-- Previous -->
+                    <li class="lum-pager__item" data-role="prev">
+
+            <span class="lum-pager__edge lum-pager__edge--disabled">
+                <i class="lum-icon lum-icon--chevron-left lum-icon--sm"></i>
+                Previous
+            </span>
+
+                    </li>
+
+
+                    <!-- Page 1 -->
+                    <li
+                            class="lum-pager__item"
+                            data-role="page"
+                            aria-current="page"
+                    >
+            <span class="lum-pager__link lum-pager__link--current">
+                1
+            </span>
+                    </li>
+
+
+                    <!-- Page 2 -->
+                    <li class="lum-pager__item" data-role="page">
+
+                        <a
+                                class="lum-pager__link"
+                                href="/collections/commercial-lighting?page=2"
+                        >
+                            2
+                        </a>
+
+                    </li>
+
+
+                    <!-- Page 3 -->
+                    <li class="lum-pager__item" data-role="page">
+
+                        <a
+                                class="lum-pager__link"
+                                href="/collections/commercial-lighting?page=3"
+                        >
+                            3
+                        </a>
+
+                    </li>
+
+
+                    <!-- Gap -->
+                    <li class="lum-pager__item" data-role="gap">
+
+            <span class="lum-pager__gap">
+                …
+            </span>
+
+                    </li>
+
+
+                    <!-- Page 17 -->
+                    <li class="lum-pager__item" data-role="page">
+
+                        <a
+                                class="lum-pager__link"
+                                href="/collections/commercial-lighting?page=17"
+                        >
+                            17
+                        </a>
+
+                    </li>
+
+
+                    <!-- Next -->
+                    <li class="lum-pager__item" data-role="next">
+
+                        <a
+                                class="lum-pager__edge"
+                                href="/collections/commercial-lighting?page=2"
+                        >
+                            Next
+
+                            <i class="lum-icon lum-icon--chevron-right lum-icon--xs"></i>
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.lum-blog-filter__item {
+    border:solid 1px var(--lum-n-30);
+    border-radius: 16px;
+}
+.lum-blog-filter{
+    overflow: auto;
+}
+.primary-project-card {
+    width: 100%;
+}
+
+.primary-project-card__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.primary-project-card__image-element {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.primary-project-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-block-start: 8px;
+}
+
+.primary-project-card__category {
+    display: flex;
+}
+
+.primary-project-card__label {
+    color: var(--lum-primary-6);
+    text-decoration: none;
+}
+
+.primary-project-card__title {
+    margin: 0;
+}
+
+.primary-project-card__title-link {
+    color: var(--lum-n-900);
+    text-decoration: none;
+}
+
+.primary-project-card__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-project-card__author,
+.primary-project-card__date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.primary-project-card__author-prefix {
+    color: var(--lum-n-100);
+}
+
+.primary-project-card__author-name,
+.primary-project-card__date,
+.primary-project-card__date-icon {
+    color: var(--lum-n-50);
+}

@@ -236,10 +236,6 @@
     }
 }
 
-.editors-choice,
-.editors-choice * {
-    box-sizing: border-box;
-}
 
 .editors-choice {
     display: flex;

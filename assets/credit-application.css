@@ -349,12 +349,17 @@
         gap: 24px;
     }
 }
-
 /* Credit process */
 
 .lum-credit-process {
     width: 100%;
+    --timeline-size: 32px;
+    --timeline-line-width: 4px;
 }
+
+/* =========================
+   Common
+========================= */
 
 .lum-credit-process__timeline {
     position: relative;
@@ -374,22 +379,31 @@
 .lum-credit-process__marker {
     position: relative;
     z-index: 2;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .lum-credit-process__number {
-    width: 32px;
-    height: 32px;
+    position: relative;
+    z-index: 2;
+
+    width: var(--timeline-size);
+    height: var(--timeline-size);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-shrink: 0;
+
     color: var(--lum-n-900);
     background: var(--lum-n-0);
+
     border: 1px solid var(--lum-border);
     border-radius: 50%;
+
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
@@ -403,6 +417,50 @@
     color: var(--lum-primary-6);
 }
 
+/* =========================
+   Timeline line
+========================= */
+
+.lum-credit-process__line,
+.lum-credit-process__mobile-line {
+    position: absolute;
+    z-index: 0;
+
+    top: 0;
+    bottom: auto;
+
+    width: var(--timeline-line-width);
+    height: 0;
+
+    margin: 0;
+
+    background: var(--lum-n-30);
+
+    transform: translateX(-50%);
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* green progress inside gray line */
+.lum-credit-process__progress {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+
+    background: var(--lum-primary-6);
+
+    transition: height 0.1s linear;
+}
+
+/* =========================
+   Mobile < 768px
+========================= */
+
 .lum-credit-process__timeline--desktop {
     display: none;
 }
@@ -410,36 +468,51 @@
 .lum-credit-process__timeline--mobile {
     display: flex;
     flex-direction: column;
+
     gap: 28px;
+
+    width: 100%;
     max-width: 480px;
 }
 
 .lum-credit-process__mobile-item {
     position: relative;
     z-index: 1;
+
     display: grid;
+
     grid-template-columns: 40px minmax(0, 1fr);
+
     align-items: start;
     gap: 24px;
+
+    min-width: 0;
 }
 
+.lum-credit-process__mobile-item > .lum-credit-process__marker {
+    width: 40px;
+}
+
+/*
+  ستون marker در موبایل 40px است
+  بنابراین مرکز آن = 20px
+*/
 .lum-credit-process__mobile-line {
-    position: absolute;
-    z-index: 0;
-    top: 16px;
-    bottom: 40px;
     left: 20px;
-    width: 4px;
-    background: var(--lum-n-30);
-    transform: translateX(-50%);
 }
 
-.lum-credit-process__timeline--mobile .lum-credit-process__content {
+.lum-credit-process__timeline--mobile
+.lum-credit-process__content {
     min-width: 0;
     text-align: left;
 }
 
+/* =========================
+   Desktop >= 768px
+========================= */
+
 @media (min-width: 768px) {
+
     .lum-credit-process__timeline--mobile {
         display: none;
     }
@@ -447,32 +520,37 @@
     .lum-credit-process__timeline--desktop {
         display: flex;
         flex-direction: column;
+
         gap: 40px;
+
+        width: 100%;
         max-width: 760px;
+
         margin-inline: auto;
     }
 
     .lum-credit-process__row {
         position: relative;
         z-index: 1;
+
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            80px
+            minmax(0, 1fr);
+
         align-items: center;
+
         min-height: 72px;
     }
 
     .lum-credit-process__line {
-        position: absolute;
-        z-index: 0;
-        top: 30px;
-        bottom: 30px;
         left: 50%;
-        width: 4px;
-        background: var(--lum-n-30);
-        transform: translateX(-50%);
     }
 
-    .lum-credit-process__row > .lum-credit-process__marker {
+    .lum-credit-process__row
+    > .lum-credit-process__marker {
         grid-column: 2;
     }
 
@@ -514,27 +592,13 @@
     }
 }
 
+/* =========================
+   Large desktop
+========================= */
+
 @media (min-width: 1024px) {
-    .lum-credit-process__number {
-        width: 40px;
-        height: 40px;
+
+    .lum-credit-process {
+        --timeline-size: 40px;
     }
-}
-.lum-credit-process__line,
-.lum-credit-process__mobile-line {
-    overflow: hidden;
-}
-
-.lum-credit-process__progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 0;
-
-    background: var(--lum-primary-6);
-    border-radius: inherit;
-
-    transition: height 0.1s linear;
 }

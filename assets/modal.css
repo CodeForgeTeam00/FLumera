@@ -285,3 +285,11 @@
     color: var(--lum-n-200) !important;
     opacity: 1 !important;
 }
+.lum-support-modal__header p{
+    color: var(--lum-n-100);
+}
+.contact-form-card .lum-field__input:focus,
+.contact-form-card__textarea:focus {
+    border-color: var(--lum-primary-6);
+    box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
+}

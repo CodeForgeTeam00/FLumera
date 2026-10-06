@@ -521,3 +521,6 @@
     color: var(--lum-n-1000);
     font-weight: 500;
 }
+.lum-contact-message__sub-title{
+    color: var(--lum-n-200);
+}

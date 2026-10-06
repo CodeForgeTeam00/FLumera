@@ -221,5 +221,75 @@
     .lum-step.is-active { animation: none; }
 }
 
+.lum-support-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.lum-support-modal__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.lum-support-modal__row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lum-support-modal__textarea {
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid var(--lum-n-30);
+    border-radius: 8px;
+    background: var(--lum-n-0);
+    padding: 12px 14px;
+    font: inherit;
+    color: var(--lum-n-1000);
+    resize: none;
+    outline: none;
+}
+
+.lum-support-modal__textarea:focus {
+    border-color: var(--lum-primary);
+}
+
+@media (min-width: 1024px) {
+    .lum-support-modal__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+}
+@media (min-width: 1024px) {
+    .lum-modal__panel.lum-support-modal {
+        inline-size: 570px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .lum-support-modal__textarea {
+        block-size: 96px;
+        min-block-size: 96px;
+    }
+}
+
+.lum-support-modal .lum-field__input::placeholder,
+.lum-support-modal .lum-support-modal__textarea::placeholder {
+    font-size: 14.22px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 28.2px !important;
+    color: var(--lum-n-200) !important;
+    opacity: 1 !important;
+}
+.lum-support-modal__header p{
+    color: var(--lum-n-100);
+}
+.contact-form-card .lum-field__input:focus,
+.contact-form-card__textarea:focus {
+    border-color: var(--lum-primary-6);
+    box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
+}

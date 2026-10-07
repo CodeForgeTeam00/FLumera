@@ -293,3 +293,7 @@
     border-color: var(--lum-primary-6);
     box-shadow: 0 0 0 3px rgba(21, 174, 92, 0.15);
 }
+.lum-modal__actions.lum-support-modal__actions {
+    border-top: 0 !important;
+    border-block-start: 0 !important;
+}

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/Lum-utilities.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="./assets/base.css">
     <link rel="stylesheet" href="./assets/header.css">
     <link rel="stylesheet" href="./assets/footer.css">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./assets/modal.css">
     <link rel="stylesheet" href="./assets/about-us.css">
     <link rel="stylesheet" href="./assets/blog.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 
 </head>
@@ -353,7 +353,7 @@
     </div>
 </header>
 <main>
-    <section class=" lg:pt-8 lg:pb-16 pb-6">
+    <section class=" lg:pt-8  lum-section-padding--lg-bottom ">
         <div class="lum-container">
 
             <div class="lum-about-hero">
@@ -379,10 +379,10 @@
             </div>
         </div>
     </section>
-    <section class="px-4 2xl:px-0 ">
+    <section class="lum-section-padding--xl-bottom px-4 2xl:px-0  ">
         <div class="lum-container">
             <div class="flex flex-col gap-4 lg:gap-10">
-                <div class="lum-sec-head lum-sec-head--split text-center">
+                <div class="lum-sec-head lum-sec-head--split text-center container-about">
                     <div class="lum-sec-head__left">
                     <span class="lum-eyebrow lum-eyebrow--start lum-text-md">
                          BUILT FOR PROFESSIONALS
@@ -488,7 +488,7 @@
             </div>
         </div>
     </section>
-    <section class="lg:py-20 py-6 ">
+    <section class=" ">
         <div class="lum-container">
             <article class="flex items-center lg:flex-row flex-col lg:flex-row-reverse flex-col-reveres px-4 2xl:px-0 lg:gap-20 gap-4  ">
                 <a class="editors-choice__image-wrapper" href="#">
@@ -521,7 +521,7 @@
             </article>
         </div>
     </section>
-    <section class="lum-business-banner lum-container px-4 2xl:px-0 ">
+    <section class="lum-business-banner lum-container lum-section-padding--xl  px-4 2xl:px-0 ">
 
         <div class="lum-business-banner__wrapper">
 
@@ -591,27 +591,497 @@
         </div>
 
     </section>
-    <section class="lg:py-20">
-        <div class="lum-container">
-            <div class="lum-sec-head lum-sec-head--split text-center    ">
-                <div class="lum-sec-head__left">
-                    <span class="lum-eyebrow lum-eyebrow--start lum-text-md">
-                         BUILT FOR PROFESSIONALS
-                    </span>
-                    <div class="flex flex-col gap-2 ">
-                        <h2 class="lum-h-md">
-                            Built for Contractors. Designed for Projects.
-                        </h2>
 
-                        <p class="lum-sec-head__desc lum-text-lg container-blog">
-                            Lumera Electric serves the professionals who keep projects moving. From contractors and electricians to designers,
-                            builders, and facility teams, our goal is to make electrical and lighting procurement simpler
-                        </p>
+    <section class="lum-journey  px-4 2xl:px-0 lum-section-padding--lg-bottom" dir="ltr">
+        <div class="lum-container">
+
+            <div class="lum-journey__header">
+            <span class="lum-journey__eyebrow lum-text-md">
+                OUR JOURNEY
+            </span>
+
+                <h2 class="lum-journey__title lum-h-md">
+                    From a vision to a trusted name in electrical solutions.
+                </h2>
+
+                <p class="lum-journey__intro lum-text-lg">
+                    What began as a vision to deliver reliable and innovative
+                    electrical solutions has grown into a journey built on
+                    quality, trust, and continuous progress.
+                </p>
+            </div>
+
+            <div
+                    class="swiper lum-journey__years"
+                    role="group"
+                    aria-label="Choose a year"
+            >
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <button class="lum-journey__year" type="button">
+                        <span class="lum-journey__year-label lum-h-md">
+                            2013
+                        </span>
+                        </button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <button class="lum-journey__year" type="button">
+                        <span class="lum-journey__year-label lum-h-md">
+                            2014
+                        </span>
+                        </button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <button class="lum-journey__year" type="button">
+                        <span class="lum-journey__year-label lum-h-md">
+                            2015
+                        </span>
+                        </button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <button class="lum-journey__year" type="button">
+                        <span class="lum-journey__year-label lum-h-md">
+                            2016
+                        </span>
+                        </button>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <button class="lum-journey__year" type="button">
+                        <span class="lum-journey__year-label lum-h-md">
+                            2017
+                        </span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="lum-journey__body">
+
+                <div class="lum-journey__controls">
+                    <button
+                            class="lum-journey__arrow lum-journey__prev"
+                            type="button"
+                            aria-label="Previous year"
+                    >
+                        <i class="lum-icon lum-icon--arrow-right lum-icon--lg" aria-hidden="true"></i>
+                    </button>
+
+                    <button
+                            class="lum-journey__arrow lum-journey__next"
+                            type="button"
+                            aria-label="Next year"
+                    >
+                        <i class="lum-icon lum-icon--arrow-right lum-icon--lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="swiper lum-journey__slider">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide lum-journey__slide">
+                            <div class="lum-journey__content">
+                                <h3 class="lum-h-md">
+                                    Milestone title — 2013
+                                </h3>
+
+                                <p class="lum-journey__description lum-text-lg">
+                                    Replace this text with the story for 2013.
+                                </p>
+                            </div>
+
+                            <div class="lum-journey__media">
+                                <img
+                                        src="assets/img/journey-2013.webp"
+                                        alt="Company journey in 2013"
+                                        loading="lazy"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide lum-journey__slide">
+                            <div class="lum-journey__content">
+                                <h3 class="lum-h-md">
+                                    Milestone title — 2014
+                                </h3>
+
+                                <p class="lum-journey__description lum-text-lg">
+                                    Replace this text with the story for 2014.
+                                </p>
+                            </div>
+
+                            <div class="lum-journey__media">
+                                <img
+                                        src="assets/img/journey-2014.webp"
+                                        alt="Company journey in 2014"
+                                        loading="lazy"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide lum-journey__slide">
+                            <div class="lum-journey__content">
+                                <h3 class="lum-h-md">
+                                    Foundational Values and Commitments
+                                </h3>
+
+                                <p class="lum-journey__description lum-text-lg">
+                                    We believe in integrity across every decision,
+                                    from concept to execution. Thoughtful design,
+                                    honest materials, and long-term value guide
+                                    our process, ensuring that what we create
+                                    endures beyond passing moments.
+                                </p>
+                            </div>
+
+                            <div class="lum-journey__media">
+                                <img
+                                        src="assets/img-pourdact-card.png"
+                                        alt="Modern commercial building"
+                                        loading="lazy"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide lum-journey__slide">
+                            <div class="lum-journey__content">
+                                <h3 class="lum-h-md">
+                                    Milestone title — 2016
+                                </h3>
+
+                                <p class="lum-journey__description lum-text-lg">
+                                    Replace this text with the story for 2016.
+                                </p>
+                            </div>
+
+                            <div class="lum-journey__media">
+                                <img
+                                        src="assets/MAM.jpg"
+                                        alt="Company journey in 2016"
+                                        loading="lazy"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide lum-journey__slide">
+                            <div class="lum-journey__content">
+                                <h3 class="lum-h-md">
+                                    Milestone title — 2017
+                                </h3>
+
+                                <p class="lum-journey__description lum-text-lg">
+                                    Replace this text with the story for 2017.
+                                </p>
+                            </div>
+
+                            <div class="lum-journey__media">
+                                <img
+                                        src="assets/post.png"
+                                        alt="Company journey in 2017"
+                                        loading="lazy"
+                                >
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="lum-team  lum-section-padding--lg px-4 2xl:px-0 ">
+        <div class="lum-container">
+
+            <div class="container-about">
+                <div class="lum-sec-head lum-sec-head--split lg:text-center">
+                    <div class="lum-sec-head__left">
+
+                        <div class="lum-about-story__eyebrow flex lg:justify-center lg:items-center">
+                            <span class="lum-about-story__eyebrow-line"></span>
+                            <span class="lum-text-md">OUR TEAM</span>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <h2 class="lum-h-md">
+                                Meet Our Team in
+                                <span class="lum-team__highlight">Lumera</span>
+                            </h2>
+
+                            <p class="lum-sec-head__desc lum-text-lg container-blog">
+                                Behind every solution we deliver is a team of passionate professionals
+                                who bring together expertise, experience, and fresh perspectives.
+                                United by a shared vision and a commitment to excellence, we work
+                                together to turn ideas into reliable solutions and create lasting
+                                value for our customers.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
+
+            <div class="lum-tabs lum-tabs--pill lum-team__tabs" data-tabs>
+
+                <div class="lum-tabs__list" role="tablist" aria-label="Team departments">
+
+                    <button
+                            class="lum-tabs__tab is-active"
+                            id="g1-1"
+                            role="tab"
+                            aria-controls="g1p-1"
+                            aria-selected="true"
+                            type="button"
+                    >
+                        <span class="lum-text-sm"> All</span>
+
+                    </button>
+
+                    <button
+                            class="lum-tabs__tab"
+                            id="g1-2"
+                            role="tab"
+                            aria-controls="g1p-2"
+                            aria-selected="false"
+                            tabindex="-1"
+                            type="button"
+                    >
+                        <span class="lum-text-sm">  Marketing</span>
+
+                    </button>
+
+                    <button
+                            class="lum-tabs__tab"
+                            id="g1-3"
+                            role="tab"
+                            aria-controls="g1p-3"
+                            aria-selected="false"
+                            tabindex="-1"
+                            type="button"
+                    >
+                        <span class="lum-text-sm">Technical</span>
+
+                    </button>
+
+                    <button
+                            class="lum-tabs__tab"
+                            id="g1-4"
+                            role="tab"
+                            aria-controls="g1p-4"
+                            aria-selected="false"
+                            tabindex="-1"
+                            type="button"
+                    >
+                        <span class="lum-text-sm"> Product</span>
+                    </button>
+
+                </div>
+
+                <div class="lum-tabs__panel" id="g1p-1" role="tabpanel" aria-labelledby="g1-1">
+
+                    <div class="lum-team__grid">
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/MAM.jpg" alt="MAM" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">MAM</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/MAM.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/test-img-cart.png" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div class="lum-tabs__panel" id="g1p-2" role="tabpanel" aria-labelledby="g1-2" hidden>
+
+                    <div class="lum-team__grid">
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div class="lum-tabs__panel" id="g1p-3" role="tabpanel" aria-labelledby="g1-3" hidden>
+
+                    <div class="lum-team__grid">
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-h-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+                <div class="lum-tabs__panel" id="g1p-4" role="tabpanel" aria-labelledby="g1-4" hidden>
+
+                    <div class="lum-team__grid">
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-text-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                        <article class="lum-team__member">
+                            <img class="lum-team__avatar" src="assets/team-member.jpg" alt="Behnam Jafari" loading="lazy">
+                            <h3 class="lum-team__name lum-text-xs">Behnam Jafari</h3>
+                            <p class="lum-team__role lum-text-md">Product Designer</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </section>
+
+    <section class="lum-about-approach 2xl:px-0 px-4 lum-section-padding--lg ">
+        <div class="lum-container">
+
+            <div class="lum-about-approach__wrapper">
+
+                <div class="lum-about-approach__intro">
+
+                    <div class="lum-about-approach__header">
+                        <div class="lum-about-story__eyebrow ">
+                            <span class="lum-about-story__eyebrow-line"></span>
+                            <span class="lum-text-md">OUR TEAM</span>
+                        </div>
+
+                        <h2 class="lum-about-approach__title lum-h-md">
+                            Built for Contractors.
+                            <span>Designed for Projects.</span>
+                        </h2>
+
+                    </div>
+
+                    <div class="lum-about-approach__media">
+                        <img
+                                class="lum-about-approach__image"
+                                src="assets/post.png"
+                                alt="Modern commercial building"
+                                loading="lazy"
+                        >
+                    </div>
+
+                </div>
+
+                <ol class="lum-about-approach__list">
+
+                    <li class="lum-about-approach__card">
+                        <span class="lum-about-approach__number lum-h-md">01.</span>
+
+                        <p class="lum-about-approach__description lum-text-md">
+                            From infrastructure management and cloud environments
+                            to endpoint protection and network
+                        </p>
+                    </li>
+                    <li class="lum-about-approach__card">
+                        <span class="lum-about-approach__number lum-h-md">01.</span>
+
+                        <p class="lum-about-approach__description lum-text-md">
+                            From infrastructure management and cloud environments
+                            to endpoint protection and network
+                        </p>
+                    </li>
+                    <li class="lum-about-approach__card">
+                        <span class="lum-about-approach__number lum-h-md">01.</span>
+
+                        <p class="lum-about-approach__description lum-text-md">
+                            From infrastructure management and cloud environments
+                            to endpoint protection and network
+                        </p>
+                    </li>
+                    <li class="lum-about-approach__card">
+                        <span class="lum-about-approach__number lum-h-md">01.</span>
+
+                        <p class="lum-about-approach__description lum-text-md">
+                            From infrastructure management and cloud environments
+                            to endpoint protection and network
+                        </p>
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
 </main>
 <footer class="lum-footer mt-20">
 
@@ -745,8 +1215,113 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./assets/faq.script.js"></script>
 <script src="./assets/global.js"></script>
+<script src="./assets/tabs.js"></script>
+<script src="./assets/about.js"></script>
+<script>
+    document.querySelectorAll(".lum-journey").forEach((section) => {
+        const yearsElement = section.querySelector(".lum-journey__years");
+        const contentElement = section.querySelector(".lum-journey__slider");
+
+        if (!yearsElement || !contentElement) return;
+        if (contentElement.swiper) return;
+
+        const yearButtons = yearsElement.querySelectorAll(".lum-journey__year");
+
+        const contentSlides = contentElement.querySelectorAll(
+            ".lum-journey__slide"
+        );
+
+        if (yearButtons.length !== contentSlides.length) {
+            console.warn("Journey: years and content slides must have equal counts.");
+            return;
+        }
+
+        if (!contentSlides.length) return;
+
+        const reduceMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        const speed = reduceMotion ? 0 : 450;
+
+        // Index 2 = 2015 in this example.
+        const initialSlide = Math.min(2, contentSlides.length - 1);
+
+        /* Years slider */
+        const yearsSwiper = new Swiper(yearsElement, {
+            initialSlide,
+            speed,
+
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            centeredSlides: true,
+
+            // Years are selected using the buttons.
+            allowTouchMove: false,
+
+            // Keep centering available even when all five years fit.
+            watchOverflow: false,
+
+            // Native buttons already provide keyboard interaction.
+            a11y: {
+                enabled: false,
+            },
+
+            breakpoints: {
+                1024: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+
+        /* Move the selected year to the center */
+        function updateYears(swiper) {
+            yearsSwiper.slideTo(swiper.activeIndex);
+
+            yearButtons.forEach((button, index) => {
+                button.setAttribute(
+                    "aria-pressed",
+                    String(index === swiper.activeIndex)
+                );
+            });
+        }
+
+        /* Text + image slider */
+        const contentSwiper = new Swiper(contentElement, {
+            initialSlide,
+            speed,
+
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 24,
+
+            autoHeight: true,
+            watchOverflow: true,
+            loop: false,
+
+            navigation: {
+                prevEl: section.querySelector(".lum-journey__prev"),
+                nextEl: section.querySelector(".lum-journey__next"),
+                addIcons: false,
+            },
+
+            on: {
+                init: updateYears,
+                slideChange: updateYears,
+            },
+        });
+
+        /* Clicking a year changes the content */
+        yearButtons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                contentSwiper.slideTo(index);
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

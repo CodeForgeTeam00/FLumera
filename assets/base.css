@@ -229,7 +229,7 @@ button{
     line-height: var(--lum-h-sm-lh);
 }
 
-.lum-h-xslum-h-xs {
+.lum-h-xs {
     font-size: var(--lum-h-xs);
     line-height: var(--lum-h-xs-lh);
 }

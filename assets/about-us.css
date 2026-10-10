@@ -94,13 +94,15 @@
     position: absolute;
     z-index: 2;
     inset-inline: 16px;
-    inset-block-start: 50%;
+    inset-block-start: 45%;
     transform: translateY(-50%);
 
     @media (min-width: 1024px) {
         inset-inline-start: 48px;
         inset-inline-end: auto;
+        inset-block-start: 50%;
         max-width: 360px;
+        transform: translateY(-50%);
     }
 }
 
@@ -301,8 +303,8 @@
 }
 
 .lum-business-banner .lum-cta__title,
-.lum-business-banner .lum-cta__desc {
-    color: var(--lum-n-0);
+.lum-business-banner .lum-cta__desc ,.cta__trade {
+    color: var(--lum-n-0);!important;
 }
 
 .lum-business-banner .lum-cta__actions {
@@ -334,7 +336,7 @@
     }
 
     .lum-business-banner__content {
-        inset-inline-start: 40px;
+        inset-inline-start: 80px;
         inset-inline-end: auto;
         max-width: 520px;
     }
@@ -586,6 +588,7 @@
     width: max-content;
     max-width: 100%;
     margin-inline: auto;
+    color: var(--lum-n-1000);
 }
 
 .lum-team__tabs .lum-tabs__panel {
